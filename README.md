@@ -1,3 +1,3 @@
-# Survey Dummy Generator v6
+# SRS-from-PRD 를 제출해보자!
 
-Alert-driven retry build.
+과제 제출용 입니다.
