@@ -148,7 +148,169 @@
 | CLI-01 | 웹 대시보드 | 문서 업로드, 폼 관리, 쿼터 세팅, ZIP 다운로드, 결제 |
 | CLI-02 | 모바일 웹 설문 폼 | 응답자 대상 설문 응답 수집 인터페이스 (워터마크 포함) |
 
-### 3.3 API Overview
+### 3.3 Use Case Diagram
+
+아래 다이어그램은 3종 페르소나(홍일반, 최실무, 유팀장) 및 외부 시스템과의 상호작용을 UseCase 관점에서 정리한 것이다.
+
+```mermaid
+flowchart LR
+    subgraph Actors
+        Hong["홍일반\n(일반 설문 작성자)"]
+        Choi["최실무\n(신사업 기획 실무자)"]
+        Yoo["유팀장\n(리서치 에이전시 운영팀장)"]
+        Respondent["응답자\n(패널/일반)"]
+    end
+
+    subgraph System["AI Survey Platform"]
+        UC1(["UC-01: 문서 업로드"])
+        UC2(["UC-02: 자동 폼 변환"])
+        UC3(["UC-03: 파싱 상태 조회"])
+        UC4(["UC-04: 설문 응답 수집"])
+        UC5(["UC-05: 워터마크 바이럴 유입"])
+        UC6(["UC-06: 4종 ZIP 패키지 생성"])
+        UC7(["UC-07: 결제(Paywall) 처리"])
+        UC8(["UC-08: ZIP 다운로드"])
+        UC9(["UC-09: 교차 쿼터 설정"])
+        UC10(["UC-10: 쿼터 상태 모니터링"])
+        UC11(["UC-11: 패널사 라우팅 설정"])
+        UC12(["UC-12: 패널 리다이렉트 실행"])
+        UC13(["UC-13: Rate Limit 제어"])
+        UC14(["UC-14: 데이터 삭제 스케줄링"])
+    end
+
+    subgraph External["외부 시스템"]
+        PG["PG사\n(토스페이먼츠)"]
+        S3["AWS S3"]
+        Panel["패널사\n(Cint/Toluna)"]
+        Monitoring["DataDog / PagerDuty / Slack"]
+        Analytics["Amplitude / GA4"]
+    end
+
+    Hong --> UC1
+    Hong --> UC2
+    Hong --> UC3
+    Choi --> UC1
+    Choi --> UC2
+    Choi --> UC6
+    Choi --> UC7
+    Choi --> UC8
+    Yoo --> UC9
+    Yoo --> UC10
+    Yoo --> UC11
+    Respondent --> UC4
+    Respondent --> UC5
+    Respondent --> UC12
+
+    UC7 --> PG
+    UC8 --> S3
+    UC12 --> Panel
+    UC10 --> Monitoring
+    UC7 --> Analytics
+    UC5 --> Analytics
+    UC14 --> S3
+    UC2 -. "include" .-> UC13
+    UC6 -. "include" .-> UC7
+```
+
+| Use Case ID | Use Case 명 | Primary Actor | 관련 REQ-FUNC |
+|---|---|---|---|
+| UC-01 | 문서 업로드 | 홍일반, 최실무 | REQ-FUNC-001, 005, 026, 027 |
+| UC-02 | 자동 폼 변환 | 홍일반, 최실무 | REQ-FUNC-002, 003, 004, 006, 007 |
+| UC-03 | 파싱 상태 조회 | 홍일반, 최실무 | REQ-FUNC-004 |
+| UC-04 | 설문 응답 수집 | 응답자 | REQ-FUNC-008 |
+| UC-05 | 워터마크 바이럴 유입 | 응답자 | REQ-FUNC-016, 017 |
+| UC-06 | 4종 ZIP 패키지 생성 | 최실무 | REQ-FUNC-008, 009, 014, 015 |
+| UC-07 | 결제(Paywall) 처리 | 최실무 | REQ-FUNC-010, 011, 012, 013 |
+| UC-08 | ZIP 다운로드 | 최실무 | REQ-FUNC-011, 013 |
+| UC-09 | 교차 쿼터 설정 | 유팀장 | REQ-FUNC-018 |
+| UC-10 | 쿼터 상태 모니터링 | 유팀장 | REQ-FUNC-019, 020, 021, 022 |
+| UC-11 | 패널사 라우팅 설정 | 유팀장 | REQ-FUNC-023 |
+| UC-12 | 패널 리다이렉트 실행 | 응답자 | REQ-FUNC-024, 025 |
+| UC-13 | Rate Limit 제어 | 시스템(내부) | REQ-FUNC-026, 028 |
+| UC-14 | 데이터 삭제 스케줄링 | 시스템(내부) | REQ-FUNC-029 |
+
+### 3.4 Component Diagram (시스템 컴포넌트 구조)
+
+아래 다이어그램은 시스템의 주요 컴포넌트와 외부 시스템 간의 의존·연동 관계를 나타낸다.
+
+```mermaid
+flowchart TB
+    subgraph Client["Client Layer"]
+        WebDash["웹 대시보드\n(CLI-01)"]
+        MobileForm["모바일 웹 설문 폼\n(CLI-02)"]
+    end
+
+    subgraph API["API Gateway Layer"]
+        Gateway["API Gateway\n/api/v1/*\n(인증·Rate Limit·라우팅)"]
+    end
+
+    subgraph Core["Core Service Layer"]
+        DocService["Document Service\n문서 업로드·검증·상태 관리"]
+        ParserService["AI Parser Service\n비정형 문서 파싱·구조 분석"]
+        FormService["Form Service\n설문 폼 관리·응답 수집"]
+        PackageService["Package Service\nZIP 4종 컴파일·다운로드"]
+        PaymentService["Payment Service\n결제 요청·콜백·상태 관리"]
+        QuotaService["Quota Service\n교차 쿼터 관리·카운트 연산"]
+        RoutingService["Routing Service\n패널사 포스트백·리다이렉트"]
+        SchedulerService["Scheduler Service\n데이터 삭제(Zero-Retention)"]
+    end
+
+    subgraph Infra["Infrastructure Layer"]
+        DB[("PostgreSQL\n(RDB)")]
+        Redis[("Redis\n(Cache / Quota Counter)")]
+        OCR["OCR Engine\n(HWP/Word/PDF 전용)"]
+    end
+
+    subgraph External["External Systems"]
+        PG["PG사\n(토스페이먼츠)"]
+        S3["AWS S3"]
+        Panel["패널사\n(Cint/Toluna)"]
+        DataDog["DataDog APM"]
+        PagerDuty["PagerDuty"]
+        Slack["Slack"]
+        Amplitude["Amplitude"]
+        GA4["GA4"]
+    end
+
+    WebDash --> Gateway
+    MobileForm --> Gateway
+
+    Gateway --> DocService
+    Gateway --> FormService
+    Gateway --> PackageService
+    Gateway --> PaymentService
+    Gateway --> QuotaService
+    Gateway --> RoutingService
+
+    DocService --> ParserService
+    ParserService --> OCR
+    ParserService --> DB
+    ParserService --> Redis
+
+    FormService --> DB
+    PackageService --> DB
+    PackageService --> S3
+    PaymentService --> PG
+    PaymentService --> DB
+    PaymentService --> Amplitude
+
+    QuotaService --> Redis
+    QuotaService --> DB
+    QuotaService --> DataDog
+    QuotaService --> Slack
+
+    RoutingService --> Panel
+    RoutingService --> DB
+
+    SchedulerService --> DB
+    SchedulerService --> S3
+
+    DocService --> DataDog
+    PaymentService --> PagerDuty
+    MobileForm -. "utm tracking" .-> GA4
+```
+
+### 3.5 API Overview
 
 | Endpoint | Method | 설명 | 관련 요구사항 |
 |---|---|---|---|
@@ -164,9 +326,9 @@
 | `GET /api/v1/routing/redirect/{resp_id}` | GET | 패널 라우팅 리다이렉션 | REQ-FUNC-022 |
 | `POST /api/v1/payments/callback` | POST | PG사 결제 콜백 수신 | REQ-FUNC-012 |
 
-### 3.4 Interaction Sequences (핵심 시퀀스 다이어그램)
+### 3.6 Interaction Sequences (핵심 시퀀스 다이어그램)
 
-#### 3.4.1 문서 업로드 → 설문 폼 자동 생성 흐름
+#### 3.6.1 문서 업로드 → 설문 폼 자동 생성 흐름
 
 ```mermaid
 sequenceDiagram
@@ -197,7 +359,7 @@ sequenceDiagram
     end
 ```
 
-#### 3.4.2 ZIP 패키지 결제 → 다운로드 흐름
+#### 3.6.2 ZIP 패키지 결제 → 다운로드 흐름
 
 ```mermaid
 sequenceDiagram
@@ -232,7 +394,7 @@ sequenceDiagram
     end
 ```
 
-#### 3.4.3 동적 쿼터 제어 및 패널 라우팅 흐름
+#### 3.6.3 동적 쿼터 제어 및 패널 라우팅 흐름
 
 ```mermaid
 sequenceDiagram
@@ -595,6 +757,296 @@ sequenceDiagram
 | `details` | JSON | NULLABLE | 상세 정보 |
 | `ip_address_hash` | VARCHAR(64) | NOT NULL | 요청 IP 해시 |
 | `created_at` | TIMESTAMP | NOT NULL, DEFAULT NOW() | 기록 시각 |
+
+#### 6.2.9 Entity-Relationship Diagram (ERD)
+
+아래 ERD는 6.2절에 정의된 모든 엔터티의 관계를 시각화한 것이다. USER 엔터티는 인증 모듈에서 관리되며 본 ERD에서는 참조 관계만 표시한다.
+
+```mermaid
+erDiagram
+    USER {
+        VARCHAR user_id PK
+        VARCHAR email
+        VARCHAR name
+        BOOLEAN is_paid_user
+        TIMESTAMP created_at
+    }
+
+    DOCUMENT {
+        VARCHAR doc_id PK
+        VARCHAR user_id FK
+        ENUM file_type
+        VARCHAR file_name
+        BIGINT file_size_bytes
+        VARCHAR file_hash
+        BOOLEAN parsed_success
+        VARCHAR error_code
+        TEXT error_message
+        TIMESTAMP created_at
+        TIMESTAMP expires_at
+        ENUM status
+    }
+
+    PARSED_FORM {
+        VARCHAR form_id PK
+        VARCHAR doc_id FK
+        JSON structure_schema
+        INTEGER question_count
+        JSON skipped_elements
+        VARCHAR viral_watermark_url
+        BOOLEAN is_paid_user
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
+
+    RESPONSE {
+        VARCHAR resp_id PK
+        VARCHAR form_id FK
+        VARCHAR user_agent
+        JSON raw_record
+        ENUM quota_status
+        JSON quota_group
+        ENUM routing_status
+        TIMESTAMP created_at
+        VARCHAR ip_hash
+    }
+
+    ZIP_DATAMAP {
+        VARCHAR package_id PK
+        VARCHAR form_id FK
+        BOOLEAN payment_cleared
+        VARCHAR pg_transaction_id
+        INTEGER payment_amount
+        VARCHAR s3_download_url
+        TIMESTAMP url_expires_at
+        INTEGER download_count
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
+
+    QUOTA_SETTING {
+        VARCHAR quota_id PK
+        VARCHAR form_id FK
+        JSON quota_matrix
+        BOOLEAN is_active
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
+
+    QUOTA_CELL {
+        VARCHAR cell_id PK
+        VARCHAR quota_id FK
+        VARCHAR group_key
+        ENUM gender
+        VARCHAR age_range
+        VARCHAR region
+        INTEGER target_count
+        INTEGER current_count
+        BOOLEAN is_full
+    }
+
+    ROUTING_CONFIG {
+        VARCHAR routing_id PK
+        VARCHAR form_id FK
+        VARCHAR success_url
+        VARCHAR screenout_url
+        VARCHAR quotafull_url
+        TIMESTAMP created_at
+    }
+
+    AUDIT_LOG {
+        VARCHAR log_id PK
+        VARCHAR user_id FK
+        VARCHAR action
+        VARCHAR resource_type
+        VARCHAR resource_id
+        JSON details
+        VARCHAR ip_address_hash
+        TIMESTAMP created_at
+    }
+
+    USER ||--o{ DOCUMENT : "uploads"
+    USER ||--o{ AUDIT_LOG : "generates"
+    DOCUMENT ||--o| PARSED_FORM : "produces"
+    PARSED_FORM ||--o{ RESPONSE : "collects"
+    PARSED_FORM ||--o| ZIP_DATAMAP : "packages"
+    PARSED_FORM ||--o| QUOTA_SETTING : "configures"
+    PARSED_FORM ||--o| ROUTING_CONFIG : "routes"
+    QUOTA_SETTING ||--o{ QUOTA_CELL : "contains"
+```
+
+#### 6.2.10 Class Diagram (핵심 도메인 객체)
+
+아래 다이어그램은 시스템의 핵심 도메인 객체와 서비스 클래스의 구조 및 의존 관계를 나타낸다.
+
+```mermaid
+classDiagram
+    class Document {
+        -String docId
+        -String userId
+        -FileType fileType
+        -String fileName
+        -Long fileSizeBytes
+        -String fileHash
+        -Boolean parsedSuccess
+        -String errorCode
+        -String errorMessage
+        -Timestamp createdAt
+        -Timestamp expiresAt
+        -DocumentStatus status
+        +validate() Boolean
+        +computeHash() String
+        +isExpired() Boolean
+    }
+
+    class ParsedForm {
+        -String formId
+        -String docId
+        -JSON structureSchema
+        -Integer questionCount
+        -JSON skippedElements
+        -String viralWatermarkUrl
+        -Boolean isPaidUser
+        -Timestamp createdAt
+        -Timestamp updatedAt
+        +getWatermarkUrl() String
+        +shouldShowWatermark() Boolean
+    }
+
+    class Response {
+        -String respId
+        -String formId
+        -String userAgent
+        -JSON rawRecord
+        -QuotaStatus quotaStatus
+        -JSON quotaGroup
+        -RoutingStatus routingStatus
+        -Timestamp createdAt
+        -String ipHash
+        +isQuotaFull() Boolean
+    }
+
+    class ZipDatamap {
+        -String packageId
+        -String formId
+        -Boolean paymentCleared
+        -String pgTransactionId
+        -Integer paymentAmount
+        -String s3DownloadUrl
+        -Timestamp urlExpiresAt
+        -Integer downloadCount
+        +isDownloadable() Boolean
+        +isUrlExpired() Boolean
+    }
+
+    class QuotaSetting {
+        -String quotaId
+        -String formId
+        -JSON quotaMatrix
+        -Boolean isActive
+        +isActive() Boolean
+    }
+
+    class QuotaCell {
+        -String cellId
+        -String quotaId
+        -String groupKey
+        -Gender gender
+        -String ageRange
+        -String region
+        -Integer targetCount
+        -Integer currentCount
+        -Boolean isFull
+        +incrementCount() void
+        +isFull() Boolean
+        +getRemaining() Integer
+    }
+
+    class RoutingConfig {
+        -String routingId
+        -String formId
+        -String successUrl
+        -String screenoutUrl
+        -String quotafullUrl
+        +getRedirectUrl(status) String
+    }
+
+    class AuditLog {
+        -String logId
+        -String userId
+        -String action
+        -String resourceType
+        -String resourceId
+        -JSON details
+        -String ipAddressHash
+        -Timestamp createdAt
+    }
+
+    class DocumentService {
+        +upload(file) Document
+        +validateFile(file) Boolean
+        +getStatus(docId) DocumentStatus
+    }
+
+    class AIParserService {
+        +parse(document) ParsedForm
+        +selectOcrEngine(fileType) OcrEngine
+        +analyzeStructure(text) JSON
+    }
+
+    class FormService {
+        +getForm(formId) ParsedForm
+        +submitResponse(formId, data) Response
+    }
+
+    class PackageService {
+        +compileZip(formId) ZipDatamap
+        +generatePresignedUrl(packageId) String
+    }
+
+    class PaymentService {
+        +requestPayment(formId) PaymentSession
+        +handleCallback(callbackData) Boolean
+        +blockDownload(packageId) void
+    }
+
+    class QuotaService {
+        +createQuota(formId, matrix) QuotaSetting
+        +checkQuota(respId, group) QuotaStatus
+        +incrementAtomically(cellId) Integer
+    }
+
+    class RoutingService {
+        +setPostbackUrls(formId, urls) RoutingConfig
+        +redirect(respId) RedirectResponse
+    }
+
+    Document "1" --> "0..1" ParsedForm : produces
+    ParsedForm "1" --> "*" Response : collects
+    ParsedForm "1" --> "0..1" ZipDatamap : packages
+    ParsedForm "1" --> "0..1" QuotaSetting : configures
+    ParsedForm "1" --> "0..1" RoutingConfig : routes
+    QuotaSetting "1" --> "*" QuotaCell : contains
+
+    DocumentService --> Document : manages
+    DocumentService --> AIParserService : delegates
+    AIParserService --> ParsedForm : creates
+    FormService --> ParsedForm : reads
+    FormService --> Response : creates
+    PackageService --> ZipDatamap : compiles
+    PaymentService --> ZipDatamap : authorizes
+    QuotaService --> QuotaSetting : manages
+    QuotaService --> QuotaCell : updates
+    RoutingService --> RoutingConfig : manages
+```
+
+| 열거형(Enum) | 값 | 설명 |
+|---|---|---|
+| `FileType` | HWP, PDF, WORD | 지원 문서 파일 형식 |
+| `DocumentStatus` | PENDING, PARSING, COMPLETED, FAILED | 문서 처리 상태 |
+| `QuotaStatus` | ACTIVE, FULL, SCREENOUT | 응답자 쿼터 상태 |
+| `RoutingStatus` | SUCCESS, SCREENOUT, QUOTAFULL, PENDING | 패널 라우팅 결과 상태 |
+| `Gender` | M, F, OTHER | 쿼터 성별 구분 |
 
 ### 6.3 Detailed Interaction Models (상세 시퀀스 다이어그램)
 
