@@ -1,10 +1,10 @@
-# Software Requirements Specification (SRS)
+# Software Requirements Specification (SRS) - V0.2 (무료 인프라 및 MVP 1인 개발 최적화)
 
 **Document ID:** SRS-001  
-**Revision:** 1.1 (C-TEC 스택 전환 적용)  
+**Revision:** 1.2 (무료 인프라 및 MVP 최적화)  
 **Date:** 2026-04-21  
 **Standard:** ISO/IEC/IEEE 29148:2018  
-**Tech Stack:** Next.js App Router + Vercel + Supabase + Gemini API (C-TEC-001~007)  
+**Tech Stack:** Next.js App Router + Vercel Hobby + Supabase Free + Gemini API (C-TEC-001~007)  
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### 1.1 Purpose
 
-본 SRS(Software Requirements Specification)는 **AI 기반 문서(HWP/Word/PDF) → 설문 변환 및 턴키 운영 플랫폼**(이하 "시스템")에 대한 소프트웨어 요구사항을 정의한다.
+본 SRS(Software Requirements Specification)는 **AI 기반 문서(HWPX/Word/PDF) → 설문 변환 및 턴키 운영 플랫폼**(이하 "시스템")에 대한 소프트웨어 요구사항을 정의한다.
 
 본 문서가 해결하고자 하는 핵심 문제는 다음과 같다:
 
@@ -30,7 +30,7 @@
 
 | 항목 | 설명 |
 |---|---|
-| IS-01 | HWP/Word/PDF 비정형 문서 파싱 및 설문 폼 자동 생성 |
+| IS-01 | HWPX(개방형 한글 포맷), Word(.docx), PDF 텍스트 기반 파싱 및 설문 폼 자동 생성 |
 | IS-02 | 모바일/웹 기반 설문 응답 수집 |
 | IS-03 | 데이터맵/코드북/변수가이드/응답 원본 엑셀 4종 ZIP 패키지 자동 생성 및 다운로드 |
 | IS-04 | PG사 결제 연동(Paywall) 기반 유료 산출물 판매 |
@@ -43,19 +43,20 @@
 
 | 항목 | 설명 |
 |---|---|
-| OS-01 | 설문 패널(앱테크) 자체 구축 사업 진출 |
-| OS-02 | 브랜치(방향 분기형) 에디터 고도화 |
-| OS-03 | 화려한 에디터 템플릿 / 폰트 커스터마이징 |
-| OS-04 | 문서 내 이미지/수식 파싱 (V1.0 제외) |
-| OS-05 | CSAP 인증 프라이빗망 구축 (향후 엔터프라이즈 로드맵) |
+| OS-01 | 구형 바이너리 HWP 비정형 문서 파싱 (V2.0으로 연기) |
+| OS-02 | 설문 패널(앱테크) 자체 구축 사업 진출 |
+| OS-03 | 브랜치(방향 분기형) 에디터 고도화 |
+| OS-04 | 화려한 에디터 템플릿 / 폰트 커스터마이징 |
+| OS-05 | 문서 내 이미지/수식 파싱 (V1.0 제외) |
+| OS-06 | CSAP 인증 프라이빗망 구축 (향후 엔터프라이즈 로드맵) |
 
 #### 1.2.3 Constraints (제약사항)
 
 | ID | 유형 | 제약사항 |
 |---|---|---|
-| CON-01 | 기술 | HWP 문서 내부 복잡한 표/수식 파싱 시 AI 정밀도 한계 존재; 정형 텍스트 기반 파싱에 한정 |
-| CON-02 | 비용 | 단건 파싱 원가 상한 20원(KRW); MVP 월간 인프라 총 예산 무료~최대 100,000원(KRW) 한도 |
-| CON-03 | 운영 | 무료 계정 일일 파싱 횟수 3회 제한(Rate Limit) — ADR-02 |
+| CON-01 | 기술 | HWPX(.hwpx) 기반 정형 텍스트 파싱에 한정; HWP 파일 업로드 시 한컴오피스에서 'HWPX로 저장' 기능을 사용하도록 안내하는 사용자 가이드 UX 필수 포함 |
+| CON-02 | 비용 | 단건 파싱 원가 상한 20원(KRW); MVP 월간 인프라 총 예산 완전 무료(0원) 지향 |
+| CON-03 | 운영 | 무료 계정 일일 파싱 횟수 3회 제한(Rate Limit); Supabase DB 기반 IP 체크 또는 유저별 카운트로 제어(별도 캐시 서버 불가) — ADR-02 |
 | CON-04 | 보안 | 원본 문서/파편 데이터 작업 종료 후 24시간 이내 영구 삭제(Zero-Retention) |
 | CON-05 | 인프라 | Vercel AI SDK + Google Gemini API를 사용하며, 환경 변수 설정만으로 모델 교체가 가능하도록 SDK 표준 인터페이스를 준수한다 |
 | C-TEC-001 | 아키텍처 | 모든 서비스는 **Next.js (App Router)** 기반의 단일 풀스택 프레임워크로 구현한다. 프론트엔드와 백엔드를 별도 분리하지 않는다. |
@@ -75,9 +76,9 @@
 | ASM-03 | Supabase 서비스(PostgreSQL + Storage)의 가용성은 99.9% 이상이다 |
 | ASM-04 | 외부 패널사(Cint/Toluna)의 Redirect 규격은 표준 HTTP 302 방식이다 |
 | ASM-05 | Google Gemini API는 안정적으로 제공되며, Free Tier 쿼터가 MVP 초기 트래픽에 충분하다 |
-| ASM-06 | Vercel Pro 플랜($20/월)의 Serverless Function 타임아웃(60초)과 동시 실행 수는 MVP 운영에 충분하다 |
+| ASM-06 | Vercel Hobby(무료) 플랜의 Serverless Function 타임아웃(10초) 제약 내에서 파싱 파이프라인 처리가 가능함을 가정한다 |
 | ASM-07 | Supabase Free 티어(500MB DB, 1GB Storage, 50,000 MAU)는 MVP 초기 운영에 충분하다 |
-| ASM-08 | Vercel KV Free 티어(일일 3,000 요청)는 MVP 쿼터 카운트 연산에 충분하다 |
+| ASM-08 | 모든 상태 관리와 쿼터 카운트 연산은 Supabase PostgreSQL(Free)의 트랜잭션 또는 원자적 연산에 전적으로 의존한다 |
 
 ### 1.3 Definitions, Acronyms, Abbreviations
 
@@ -97,7 +98,6 @@
 | **Vercel AI SDK** | Vercel이 제공하는 LLM 통합 SDK; `generateObject()`, `streamText()` 등 표준 인터페이스로 다양한 AI 모델을 호출 |
 | **Prisma** | Node.js/TypeScript용 ORM(Object-Relational Mapping); 스키마 정의 → 타입 안전 DB 쿼리 생성 |
 | **Supabase** | PostgreSQL 기반 오픈소스 BaaS(Backend-as-a-Service); DB, Storage, Auth, Edge Functions 통합 제공 |
-| **Vercel KV** | Vercel 플랫폼의 Redis 호환 키-밸류 저장소; 원자적 INCR 연산 지원 |
 | **Vercel Cron** | Vercel 플랫폼의 예약 작업 실행 기능; `vercel.json`에서 cron 표현식으로 설정 |
 | **shadcn/ui** | Tailwind CSS 기반의 재사용 가능한 React UI 컴포넌트 라이브러리 |
 | **페르소나(Persona)** | 제품의 목표 사용자 유형을 대표하는 가상 인물 프로필 |
@@ -143,8 +143,8 @@
 
 **ADR-02 Rate Limit 결정 (PRD §7 리스크 대응 기반):**
 - 무료 계정 일일 파싱 횟수를 3회로 제한하여 AI 파싱 서버 비용 통제
-- 캐시 서버 구축을 통해 동일 문서 해시(hash) 기반 중복 요청 비용 절감
-- 업로드 전 표/이미지/수식 정확도 한계에 대한 모달 가이드 사전 노출
+- Supabase DB 기반 IP 체크 또는 유저별 카운트로 제어 (별도 캐시 서버 불가)
+- 업로드 전 HWPX 전환 안내 모달 및 표/이미지 정확도 한계 가이드 사전 노출
 
 ---
 
@@ -167,7 +167,7 @@
 
 ### 3.1 External Systems
 
-> **스택 전환 반영:** C-TEC-001~007 기술 스택에 따라 외부 시스템 연동을 전면 재정의했다. AWS S3 → Supabase Storage, Redis → Vercel KV, OCR Engine → Gemini API 멀티모달, DataDog/PagerDuty/Amplitude → Vercel Analytics + Slack + DB 직접 집계로 전환되었다.
+> **스택 전환 반영:** C-TEC-001~007 기술 스택에 따라 외부 시스템 연동을 전면 재정의했다. AWS S3 → Supabase Storage, Redis → Supabase PostgreSQL (Atomic Update), OCR Engine → Gemini API 멀티모달, DataDog/PagerDuty/Amplitude → Vercel Analytics + Slack + DB 직접 집계로 전환되었다.
 
 | ID | 외부 시스템 | 연동 방식 | 용도 | 장애 시 임시 우회 전략 (Fallback) |
 |---|---|---|---|---|
@@ -177,10 +177,9 @@
 | EXT-04 | Vercel Analytics + Logs | Vercel 내장 분석 | 파싱 파이프라인 모니터링, 전체 시스템 성능 추적 | 내부 DB `AUDIT_LOG` 테이블에 이벤트를 Structured JSON으로 직접 기록. Vercel 복구 시 로그 기반 역추적. |
 | EXT-05 | Slack | Webhook (Route Handler에서 직접 호출) | 쿼터 100% 도달 알림, 결제 실패 알림 통합 | 내부 DB `AUDIT_LOG`에 알림 이벤트 기록 + 대시보드 UI 배너 알림 표시. 운영자 이메일 알림 대체 발송. |
 | EXT-06 | GA4 | Next.js `<Script>` + utm 파라미터 / 퍼널 분석 | 워터마크 유입 대비 가입 전환율 측정 | 워터마크 클릭 이벤트를 내부 DB `AUDIT_LOG`에 `action=WATERMARK_CLICK`으로 기록. UTM 파라미터 로그 보존. |
-| EXT-07 | Vercel KV | Vercel KV SDK (Redis 호환) | 쿼터 카운트 동시성 제어, 캐시, Rate Limit 카운터 | Prisma 트랜잭션(`SELECT FOR UPDATE`)으로 DB 직접 원자적 업데이트 전환. 성능 저하 허용하되 무결성 유지. KV 복구 시 DB→KV 동기화. |
-| EXT-08 | Google Gemini API | Vercel AI SDK (`generateObject()`, `streamObject()`) | 문서 파싱: 텍스트 추출 + 설문 구조 분석 + structure_schema JSON 생성 | JS 텍스트 추출 라이브러리(`pdf-parse`, `mammoth`, `hwp.js`)로 Fallback 파싱 적용. 정밀도는 저하되나 기본 텍스트 추출 가능. 사용자에게 "간이 모드로 파싱됨" 안내 표시. |
-| EXT-09 | Supabase PostgreSQL | Prisma ORM (개발: SQLite, 배포: PostgreSQL) | 전체 데이터 영속화(엔터티 저장, 감사 로그, KPI 이벤트 집계) | SQLite 로컬 개발 환경으로 페일오버. Supabase 복구 시 데이터 동기화. |
-| EXT-10 | Vercel Cron | `vercel.json` cron 설정 | Zero-Retention 24시간 삭제 스케줄러 | 수동 삭제 스크립트(npm script) 실행으로 대체. 복구 시 자동 스케줄 재개. |
+| EXT-07 | Google Gemini API | Vercel AI SDK (`generateObject()`, `streamObject()`) | 문서 파싱: 텍스트 추출 + 설문 구조 분석 + structure_schema JSON 생성 | JS 텍스트 추출 라이브러리(`pdf-parse`, `mammoth`, `hwp.js`)로 Fallback 파싱 적용. 정밀도는 저하되나 기본 텍스트 추출 가능. |
+| EXT-08 | Supabase PostgreSQL | Prisma ORM + RPC (PL/pgSQL) | 전체 데이터 영속화 및 **RPC/Atomic Update를 통한 쿼터 동시성 제어** | SQLite 로컬 개발 환경으로 페일오버. Supabase 복구 시 데이터 동기화. |
+| EXT-09 | Vercel Cron | `vercel.json` cron 설정 | Zero-Retention 24시간 삭제 스케줄러 | 수동 삭제 스크립트(npm script) 실행으로 대체. 복구 시 자동 스케줄 재개. |
 
 ### 3.2 Client Applications
 
@@ -299,7 +298,7 @@ flowchart TB
             subgraph ServiceLib["lib/services/ (비즈니스 로직)"]
                 ParserModule["parser.ts\nVercel AI SDK + Gemini 파싱"]
                 PackageModule["package.ts\nJSZip + exceljs 컴파일"]
-                QuotaModule["quota.ts\nVercel KV 원자적 카운트"]
+                QuotaModule["quota.ts\nSupabase RPC/Atomic 카운트"]
             end
 
             Middleware["middleware.ts\n인증·Rate Limit·라우팅"]
@@ -307,7 +306,6 @@ flowchart TB
 
         VercelAnalytics["Vercel Analytics + Logs"]
         VercelCron["Vercel Cron Jobs\nZero-Retention 스케줄러"]
-        VercelKV["Vercel KV\n(Redis 호환 카운터)"]
     end
 
     subgraph Supabase["Supabase (C-TEC-003)"]
@@ -345,7 +343,6 @@ flowchart TB
     PaymentHandler --> DB
 
     QuotaHandler --> QuotaModule
-    QuotaModule --> VercelKV
     QuotaModule --> DB
     QuotaModule --> Slack
 
@@ -397,7 +394,7 @@ sequenceDiagram
         Web-->>User: 에러 모달 표시 (2초 이내)
     else 유효한 파일
         Handler->>DB: DOCUMENT 레코드 생성 (parsed_success=false)
-        Handler->>Handler: JS 라이브러리로 텍스트 전처리 (pdf-parse/mammoth/hwp.js)
+        Handler->>Handler: jszip(HWPX) / pdf-parse / mammoth 라이브러리로 전처리
         Handler->>Gemini: generateObject() — 구조화 파싱 요청
         Gemini-->>Handler: structure_schema (JSON) 반환
         Handler->>DB: PARSED_FORM 레코드 생성
@@ -450,15 +447,13 @@ sequenceDiagram
     actor Admin as 유팀장(운영자)
     participant Web as 웹 대시보드 (Next.js)
     participant Handler as Route Handler (/api/v1/quotas)
-    participant KV as Vercel KV
     participant DB as Prisma DB (Supabase PostgreSQL)
     participant Panel as 패널사(Cint/Toluna)
     participant Slack as Slack Webhook
 
     Admin->>Web: 교차 쿼터 목표치 설정 (엑셀 업로드)
     Web->>Handler: POST /api/v1/quotas
-    Handler->>DB: 쿼터 설정 저장
-    Handler->>KV: 쿼터 카운트 초기화
+    Handler->>DB: 쿼터 설정 저장 및 카운트 초기화
     Handler-->>Web: 쿼터 설정 완료
 
     Admin->>Web: 포스트백 링크 입력 (성공/스크린아웃/쿼터풀)
@@ -467,17 +462,16 @@ sequenceDiagram
     Handler-->>Web: 라우팅 설정 완료
 
     PanelUser->>Handler: 설문 접속
-    Handler->>KV: 현재 쿼터 카운트 조회
+    Handler->>DB: 현재 쿼터 카운트 조회 및 원자적 업데이트 (Atomic Update/RPC)
     
     alt 쿼터 미도달
-        KV-->>Handler: 잔여 쿼터 있음
+        DB-->>Handler: 잔여 쿼터 있음
         Handler-->>PanelUser: 설문 폼 렌더링
         PanelUser->>Handler: 설문 응답 제출
-        Handler->>KV: 쿼터 카운트 원자적 증가 (INCR)
-        Handler->>DB: RESPONSE 레코드 저장
+        Handler->>DB: RESPONSE 레코드 저장 및 원자적 카운트 증가
         Handler->>Panel: HTTP 302 Redirect (성공 URL)
     else 쿼터 도달(Over-quota)
-        KV-->>Handler: 쿼터 FULL
+        DB-->>Handler: 쿼터 FULL
         Handler->>Panel: HTTP 302 Redirect (쿼터풀 URL)
         Handler->>Slack: 쿼터 100% 도달 Webhook 전송
         Slack->>Admin: Slack Alert 발송
@@ -499,13 +493,14 @@ sequenceDiagram
 
 | ID | 요구사항 | Source | Priority | Acceptance Criteria |
 |---|---|---|---|---|
-| REQ-FUNC-001 | 시스템은 HWP, Word(.docx), PDF 형식의 문서 파일 업로드를 지원해야 한다. | Story 1 | Must | **Given** 사용자가 대시보드에 접속했을 때, **When** HWP/Word/PDF 파일을 업로드 영역에 드래그하거나 파일 선택을 수행하면, **Then** 시스템은 해당 파일을 수신하고 파싱 파이프라인을 개시해야 한다. |
+| REQ-FUNC-001 | 시스템은 HWPX, Word(.docx), PDF 형식의 문서 파일 업로드를 지원해야 한다. | Story 1 | Must | **Given** 사용자가 대시보드에 접속했을 때, **When** HWPX/Word/PDF 파일을 업로드 영역에 드래그하거나 파일 선택을 수행하면, **Then** 시스템은 해당 파일을 수신하고 파싱 파이프라인을 개시해야 한다. |
 | REQ-FUNC-002 | 시스템은 업로드된 문서에서 텍스트 기반 설문 문항을 자동 추출하여 설문 폼(PARSED_FORM)을 생성해야 한다. | Story 1 / F1 | Must | **Given** 50문항 이내(텍스트 5MB 이하)의 유효한 HWP/Word/PDF 파일이 업로드되었을 때, **When** AI Document Parser가 파싱을 수행하면, **Then** 설문 문항 구조(`structure_schema`)가 생성되고 PARSED_FORM 레코드가 DB에 저장되어야 한다. |
 | REQ-FUNC-003 | 시스템은 문서 파싱 및 모바일 웹 렌더링을 10초(10,000ms) 이내에 완료해야 한다. | Story 1 AC-1 | Must | **Given** 50문항 이내의 유효한 문서 파일이 주어졌을 때, **When** [자동 폼 변환] 버튼이 클릭되면, **Then** 파싱부터 모바일 웹 렌더링까지 전체 처리가 10,000ms 이내에 완료되어야 한다. |
 | REQ-FUNC-004 | 시스템은 파싱 결과의 데이터 손실률을 1% 미만으로 보장해야 한다. | Story 1 AC-2 | Must | **Given** 변환된 설문 폼이 생성되었을 때, **When** 원본 문서의 항목 수와 DB 스키마(`structure_schema`)를 연산 비교하면, **Then** 파싱 누락으로 인한 데이터 손실률이 1% 미만이어야 한다. |
 | REQ-FUNC-005 | 시스템은 유효하지 않은 파일(암호화, 손상, 지원 외 확장자) 업로드 시 2초 이내에 명확한 에러 메시지를 표시해야 한다. | Story 1 AC-4 | Must | **Given** 암호가 걸려있거나 손상된 파일, 또는 지원 외 확장자(.txt 등)의 파일이 업로드되었을 때, **When** 파싱을 시도하면, **Then** 2초 이내에 실패 사유가 포함된 에러 모달(HTTP 400)을 표시하고 DOCUMENT 상태를 `FAILED`로 기록해야 한다. |
-| REQ-FUNC-006 | 시스템은 문서 종류(PDF/Word/HWP)별 JS 텍스트 추출 라이브러리(`pdf-parse`, `mammoth`, `hwp.js`)로 전처리하고, Vercel AI SDK + Gemini API `generateObject()`로 구조화 파싱을 수행해야 한다. | C-TEC-005/006; F1 의존성 | Must | **Given** 각 문서 형식(PDF, Word, HWP)의 파일이 업로드되었을 때, **When** 파싱 파이프라인이 실행되면, **Then** 해당 문서 타입에 맞는 JS 라이브러리로 텍스트를 추출한 후 Gemini API로 구조화된 structure_schema를 생성해야 한다. |
+| REQ-FUNC-006 | 시스템은 문서 종류별(`pdf-parse`, `mammoth`, `jszip`) 전처리를 수행해야 하며, 특히 HWPX의 경우 `jszip`으로 압축 해제 후 `Contents/section0.xml`에서 텍스트 노드를 추출해야 한다. | C-TEC-005/006 | Must | **Given** HWPX/Word/PDF 파일이 업로드되었을 때, **When** 파싱이 시작되면, **Then** HWPX는 XML 파싱 방식을 적용하고 이후 Vercel AI SDK로 구조화된 JSON을 생성해야 한다. |
 | REQ-FUNC-007 | 시스템은 파싱 시 이미지/수식 요소가 포함된 경우 해당 요소를 건너뛰고 텍스트 기반 문항만 추출해야 한다. | F1 구현성; CON-01 | Must | **Given** 이미지 또는 수식이 포함된 문서가 업로드되었을 때, **When** 파싱을 수행하면, **Then** 이미지/수식 요소는 건너뛰고 텍스트 기반 문항만 정상 추출되어야 하며, 건너뛴 요소에 대한 알림 메시지를 사용자에게 제공해야 한다. |
+| REQ-FUNC-031 | 시스템은 구형 HWP 확장자 업로드 시 "문서를 HWPX로 다른 이름으로 저장한 후 업로드해 주세요"라는 안내 모달이 1초 이내에 뜨도록 해야 한다. | F1 (신규) | Must | **Given** 사용자가 .hwp 파일을 업로드했을 때, **When** 파일 확장자 체크가 수행되면, **Then** 1초 이내에 안내 모달을 표시하고 업로드를 중단해야 한다. |
 
 #### 4.1.2 F2 — 데이터맵 컴파일러(ZIP 산출물 추출기) & Paywall
 
@@ -533,7 +528,7 @@ sequenceDiagram
 |---|---|---|---|---|
 | REQ-FUNC-018 | 시스템은 엑셀 파일 업로드 기반으로 교차 쿼터(성별×연령×지역) 목표치를 설정할 수 있는 노코드 UI를 제공해야 한다. | Story 3 / F3(PRD) | Should | **Given** 운영자가 쿼터 설정 화면에 접근했을 때, **When** 교차 쿼터 목표치가 포함된 엑셀 파일을 업로드하면, **Then** 시스템이 파일을 파싱하여 성별×연령×지역 교차 쿼터 설정을 자동 반영해야 한다. |
 | REQ-FUNC-019 | 시스템은 교차 쿼터 목표치 도달 시 초과 응답자(Over-quota)의 수용 오차율을 1% 이내로 제어해야 한다. | Story 3 AC-2 | Should | **Given** 교차 쿼터 목표치(예: 20대 여성 100명)에 이미 도달했을 때, **When** 목표 도달 이후 조건 합치 응답자가 진입하면, **Then** Over-quota 수용 오차율이 1% 이내여야 하며 즉시 '할당초과(Quota Full)' URL로 리다이렉션해야 한다. |
-| REQ-FUNC-020 | 시스템은 쿼터 카운트 연산 시 DB 데드락(Deadlock)을 방지해야 한다. | Story 3 AC-3 | Should | **Given** 동시 접속자가 1,000명을 초과하는 트래픽 스파이크 상황에서, **When** 쿼터 카운트 로직을 수행할 때, **Then** Vercel KV 기반 원자적(Atomic) INCR 연산을 사용하여 DB 데드락이 발생하지 않아야 한다. |
+| REQ-FUNC-020 | 시스템은 쿼터 카운트 연산 시 DB 데드락(Deadlock)을 방지해야 한다. | Story 3 AC-3 | Should | **Given** 동시 접속자가 발생하는 상황에서, **When** 쿼터 카운트 로직을 수행할 때, **Then** Supabase DB 단일 트랜잭션 및 RPC(Atomic Update) 활용하여 데드락 없이 연산해야 한다. |
 | REQ-FUNC-021 | 시스템은 쿼터 연산 레이턴시가 1초를 초과할 경우 Slack Webhook으로 경고(Alert)를 발송해야 한다. | Story 3 AC-3 | Should | **Given** 쿼터 카운트 연산이 수행 중일 때, **When** 연산 레이턴시가 1,000ms를 초과하면, **Then** AUDIT_LOG에 기록하고 Slack Webhook을 통해 운영자에게 경고(Alert)를 즉시 발송해야 한다. |
 | REQ-FUNC-022 | 시스템은 쿼터 100% 도달 시 Slack Alert를 발송해야 한다. | PRD NFR 모니터링 | Should | **Given** 특정 쿼터 셀이 목표치의 100%에 도달했을 때, **When** 시스템이 이를 감지하면, **Then** Slack Webhook을 통해 운영자에게 '쿼터 100% 도달' 알림을 즉시 발송해야 한다. |
 
@@ -566,9 +561,9 @@ sequenceDiagram
 
 | ID | 요구사항 | 측정 기준 | Source | Priority |
 |---|---|---|---|---|
-| REQ-NF-001 | 모바일 및 웹 설문 응답 패킷의 p95 응답 시간은 300ms 이하여야 한다. | p95 latency ≤ 300ms (동시 1,000명 기준) | PRD NFR 성능 | Must |
+| REQ-NF-001 | 모바일 및 웹 설문 응답 패킷의 p95 응답 시간은 1,000ms 이하여야 한다. | p95 latency ≤ 1,000ms (무료 티어 기준) | PRD NFR 성능 | Must |
 | REQ-NF-002 | 문서 파싱 완료 레이턴시는 15초 이하여야 한다. | 파싱 대기 시간 ≤ 15,000ms | PRD NFR 성능 | Must |
-| REQ-NF-003 | 폼 생성(파싱부터 렌더링까지) 소요 시간은 10초 이내여야 한다. | 전체 파이프라인 ≤ 10,000ms | PRD 목표 / Story 1 AC-1 | Must |
+| REQ-NF-003 | 폼 생성(파싱부터 렌더링까지) 소요 시간은 10초 이내여야 하며, 지연 시 로딩 스켈레톤 UI를 의무적으로 적용해야 한다. | 전체 파이프라인 ≤ 10,000ms (스켈레톤 UI 의무화) | PRD 목표 / Story 1 AC-1 | Must |
 | REQ-NF-004 | ZIP 패키지(4종 산출물) 생성 대기 시간은 5초 이내여야 한다. | 패키지 컴파일 ≤ 5,000ms | PRD 목표 | Must |
 | REQ-NF-005 | PG사 결제 모듈 프레임 팝업은 3초 이내에 완료되어야 한다. | 결제 UI 로드 ≤ 3,000ms | Story 2 AC-1 | Must |
 | REQ-NF-006 | 쿼터 카운트 연산 레이턴시는 1초 이하여야 한다 (정상 운영 기준). | 쿼터 연산 ≤ 1,000ms | Story 3 AC-3 | Should |
@@ -578,7 +573,7 @@ sequenceDiagram
 
 | ID | 요구사항 | 측정 기준 | Source | Priority |
 |---|---|---|---|---|
-| REQ-NF-008 | 시스템 SLA 가용률은 월 99.9% 이상이어야 한다. | 월간 다운타임 ≤ 43.8분 | PRD NFR 신뢰성 | Must |
+| REQ-NF-008 | 시스템 가용성은 Vercel 및 Supabase 무료 티어 서비스 제공자의 가용성 정책을 베스트 에포트(Best-effort)로 준수한다. | 제공자 가용성 정책 준수 | PRD NFR 신뢰성 | Must |
 | REQ-NF-009 | 파싱 및 운영 치명률(Critical Failure Rate)은 0.5% 이하여야 한다. | 치명적 오류 발생률 ≤ 0.5% | PRD NFR 신뢰성 | Must |
 | REQ-NF-010 | 업로드된 비정형 문서 대비 폼 파싱 완료율은 95% 이상을 유지해야 한다. | `form_id` 발급률 / `doc_id` 인입률 ≥ 95% | PRD 보조 KPI 1 | Must |
 | REQ-NF-011 | 데이터맵의 결측치(Missing Value) 처리 실패율은 0%여야 한다. | 결측치 처리 실패 건수 = 0 | Story 2 AC-2 | Must |
@@ -603,23 +598,22 @@ sequenceDiagram
 
 | 비용 항목 | 기존 PRD 기준 | 수정 후 MVP 기준 (C-TEC 스택) | 변경률 |
 |---|---|---|---|
-| 월간 인프라(서버) 예산 | 500 USD (≈ 680,000 KRW) | **무료 ~ 최대 100,000 KRW** (≈ 75 USD) | **▼ 85% 감축** |
+| 월간 인프라(서버) 예산 | 500 USD (≈ 680,000 KRW) | **완전 무료 (0 KRW)** | **▼ 100% 감축** |
 | 단건 파싱 원가 상한 | 20 KRW | 20 KRW (유지) | 변경 없음 |
 
 | 서비스 | 티어 | 월 예상 비용 | 비고 |
 |---|---|---|---|
-| Vercel | Pro ($20/월) | ~27,000 KRW | 60s 함수 타임아웃, 1TB 대역폭, Cron Jobs 포함 |
+| Vercel | Hobby (무료) | 0 KRW | 10s 함수 타임아웃, 100GB 대역폭 |
 | Supabase | Free | 0 KRW | 500MB DB, 1GB Storage, 50,000 MAU |
-| Vercel KV | Free (기본 포함) | 0 KRW | 3,000 req/day |
-| Google Gemini API | Free Tier / Pay-as-you-go | 0 ~ 30,000 KRW | 무료 쿼터 활용 후 종량제 |
+| Google Gemini API | Free Tier | 0 KRW | 무료 쿼터 범위 내 운영 |
 | 토스페이먼츠 | 건당 수수료 | 매출 연동 | 기본 사용료 없음 |
 | Slack / GA4 | Free | 0 KRW | |
-| **합계** | | **27,000 ~ 57,000 KRW** | **✅ 100,000 KRW 이내** |
+| **합계** | | **0 KRW** | **✅ 완전 무료** |
 
 | ID | 요구사항 | 측정 기준 | Source | Priority |
 |---|---|---|---|---|
 | REQ-NF-021 | 단건 문서 파싱 원가는 20원(KRW)을 초과하지 않아야 한다. | 파싱 1건당 비용 ≤ 20 KRW | PRD NFR 비용 | Must |
-| REQ-NF-022 | MVP 월간 인프라 총 예산은 무료~최대 100,000원(KRW)을 초과하지 않아야 한다. | 월 인프라 비용 ≤ 100,000 KRW | MVP 비용 재책정 | Must |
+| REQ-NF-022 | MVP 월간 인프라 총 예산은 완전 무료(0원, PG사 수수료 제외)를 원칙으로 한다. | 월 인프라 비용 = 0 KRW | MVP 비용 재책정 | Must |
 | REQ-NF-023 | 클라우드 예산 초과 시 자동 알람이 설정되어야 한다. | 알람 설정 완료 여부 = Yes | PRD NFR 비용 | Must |
 
 #### 4.2.5 운영/모니터링(Monitoring & Observability)
@@ -638,7 +632,7 @@ sequenceDiagram
 
 | ID | 요구사항 | 측정 기준 | Source | Priority |
 |---|---|---|---|---|
-| REQ-NF-029 | 시스템은 동시 접속자 1,000명 이상을 DB 데드락 없이 처리할 수 있어야 한다. | 동시 1,000명 부하 테스트 통과 | Story 3 AC-3 | Should |
+| REQ-NF-029 | 시스템은 동시 접속 50~100명 수준을 지연 없이 처리할 수 있어야 한다. | 동시 접속 50~100명 테스트 통과 | Story 3 AC-3 | Should |
 | REQ-NF-030 | 시스템은 Vercel Serverless 자동 스케일링을 활용하며, Stateless 설계를 준수해야 한다. | Vercel 자동 스케일링 활성화 여부 = Yes | C-TEC-007 | Should |
 
 #### 4.2.7 유지보수성(Maintainability)
@@ -680,16 +674,16 @@ sequenceDiagram
 
 | KPI/성능 지표 | PRD Section | NFR ID(s) | Test Case ID |
 |---|---|---|---|
-| p95 응답 시간 ≤ 300ms | PRD §5 성능 | REQ-NF-001 | TC-NF-001 |
+| p95 응답 시간 ≤ 1,000ms | PRD §5 성능 | REQ-NF-001 | TC-NF-001 |
 | 파싱 레이턴시 ≤ 15초 | PRD §5 성능 | REQ-NF-002 | TC-NF-002 |
-| 폼 생성 ≤ 10초 | PRD §1 목표 | REQ-NF-003 | TC-NF-003 |
+| 폼 생성 ≤ 10초 (스켈레톤 UI) | PRD §1 목표 | REQ-NF-003 | TC-NF-003 |
 | ZIP 생성 ≤ 5초 | PRD §1 목표 | REQ-NF-004 | TC-NF-004 |
-| SLA ≥ 99.9% | PRD §5 신뢰성 | REQ-NF-008 | TC-NF-008 |
+| 제공자 가용성 준수 (Best-effort) | PRD §5 신뢰성 | REQ-NF-008 | TC-NF-008 |
 | 치명률 ≤ 0.5% | PRD §5 신뢰성 | REQ-NF-009 | TC-NF-009 |
 | 파싱 완료율 ≥ 95% | PRD §1 보조 KPI 1 | REQ-NF-010, REQ-NF-034 | TC-NF-010 |
 | 결측치 실패율 = 0% | PRD §3 Story 2 AC-2 | REQ-NF-011 | TC-NF-011 |
 | 단건 원가 ≤ 20원 | PRD §5 비용 | REQ-NF-021 | TC-NF-021 |
-| 월간 인프라 ≤ 100,000 KRW | MVP 비용 재책정 | REQ-NF-022 | TC-NF-022 |
+| 월간 인프라 = 0 KRW | MVP 비용 재책정 | REQ-NF-022 | TC-NF-022 |
 | 북극성 KPI ≥ 월 10,000건 | PRD §1 북극성 KPI | REQ-NF-033 | TC-NF-033 |
 | 가입 전환율 ≥ 5% | PRD §1 보조 KPI 2 | REQ-NF-035 | TC-NF-035 |
 | PMF 전환율 ≥ 5% | PRD §8 실험 | REQ-NF-036 | TC-NF-036 |
@@ -884,7 +878,7 @@ erDiagram
         BOOLEAN payment_cleared
         VARCHAR pg_transaction_id
         INTEGER payment_amount
-        VARCHAR s3_download_url
+        VARCHAR download_url
         TIMESTAMP url_expires_at
         INTEGER download_count
         TIMESTAMP created_at
@@ -999,7 +993,7 @@ classDiagram
         -Boolean paymentCleared
         -String pgTransactionId
         -Integer paymentAmount
-        -String s3DownloadUrl
+        -String downloadUrl
         -Timestamp urlExpiresAt
         -Integer downloadCount
         +isDownloadable() Boolean
@@ -1125,11 +1119,9 @@ sequenceDiagram
     participant Web as 웹 대시보드
     participant API as API Server
     participant Auth as 인증/Rate Limit
-    participant Cache as Redis Cache
     participant Parser as AI Document Parser
-    participant OCR as OCR Engine
     participant DB as Database
-    participant Monitor as DataDog APM
+    participant Monitor as Vercel Analytics / Slack
 
     User->>Web: 문서 파일 선택
     Web->>Web: 클라이언트 측 파일 검증 (확장자, 크기)
@@ -1150,43 +1142,31 @@ sequenceDiagram
             API-->>Web: 400 Error (실패 사유 포함, 2초 이내)
             Web-->>User: 에러 모달 표시
         else 유효한 파일
-            API->>API: SHA-256 파일 해시 계산
-            API->>Cache: 해시 기반 캐시 조회
-            alt 캐시 히트
-                Cache-->>API: 캐시된 form_id 반환
-                API-->>Web: 200 OK (form_id)
-                Web-->>User: 기존 폼 미리보기 표시
-            else 캐시 미스
-                API->>DB: DOCUMENT 생성 (status=PARSING)
-                API->>Parser: 비동기 파싱 작업 요청
-                Parser->>Monitor: 파싱 시작 trace 전송
-                
-                alt HWP 문서
-                    Parser->>OCR: HWP 전용 텍스트 추출
-                else Word 문서
-                    Parser->>OCR: DOCX 전용 텍스트 추출
-                else PDF 문서
-                    Parser->>OCR: PDF 전용 OCR/텍스트 추출
-                end
-                
-                OCR-->>Parser: 추출 텍스트 반환
-                Parser->>Parser: AI 문항 구조 분석
-                Parser->>Parser: structure_schema (JSON) 생성
-                Parser->>Parser: 이미지/수식 요소 건너뛰기 및 목록화
-                
-                Parser->>DB: PARSED_FORM 생성 (structure_schema, watermark_url)
-                Parser->>DB: DOCUMENT 갱신 (parsed_success=true, status=COMPLETED)
-                Parser->>Cache: 파일 해시 → form_id 캐시 저장
-                Parser->>Monitor: 파싱 완료 trace (레이턴시 기록)
-                
-                alt 파싱 레이턴시 > 10초
-                    Monitor->>Monitor: 성능 경고 로그
-                end
-                
-                Parser-->>API: 파싱 완료 (form_id, question_count, skipped_elements)
-                API-->>Web: 200 OK (form_id, 10초 이내 응답)
-                Web-->>User: 설문 폼 미리보기 + 건너뛴 요소 알림
+            API->>DB: DOCUMENT 생성 (status=PARSING)
+            API->>Parser: 비동기 파싱 작업 요청
+            Parser->>Monitor: 파싱 시작 알림 전송
+            
+            alt HWPX 문서
+                Parser->>Parser: jszip 압축 해제 및 XML 파싱 (section0.xml)
+            else Word 문서
+                Parser->>Parser: mammoth 텍스트 추출
+            else PDF 문서
+                Parser->>Parser: pdf-parse 텍스트 추출
             end
+            
+            Parser->>Parser: AI 문항 구조 분석 및 structure_schema 생성
+            Parser->>Parser: 이미지/수식 요소 건너뛰기 및 목록화
+            
+            Parser->>DB: PARSED_FORM 생성 및 DOCUMENT 상태 갱신
+            Parser->>Monitor: 파싱 완료 알림 (레이턴시 기록)
+            
+            alt 파싱 레이턴시 > 10초
+                Monitor->>Monitor: 성능 경고 로그 (스켈레톤 UI 노출 연장)
+            end
+            
+            Parser-->>API: 파싱 완료 (form_id)
+            API-->>Web: 200 OK (form_id, 10초 이내 응답)
+            Web-->>User: 설문 폼 미리보기 + 건너뛴 요소 알림
         end
     end
 ```
@@ -1230,39 +1210,27 @@ sequenceDiagram
 sequenceDiagram
     actor PanelUser as 패널 응답자
     participant API as API Server
-    participant Redis as Redis Cache
-    participant DB as Database
-    participant Panel as 패널사
-    participant Monitor as DataDog
-    participant Slack as Slack
-
     PanelUser->>API: 설문 접속 (패널사 리다이렉트)
-    API->>Redis: 쿼터 그룹 카운트 원자적 조회 (WATCH)
+    API->>DB: 쿼터 그룹 카운트 조회 및 원자적 업데이트 (Atomic Update/RPC)
     
-    Note over API,Redis: Redis 기반 원자적 연산으로 DB 데드락 방지
+    Note over API,DB: Supabase DB 단일 트랜잭션으로 데드락 방지
     
     alt 쿼터 잔여 있음
-        Redis-->>API: current_count < target_count
+        DB-->>API: current_count < target_count
         API-->>PanelUser: 설문 폼 렌더링
         PanelUser->>API: 응답 제출
         
-        API->>Redis: INCR 쿼터 카운트 (원자적 증가)
-        Redis-->>API: 증가된 카운트 반환
-        
-        API->>DB: RESPONSE 저장 (quota_status=ACTIVE)
-        API->>DB: QUOTA_CELL.current_count 동기화
+        API->>DB: RESPONSE 저장 및 카운트 원자적 증가
         
         alt 카운트 == 목표치 (쿼터 100% 도달)
-            API->>Redis: is_full = true 설정
             API->>DB: QUOTA_CELL.is_full = true 갱신
-            API->>Monitor: 쿼터 100% 도달 이벤트
-            Monitor->>Slack: 쿼터 100% 도달 Alert 발송
+            API->>Monitor: 쿼터 100% 도달 알림 발송 (Slack)
         end
         
         API->>Panel: HTTP 302 Redirect → success_url
         
     else 쿼터 FULL (Over-quota)
-        Redis-->>API: current_count >= target_count
+        DB-->>API: current_count >= target_count
         API->>DB: RESPONSE 저장 (quota_status=FULL, routing_status=QUOTAFULL)
         API->>Panel: HTTP 302 Redirect → quotafull_url
         
@@ -1272,8 +1240,7 @@ sequenceDiagram
     end
 
     opt 쿼터 연산 레이턴시 > 1초
-        API->>Monitor: 쿼터 연산 레이턴시 초과 경고 전송
-        Monitor->>Monitor: Alert 생성 및 대시보드 기록
+        API->>Monitor: 쿼터 연산 레이턴시 초과 경고 (Slack)
     end
 ```
 
@@ -1347,8 +1314,7 @@ sequenceDiagram
     participant Web as 웹 대시보드 (폼 에디터)
     participant API as API Server
     participant DB as Database
-    participant Cache as Redis Cache
-    participant Monitor as DataDog APM
+    participant Monitor as Vercel Analytics / Slack
 
     Note over User,Monitor: 전제: AI 파싱이 완료되어 PARSED_FORM이 이미 생성된 상태
 
@@ -1397,8 +1363,7 @@ sequenceDiagram
         API->>DB: PARSED_FORM.structure_schema 갱신
         API->>DB: PARSED_FORM.question_count 재계산·갱신
         API->>DB: PARSED_FORM.updated_at 갱신
-        API->>Cache: form_id 캐시 무효화 (Invalidate)
-        API->>Monitor: 커스텀 빌드 완료 이벤트 전송 (변경 항목 수)
+        API->>Monitor: 커스텀 빌드 완료 이벤트 전송 (Slack)
         API-->>Web: 200 OK (갱신된 form_id, question_count)
         Web-->>User: "저장 완료" 확인 메시지 + 업데이트된 미리보기
     end
