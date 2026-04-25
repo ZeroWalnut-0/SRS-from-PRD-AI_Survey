@@ -4,7 +4,7 @@
 **원천 문서:** SRS-001 Rev 1.2 (SRS_v1.md)  
 **작성일:** 2026-04-21 (v1) / 2026-04-23 (v2 최신화)  
 **작성 방법론:** Contract-First → CQRS → TDD → NFR 순차 추출  
-**v2 변경사항:** Dashboard·Auth·Admin 도메인 추가, TEST-FORM·TEST-ADMIN 추가, 요약 통계 보정 (141 → 166개)  
+**v2 변경사항:** Dashboard·Auth·Admin 도메인 추가, TEST-FORM·TEST-ADMIN 추가, Step 5 UI/UX 컴포넌트 추가 (141 → 184개)  
 
 ---
 
@@ -14,8 +14,9 @@
 2. [Step 2. 로직·상태 변경 Task (Feature Layer — CQRS 분해)](#step-2-로직상태-변경-task-feature-layer--cqrs-분해)
 3. [Step 3. 테스트 Task (AC 기반 자동화 검증)](#step-3-테스트-task-ac-기반-자동화-검증)
 4. [Step 4. 비기능 제약(NFR) 및 인프라 Task](#step-4-비기능-제약nfr-및-인프라-task)
-5. [전체 태스크 의존성 맵 (Dependency Graph)](#전체-태스크-의존성-맵-dependency-graph)
-6. [전체 태스크 요약 통계](#전체-태스크-요약-통계)
+5. [Step 5. UI/UX 프론트엔드 태스크](#step-5--uiux-프론트엔드-태스크)
+6. [전체 태스크 의존성 맵 (Dependency Graph)](#전체-태스크-의존성-맵-dependency-graph)
+7. [전체 태스크 요약 통계](#전체-태스크-요약-통계)
 
 ---
 
@@ -86,60 +87,67 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-PARSE-001 | Document Parser | [UI] 문서 업로드 드래그 앤 드롭 영역 + 클라이언트 측 파일 검증(확장자, 크기) UI 구현 (shadcn/ui) | §4.1.1 REQ-FUNC-001 | MOCK-001 | M |
-| FE-PARSE-002 | Document Parser | [UI] 파싱 대기 로딩 스켈레톤 UI 구현 (10초 이상 시 연장 표시) | §4.2.1 REQ-NF-003 | FE-PARSE-001 | L |
-| FE-PARSE-003 | Document Parser | [UI] HWPX 전환 안내 모달 구현 (.hwp 확장자 감지 시 1초 이내 표시) | §4.1.1 REQ-FUNC-031 | FE-PARSE-001 | L |
-| FE-PARSE-004 | Document Parser | [UI] 업로드 전 표/이미지/수식 정확도 한계 안내 모달 + AI 최적화 템플릿 다운로드 링크 구현 | §4.1.6 REQ-FUNC-027 | FE-PARSE-001 | L |
-| FE-PARSE-005 | Document Parser | [UI] 파일 유효성 검증 실패 에러 모달 구현 (2초 이내 표시, 실패 사유 포함) | §4.1.1 REQ-FUNC-005 | FE-PARSE-001 | L |
-| FE-PARSE-006 | Document Parser | [UI] 파싱 완료 후 생성된 설문 폼 미리보기 화면 + 건너뛴 요소 알림 표시 | §4.1.1 REQ-FUNC-007 | MOCK-002 | M |
+| FE-PARSE-001 | Document Parser | [Client Logic] 문서 업로드 이벤트 처리 및 클라이언트 측 파일 검증 로직 연결 | §4.1.1 REQ-FUNC-001 | UI-010, MOCK-001 | M |
+| FE-PARSE-002 | Document Parser | [Client Logic] 파싱 대기 스켈레톤 상태 연동 및 폴링/타임아웃(10초) 처리 | §4.2.1 REQ-NF-003 | UI-011 | L |
+| FE-PARSE-003 | Document Parser | [Client Logic] HWPX 전환 안내 모달 트리거 상태 제어 (.hwp 확장자 감지 시) | §4.1.1 REQ-FUNC-031 | UI-010 | L |
+| FE-PARSE-004 | Document Parser | [Client Logic] 정확도 한계 안내 모달 표시 및 템플릿 다운로드 이벤트 연동 | §4.1.6 REQ-FUNC-027 | UI-010 | L |
+| FE-PARSE-005 | Document Parser | [Client Logic] 파일 검증 에러 상태 연동 및 에러 모달 트리거 | §4.1.1 REQ-FUNC-005 | UI-010 | L |
+| FE-PARSE-006 | Document Parser | [Client Logic] 파싱 결과 JSON 데이터 폼 미리보기 바인딩 및 상태 렌더링 | §4.1.1 REQ-FUNC-007 | UI-004, MOCK-002 | M |
+| FE-PARSE-007 | Document Parser | [Client Logic] AI 주치의 제안 Alert 데이터 수신 및 수락 시 자동 교정 로직 적용 | §4.1.1 REQ-FUNC-032 | UI-022, MOCK-002 | M |
+| FE-PARSE-008 | Document Parser | [Client Logic] 커스텀 에디터 모드 전역 상태 연동 및 인라인 AI 명령 전송 로직 | §4.1.1 REQ-FUNC-033 | UI-020, MOCK-002 | H |
+| FE-PARSE-009 | Document Parser | [Client Logic] 멀티턴 대화형 설문 설계 챗봇 API 연동 및 상태 업데이트 | §4.1.1 REQ-FUNC-034 | UI-002, MOCK-002 | H |
 | BE-PARSE-001 | Document Parser | [Command] 문서 파일 서버 측 검증 로직 구현 (확장자·크기·암호화·손상 체크) → DOCUMENT 레코드 생성 (status=FAILED 또는 PARSING) | §4.1.1 REQ-FUNC-001, 005 | DB-003, API-001 | M |
 | BE-PARSE-002 | Document Parser | [Command] HWPX 문서 전처리 구현: jszip 압축 해제 → section0.xml 텍스트 노드 추출 | §4.1.1 REQ-FUNC-006 | BE-PARSE-001 | H |
 | BE-PARSE-003 | Document Parser | [Command] Word(.docx) 문서 전처리 구현: mammoth 라이브러리 텍스트 추출 | §4.1.1 REQ-FUNC-006 | BE-PARSE-001 | M |
 | BE-PARSE-004 | Document Parser | [Command] PDF 문서 전처리 구현: pdf-parse 라이브러리 텍스트 추출 | §4.1.1 REQ-FUNC-006 | BE-PARSE-001 | M |
-| BE-PARSE-005 | Document Parser | [Command] Vercel AI SDK + Gemini API 연동: generateObject()로 structure_schema JSON 생성 + PARSED_FORM 레코드 저장 | §4.1.1 REQ-FUNC-002, §3.6.1 | BE-PARSE-002, BE-PARSE-003, BE-PARSE-004, DB-004 | H |
+| BE-PARSE-005 | Document Parser | [Command] Vercel AI SDK + Gemini API 연동: generateObject()로 structure_schema JSON 생성 및 AI 주치의(문항 논리 교정 가이드) 생성 + PARSED_FORM 레코드 저장 | §4.1.1 REQ-FUNC-002, §3.6.1 | BE-PARSE-002, BE-PARSE-003, BE-PARSE-004, DB-004 | H |
 | BE-PARSE-006 | Document Parser | [Command] 이미지/수식 요소 스킵 처리 및 skipped_elements 목록 기록 로직 구현 | §4.1.1 REQ-FUNC-007 | BE-PARSE-005 | M |
 | BE-PARSE-007 | Document Parser | [Command] 파싱 완료 후 DOCUMENT.parsed_success = true 갱신 및 DOCUMENT.status = COMPLETED 처리 | §3.6.1 | BE-PARSE-005 | L |
 | BE-PARSE-008 | Document Parser | [Query] GET /api/v1/documents/{doc_id}/status 파싱 상태 조회 Route Handler 구현 | §4.1.1 REQ-FUNC-004, §6.1 #2 | DB-003, API-002 | L |
 | BE-PARSE-009 | Document Parser | [Command] Gemini API Fallback: JS 텍스트 추출 라이브러리(pdf-parse, mammoth, hwp.js)로 대체 파싱 경로 구현 | §3.1 EXT-07 | BE-PARSE-005 | H |
 | BE-PARSE-010 | Document Parser | [Command] 파일 해시(SHA-256) 기반 캐시 조회: Supabase DB에서 동일 해시 파싱 결과 존재 시 재사용 | §4.1.6 REQ-FUNC-028 | BE-PARSE-001, DB-003 | M |
+| BE-PARSE-011 | Document Parser | [Command] AI 주치의 진단 로직: 파싱 완료된 JSON을 LLM으로 검수하여 편향성/오류 등 수정 가이드 Alert 객체 반환 | §4.1.1 REQ-FUNC-032 | BE-PARSE-005 | H |
+| BE-PARSE-012 | Document Parser | [Command] 대화형 챗봇 API 연동: Vercel AI SDK (streamText) 기반으로 사용자 대화에 맞춰 structure_schema 동적 갱신 | §4.1.1 REQ-FUNC-034 | BE-PARSE-005 | H |
 
 ### 2-B. Epic: Form Management (설문 폼 관리)
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-FORM-001 | Form Management | [UI] 폼 에디터 화면 구현: 문항 목록 표시, 드래그 앤 드롭 순서 변경 UI | §6.3.6 | MOCK-002 | H |
-| FE-FORM-002 | Form Management | [UI] 폼 에디터: 문항 유형 변경(단일선택→복수선택 등) + 보기 추가/삭제/수정 UI | §6.3.6 | FE-FORM-001 | H |
-| FE-FORM-003 | Form Management | [UI] 폼 에디터: 새 문항 수동 추가 입력 UI | §6.3.6 | FE-FORM-001 | M |
-| FE-FORM-004 | Form Management | [UI] 폼 에디터: 스킵 로직(조건부 분기) 설정 UI + 클라이언트 측 순환 참조 검증 | §6.3.6 | FE-FORM-001 | H |
-| FE-FORM-005 | Form Management | [UI] 폼 에디터: 실시간 모바일 미리보기 팝업 | §6.3.6 | FE-FORM-001 | M |
-| FE-FORM-006 | Form Management | [UI] 폼 배포 화면: 배포 버튼 + 공유 URL 및 QR코드 표시 | §6.3.6 | FE-FORM-001 | M |
-| FE-FORM-007 | Form Management | [UI] 모바일 웹 설문 응답 폼 렌더링 (반응형 Tailwind CSS, /app/(survey)/*) | §3.2 CLI-02, §6.3.2 | MOCK-002, MOCK-003 | H |
+| FE-FORM-001 | Form Management | [Client Logic] 폼 에디터 문항 배열 전역 상태 관리 및 순서 변경(D&D) 로직 연동 | §6.3.6 | UI-020, MOCK-002 | H |
+| FE-FORM-002 | Form Management | [Client Logic] 문항 유형 변경 이벤트 처리 및 객체 속성(보기 등) 동적 업데이트 | §6.3.6 | UI-021, FE-FORM-001 | H |
+| FE-FORM-003 | Form Management | [Client Logic] 새 문항 추가 로직 및 폼 스키마 전역 상태 동기화 | §6.3.6 | UI-021, FE-FORM-001 | M |
+| FE-FORM-004 | Form Management | [Client Logic] 스킵 로직(조건부 분기) 상태 저장 및 클라이언트 측 순환 참조 검증 | §6.3.6 | UI-023, FE-FORM-001 | H |
+| FE-FORM-005 | Form Management | [Client Logic] 모바일 미리보기 창 데이터 바인딩 및 실시간 렌더링 동기화 | §6.3.6 | UI-030, FE-FORM-001 | M |
+| FE-FORM-006 | Form Management | [Client Logic] 폼 배포 API 호출 및 배포 결과(URL, QR) 클라이언트 렌더링 | §6.3.6 | UI-020, FE-FORM-001 | M |
+| FE-FORM-007 | Form Management | [Client Logic] 모바일 설문 응답 폼 동적 렌더링 및 사용자 입력 상태(응답 데이터) 수집 로직 | §3.2 CLI-02, §6.3.2 | UI-030, MOCK-003 | H |
+| FE-FORM-008 | Form Management | [Client Logic] 의심 응답 데이터 패치 및 상태 복원(ACTIVE) API 연동 처리 | §4.1.8 REQ-FUNC-037 | UI-051, FE-FORM-007 | M |
 | BE-FORM-001 | Form Management | [Query] GET /api/v1/forms/{form_id} 설문 폼 조회 Route Handler 구현 (structure_schema + viral_watermark_url 반환) | §4.1.1 REQ-FUNC-006, §6.1 #3 | DB-004, API-003 | L |
 | BE-FORM-002 | Form Management | [Command] PUT /api/v1/forms/{form_id} 폼 수정(커스텀 빌드) Route Handler 구현: structure_schema 서버 측 유효성 검증 + DB 갱신 (question_count 재계산) | §6.3.6 | DB-004, API-005 | H |
 | BE-FORM-003 | Form Management | [Command] POST /api/v1/forms/{form_id}/publish 폼 배포 Route Handler 구현: status='PUBLISHED' 갱신 + 응답 수집용 고유 URL 생성 | §6.3.6 | DB-004, API-006 | M |
-| BE-FORM-004 | Form Management | [Command] POST /api/v1/forms/{form_id}/responses 설문 응답 제출 Route Handler 구현: RESPONSE 레코드 저장 (raw_record, user_agent, ip_hash) | §4.1.2 REQ-FUNC-008, §6.1 #4 | DB-005, API-004 | M |
+| BE-FORM-004 | Form Management | [Command] POST /api/v1/forms/{form_id}/responses 설문 응답 제출 Route Handler 구현: AI Data Bouncer를 통한 500ms 이내 실시간 불성실 응답(매크로/찍기) 무효 처리 후 RESPONSE 레코드 저장 (raw_record, user_agent, ip_hash) | §4.1.2 REQ-FUNC-008, §6.1 #4 | DB-005, API-004 | M |
 
 ### 2-C. Epic: DataMap Compiler & Paywall (ZIP 산출물 및 결제)
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-PAY-001 | DataMap & Paywall | [UI] 대시보드 '보고용 데이터 패키지 다운로드' 버튼 및 Paywall 팝업 UI 구현 | §4.1.2 REQ-FUNC-010 | MOCK-004 | M |
-| FE-PAY-002 | DataMap & Paywall | [UI] 결제 모듈 PG사(토스페이먼츠) JS SDK 프레임 팝업 연동 UI | §4.1.2 REQ-FUNC-010, §3.6.2 | FE-PAY-001 | H |
-| FE-PAY-003 | DataMap & Paywall | [UI] Paywall 팝업 내 모자이크 처리된 데이터맵 샘플 이미지 + 더미 스키마 엑셀 무료 다운로드 링크 표시 | §4.1.2 REQ-FUNC-015 | FE-PAY-001 | M |
-| FE-PAY-004 | DataMap & Paywall | [UI] 결제 실패 안내 메시지 UI + 결제 성공 후 ZIP 다운로드 시작 UI | §4.1.2 REQ-FUNC-013, §3.6.2 | FE-PAY-002 | L |
+| FE-PAY-001 | DataMap & Paywall | [Client Logic] 결제 대기 상태 관리 및 Paywall 모달 트리거 처리 | §4.1.2 REQ-FUNC-010 | UI-041, MOCK-004 | M |
+| FE-PAY-002 | DataMap & Paywall | [Client Logic] 토스페이먼츠 JS SDK 연동 및 결제 요청/콜백 상태 제어 | §4.1.2 REQ-FUNC-010, §3.6.2 | UI-041, FE-PAY-001 | H |
+| FE-PAY-003 | DataMap & Paywall | [Client Logic] 모자이크 이미지 및 더미 스키마 다운로드 이벤트 핸들러 | §4.1.2 REQ-FUNC-015 | UI-040, FE-PAY-001 | M |
+| FE-PAY-004 | DataMap & Paywall | [Client Logic] 결제 성공/실패 응답 상태에 따른 UI 분기 및 ZIP 다운로드 트리거 | §4.1.2 REQ-FUNC-013, §3.6.2 | UI-041, FE-PAY-002 | L |
 | BE-PAY-001 | DataMap & Paywall | [Command] POST /api/v1/packages/{form_id}/payment 결제 요청 Route Handler 구현: PG사 결제 세션 생성 및 결제 모듈 URL 반환 | §4.1.2 REQ-FUNC-010, §6.1 #5 | DB-006, API-007 | H |
 | BE-PAY-002 | DataMap & Paywall | [Command] POST /api/v1/payments/callback PG 결제 콜백 Route Handler 구현: payment_cleared 상태 갱신 + AUDIT_LOG KPI 이벤트 기록 | §4.1.2 REQ-FUNC-012, §6.1 #6 | DB-006, DB-010, API-008 | H |
-| BE-PAY-003 | DataMap & Paywall | [Command] ZIP 4종 산출물 컴파일 로직 구현: JSZip + exceljs 기반 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵 자동 생성 | §4.1.2 REQ-FUNC-008, 009 | DB-005, DB-006, BE-PAY-002 | H |
+| BE-PAY-003 | DataMap & Paywall | [Command] ZIP 5종 산출물 컴파일 로직 구현: JSZip + exceljs 기반 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵, 할당표, AI 내러티브 리포트 자동 생성 | §4.1.2 REQ-FUNC-008, 009 | DB-005, DB-006, BE-PAY-002 | H |
 | BE-PAY-004 | DataMap & Paywall | [Command] 생성된 ZIP 파일 Supabase Storage 업로드 + 서명 Download URL 발급 및 DB 저장 | §4.1.2 REQ-FUNC-011, §3.6.2 | BE-PAY-003 | M |
 | BE-PAY-005 | DataMap & Paywall | [Query] GET /api/v1/packages/{package_id}/download ZIP 다운로드 Route Handler 구현: 결제 상태 검증(payment_cleared=true) 후 서명 URL 반환, 미결제 시 403 차단 | §4.1.2 REQ-FUNC-011, 013, §6.1 #7 | DB-006, API-009, BE-PAY-002 | M |
 | BE-PAY-006 | DataMap & Paywall | [Command] 데이터맵 결측치(Missing Value) 검증 로직 구현: ZIP 컴파일 시 전체 응답자 레코드 결측치 0% 보장 | §4.1.2 REQ-FUNC-014 | BE-PAY-003 | H |
+| BE-PAY-007 | DataMap & Paywall | [Command] AI 내러티브 리포트 산출 로직 구현: 응답 통계 데이터를 Vercel AI SDK(generateText)로 분석하여 마크다운(.md) 요약 작성 | §4.1.2 REQ-FUNC-035 | BE-PAY-003 | H |
 
 ### 2-D. Epic: Watermark & Viral (워터마크 바이럴)
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-WM-001 | Watermark & Viral | [UI] 무료 사용자 설문 폼 하단 뷰포트 워터마크 배너 100% 렌더링 구현 | §4.1.3 REQ-FUNC-016 | FE-FORM-007 | M |
-| FE-WM-002 | Watermark & Viral | [UI] 워터마크 클릭 시 utm_source=watermark 포함 URL로 서비스 가입 페이지 랜딩 구현 | §4.1.3 REQ-FUNC-017 | FE-WM-001 | L |
+| FE-WM-001 | Watermark & Viral | [Client Logic] 뷰포트 내 워터마크 노출 조건 검증 및 렌더링 상태 제어 | §4.1.3 REQ-FUNC-016 | UI-031, FE-FORM-007 | M |
+| FE-WM-002 | Watermark & Viral | [Client Logic] 워터마크 클릭 이벤트 로깅 및 UTM 파라미터 포함 리다이렉션 | §4.1.3 REQ-FUNC-017 | UI-031, FE-WM-001 | L |
 | BE-WM-001 | Watermark & Viral | [Command] PARSED_FORM 생성 시 viral_watermark_url 자동 생성(utm_source=watermark 파라미터 포함) | §4.1.3 REQ-FUNC-017, §6.2.2 | BE-PARSE-005 | L |
 | BE-WM-002 | Watermark & Viral | [Command] 워터마크 클릭 이벤트 AUDIT_LOG 기록 (action=WATERMARK_CLICK) — GA4 장애 시 Fallback | §3.1 EXT-06 | DB-010 | L |
 
@@ -147,21 +155,23 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-QT-001 | Quota Management | [UI] 교차 쿼터 설정 화면: 엑셀 파일 업로드 + 성별×연령×지역 매트릭스 자동 반영 노코드 UI | §4.1.4 REQ-FUNC-018 | MOCK-006 | H |
-| FE-QT-002 | Quota Management | [UI] 쿼터 충족 상태 실시간 모니터링 대시보드 (셀별 진행률 시각화) | §4.1.4 REQ-FUNC-019, 022 | MOCK-006 | H |
-| FE-QT-003 | Quota Management | [UI] 쿼터 마감(QUOTAFULL) 안내 화면: 응답자에게 조사 참여 불가 안내 메시지 표시 | §4.1.4 REQ-FUNC-020 | FE-FORM-007 | M |
+| FE-QT-001 | Quota Management | [Client Logic] 교차 쿼터 엑셀 데이터 파싱 및 매트릭스 상태 바인딩 | §4.1.4 REQ-FUNC-018 | UI-052, MOCK-006 | H |
+| FE-QT-002 | Quota Management | [Client Logic] 쿼터 진행률 데이터 실시간 폴링 및 차트/게이지 데이터 매핑 | §4.1.4 REQ-FUNC-019, 022 | UI-052, MOCK-006 | H |
+| FE-QT-004 | Quota Management | [Client Logic] 자연어 프롬프트 API 호출 및 할당표 자동 생성 결과 상태 반영 | §4.1.4 REQ-FUNC-038 | UI-052, FE-QT-001 | M |
+| FE-QT-003 | Quota Management | [Client Logic] 쿼터 풀 상태 감지 시 진입 차단 및 안내 모달 렌더링 제어 | §4.1.4 REQ-FUNC-020 | UI-052, FE-FORM-007 | M |
 | BE-QT-001 | Quota Management | [Command] POST /api/v1/quotas 쿼터 설정 생성 Route Handler 구현: 엑셀 파일 파싱 → QUOTA_SETTING + QUOTA_CELL 레코드 일괄 생성 | §4.1.4 REQ-FUNC-018, §6.1 #8 | DB-007, DB-008, API-010 | H |
 | BE-QT-002 | Quota Management | [Query] GET /api/v1/quotas/{quota_id}/status 쿼터 상태 조회 Route Handler 구현 (셀별 target/current/is_full 반환) | §4.1.4 REQ-FUNC-019, §6.1 #9 | DB-008, API-011 | M |
 | BE-QT-003 | Quota Management | [Command] 응답 제출 시 쿼터 카운트 원자적 증가 로직 구현: Supabase RPC 호출 → Over-quota 시 즉시 QUOTAFULL 리다이렉션 (오차율 1% 이내) | §4.1.4 REQ-FUNC-019, 020 | DB-012, BE-FORM-004 | H |
 | BE-QT-004 | Quota Management | [Command] 쿼터 100% 도달 감지 시 QUOTA_CELL.is_full=true 갱신 + Slack Webhook 발송 | §4.1.4 REQ-FUNC-022 | BE-QT-003 | M |
 | BE-QT-005 | Quota Management | [Command] 쿼터 연산 레이턴시 > 1초 시 AUDIT_LOG 기록 + Slack Webhook 경고 발송 | §4.1.4 REQ-FUNC-021 | BE-QT-003, DB-010 | M |
+| BE-QT-006 | Quota Management | [Command] 자연어 기반 쿼터 자동 연산 API: 통계청 인구 데이터 비례 배분 로직(LLM JSON 반환)을 적용한 QUOTA_MATRIX 생성 | §4.1.4 REQ-FUNC-038 | API-010 | H |
 
 ### 2-F. Epic: Panel Routing (패널사 라우팅)
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-RT-001 | Panel Routing | [UI] 패널 연동 세팅 화면: 상태별 포스트백 링크(성공/스크린아웃/쿼터풀) 입력·관리 UI | §4.1.5 REQ-FUNC-023 | MOCK-007 | M |
-| FE-RT-002 | Panel Routing | [UI] 패널 리다이렉트 로딩 화면: 외부 사이트 이동 전 안내 메시지 + 로딩 스피너 구현 | §4.1.5 REQ-FUNC-024 | FE-RT-001 | L |
+| FE-RT-001 | Panel Routing | [Client Logic] 패널 연동 상태 폼 데이터 검증 및 포스트백 URL 저장 API 연동 | §4.1.5 REQ-FUNC-023 | UI-020, MOCK-007 | M |
+| FE-RT-002 | Panel Routing | [Client Logic] 리다이렉트 지연 시간(안내 메시지 표시) 상태 제어 및 외부 라우팅 실행 | §4.1.5 REQ-FUNC-024 | UI-030, FE-RT-001 | L |
 | BE-RT-001 | Panel Routing | [Command] POST /api/v1/routing/postback 포스트백 URL 등록 Route Handler 구현: ROUTING_CONFIG 레코드 생성/수정 | §4.1.5 REQ-FUNC-023, §6.1 #10 | DB-009, API-012 | M |
 | BE-RT-002 | Panel Routing | [Command] GET /api/v1/routing/redirect/{resp_id} 패널 리다이렉트 Route Handler 구현: 응답 상태(SUCCESS/SCREENOUT/QUOTAFULL)에 따른 HTTP 302 리다이렉트 | §4.1.5 REQ-FUNC-024, §6.1 #11 | DB-009, DB-005, API-013, BE-QT-003 | H |
 | BE-RT-003 | Panel Routing | [Command] 라우팅 실패 시 재시도 큐 등록(3회 재시도) + 3회 실패 시 Slack 알림 + 응답자 안내 페이지 렌더링 | §3.1 EXT-03 | BE-RT-002 | H |
@@ -170,7 +180,7 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-RL-001 | Rate Limit & Auth | [UI] 일일 파싱 한도 초과(429) 안내 화면 구현 | §4.1.6 REQ-FUNC-026 | FE-PARSE-001 | L |
+| FE-RL-001 | Rate Limit & Auth | [Client Logic] API 429 에러 코드 인터셉트 및 파싱 한도 초과 안내 모달 트리거 | §4.1.6 REQ-FUNC-026 | UI-003, FE-PARSE-001 | L |
 | BE-RL-001 | Rate Limit & Auth | [Command] middleware.ts 인증·Rate Limit 미들웨어 구현: Supabase DB 기반 무료 계정 일일 파싱 3회 제한 (IP 체크 또는 유저별 카운트) | §4.1.6 REQ-FUNC-026, §3.4 | DB-002, DB-010 | H |
 | BE-RL-002 | Rate Limit & Auth | [Command] RBAC(역할 기반 접근 제어) 미들웨어 구현: 사용자 권한 분리 (일반/유료/운영자) | §4.2.3 REQ-NF-019 | DB-002 | H |
 
@@ -185,9 +195,9 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-DASH-001 | Dashboard | [UI] 설문 목록 대시보드: 내 설문 카드 목록 + 상태 필터링 + 검색 기능 구현 | §6.3.5 | MOCK-002 | M |
-| FE-DASH-002 | Dashboard | [UI] 기본 통계 시각화: 응답 수 추이 차트 + 완료율 표시 (Recharts/Chart.js) | §4.2.8 REQ-NF-035 | FE-DASH-001 | M |
-| FE-DASH-003 | Dashboard | [UI] 응답 원본 데이터 테이블: 페이지네이션 + 정렬 + CSV 내보내기 기능 | §4.2.8 REQ-NF-036 | FE-DASH-001 | M |
+| FE-DASH-001 | Dashboard | [Client Logic] 설문 목록 API 연동 및 클라이언트 측 상태 필터링/검색 로직 | §6.3.5 | UI-050, MOCK-002 | M |
+| FE-DASH-002 | Dashboard | [Client Logic] 응답 수 및 완료율 집계 데이터 차트 라이브러리(Recharts) 바인딩 | §4.2.8 REQ-NF-035 | UI-053, FE-DASH-001 | M |
+| FE-DASH-003 | Dashboard | [Client Logic] 테이블 페이지네이션, 정렬 상태 관리 및 CSV 내보내기 다운로드 핸들러 | §4.2.8 REQ-NF-036 | UI-050, FE-DASH-001 | M |
 | BE-DASH-001 | Dashboard | [Query] 설문별 응답 통계 집계 Route Handler: 일별/주별 응답 수, 완료율, 평균 소요 시간 등 | §4.2.8 REQ-NF-035 | DB-005, DB-004 | M |
 | BE-DASH-002 | Dashboard | [Query] 사용자별 대시보드 데이터 조회: 내 설문 목록 + 각 설문 요약 정보 반환 | §6.3.5 | DB-004, DB-002 | M |
 
@@ -195,9 +205,9 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-AUTH-001 | Authentication | [UI] 로그인/회원가입 화면: Supabase Auth 이메일 기반 인증 폼 + 소셜 로그인 버튼 구현 | §4.2.3 REQ-NF-018 | NFR-INFRA-004 | M |
-| FE-AUTH-002 | Authentication | [UI] 프로필 설정 화면: 사용자 정보 수정 + 비밀번호 변경 + 계정 삭제 기능 | §4.2.3 REQ-NF-018 | FE-AUTH-001 | M |
-| FE-AUTH-003 | Authentication | [UI] Auth Guard HOC/미들웨어: 비인증 사용자 자동 리다이렉트 + 세션 만료 안내 모달 | §4.2.3 REQ-NF-019 | FE-AUTH-001 | M |
+| FE-AUTH-001 | Authentication | [Client Logic] Supabase Auth SDK 연동 및 이메일/소셜 로그인/가입 상태 관리 | §4.2.3 REQ-NF-018 | UI-050, NFR-INFRA-004 | M |
+| FE-AUTH-002 | Authentication | [Client Logic] 프로필/비밀번호 수정 폼 검증 및 계정 삭제 API 연동 | §4.2.3 REQ-NF-018 | UI-050, FE-AUTH-001 | M |
+| FE-AUTH-003 | Authentication | [Client Logic] Auth Guard 미들웨어 상태 연동 및 세션 만료 시 리다이렉션 제어 | §4.2.3 REQ-NF-019 | UI-002, FE-AUTH-001 | M |
 | BE-AUTH-001 | Authentication | [Command] Supabase Auth 통합: 이메일 가입/로그인 서버 측 검증 + JWT 토큰 발급/갱신 처리 | §4.2.3 REQ-NF-018, §3.1 EXT-08 | NFR-INFRA-004 | M |
 | BE-AUTH-002 | Authentication | [Command] 사용자 세션 핸들러: 서버 컴포넌트/미들웨어에서 Supabase 세션 검증 + 세션 갱신 로직 구현 | §4.2.3 REQ-NF-019 | BE-AUTH-001, DB-002 | M |
 
@@ -205,8 +215,8 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| FE-ADMIN-001 | Admin | [UI] 관리자 대시보드 레이아웃: /app/(admin)/ 라우트 구조 + 사이드바 네비게이션 구현 | §4.2.8 REQ-NF-033 | NFR-INFRA-001, BE-RL-002 | M |
-| FE-ADMIN-002 | Admin | [UI] 관리자 통계 화면: 전체 사용자 수, 파싱 건수, 결제 현황 등 KPI 카드 + 트렌드 차트 | §4.2.8 REQ-NF-037 | FE-ADMIN-001, API-016 | M |
+| FE-ADMIN-001 | Admin | [Client Logic] 관리자 라우트 접근 권한 검증 및 네비게이션 전역 상태 동기화 | §4.2.8 REQ-NF-033 | UI-050, BE-RL-002 | M |
+| FE-ADMIN-002 | Admin | [Client Logic] 전체 통계 API 연동 및 KPI 대시보드 데이터 바인딩 | §4.2.8 REQ-NF-037 | UI-053, API-016 | M |
 | BE-ADMIN-001 | Admin | [Query] 관리자 통계 집계 로직: 전체 서비스 KPI 데이터 수집 및 가공 (Prisma groupBy 활용) | §4.2.8 REQ-NF-033 | DB-010, BE-RL-002 | M |
 
 ---
@@ -234,7 +244,7 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| TEST-PAY-001 | DataMap & Paywall | [Test] 조사 종료 후 ZIP 4종 산출물(응답 원본 엑셀, 변수가이드, 코드북, 데이터맵) 정상 생성 검증 테스트 (TC-FUNC-008) | §4.1.2 REQ-FUNC-008 | BE-PAY-003 | H |
+| TEST-PAY-001 | DataMap & Paywall | [Test] 조사 종료 후 ZIP 5종 산출물(응답 원본 엑셀, 변수가이드, 코드북, 데이터맵, 할당표, AI 내러티브 리포트) 정상 생성 검증 테스트 (TC-FUNC-008) | §4.1.2 REQ-FUNC-008 | BE-PAY-003 | H |
 | TEST-PAY-002 | DataMap & Paywall | [Test] ZIP 패키지 생성 ≤ 5초 성능 검증 테스트 (TC-FUNC-009, TC-NF-004) | §4.1.2 REQ-FUNC-009, §4.2.1 REQ-NF-004 | BE-PAY-003 | M |
 | TEST-PAY-003 | DataMap & Paywall | [Test] PG 결제 모듈 프레임 팝업 3초 이내 로드 검증 테스트 (TC-FUNC-010, TC-NF-005) | §4.1.2 REQ-FUNC-010, §4.2.1 REQ-NF-005 | FE-PAY-002, BE-PAY-001 | M |
 | TEST-PAY-004 | DataMap & Paywall | [Test] 결제 성공 콜백 수신 → payment_cleared=true 갱신 + 서명 URL 발급 정상 흐름 테스트 (TC-FUNC-011, TC-FUNC-012) | §4.1.2 REQ-FUNC-011, 012 | BE-PAY-002, BE-PAY-004 | M |
@@ -353,6 +363,45 @@
 
 ---
 
+## Step 5 — UI/UX 프론트엔드 태스크
+
+> **목적:** 백엔드 로직과 분리된 순수 프론트엔드 UI 컴포넌트 및 페이지 조립 태스크를 추출하여 디자인 시스템을 코드로 구현한다.
+
+### 5.1 공통 UI 인프라
+
+| Task ID | Epic | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 |
+|---|---|---|---|---|---|
+| **UI-001** | UI | shadcn/ui + Tailwind 디자인 시스템 토큰 적용 및 기반 환경 세팅 | NFR-INFRA | NFR-INFRA-002 | M |
+| **UI-002** | UI | 공통 레이아웃 컴포넌트 (GNB 헤더, 모바일 하단 네비게이션, 셸) | §6.3 | UI-001 | M |
+| **UI-003** | UI | 글로벌 토스트 알림 컴포넌트 (저장 완료, 에러 발생, AI 주치의 알림) | §6.3 | UI-001 | L |
+| **UI-004** | UI | 글로벌 로딩 스켈레톤 및 파싱 프로그레스 바 컴포넌트 | §6.3.1 | UI-001 | M |
+
+### 5.2 도메인별 페이지·컴포넌트
+
+| Task ID | Epic | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 |
+|---|---|---|---|---|---|
+| **UI-010** | Document Parser | 랜딩 페이지 — HWPX/Word/PDF 파일 드래그 앤 드롭 업로드 영역 UI | §4.1.1 | UI-002 | M |
+| **UI-011** | Document Parser | 문서 파싱 대기 화면 — Lottie 애니메이션 및 AI 진행률 상태 표시 UI | §4.1.1 | UI-010 | M |
+| **UI-020** | Form Editor | 폼 에디터 메인 화면 — 3단 레이아웃 (좌측 패널, 중앙 에디터, 우측 속성) | §6.3.6 | UI-002 | H |
+| **UI-021** | Form Editor | 문항 카드 컴포넌트 (질문, 보기, 드래그 핸들, 타입 변경 셀렉트박스) | §6.3.6 | UI-020 | H |
+| **UI-022** | Form Editor | AI 주치의 제안 배지 및 상세 수락/거절 팝업 모달 UI | §4.1.1 | UI-021 | M |
+| **UI-023** | Form Editor | 스킵 로직(조건부 분기) 설정 시각화 컴포넌트 | §6.3.6 | UI-020 | H |
+| **UI-030** | Survey Response | 모바일 최적화 설문 응답 폼 렌더러 (페이지네이션, 터치 버튼) | §6.3.2 | UI-001 | H |
+| **UI-031** | Survey Response | 바이럴 워터마크 푸터 컴포넌트 ("나도 10초만에 설문지 만들기") | §4.1.5 | UI-030 | L |
+| **UI-040** | DataMap & Paywall | 설문 종료 후 데이터맵 샘플 미리보기(모자이크 처리) UI | §4.1.2 | UI-030 | M |
+| **UI-041** | DataMap & Paywall | Paywall 결제 유도 모달 및 PG사 연동 로딩 화면 UI | §3.6.2 | UI-040 | M |
+
+### 5.3 관리자 백오피스 UI
+
+| Task ID | Epic | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 |
+|---|---|---|---|---|---|
+| **UI-050** | Admin | 관리자 로그인 및 대시보드 공통 레이아웃 (LNB) | §1.3 | UI-002 | M |
+| **UI-051** | Admin | AI Data Bouncer (휴지통) 대시보드 — 의심 응답 목록 테이블 및 상세 사유 뷰어 | §4.1.8 | UI-050 | H |
+| **UI-052** | Admin | 쿼터 모니터링 대시보드 — 성별/연령별 달성률 프로그레스 게이지 UI | §4.1.4 | UI-050 | M |
+| **UI-053** | Admin | 수익/결제 현황 대시보드 — ZIP 패키지 다운로드 수 및 전환율 차트 UI | §4.2.8 | UI-050 | M |
+
+---
+
 ## 전체 태스크 의존성 맵 (Dependency Graph)
 
 ```mermaid
@@ -413,10 +462,22 @@ flowchart TD
         subgraph RET["Retention"]
             BERET[BE-RET-001~002]
         end
+        subgraph DASH["Dashboard"]
+            BEDASH[BE-DASH-001~002]
+            FEDASH[FE-DASH-001~003]
+        end
+        subgraph AUTH["Authentication"]
+            BEAUTH[BE-AUTH-001~002]
+            FEAUTH[FE-AUTH-001~003]
+        end
+        subgraph ADMIN["Admin"]
+            BEADMIN[BE-ADMIN-001]
+            FEADMIN[FE-ADMIN-001~002]
+        end
     end
 
     subgraph S3["Step 3: Test Layer"]
-        TEST[TEST-PARSE / TEST-PAY / TEST-WM / TEST-QT / TEST-RT / TEST-RET]
+        TEST[TEST-PARSE / TEST-PAY / TEST-WM / TEST-QT / TEST-RT / TEST-RET / TEST-FORM / TEST-ADMIN]
     end
 
     subgraph S4["Step 4: NFR and Infra"]
@@ -428,7 +489,29 @@ flowchart TD
         FB[NFR-FB-001~003]
     end
 
-    DB001 --> INFRA
+    subgraph S5["Step 5: UI Component Layer"]
+        UICORE[UI-001~004: Core UI]
+        UIPARSE[UI-010~011: Parser UI]
+        UIFORM[UI-020~023: Form UI]
+        UIRES[UI-030~031: Response UI]
+        UIPAY[UI-040~041: Paywall UI]
+        UIADMIN[UI-050~053: Admin UI]
+    end
+
+    INFRA --> UICORE
+    UICORE --> UIPARSE
+    UICORE --> UIFORM
+    UICORE --> UIRES
+    UICORE --> UIPAY
+    UICORE --> UIADMIN
+
+    UIPARSE --> FEPARSE
+    UIFORM --> FEFORM
+    UIRES --> FEFORM
+    UIPAY --> FEPAY
+    UIADMIN --> FEADMIN
+
+    DB002 --> BEPARSE
     DB003 --> BEPARSE
     DB004 --> BEFORM
     DB005 --> BEPAY
@@ -438,6 +521,8 @@ flowchart TD
 
     MOCK001 --> FEPARSE
     MOCK001 --> FEFORM
+    MOCK001 --> UIPARSE
+    MOCK001 --> UIFORM
 
     BEPARSE --> TEST
     BEFORM --> TEST
@@ -478,17 +563,20 @@ flowchart TD
 | **Step 2** | Admin (BE+FE) — *v2 추가* | 3 | 0H / 3M / 0L |
 | **Step 3** | 테스트 (전체) | 33 | 4H / 23M / 6L |
 | **Step 4** | NFR (성능/보안/모니터링/인프라/비용/Fallback) | 25 | 5H / 14M / 6L |
-| | **합계** | **166** | **30H / 91M / 45L** |
+| **Step 5** | UI/UX 프론트엔드 공통 컴포넌트 | 4 | 0H / 2M / 2L |
+| **Step 5** | UI/UX 도메인 페이지 및 모달 | 10 | 4H / 5M / 1L |
+| **Step 5** | UI/UX 관리자 백오피스 | 4 | 1H / 3M / 0L |
+| | **합계** | **184** | **35H / 101M / 48L** |
 
 ---
 
 ### 개발 착수 순서 (권장)
 
-> **NFR-INFRA (프로젝트 셋업) → DB (스키마) → API (계약) → MOCK (Mock 데이터) → BE/FE Feature (CQRS 분해) → TEST (자동화 검증) → NFR-PERF/SEC/MON (비기능 검증)**
+> **NFR-INFRA (프로젝트 셋업) → [병렬 1] Step 5 UI (퍼블리싱) & [병렬 2] Step 1 DB/API/MOCK (계약) → Step 2 BE/FE Feature (로직 연동) → Step 3 TEST (검증) → Step 4 NFR (비기능)**
 
 ### 병렬화 가능 구간
 
-> Mock 데이터(MOCK-*)가 완성되면 FE-* 태스크들은 BE-* 완성을 기다리지 않고 **병렬 개발** 가능합니다. 이것이 Contract-First 접근 방식의 핵심 이점입니다.
+> **Contract & UI First:** Mock 데이터(MOCK-*)와 UI 컴포넌트(UI-*)가 선행되면, 프론트엔드 로직(FE-*)은 백엔드 로직(BE-*) 완성을 기다리지 않고 곧바로 **데이터 바인딩 및 상태 연동** 개발이 가능합니다. 이는 1인 개발 1순위 병목을 해소하는 핵심 이점입니다.
 
 ### 주의 사항
 

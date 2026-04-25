@@ -32,7 +32,7 @@
 |---|---|
 | IS-01 | HWPX(개방형 한글 포맷), Word(.docx), PDF 텍스트 기반 파싱 및 설문 폼 자동 생성 |
 | IS-02 | 모바일/웹 기반 설문 응답 수집 |
-| IS-03 | 데이터맵/코드북/변수가이드/응답 원본 엑셀 4종 ZIP 패키지 자동 생성 및 다운로드 |
+| IS-03 | 데이터맵/코드북/변수가이드/응답 원본 엑셀 5종 ZIP 패키지 자동 생성 및 다운로드 |
 | IS-04 | PG사 결제 연동(Paywall) 기반 유료 산출물 판매 |
 | IS-05 | 노코드 동적 다중 쿼터(성별×연령×지역) 세팅 UI |
 | IS-06 | 외부 패널사(Cint/Toluna) 라우팅(Redirect) 제어 |
@@ -88,7 +88,7 @@
 | **데이터맵(Data Map)** | 설문 응답 데이터를 분석 변수로 매핑한 코딩 가이드 문서 |
 | **코드북(Codebook)** | 설문 문항 및 보기의 코드 번호와 라벨을 정의한 참조 문서 |
 | **변수가이드(Variable Guide)** | 데이터 분석용 변수명·유형·값 범위를 정의한 문서 |
-| **4종 ZIP 패키지** | 응답 원본 엑셀 + 변수가이드 + 코드북 + 데이터맵으로 구성된 대행사급 산출물 압축 파일 |
+| **5종 ZIP 패키지** | 응답 원본 엑셀 + 변수가이드 + 코드북 + 데이터맵 + 할당표 + AI 내러티브 리포트으로 구성된 대행사급 산출물 압축 파일 |
 | **쿼터(Quota)** | 조사에서 특정 인구통계학적 그룹별로 목표 응답 수를 제한하는 할당 체계 |
 | **스크린아웃(Screen-out)** | 조건 미달 응답자를 조사에서 제외하는 프로세스 |
 | **워터마크(Watermark)** | 무료 생성 폼 하단에 노출되는 브랜드 배너/링크 |
@@ -133,12 +133,12 @@
 | 페르소나 | 핵심 Pain | Needs | Gain |
 |---|---|---|---|
 | 홍일반(대중) | 설문 툴의 복잡한 문항 세팅으로 인한 초기 이탈(폼 생성 포기율 40%+) | 문서 업로드만으로 즉시 설문 폼 자동 생성 | 복사-붙여넣기 입력 노동 제거 |
-| 최실무(핵심 실무자) | 조사 종료 후 엑셀→데이터맵 수작업 코딩 야근(발생률 90%+, 일평균 4시간+) | 대행사급 4종 산출물 즉시 다운로드 | 수작업 야근 → 즉시 퇴근, 비용 99% 절감 |
+| 최실무(핵심 실무자) | 조사 종료 후 엑셀→데이터맵 수작업 코딩 야근(발생률 90%+, 일평균 4시간+) | 대행사급 5종 산출물 즉시 다운로드 | 수작업 야근 → 즉시 퇴근, 비용 99% 절감 |
 | 유팀장(대행사) | 할당(Quota) 컨트롤 및 패널사 라우팅 외주 개발(월 1,500만 원 누수) | 노코드 동적 다중 쿼터 및 외부 패널사 라우팅 제어 | 외주 개발비/모니터링 알바비 100% 절감 |
 
 **JTBD 검증 결과 (PRD §3 기반):**
 - Story 1 (문서 무손실 파싱): 홍일반/최실무 공통 — 문항 복사-붙여넣기 노동 제거
-- Story 2 (4종 산출물 ZIP 턴키 출하): 최실무 캐시카우 — 수작업 코딩 야근 제거
+- Story 2 (5종 산출물 ZIP 턴키 출하): 최실무 캐시카우 — 수작업 코딩 야근 제거
 - Story 3 (동적 쿼터/라우팅 인프라): 유팀장 VIP — 외주 스크립트 비용/알바비 제거
 
 **ADR-02 Rate Limit 결정 (PRD §7 리스크 대응 기반):**
@@ -153,7 +153,7 @@
 | 역할(Role) | 대표 페르소나 | 책임(Responsibility) | 관심사(Interest) |
 |---|---|---|---|
 | 일반 설문 작성자 | 홍일반 | 비정형 문서 업로드 및 자동 생성 폼 활용 | 복잡한 문항 세팅 제거, 10초 이내 파싱 완료, 무료 사용 |
-| 신사업 기획 실무자 | 최실무 | 조사 종료 후 데이터맵 ZIP 패키지 구매 및 활용 | 수작업 코딩 야근 제거, 대행사급 4종 산출물 즉시 획득, 비용 절감 |
+| 신사업 기획 실무자 | 최실무 | 조사 종료 후 데이터맵 ZIP 패키지 구매 및 활용 | 수작업 코딩 야근 제거, 대행사급 5종 산출물 즉시 획득, 비용 절감 |
 | 리서치 에이전시 운영팀장 | 유팀장 | 노코드 쿼터/라우팅 제어, B2B 클라우드 인프라 운영 | 외주 개발비 100% 절감, 동적 다중 쿼터 자동 제어, 패널사 연동 |
 | 보안 관리자 | 보안보스 | 사내 보안 규정 준수 검토 | CSAP 인증 프라이빗망 구축(향후), 망분리 규제 대응 |
 | Product Manager | - | PRD 정의, 요구사항 우선순위 결정, KPI 측정 | PMF 검증, 북극성 KPI 달성 |
@@ -207,9 +207,9 @@ flowchart LR
         UC1(["UC-01: 문서 업로드"])
         UC2(["UC-02: 자동 폼 변환"])
         UC3(["UC-03: 파싱 상태 조회"])
-        UC4(["UC-04: 설문 응답 수집"])
+        UC4(["UC-04: 설문 응답 수집 (AI Data Bouncer)"])
         UC5(["UC-05: 워터마크 바이럴 유입"])
-        UC6(["UC-06: 4종 ZIP 패키지 생성"])
+        UC6(["UC-06: 5종 ZIP 패키지 생성"])
         UC7(["UC-07: 결제(Paywall) 처리"])
         UC8(["UC-08: ZIP 다운로드"])
         UC9(["UC-09: 교차 쿼터 설정"])
@@ -263,7 +263,7 @@ flowchart LR
 | UC-03 | 파싱 상태 조회 | 홍일반, 최실무 | REQ-FUNC-004 |
 | UC-04 | 설문 응답 수집 | 응답자 | REQ-FUNC-008 |
 | UC-05 | 워터마크 바이럴 유입 | 응답자 | REQ-FUNC-016, 017 |
-| UC-06 | 4종 ZIP 패키지 생성 | 최실무 | REQ-FUNC-008, 009, 014, 015 |
+| UC-06 | 5종 ZIP 패키지 생성 | 최실무 | REQ-FUNC-008, 009, 014, 015 |
 | UC-07 | 결제(Paywall) 처리 | 최실무 | REQ-FUNC-010, 011, 012, 013 |
 | UC-08 | ZIP 다운로드 | 최실무 | REQ-FUNC-011, 013 |
 | UC-09 | 교차 쿼터 설정 | 유팀장 | REQ-FUNC-018 |
@@ -289,7 +289,7 @@ flowchart TB
             subgraph Handlers["Route Handlers + Server Actions (C-TEC-002)"]
                 DocHandler["documents/\n문서 업로드·검증·상태 관리"]
                 FormHandler["forms/\n설문 폼 관리·응답 수집"]
-                PackageHandler["packages/\nZIP 4종 컴파일·다운로드"]
+                PackageHandler["packages/\nZIP 5종 컴파일·다운로드"]
                 PaymentHandler["payments/\n결제 요청·콜백·상태 관리"]
                 QuotaHandler["quotas/\n교차 쿼터 관리·카운트 연산"]
                 RoutingHandler["routing/\n패널사 포스트백·리다이렉트"]
@@ -424,7 +424,7 @@ sequenceDiagram
         User->>PG: 결제 정보 입력 및 승인
         PG->>Handler: POST /api/v1/payments/callback (결제 성공)
         Handler->>DB: payment_cleared = true 갱신
-        Handler->>Handler: JSZip + exceljs로 ZIP 4종 컴파일
+        Handler->>Handler: JSZip + exceljs로 ZIP 5종 컴파일
         Handler->>Storage: ZIP 파일 업로드
         Storage-->>Handler: 서명 Download URL 발급
         Handler->>DB: download_url 저장
@@ -489,7 +489,7 @@ sequenceDiagram
 
 ### 4.1 Functional Requirements
 
-#### 4.1.1 F1 — 비정형 문서 고정밀 파서 (AI Document Parser)
+#### 4.1.1 F1 — 3-Track 진입 엔진 및 AI 주치의 진단 (3-Track Engine & AI Document Parser)
 
 | ID | 요구사항 | Source | Priority | Acceptance Criteria |
 |---|---|---|---|---|
@@ -501,19 +501,23 @@ sequenceDiagram
 | REQ-FUNC-006 | 시스템은 문서 종류별(`pdf-parse`, `mammoth`, `jszip`) 전처리를 수행해야 하며, 특히 HWPX의 경우 `jszip`으로 압축 해제 후 `Contents/section0.xml`에서 텍스트 노드를 추출해야 한다. | C-TEC-005/006 | Must | **Given** HWPX/Word/PDF 파일이 업로드되었을 때, **When** 파싱이 시작되면, **Then** HWPX는 XML 파싱 방식을 적용하고 이후 Vercel AI SDK로 구조화된 JSON을 생성해야 한다. |
 | REQ-FUNC-007 | 시스템은 파싱 시 이미지/수식 요소가 포함된 경우 해당 요소를 건너뛰고 텍스트 기반 문항만 추출해야 한다. | F1 구현성; CON-01 | Must | **Given** 이미지 또는 수식이 포함된 문서가 업로드되었을 때, **When** 파싱을 수행하면, **Then** 이미지/수식 요소는 건너뛰고 텍스트 기반 문항만 정상 추출되어야 하며, 건너뛴 요소에 대한 알림 메시지를 사용자에게 제공해야 한다. |
 | REQ-FUNC-031 | 시스템은 구형 HWP 확장자 업로드 시 "문서를 HWPX로 다른 이름으로 저장한 후 업로드해 주세요"라는 안내 모달이 1초 이내에 뜨도록 해야 한다. | F1 (신규) | Must | **Given** 사용자가 .hwp 파일을 업로드했을 때, **When** 파일 확장자 체크가 수행되면, **Then** 1초 이내에 안내 모달을 표시하고 업로드를 중단해야 한다. |
+| REQ-FUNC-032 | 시스템은 문서 파싱 완료 직후 LLM 기반 AI 주치의가 문항의 논리적 오류(편향성 등)를 평가하여 수정 가이드 Alert 팝업을 즉시 노출해야 한다. | PRD AC 5 | Must | **Given** 파싱 완료 후 에디터 화면이 로드되었을 때, **When** 논리적 오류가 발견되면, **Then** 문항 수정 제안 팝업(Recommendation)이 렌더링되어 클릭 시 자동 교정되어야 한다. |
+| REQ-FUNC-033 | 시스템은 [Track 2] 백지 커스텀 에디터 모드에서 사용자의 인라인 자연어 프롬프트("5점 척도 문항 추가해줘")를 해석해 폼에 즉시 반영하는 AI 어시스턴트를 제공해야 한다. | Biz-Analysis Track 2 | Must | **Given** 백지 에디터 모드일 때, **When** 인라인 AI 어시스턴트에 프롬프트를 입력하면, **Then** 3초 이내에 해당 구조의 문항 블록이 렌더링되어야 한다. |
+| REQ-FUNC-034 | 시스템은 [Track 3] 대화형 챗봇 모드에서 설문 시나리오를 입력받고, 멀티턴 대화를 통해 최종 폼 구조(`structure_schema`)를 생성해야 한다. | Biz-Analysis Track 3 | Must | **Given** AI 챗봇 모드에서 조사 목적을 입력했을 때, **When** 챗봇이 설문 구조를 추천하고 확정하면, **Then** 확정된 구조로 설문 폼이 렌더링되어야 한다. |
 
 #### 4.1.2 F2 — 데이터맵 컴파일러(ZIP 산출물 추출기) & Paywall
 
 | ID | 요구사항 | Source | Priority | Acceptance Criteria |
 |---|---|---|---|---|
-| REQ-FUNC-008 | 시스템은 조사 종료(수집 마감) 후 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵의 4종 산출물을 자동 생성하여 ZIP 파일로 패키징해야 한다. | Story 2 / F2 | Must | **Given** 조사가 종료(수집 마감)되었을 때, **When** ZIP 컴파일러가 실행되면, **Then** 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵 4종 파일이 생성되어 단일 ZIP 파일로 패키징되어야 한다. |
-| REQ-FUNC-009 | 시스템은 ZIP 패키지 생성을 5초 이내에 완료해야 한다. | PRD 목표 | Must | **Given** 조사 종료 후 ZIP 패키지 생성이 요청되었을 때, **When** 컴파일러가 4종 산출물을 생성하면, **Then** ZIP 파일 생성 완료까지 5초 이내여야 한다. |
+| REQ-FUNC-008 | 시스템은 조사 종료(수집 마감) 후 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵, 할당표, AI 내러티브 리포트의 5종 산출물을 자동 생성하여 ZIP 파일로 패키징해야 한다. | Story 2 / F2 | Must | **Given** 조사가 종료(수집 마감)되었을 때, **When** ZIP 컴파일러가 실행되면, **Then** 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵, 할당표, AI 내러티브 리포트 5종 파일이 생성되어 단일 ZIP 파일로 패키징되어야 한다. |
+| REQ-FUNC-009 | 시스템은 ZIP 패키지 생성을 5초 이내에 완료해야 한다. | PRD 목표 | Must | **Given** 조사 종료 후 ZIP 패키지 생성이 요청되었을 때, **When** 컴파일러가 5종 산출물을 생성하면, **Then** ZIP 파일 생성 완료까지 5초 이내여야 한다. |
 | REQ-FUNC-010 | 시스템은 ZIP 다운로드 전 PG사 결제 모듈을 팝업하여 결제를 요구해야 한다(Paywall). | Story 2 AC-1 / F2 | Must | **Given** 사용자가 대시보드에서 [보고용 데이터 패키지 다운로드] 버튼을 클릭했을 때, **When** API가 결제 요청을 처리하면, **Then** 3초 이내에 PG사 결제 모듈 프레임이 오류 없이 팝업되어야 한다. |
 | REQ-FUNC-011 | 시스템은 결제 완료 후 Supabase Storage 서명 URL을 발급하여 ZIP 다운로드를 허용해야 한다. | Story 2 / F2 의존성 | Must | **Given** PG사로부터 결제 성공 콜백이 수신되었을 때, **When** 시스템이 결제 상태를 검증하면, **Then** DB의 `payment_cleared`를 `true`로 갱신하고 Supabase Storage 서명 Download URL을 발급해야 한다. |
 | REQ-FUNC-012 | 시스템은 PG사 결제 콜백을 Route Handler로 수신하여 결제 성공/실패 상태를 DB에 기록해야 한다. | Story 2 / F2 | Must | **Given** PG사에서 결제 콜백 API를 호출했을 때, **When** 시스템이 콜백 데이터를 수신하면, **Then** 결제 성공 시 `payment_cleared=true`, 실패 시 `payment_cleared=false`를 DB에 기록하고 AUDIT_LOG에 KPI 이벤트를 기록해야 한다. |
 | REQ-FUNC-013 | 시스템은 결제 실패 또는 이탈 시 ZIP 다운로드 URL 발급을 차단(403 Forbidden)해야 한다. | Story 2 AC-3 | Must | **Given** 결제 진행 중 사용자가 창을 닫거나 잔액 부족으로 결제 실패 코드를 수신했을 때, **When** 시스템이 이를 감지하면, **Then** DB의 `payment_cleared=false`를 유지하고 Supabase Storage 다운로드 서명 URL 발급을 차단(403 Forbidden 응답)해야 한다. |
 | REQ-FUNC-014 | 시스템은 다운로드된 데이터맵의 결측치(Missing Value) 처리 실패율 0%를 보장해야 한다. | Story 2 AC-2 | Must | **Given** 다운로드된 데이터맵 파일에 대해 백엔드 데이터 검증이 수행되었을 때, **When** 전체 응답자 레코드를 검사하면, **Then** 형식 불일치 또는 결측치 처리 실패율이 0%여야 한다. |
 | REQ-FUNC-015 | 시스템은 Paywall 팝업에 실제 추출된 데이터맵 샘플(모자이크 이미지) 및 더미데이터 스키마 엑셀 무료 다운로드를 제공해야 한다. | PRD 리스크 대응 #2 | Must | **Given** 사용자가 ZIP 다운로드 결제 화면에 접근했을 때, **When** Paywall 팝업이 표시되면, **Then** 모자이크 처리된 실제 데이터맵 샘플 이미지와 임시 더미데이터 스키마 엑셀 1개의 무료 다운로드 링크가 함께 제공되어야 한다. |
+| REQ-FUNC-035 | 시스템은 5종 ZIP 패키지 컴파일 시 통계 요약 및 인사이트를 담은 마크다운(.md) 형식의 AI 내러티브 리포트를 동봉해야 한다. | PRD Story 2 AC 3 | Must | **Given** 결제 완료 후 ZIP 패키징을 시작할 때, **When** 응답 데이터를 바탕으로 LLM 파이프라인이 구동되면, **Then** 서술형 분석이 포함된 리포트 파일이 패키지에 포함되어야 한다. |
 
 #### 4.1.3 F3 — 워터마크 기반 바이럴 메커니즘
 
@@ -531,6 +535,7 @@ sequenceDiagram
 | REQ-FUNC-020 | 시스템은 쿼터 카운트 연산 시 DB 데드락(Deadlock)을 방지해야 한다. | Story 3 AC-3 | Should | **Given** 동시 접속자가 발생하는 상황에서, **When** 쿼터 카운트 로직을 수행할 때, **Then** Supabase DB 단일 트랜잭션 및 RPC(Atomic Update) 활용하여 데드락 없이 연산해야 한다. |
 | REQ-FUNC-021 | 시스템은 쿼터 연산 레이턴시가 1초를 초과할 경우 Slack Webhook으로 경고(Alert)를 발송해야 한다. | Story 3 AC-3 | Should | **Given** 쿼터 카운트 연산이 수행 중일 때, **When** 연산 레이턴시가 1,000ms를 초과하면, **Then** AUDIT_LOG에 기록하고 Slack Webhook을 통해 운영자에게 경고(Alert)를 즉시 발송해야 한다. |
 | REQ-FUNC-022 | 시스템은 쿼터 100% 도달 시 Slack Alert를 발송해야 한다. | PRD NFR 모니터링 | Should | **Given** 특정 쿼터 셀이 목표치의 100%에 도달했을 때, **When** 시스템이 이를 감지하면, **Then** Slack Webhook을 통해 운영자에게 '쿼터 100% 도달' 알림을 즉시 발송해야 한다. |
+| REQ-FUNC-038 | 시스템은 자연어 프롬프트("전국 성별 연령 500명 할당표 짜줘")를 입력받아 비례 배분된 교차 쿼터 목표치 JSON을 자동 연산 및 세팅하는 기능을 제공해야 한다. | Biz-Analysis | Should | **Given** 쿼터 설정 UI에서 AI 챗봇에게 프롬프트를 입력했을 때, **When** 생성을 요청하면, **Then** 통계적 비례 배분에 맞춘 쿼터 할당표가 즉시 설정 화면에 반영되어야 한다. |
 
 #### 4.1.5 F5 — 외부 패널사 라우팅(Redirect) 제어
 
@@ -555,6 +560,13 @@ sequenceDiagram
 | REQ-FUNC-029 | 시스템은 작업 종료 후 원본 문서 및 파편 데이터를 24시간 이내에 영구 삭제해야 한다. | PRD NFR 보안 | Must | **Given** 문서 파싱 및 관련 작업이 종료된 후 24시간이 경과했을 때, **When** Vercel Cron 삭제 스케줄러가 실행되면, **Then** 해당 원본 문서와 모든 파편 데이터가 Supabase Storage 및 DB에서 영구 삭제되어야 하며 삭제 로그가 기록되어야 한다. |
 | REQ-FUNC-030 | 시스템은 디스크에 저장되는 모든 데이터에 암호화를 적용해야 한다. | PRD NFR 보안 | Must | **Given** 문서, 응답, 산출물 등의 데이터가 디스크에 기록될 때, **When** 저장 연산이 수행되면, **Then** Supabase PostgreSQL at-rest encryption 및 HTTPS(TLS 1.2+) 전송 암호화가 적용된 상태로 저장되어야 한다. |
 
+#### 4.1.8 F8 — AI 실시간 응답 품질 관리 (Data Bouncer)
+
+| ID | 요구사항 | Source | Priority | Acceptance Criteria |
+|---|---|---|---|---|
+| REQ-FUNC-036 | 시스템은 폼 응답 제출 시 500ms 이내에 실시간 불성실 응답(매크로, 찍기 등) 유효성을 판단하여 SUSPECT 또는 REJECTED 상태로 마킹해야 한다. | PRD Story 2-1 AC 1 | Must | **Given** 폼 응답 제출(POST)이 발생할 때, **When** Data Bouncer 로직이 수행되면, **Then** 500ms 이내에 응답의 유효성을 판단하여 상태를 기록해야 한다. |
+| REQ-FUNC-037 | 시스템은 대시보드 내에 '의심 응답 휴지통' 탭을 제공하여, 불성실 처리된 응답을 별도 조회하고 수동 복원(ACTIVE)할 수 있도록 해야 한다. | PRD Story 2-1 AC 2 | Must | **Given** 관리자가 결과 대시보드에 접근했을 때, **When** 의심 응답 탭을 클릭하면, **Then** 무효 처리된 응답 목록이 노출되고 복원 버튼 클릭 시 유효 카운트로 원복되어야 한다. |
+
 ### 4.2 Non-Functional Requirements
 
 #### 4.2.1 성능(Performance)
@@ -564,7 +576,7 @@ sequenceDiagram
 | REQ-NF-001 | 모바일 및 웹 설문 응답 패킷의 p95 응답 시간은 1,000ms 이하여야 한다. | p95 latency ≤ 1,000ms (무료 티어 기준) | PRD NFR 성능 | Must |
 | REQ-NF-002 | 문서 파싱 완료 레이턴시는 15초 이하여야 한다. | 파싱 대기 시간 ≤ 15,000ms | PRD NFR 성능 | Must |
 | REQ-NF-003 | 폼 생성(파싱부터 렌더링까지) 소요 시간은 10초 이내여야 하며, 지연 시 로딩 스켈레톤 UI를 의무적으로 적용해야 한다. | 전체 파이프라인 ≤ 10,000ms (스켈레톤 UI 의무화) | PRD 목표 / Story 1 AC-1 | Must |
-| REQ-NF-004 | ZIP 패키지(4종 산출물) 생성 대기 시간은 5초 이내여야 한다. | 패키지 컴파일 ≤ 5,000ms | PRD 목표 | Must |
+| REQ-NF-004 | ZIP 패키지(5종 산출물) 생성 대기 시간은 5초 이내여야 한다. | 패키지 컴파일 ≤ 5,000ms | PRD 목표 | Must |
 | REQ-NF-005 | PG사 결제 모듈 프레임 팝업은 3초 이내에 완료되어야 한다. | 결제 UI 로드 ≤ 3,000ms | Story 2 AC-1 | Must |
 | REQ-NF-006 | 쿼터 카운트 연산 레이턴시는 1초 이하여야 한다 (정상 운영 기준). | 쿼터 연산 ≤ 1,000ms | Story 3 AC-3 | Should |
 | REQ-NF-007 | 파일 유효성 검증 실패 시 에러 모달 표시는 2초 이내에 완료되어야 한다. | 에러 응답 ≤ 2,000ms | Story 1 AC-4 | Must |
@@ -662,9 +674,9 @@ sequenceDiagram
 |---|---|---|---|
 | Story 1: 문서 무손실 파싱 | PRD §3 Story 1 | REQ-FUNC-001, REQ-FUNC-002, REQ-FUNC-003, REQ-FUNC-004, REQ-FUNC-005, REQ-FUNC-006, REQ-FUNC-007 | TC-FUNC-001 ~ TC-FUNC-007 |
 | Story 1 AC-3 (워터마크) | PRD §3 Story 1 | REQ-FUNC-016, REQ-FUNC-017 | TC-FUNC-016, TC-FUNC-017 |
-| Story 2: 4종 산출물 ZIP 턴키 출하 | PRD §3 Story 2 | REQ-FUNC-008, REQ-FUNC-009, REQ-FUNC-010, REQ-FUNC-011, REQ-FUNC-012, REQ-FUNC-013, REQ-FUNC-014, REQ-FUNC-015 | TC-FUNC-008 ~ TC-FUNC-015 |
+| Story 2: 5종 산출물 ZIP 턴키 출하 | PRD §3 Story 2 | REQ-FUNC-008, REQ-FUNC-009, REQ-FUNC-010, REQ-FUNC-011, REQ-FUNC-012, REQ-FUNC-013, REQ-FUNC-014, REQ-FUNC-015 | TC-FUNC-008 ~ TC-FUNC-015 |
 | Story 3: 동적 쿼터/라우팅 인프라 | PRD §3 Story 3 | REQ-FUNC-018, REQ-FUNC-019, REQ-FUNC-020, REQ-FUNC-021, REQ-FUNC-022, REQ-FUNC-023, REQ-FUNC-024, REQ-FUNC-025 | TC-FUNC-018 ~ TC-FUNC-025 |
-| F1: 비정형 문서 고정밀 파서 | PRD §4 F1 | REQ-FUNC-001 ~ REQ-FUNC-007 | TC-FUNC-001 ~ TC-FUNC-007 |
+| F1: 비정형 문서 고정밀 파서 및 AI 주치의 진단 | PRD §4 F1 | REQ-FUNC-001 ~ REQ-FUNC-007 | TC-FUNC-001 ~ TC-FUNC-007 |
 | F2: 데이터맵 컴파일러 & Paywall | PRD §4 F2 | REQ-FUNC-008 ~ REQ-FUNC-015 | TC-FUNC-008 ~ TC-FUNC-015 |
 | F3 (PRD): 노코드 쿼터 세팅 | PRD §4 F3 | REQ-FUNC-018 ~ REQ-FUNC-022 | TC-FUNC-018 ~ TC-FUNC-022 |
 | 리스크 대응 | PRD §7 | REQ-FUNC-026, REQ-FUNC-027, REQ-FUNC-028 | TC-FUNC-026 ~ TC-FUNC-028 |
@@ -1290,7 +1302,7 @@ sequenceDiagram
         Web->>API: POST /api/v1/packages/{form_id}/payment
     else 실험군(B): 즉각 결제 버튼
         AB-->>Web: variant=B
-        Web-->>User: "완성된 4종 압축 대행사 팩 (29,900원)" 결제 버튼 즉각 노출
+        Web-->>User: "완성된 5종 압축 대행사 팩 (29,900원)" 결제 버튼 즉각 노출
         User->>Web: 결제 버튼 클릭
         Web->>API: POST /api/v1/packages/{form_id}/payment
     end
@@ -1397,7 +1409,7 @@ sequenceDiagram
 |---|---|
 | 샘플 크기 | N=500 (폐쇄 테스트) |
 | 대조군(A) | 결제 버튼 클릭 시 데이터맵 샘플 스크린샷 1장 노출 후 결제 유도 |
-| 실험군(B) | 스크린샷 없이 "완성된 4종 압축 대행사 팩 (29,900원)" 결제 버튼만 즉각 노출 |
+| 실험군(B) | 스크린샷 없이 "완성된 5종 압축 대행사 팩 (29,900원)" 결제 버튼만 즉각 노출 |
 | 측정 KPI | 유료 구매 전환율(Conversion Rate), 평균 결제 도달 소요 시간(초) |
 | 성공 기준 | 전환율 5% 달성 시 PMF 증명 → MVP Open 베타 론칭 개시 |
 | 벤치마크 | Typeform 폼 체류 이탈률 대비 파싱 후 수정 이탈률 15% 이하 유지 |

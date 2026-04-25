@@ -90,16 +90,21 @@
 | FE-PARSE-004 | Document Parser | [UI] 업로드 전 표/이미지/수식 정확도 한계 안내 모달 + AI 최적화 템플릿 다운로드 링크 구현 | §4.1.6 REQ-FUNC-027 | FE-PARSE-001 | L |
 | FE-PARSE-005 | Document Parser | [UI] 파일 유효성 검증 실패 에러 모달 구현 (2초 이내 표시, 실패 사유 포함) | §4.1.1 REQ-FUNC-005 | FE-PARSE-001 | L |
 | FE-PARSE-006 | Document Parser | [UI] 파싱 완료 후 생성된 설문 폼 미리보기 화면 + 건너뛴 요소 알림 표시 | §4.1.1 REQ-FUNC-007 | MOCK-002 | M |
+| FE-PARSE-007 | Document Parser | [UI] 파싱 완료 후 논리적 오류 발견 시 문항 수정 제안 Alert 팝업(주치의 가이드) 표시 및 클릭 시 자동 교정 | §4.1.1 REQ-FUNC-032 | MOCK-002 | M |
+| FE-PARSE-008 | Document Parser | [UI] 백지 커스텀 에디터 모드 + 자연어 명령 인라인 AI 어시스턴트 창 구현 | §4.1.1 REQ-FUNC-033 | MOCK-002 | H |
+| FE-PARSE-009 | Document Parser | [UI] AI 챗봇 대화형 설문 설계 인터페이스 (멀티턴 대화 기반 시나리오 입력창) | §4.1.1 REQ-FUNC-034 | MOCK-002 | H |
 | BE-PARSE-001 | Document Parser | [Command] 문서 파일 서버 측 검증 로직 구현 (확장자·크기·암호화·손상 체크) → DOCUMENT 레코드 생성 (status=FAILED 또는 PARSING) | §4.1.1 REQ-FUNC-001, 005 | DB-003, API-001 | M |
 | BE-PARSE-002 | Document Parser | [Command] HWPX 문서 전처리 구현: jszip 압축 해제 → section0.xml 텍스트 노드 추출 | §4.1.1 REQ-FUNC-006 | BE-PARSE-001 | H |
 | BE-PARSE-003 | Document Parser | [Command] Word(.docx) 문서 전처리 구현: mammoth 라이브러리 텍스트 추출 | §4.1.1 REQ-FUNC-006 | BE-PARSE-001 | M |
 | BE-PARSE-004 | Document Parser | [Command] PDF 문서 전처리 구현: pdf-parse 라이브러리 텍스트 추출 | §4.1.1 REQ-FUNC-006 | BE-PARSE-001 | M |
-| BE-PARSE-005 | Document Parser | [Command] Vercel AI SDK + Gemini API 연동: generateObject()로 structure_schema JSON 생성 + PARSED_FORM 레코드 저장 | §4.1.1 REQ-FUNC-002, §3.6.1 | BE-PARSE-002, BE-PARSE-003, BE-PARSE-004, DB-004 | H |
+| BE-PARSE-005 | Document Parser | [Command] Vercel AI SDK + Gemini API 연동: generateObject()로 structure_schema JSON 생성 및 AI 주치의(문항 논리 교정 가이드) 생성 + PARSED_FORM 레코드 저장 | §4.1.1 REQ-FUNC-002, §3.6.1 | BE-PARSE-002, BE-PARSE-003, BE-PARSE-004, DB-004 | H |
 | BE-PARSE-006 | Document Parser | [Command] 이미지/수식 요소 스킵 처리 및 skipped_elements 목록 기록 로직 구현 | §4.1.1 REQ-FUNC-007 | BE-PARSE-005 | M |
 | BE-PARSE-007 | Document Parser | [Command] 파싱 완료 후 DOCUMENT.parsed_success = true 갱신 및 DOCUMENT.status = COMPLETED 처리 | §3.6.1 | BE-PARSE-005 | L |
 | BE-PARSE-008 | Document Parser | [Query] GET /api/v1/documents/{doc_id}/status 파싱 상태 조회 Route Handler 구현 | §4.1.1 REQ-FUNC-004, §6.1 #2 | DB-003, API-002 | L |
 | BE-PARSE-009 | Document Parser | [Command] Gemini API Fallback: JS 텍스트 추출 라이브러리(pdf-parse, mammoth, hwp.js)로 대체 파싱 경로 구현 | §3.1 EXT-07 | BE-PARSE-005 | H |
 | BE-PARSE-010 | Document Parser | [Command] 파일 해시(SHA-256) 기반 캐시 조회: Supabase DB에서 동일 해시 파싱 결과 존재 시 재사용 | §4.1.6 REQ-FUNC-028 | BE-PARSE-001, DB-003 | M |
+| BE-PARSE-011 | Document Parser | [Command] AI 주치의 진단 로직: 파싱 완료된 JSON을 LLM으로 검수하여 편향성/오류 등 수정 가이드 Alert 객체 반환 | §4.1.1 REQ-FUNC-032 | BE-PARSE-005 | H |
+| BE-PARSE-012 | Document Parser | [Command] 대화형 챗봇 API 연동: Vercel AI SDK (streamText) 기반으로 사용자 대화에 맞춰 structure_schema 동적 갱신 | §4.1.1 REQ-FUNC-034 | BE-PARSE-005 | H |
 
 ### 2-B. Epic: Form Management (설문 폼 관리)
 
@@ -112,10 +117,11 @@
 | FE-FORM-005 | Form Management | [UI] 폼 에디터: 실시간 모바일 미리보기 팝업 | §6.3.6 | FE-FORM-001 | M |
 | FE-FORM-006 | Form Management | [UI] 폼 배포 화면: 배포 버튼 + 공유 URL 및 QR코드 표시 | §6.3.6 | FE-FORM-001 | M |
 | FE-FORM-007 | Form Management | [UI] 모바일 웹 설문 응답 폼 렌더링 (반응형 Tailwind CSS, /app/(survey)/*) | §3.2 CLI-02, §6.3.2 | MOCK-002, MOCK-003 | H |
+| FE-FORM-008 | Form Management | [UI] 관리자용 의심 응답(SUSPECT) 조회 및 복원(ACTIVE)이 가능한 '의심 응답 휴지통' 탭 대시보드 화면 구현 | §4.1.8 REQ-FUNC-037 | FE-FORM-007 | M |
 | BE-FORM-001 | Form Management | [Query] GET /api/v1/forms/{form_id} 설문 폼 조회 Route Handler 구현 (structure_schema + viral_watermark_url 반환) | §4.1.1 REQ-FUNC-006, §6.1 #3 | DB-004, API-003 | L |
 | BE-FORM-002 | Form Management | [Command] PUT /api/v1/forms/{form_id} 폼 수정(커스텀 빌드) Route Handler 구현: structure_schema 서버 측 유효성 검증 + DB 갱신 (question_count 재계산) | §6.3.6 | DB-004, API-005 | H |
 | BE-FORM-003 | Form Management | [Command] POST /api/v1/forms/{form_id}/publish 폼 배포 Route Handler 구현: status='PUBLISHED' 갱신 + 응답 수집용 고유 URL 생성 | §6.3.6 | DB-004, API-006 | M |
-| BE-FORM-004 | Form Management | [Command] POST /api/v1/forms/{form_id}/responses 설문 응답 제출 Route Handler 구현: RESPONSE 레코드 저장 (raw_record, user_agent, ip_hash) | §4.1.2 REQ-FUNC-008, §6.1 #4 | DB-005, API-004 | M |
+| BE-FORM-004 | Form Management | [Command] POST /api/v1/forms/{form_id}/responses 설문 응답 제출 Route Handler 구현: AI Data Bouncer를 통한 500ms 이내 실시간 불성실 응답(매크로/찍기) 무효 처리 후 RESPONSE 레코드 저장 (raw_record, user_agent, ip_hash) | §4.1.2 REQ-FUNC-008, §6.1 #4 | DB-005, API-004 | M |
 
 ### 2-C. Epic: DataMap Compiler & Paywall (ZIP 산출물 및 결제)
 
@@ -127,10 +133,11 @@
 | FE-PAY-004 | DataMap & Paywall | [UI] 결제 실패 안내 메시지 UI + 결제 성공 후 ZIP 다운로드 시작 UI | §4.1.2 REQ-FUNC-013, §3.6.2 | FE-PAY-002 | L |
 | BE-PAY-001 | DataMap & Paywall | [Command] POST /api/v1/packages/{form_id}/payment 결제 요청 Route Handler 구현: PG사 결제 세션 생성 및 결제 모듈 URL 반환 | §4.1.2 REQ-FUNC-010, §6.1 #5 | DB-006, API-007 | H |
 | BE-PAY-002 | DataMap & Paywall | [Command] POST /api/v1/payments/callback PG 결제 콜백 Route Handler 구현: payment_cleared 상태 갱신 + AUDIT_LOG KPI 이벤트 기록 | §4.1.2 REQ-FUNC-012, §6.1 #6 | DB-006, DB-010, API-008 | H |
-| BE-PAY-003 | DataMap & Paywall | [Command] ZIP 4종 산출물 컴파일 로직 구현: JSZip + exceljs 기반 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵 자동 생성 | §4.1.2 REQ-FUNC-008, 009 | DB-005, DB-006, BE-PAY-002 | H |
+| BE-PAY-003 | DataMap & Paywall | [Command] ZIP 5종 산출물 컴파일 로직 구현: JSZip + exceljs 기반 응답 원본 엑셀, 변수가이드, 코드북, 데이터맵, 할당표, AI 내러티브 리포트 자동 생성 | §4.1.2 REQ-FUNC-008, 009 | DB-005, DB-006, BE-PAY-002 | H |
 | BE-PAY-004 | DataMap & Paywall | [Command] 생성된 ZIP 파일 Supabase Storage 업로드 + 서명 Download URL 발급 및 DB 저장 | §4.1.2 REQ-FUNC-011, §3.6.2 | BE-PAY-003 | M |
 | BE-PAY-005 | DataMap & Paywall | [Query] GET /api/v1/packages/{package_id}/download ZIP 다운로드 Route Handler 구현: 결제 상태 검증(payment_cleared=true) 후 서명 URL 반환, 미결제 시 403 차단 | §4.1.2 REQ-FUNC-011, 013, §6.1 #7 | DB-006, API-009, BE-PAY-002 | M |
 | BE-PAY-006 | DataMap & Paywall | [Command] 데이터맵 결측치(Missing Value) 검증 로직 구현: ZIP 컴파일 시 전체 응답자 레코드 결측치 0% 보장 | §4.1.2 REQ-FUNC-014 | BE-PAY-003 | H |
+| BE-PAY-007 | DataMap & Paywall | [Command] AI 내러티브 리포트 산출 로직 구현: 응답 통계 데이터를 Vercel AI SDK(generateText)로 분석하여 마크다운(.md) 요약 작성 | §4.1.2 REQ-FUNC-035 | BE-PAY-003 | H |
 
 ### 2-D. Epic: Watermark & Viral (워터마크 바이럴)
 
@@ -147,11 +154,13 @@
 |---|---|---|---|---|---|
 | FE-QT-001 | Quota Management | [UI] 교차 쿼터 설정 화면: 엑셀 파일 업로드 + 성별×연령×지역 매트릭스 자동 반영 노코드 UI | §4.1.4 REQ-FUNC-018 | MOCK-006 | H |
 | FE-QT-002 | Quota Management | [UI] 쿼터 충족 상태 실시간 모니터링 대시보드 (셀별 진행률 시각화) | §4.1.4 REQ-FUNC-019, 022 | MOCK-006 | H |
+| FE-QT-004 | Quota Management | [UI] 교차 쿼터 설정 화면 내 자연어 기반 할당표 자동 생성 프롬프트 입력창 구현 | §4.1.4 REQ-FUNC-038 | FE-QT-001 | M |
 | BE-QT-001 | Quota Management | [Command] POST /api/v1/quotas 쿼터 설정 생성 Route Handler 구현: 엑셀 파일 파싱 → QUOTA_SETTING + QUOTA_CELL 레코드 일괄 생성 | §4.1.4 REQ-FUNC-018, §6.1 #8 | DB-007, DB-008, API-010 | H |
 | BE-QT-002 | Quota Management | [Query] GET /api/v1/quotas/{quota_id}/status 쿼터 상태 조회 Route Handler 구현 (셀별 target/current/is_full 반환) | §4.1.4 REQ-FUNC-019, §6.1 #9 | DB-008, API-011 | M |
 | BE-QT-003 | Quota Management | [Command] 응답 제출 시 쿼터 카운트 원자적 증가 로직 구현: Supabase RPC 호출 → Over-quota 시 즉시 QUOTAFULL 리다이렉션 (오차율 1% 이내) | §4.1.4 REQ-FUNC-019, 020 | DB-012, BE-FORM-004 | H |
 | BE-QT-004 | Quota Management | [Command] 쿼터 100% 도달 감지 시 QUOTA_CELL.is_full=true 갱신 + Slack Webhook 발송 | §4.1.4 REQ-FUNC-022 | BE-QT-003 | M |
 | BE-QT-005 | Quota Management | [Command] 쿼터 연산 레이턴시 > 1초 시 AUDIT_LOG 기록 + Slack Webhook 경고 발송 | §4.1.4 REQ-FUNC-021 | BE-QT-003, DB-010 | M |
+| BE-QT-006 | Quota Management | [Command] 자연어 기반 쿼터 자동 연산 API: 통계청 인구 데이터 비례 배분 로직(LLM JSON 반환)을 적용한 QUOTA_MATRIX 생성 | §4.1.4 REQ-FUNC-038 | API-010 | H |
 
 ### 2-F. Epic: Panel Routing (패널사 라우팅)
 
@@ -202,7 +211,7 @@
 
 | Task ID | Epic (도메인) | Feature (기능명) | 관련 SRS 섹션 | 선행 태스크 (Dependencies) | 복잡도 (H/M/L) |
 |---|---|---|---|---|---|
-| TEST-PAY-001 | DataMap & Paywall | [Test] 조사 종료 후 ZIP 4종 산출물(응답 원본 엑셀, 변수가이드, 코드북, 데이터맵) 정상 생성 검증 테스트 (TC-FUNC-008) | §4.1.2 REQ-FUNC-008 | BE-PAY-003 | H |
+| TEST-PAY-001 | DataMap & Paywall | [Test] 조사 종료 후 ZIP 5종 산출물(응답 원본 엑셀, 변수가이드, 코드북, 데이터맵, 할당표, AI 내러티브 리포트) 정상 생성 검증 테스트 (TC-FUNC-008) | §4.1.2 REQ-FUNC-008 | BE-PAY-003 | H |
 | TEST-PAY-002 | DataMap & Paywall | [Test] ZIP 패키지 생성 ≤ 5초 성능 검증 테스트 (TC-FUNC-009, TC-NF-004) | §4.1.2 REQ-FUNC-009, §4.2.1 REQ-NF-004 | BE-PAY-003 | M |
 | TEST-PAY-003 | DataMap & Paywall | [Test] PG 결제 모듈 프레임 팝업 3초 이내 로드 검증 테스트 (TC-FUNC-010, TC-NF-005) | §4.1.2 REQ-FUNC-010, §4.2.1 REQ-NF-005 | FE-PAY-002, BE-PAY-001 | M |
 | TEST-PAY-004 | DataMap & Paywall | [Test] 결제 성공 콜백 수신 → payment_cleared=true 갱신 + 서명 URL 발급 정상 흐름 테스트 (TC-FUNC-011, TC-FUNC-012) | §4.1.2 REQ-FUNC-011, 012 | BE-PAY-002, BE-PAY-004 | M |
