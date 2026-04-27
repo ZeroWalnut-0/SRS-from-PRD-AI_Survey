@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://www.surveys.kr/study/T24060701/FS.asp</div>
+    <div><b>Title</b> 자동차 품평회 조사</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>50%F2S측면으로이동해주십시오.차량의측면디자인이전반적으로얼마나마음에드시는지평가해주십시오.전혀마음에들지않음(1)-(2)-(3)보통(4)-(5)-(6)매우마음에듦(7)◀2/7▶</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+ECODE = 
+ENUMBER = 
+FS_1 = 4
+IDKey = 042109381338990841709606
+IDS = 
+NextPage = FL
+PVALUE = 73
+PageName = FS
+ResType = TEST
+VC_ID = 042109381338990841709606
+Var = FS_1,FS_2,FS_3,FS_4,FS_5,FS_6,FS_7</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Failed Question Log</b></summary>
+      <pre>[failed question logs]
+[next_logic] no unresolved issues detected</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	if (getRadioValue(&quot;FS_1&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;1&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_2&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;2&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_3&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;3&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_4&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;4&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_5&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;5&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_6&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;6&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_7&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;7&#x27;);
+		return;
+	}
+
+	if ((FSFlag==false) &amp;&amp; (RadioArrayCnt(&quot;FS_1,FS_2,FS_3,FS_4,FS_5,FS_6,FS_7&quot;,99)))
+	{
+		alert(&quot;응답이 편중되어 있습니다. 다시 한번 확인 부탁드립니다.&quot;);
+		$(&quot;input[name=FS_7]:eq(0)&quot;).focus();
+		FSFlag=true;
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202604161034&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202604161034&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202604161034&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;자동차 품평회 조사&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	var FSFlag;
+	FSFlag=false;
+//--&gt;
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+
+		$(&quot;#btnC&quot;).hide();
+	});
+//--&gt;
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	if (getRadioValue(&quot;FS_1&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;1&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_2&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;2&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_3&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;3&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_4&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;4&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_5&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;5&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_6&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;6&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;FS_7&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;);
+		show_hide(&#x27;7&#x27;);
+		return;
+	}
+
+	if ((FSFlag==false) &amp;&amp; (RadioArrayCnt(&quot;FS_1,FS_2,FS_3,FS_4,FS_5,FS_6,FS_7&quot;,99)))
+	{
+		alert(&quot;응답이 편중되어 있습니다. 다시 한번 확인 부탁드립니다.&quot;);
+		$(&quot;input[name=FS_7]:eq(0)&quot;).focus();
+		FSFlag=true;
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;FS_1,FS_2,FS_3,FS_4,FS_5,FS_6,FS_7&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;FS&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;FL&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;042109381338990841709606&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;042109381338990841709606&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;73&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 50%; font-size:10px !important;&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;50%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+								
+
+				&lt;div class=&quot;mt-1&quot;&gt;
+						&lt;table id=&quot;FS_table&quot; style=&quot;width:100%;&quot;&gt;
+		&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
+		&lt;div id=&quot;select_1&quot; style=&quot;display: none;&quot;&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;																												
+					&lt;table&gt;																																																
+						&lt;tbody&gt;&lt;tr&gt;																																																
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;																							
+																																																								
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;																
+								F1&lt;span class=&quot;BlueBd&quot;&gt;S&lt;/span&gt;																
+							&lt;/span&gt;&lt;/td&gt;																																															
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;차량의 &lt;span class=&quot;UnBd&quot;&gt;전면&lt;/span&gt; 디자인이 전반적으로 얼마나 &lt;span class=&quot;Bd&quot;&gt;마음에 드시는지&lt;/span&gt; 평가해 주십시오.&lt;/div&gt;&lt;/td&gt;								
+						&lt;/tr&gt;																																																
+					&lt;/tbody&gt;&lt;/table&gt;																																															
+				&lt;/div&gt;																																																	
+			&lt;table class=&quot;table table-bordered mt-2&quot;&gt;
+				&lt;colgroup&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+				&lt;/colgroup&gt;
+		&lt;tbody&gt;&lt;tr&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_1_1&quot; style=&quot;width: 98% !important;&quot;&gt;전혀 마음에 들지 않음&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_1_2&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_1_3&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_1_4&quot; style=&quot;width: 98% !important;&quot;&gt;보통&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_1_5&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(5)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_1_6&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(6)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_1_7&quot; style=&quot;width: 98% !important;&quot;&gt;매우 마음에 듦&lt;/label&gt;&lt;br&gt;(7)
+						&lt;/td&gt;
+
+		&lt;/tr&gt;
+		&lt;tr&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_1_1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_1&quot; id=&quot;FS_1_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_1_2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_1&quot; id=&quot;FS_1_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_1_3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_1&quot; id=&quot;FS_1_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_1_4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_1&quot; id=&quot;FS_1_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_1_5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_1&quot; id=&quot;FS_1_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_1_6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_1&quot; id=&quot;FS_1_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_1_7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_1&quot; id=&quot;FS_1_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_1&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+		&lt;div style=&quot;&quot; id=&quot;select_2&quot;&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;																												
+					&lt;table&gt;																																																
+						&lt;tbody&gt;&lt;tr&gt;																																																
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;																							
+																																																								
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;																
+								F2&lt;span class=&quot;BlueBd&quot;&gt;S&lt;/span&gt;																
+							&lt;/span&gt;&lt;/td&gt;																																															
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;&lt;span class=&quot;Bd&quot;&gt;측면으로 이동해 주십시오.&lt;/span&gt; 차량의 &lt;span class=&quot;UnBd&quot;&gt;측면&lt;/span&gt; 디자인이 전반적으로 얼마나 &lt;span class=&quot;Bd&quot;&gt;마음에 드시는지&lt;/span&gt; 평가해 주십시오.&lt;/div&gt;&lt;/td&gt;								
+						&lt;/tr&gt;																																																
+					&lt;/tbody&gt;&lt;/table&gt;																																															
+				&lt;/div&gt;																																																	
+			&lt;table class=&quot;table table-bordered mt-2&quot;&gt;
+				&lt;colgroup&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+				&lt;/colgroup&gt;
+		&lt;tbody&gt;&lt;tr&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_2_1&quot; style=&quot;width: 98% !important;&quot;&gt;전혀 마음에 들지 않음&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_2_2&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_2_3&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_2_4&quot; style=&quot;width: 98% !important;&quot;&gt;보통&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_2_5&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(5)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_2_6&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(6)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_2_7&quot; style=&quot;width: 98% !important;&quot;&gt;매우 마음에 듦&lt;/label&gt;&lt;br&gt;(7)
+						&lt;/td&gt;
+
+		&lt;/tr&gt;
+		&lt;tr&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_2_1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_2&quot; id=&quot;FS_2_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_2_2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_2&quot; id=&quot;FS_2_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_2_3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_2&quot; id=&quot;FS_2_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_2_4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_2&quot; id=&quot;FS_2_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_2_5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_2&quot; id=&quot;FS_2_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_2_6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_2&quot; id=&quot;FS_2_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_2_7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_2&quot; id=&quot;FS_2_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_2&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+		&lt;div style=&quot;display:none;&quot; id=&quot;select_3&quot;&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;																												
+					&lt;table&gt;																																																
+						&lt;tbody&gt;&lt;tr&gt;																																																
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;																							
+																																																								
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;																
+								F3&lt;span class=&quot;BlueBd&quot;&gt;S&lt;/span&gt;																
+							&lt;/span&gt;&lt;/td&gt;																																															
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;&lt;span class=&quot;Bd&quot;&gt;후면으로 이동해 주십시오.&lt;/span&gt; 차량의 &lt;span class=&quot;UnBd&quot;&gt;후면&lt;/span&gt; 디자인이 전반적으로 얼마나 &lt;span class=&quot;Bd&quot;&gt;마음에 드시는지&lt;/span&gt; 평가해 주십시오.&lt;/div&gt;&lt;/td&gt;								
+						&lt;/tr&gt;																																																
+					&lt;/tbody&gt;&lt;/table&gt;																																															
+				&lt;/div&gt;																																																	
+			&lt;table class=&quot;table table-bordered mt-2&quot;&gt;
+				&lt;colgroup&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+				&lt;/colgroup&gt;
+		&lt;tbody&gt;&lt;tr&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_3_1&quot; style=&quot;width: 98% !important;&quot;&gt;전혀 마음에 들지 않음&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_3_2&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_3_3&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_3_4&quot; style=&quot;width: 98% !important;&quot;&gt;보통&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_3_5&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(5)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_3_6&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(6)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_3_7&quot; style=&quot;width: 98% !important;&quot;&gt;매우 마음에 듦&lt;/label&gt;&lt;br&gt;(7)
+						&lt;/td&gt;
+
+		&lt;/tr&gt;
+		&lt;tr&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_3_1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_3&quot; id=&quot;FS_3_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_3_2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_3&quot; id=&quot;FS_3_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_3_3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_3&quot; id=&quot;FS_3_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_3_4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_3&quot; id=&quot;FS_3_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_3_5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_3&quot; id=&quot;FS_3_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_3_6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_3&quot; id=&quot;FS_3_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_3_7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_3&quot; id=&quot;FS_3_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_3&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+		&lt;div style=&quot;display:none;&quot; id=&quot;select_4&quot;&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;																												
+					&lt;table&gt;																																																
+						&lt;tbody&gt;&lt;tr&gt;																																																
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;																							
+																																																								
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;																
+								F4&lt;span class=&quot;BlueBd&quot;&gt;S&lt;/span&gt;																
+							&lt;/span&gt;&lt;/td&gt;																																															
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;차량의 전/측/후면 디자인이 전반적으로 얼마나 &lt;span class=&quot;Bd&quot;&gt;마음에 드시는지&lt;/span&gt; 평가해 주십시오.&lt;/div&gt;&lt;/td&gt;								
+						&lt;/tr&gt;																																																
+					&lt;/tbody&gt;&lt;/table&gt;																																															
+				&lt;/div&gt;																																																	
+&lt;div class=&quot;mt-1 p-3 st-box d-flex&quot;&gt;&lt;div style=&quot;width:50%;&quot; class=&quot;Bd&quot;&gt;잠깐!&lt;br&gt;그림과 같이 CAR-S의 주변을 다시 한 번 둘러본 후에 전반적인 만족도를 평가해주십시오.&lt;/div&gt;&lt;div class=&quot;text-center align-middle&quot; style=&quot;width:50%;&quot;&gt;&lt;img src=&quot;https://trendresearch.speedgabia.com/Survey/T24060701/INFO4.jpg&quot; class=&quot;img-fluid mt-2&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+			&lt;table class=&quot;table table-bordered mt-2&quot;&gt;
+				&lt;colgroup&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+				&lt;/colgroup&gt;
+		&lt;tbody&gt;&lt;tr&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_4_1&quot; style=&quot;width: 98% !important;&quot;&gt;전혀 마음에 들지 않음&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_4_2&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_4_3&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_4_4&quot; style=&quot;width: 98% !important;&quot;&gt;보통&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_4_5&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(5)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_4_6&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(6)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_4_7&quot; style=&quot;width: 98% !important;&quot;&gt;매우 마음에 듦&lt;/label&gt;&lt;br&gt;(7)
+						&lt;/td&gt;
+
+		&lt;/tr&gt;
+		&lt;tr&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_4_1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_4&quot; id=&quot;FS_4_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_4_2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_4&quot; id=&quot;FS_4_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_4_3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_4&quot; id=&quot;FS_4_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_4_4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_4&quot; id=&quot;FS_4_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_4_5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_4&quot; id=&quot;FS_4_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_4_6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_4&quot; id=&quot;FS_4_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_4_7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_4&quot; id=&quot;FS_4_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_4&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+		&lt;div style=&quot;display:none;&quot; id=&quot;select_5&quot;&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;																												
+					&lt;table&gt;																																																
+						&lt;tbody&gt;&lt;tr&gt;																																																
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;																							
+																																																								
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;																
+								F5&lt;span class=&quot;BlueBd&quot;&gt;S&lt;/span&gt;																
+							&lt;/span&gt;&lt;/td&gt;																																															
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;&lt;span class=&quot;Bd&quot;&gt;전면부터 후면까지 모두 고려했을 때&lt;/span&gt;, 전반적으로 얼마나 &lt;span class=&quot;Bd&quot;&gt;잘 조화로운지&lt;/span&gt; 평가해 주십시오.&lt;/div&gt;&lt;/td&gt;								
+						&lt;/tr&gt;																																																
+					&lt;/tbody&gt;&lt;/table&gt;																																															
+				&lt;/div&gt;																																																	
+			&lt;table class=&quot;table table-bordered mt-2&quot;&gt;
+				&lt;colgroup&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+				&lt;/colgroup&gt;
+		&lt;tbody&gt;&lt;tr&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_5_1&quot; style=&quot;width: 98% !important;&quot;&gt;전혀 조화롭지 않음&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_5_2&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_5_3&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_5_4&quot; style=&quot;width: 98% !important;&quot;&gt;보통&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_5_5&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(5)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_5_6&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(6)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_5_7&quot; style=&quot;width: 98% !important;&quot;&gt;매우 조화로움&lt;/label&gt;&lt;br&gt;(7)
+						&lt;/td&gt;
+
+		&lt;/tr&gt;
+		&lt;tr&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_5_1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_5&quot; id=&quot;FS_5_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_5_2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_5&quot; id=&quot;FS_5_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_5_3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_5&quot; id=&quot;FS_5_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_5_4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_5&quot; id=&quot;FS_5_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_5_5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_5&quot; id=&quot;FS_5_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_5_6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_5&quot; id=&quot;FS_5_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_5_7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_5&quot; id=&quot;FS_5_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_5&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+		&lt;div style=&quot;display:none;&quot; id=&quot;select_6&quot;&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;																												
+					&lt;table&gt;																																																
+						&lt;tbody&gt;&lt;tr&gt;																																																
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;																							
+																																																								
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;																
+								F6&lt;span class=&quot;BlueBd&quot;&gt;S&lt;/span&gt;																
+							&lt;/span&gt;&lt;/td&gt;																																															
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;외관 디자인만을 봤을 때, 전시된 다른 모델들 대비 얼마나 &lt;span class=&quot;Bd&quot;&gt;차별적&lt;/span&gt;이라고 느껴지십니까?&lt;/div&gt;&lt;/td&gt;								
+						&lt;/tr&gt;																																																
+					&lt;/tbody&gt;&lt;/table&gt;																																															
+				&lt;/div&gt;																																																	
+			&lt;table class=&quot;table table-bordered mt-2&quot;&gt;
+				&lt;colgroup&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+				&lt;/colgroup&gt;
+		&lt;tbody&gt;&lt;tr&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_6_1&quot; style=&quot;width: 98% !important;&quot;&gt;전혀 차별적이지 않다&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_6_2&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_6_3&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_6_4&quot; style=&quot;width: 98% !important;&quot;&gt;보통&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_6_5&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(5)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_6_6&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(6)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_6_7&quot; style=&quot;width: 98% !important;&quot;&gt;매우 차별적이다&lt;/label&gt;&lt;br&gt;(7)
+						&lt;/td&gt;
+
+		&lt;/tr&gt;
+		&lt;tr&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_6_1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_6&quot; id=&quot;FS_6_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_6_2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_6&quot; id=&quot;FS_6_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_6_3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_6&quot; id=&quot;FS_6_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_6_4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_6&quot; id=&quot;FS_6_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_6_5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_6&quot; id=&quot;FS_6_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_6_6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_6&quot; id=&quot;FS_6_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_6_7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_6&quot; id=&quot;FS_6_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_6&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+		&lt;div style=&quot;display:none;&quot; id=&quot;select_7&quot;&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;																												
+					&lt;table&gt;																																																
+						&lt;tbody&gt;&lt;tr&gt;																																																
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;																							
+																																																								
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;																
+								F7&lt;span class=&quot;BlueBd&quot;&gt;S&lt;/span&gt;																
+							&lt;/span&gt;&lt;/td&gt;																																															
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;차량의 &lt;span class=&quot;UnBd&quot;&gt;전반적인 크기&lt;/span&gt;는 어떻습니까? 매우 만족스럽다면 4점입니다.&lt;/div&gt;&lt;/td&gt;								
+						&lt;/tr&gt;																																																
+					&lt;/tbody&gt;&lt;/table&gt;																																															
+				&lt;/div&gt;																																																	
+			&lt;table class=&quot;table table-bordered mt-2&quot;&gt;
+				&lt;colgroup&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+					&lt;col width=&quot;14.29%&quot;&gt;
+				&lt;/colgroup&gt;
+		&lt;tbody&gt;&lt;tr&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_7_1&quot; style=&quot;width: 98% !important;&quot;&gt;너무 작다&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_7_2&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_7_3&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_7_4&quot; style=&quot;width: 98% !important;&quot;&gt;매우 만족&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_7_5&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(5)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_7_6&quot; style=&quot;width: 98% !important;&quot;&gt;-&lt;/label&gt;&lt;br&gt;(6)
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-bottom bg-light &quot;&gt;
+							&lt;label for=&quot;FS_7_7&quot; style=&quot;width: 98% !important;&quot;&gt;너무 크다&lt;/label&gt;&lt;br&gt;(7)
+						&lt;/td&gt;
+
+		&lt;/tr&gt;
+		&lt;tr&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_7_1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_7&quot; id=&quot;FS_7_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;1&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_7_2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_7&quot; id=&quot;FS_7_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;2&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_7_3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_7&quot; id=&quot;FS_7_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;3&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_7_4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_7&quot; id=&quot;FS_7_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;4&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_7_5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_7&quot; id=&quot;FS_7_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;5&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_7_6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_7&quot; id=&quot;FS_7_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;6&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+					&lt;td class=&quot;text-center align-middle&quot; id=&quot;TD_FS_7_7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; class=&quot;form-check-input&quot; name=&quot;FS_7&quot; id=&quot;FS_7_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioMatrixValue2(&#x27;FS_7&#x27;,&#x27;7&#x27;,&#x27;&#x27;);&quot;&gt;
+					&lt;/td&gt;
+
+		&lt;/tr&gt;
+	&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+			&lt;div class=&quot;text-center&quot;&gt;
+				&lt;a href=&quot;javascript:movepage();&quot; type=&quot;button&quot; class=&quot;btn btn-xs btn-inverse&quot; id=&quot;p_arrow&quot; style=&quot;&quot;&gt;◀&lt;/a&gt;
+					&lt;label id=&quot;pnext&quot;&gt;2&lt;/label&gt;/&lt;label id=&quot;nnext&quot;&gt;7&lt;/label&gt;
+				&lt;a href=&quot;javascript:movepage2(&#x27;7&#x27;);&quot; type=&quot;button&quot; class=&quot;btn btn-xs btn-inverse&quot; id=&quot;n_arrow&quot;&gt;▶&lt;/a&gt;
+			&lt;/div&gt;
+
+				&lt;/div&gt;
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot; style=&quot;display: none;&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

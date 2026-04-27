@@ -1,0 +1,390 @@
+Select Case PAGENAME
+	Case "INDEX"
+		If SURVEYSTATUS <>"3" And SURVEYSTATUS<>"2" Then
+			Call_Url "Survey_Close.asp",""
+			Response.End
+		End If
+
+	'미디어
+		Case "TMovie"
+			If Request("MovieRan") <> Request("Movies") Then
+				NEXTPAGE = "MEDIA"
+			End if
+
+	'설문
+			Case "A2"
+
+					Dim A2,A2A
+					A2=Request("A2")
+
+					if cInt(A2)<20 Then
+							SAVEData CDAT("A2A=1")
+				NEXTPAGE = "SCREEN"
+					Elseif cInt(A2)>19 AND cInt(A2)<30 Then
+							SAVEData CDAT("A2A=2")
+					Elseif cInt(A2)>29 AND cInt(A2)<40 Then
+							SAVEData CDAT("A2A=3")
+					Elseif cInt(A2)>39 AND cInt(A2)<50 Then
+							SAVEData CDAT("A2A=4")
+					Elseif cInt(A2)>49 AND cInt(A2)<60 Then
+							SAVEData CDAT("A2A=5")
+					Elseif cInt(A2)>59 AND cInt(A2)<70 Then
+							SAVEData CDAT("A2A=6")
+					Else
+							SAVEData CDAT("A2A=7")
+				NEXTPAGE = "SCREEN"
+					End If
+
+		Case "A3"
+			If Request("A3") = "1" Then
+				NEXTPAGE = "SCREEN"
+			End If
+		
+		Case "A4"
+			If Request("A4") <> "9" Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+		Case "A5"
+			If Request("A5") = "1" Then
+				A5Hold = "Y"
+				Holding = "Y"
+			End If
+
+		Case "A6A"
+			Dim A6A,A6B
+			A6A = CDbl(Request("A6A_1"))
+			A6B = ""
+
+			If A6A < 500 Then
+				A6B = "1"
+				A6Hold = "Y"
+			ElseIf A6A > 499 And A6A < 600 Then
+				A6B = "2"
+			ElseIf A6A > 599 And A6A < 700 Then
+				A6B = "3"
+			ElseIf A6A > 699 And A6A < 800 Then
+				A6B = "4"
+			ElseIf A6A = 800 Then
+				A6B = "5"
+			ElseIf A6A > 800 And A6A < 900 Then
+				A6B = "5"
+				A6Hold = "Y"
+			ElseIf A6A > 899 And A6A < 1000 Then
+				A6B = "6"
+				A6Hold = "Y"
+			ElseIf A6A > 999 And A6A < 1100 Then
+				A6B = "7"
+				A6Hold = "Y"
+			ElseIf A6A > 1099 And A6A < 1200 Then
+				A6B = "8"
+				A6Hold = "Y"
+			Else
+				A6B = "9"
+				A6Hold = "Y"
+			End If
+
+			If A6Hold = "Y" Then
+				Holding = "Y"
+			End if
+			
+			SAVEDATA CDAT("A6B="&A6B)
+		
+		Case "A7"
+			If Request("A7") = "1" Then
+				SAVEDATA CDAT("A8=1")
+				NEXTPAGE = "B1"
+				PValue = PValue + 1
+			End if
+
+		Case "B1"
+			If Request("B1") = "3" Then
+				NEXTPAGE = "SCREEN"
+			End If
+		
+		Case "B2"
+			Dim B2
+			B2 = Request("B2")
+			If B2 = "2" or B2 = "6" or B2 = "7" or B2 = "8" Then
+				NEXTPAGE = "SCREEN"
+			ElseIf B2 = "3" Or B2 = "4" Then
+				B2Hold = "Y"
+				Holding = "Y"
+			End If
+
+		Case "B4"
+			If Request("B4") = "2" Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+		Case "B5"
+			If Request("B5") <> "1" And Request("B5") <> "2" Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+		Case "B6"
+			If Request("B6") <> "1" And Request("B6") <> "2" Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+			B3 = getRedis("B3")
+
+			If NEXTPAGE <> "SCREEN" Then
+				If B3 = "1" Or B3 = "2" Or B3 = "61" Or B3 = "62" Then
+					NEXTPAGE = "C1"
+				ElseIf B3 = "21" Then
+					NEXTPAGE = "C6"
+					PValue = PValue + 5
+				Else
+					NEXTPAGE = "D1"
+					PValue = PValue + 7
+				End If
+			End If
+		
+		Case "C1"
+			Dim C1_1, C1_2, C1A
+			C1_1 = Request("C1_1")
+			C1_2 = Request("C1_2")
+			C1A = ""
+
+			If CStr(C1_1) < 2022 Then
+				C1A = "1"
+				NEXTPAGE = "SCREEN"
+			ElseIf CStr(C1_1) = 2022 Then
+				If CStr(C1_2) < 3 Then
+					C1A = "1"
+					NEXTPAGE = "SCREEN"
+				Else
+					C1A = "2"
+				End If
+			ElseIf CStr(C1_1) = 2023 Then
+				If CStr(C1_2) = 1 Then
+					C1A = "2"
+				Else
+					C1A = "3"
+				End If
+			ElseIf CStr(C1_1) = 2024 Then
+				If CStr(C1_2) = 1 Then
+					C1A = "3"
+				Else
+					C1A = "4"
+				End If
+			ElseIf CStr(C1_1) = 2025 Then
+				If CStr(C1_2) = 1 Then
+					C1A = "4"
+				Else
+					C1A = "5"
+				End If
+			ElseIf CStr(C1_1) = 2026 Then
+				If CStr(C1_2) = 1 Then
+					C1A = "5"
+				Else
+					C1A = "6"
+				End If
+			End If
+			
+			SAVEDATA CDAT("C1A="&C1A)
+
+		Case "C2"
+			If Request("C2") = "1" Then
+				NEXTPAGE = "C4"
+				PValue = PValue + 1
+			End if
+
+		Case "C4"
+			If Request("C4_1") <> "4" And Request("C4_2") <> "4" And Request("C4_3") <> "4" Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+		Case "C5"
+			If CLng(Request("C5_4")) < 5 Then
+				NEXTPAGE = "SCREEN"
+			End If
+		
+			If NEXTPAGE <> "SCREEN" Then
+				If getRedis("B3") = "2" Then
+					NEXTPAGE = "C6"
+				Else
+					NEXTPAGE = "E1"
+					PValue = PValue + 11
+				End If
+			End if
+
+		Case "C6"
+			If Request("C6") = "2" Or Request("C6") = "3" Then
+				NEXTPAGE = "C7"
+			Else
+				If getRedis("B3") = "21" Then
+					NEXTPAGE = "D1"
+					PValue = PValue + 1
+				else
+					NEXTPAGE = "E1"
+					PValue = PValue + 10
+				End if
+			End If
+		
+		Case "C7"
+			If getRedis("B3") = "21" Then
+				NEXTPAGE = "D1"
+			else
+				NEXTPAGE = "E1"
+				PValue = PValue + 10
+			End If
+
+		Case "D1"
+			If Request("D1") <> "1" And Request("D1") <> "3" Then
+				NEXTPAGE = "SCREEN"
+			End If
+		
+		Case "D2"
+			Dim D2, D2A, numD2
+			D2 = Trim(Request("D2"))
+			D2A = ""
+
+			If Request("D2_NONE") <> "" Then
+					D2A = "6"
+					NEXTPAGE = "SCREEN"
+			ElseIf IsNumeric(D2) Then
+					numD2 = CInt(D2) 
+
+					If numD2 < 7 Then
+							D2A = "1"
+					ElseIf numD2 > 5 And numD2 < 13 Then
+							D2A = "2"
+					ElseIf numD2 > 11 And numD2 < 19 Then
+							D2A = "3"
+					ElseIf numD2 > 17 And numD2 < 25 Then
+							D2A = "4"
+			ElseIf numD2 > 24 Then
+				D2A = "5"
+					End If
+			End If
+
+			SAVEDATA CDAT("D2A="&D2A)
+
+		Case "D7"
+			If CDbl(Request("D7_2")) < 2500 Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+		Case "D8"
+			If Request("D8") = "3" Or Request("D8") = "4" Then
+				NEXTPAGE = "SCREEN"
+			End If
+		
+		Case "D9"
+			Dim D9, cnt, xx
+			cnt = 0
+			For xx = 1 To 8
+				D9 = Request("D9_"&CStr(xx))
+
+				If CStr(D9) = CStr(xx) Then
+					cnt = cnt + 1
+				End If
+			Next
+			
+			If cnt < 2 Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+		Case "E1"
+			Dim E1
+			cnt = 0
+			For xx = 1 To 9
+				E1 = Request("E1_"&CStr(xx))
+
+				If CStr(E1) = CStr(xx) Then
+					cnt = cnt + 1
+				End If
+			Next
+			
+			If cnt < 4 Then
+				NEXTPAGE = "G1"
+				PValue = PValue + 4
+				SAVEDATA CDAT("SDV=N")
+				Holding = "Y"
+			End If
+		
+			If Request("E1_10") = "10" Then
+				NEXTPAGE = "G1"
+				PValue = PValue + 4
+				SAVEDATA CDAT("SDV=N")
+				Holding = "Y"
+			End If
+
+		Case "E2"
+			Dim E2
+			cnt = 0
+
+			For xx = 1 To 5
+				E2 = Request("E2_"&CStr(xx))
+
+				If CStr(E2) < 4 Then
+					cnt = cnt + 1
+				End If
+			Next
+			If cnt > 3 Then
+				NEXTPAGE = "G1"
+				PValue = PValue + 3
+				SAVEDATA CDAT("SDV=N")
+				Holding = "Y"
+			End If
+
+		Case "E3"
+			If CInt(Request("E3")) < 4 Then
+				NEXTPAGE = "G1"
+				PValue = PValue + 3
+				SAVEDATA CDAT("SDV=N")
+				Holding = "Y"
+			End If
+
+		Case "E4"
+			If CInt(Request("E4")) < 4 Then
+				NEXTPAGE = "G1"
+				PValue = PValue + 2
+				SAVEDATA CDAT("SDV=N")
+				Holding = "Y"
+			End If
+
+		Case "E5"
+			If CInt(Request("E5")) < 4 Then
+				SAVEDATA CDAT("SDV=N")
+				Holding = "Y"
+			Else
+				SAVEDATA CDAT("SDV=Y")
+			End If
+
+		Case "G1"
+			If Request("G1") = "1" Then
+				NEXTPAGE = "SCREEN"
+			End If
+		
+		Case "G2"
+			If Request("G2") = "2" Then
+				NEXTPAGE = "SCREEN"
+			End If
+
+		Case "G3"
+			Dim holdStr
+			holdStr = ""
+
+			Dim valA6A
+			valA6A = getRedis("A6A_1")
+			If IsNumeric(valA6A) Then
+				If CDbl(valA6A) < 500 Then
+					holdStr = holdStr & "A6∑"
+				End If
+			End If
+
+			If holdStr <> "" Then
+				If Right(holdStr, 1) = "∑" Then
+					holdStr = Left(holdStr, Len(holdStr) - 1)
+				End If
+				
+				SAVEDATA CDAT("HOLDING=" & holdStr)
+			End If
+
+			
+
+
+End Select

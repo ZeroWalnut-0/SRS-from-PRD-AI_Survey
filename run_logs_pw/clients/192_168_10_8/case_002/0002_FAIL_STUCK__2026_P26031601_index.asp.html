@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138</div>
+    <div><b>Title</b> 국내 신차반응조사 정량 설문지</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>앞으로가기및뒤로가기버튼클릭금지시작</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+AnsType = TEST
+FKEY = 
+GPS_ADD = 
+GPS_XY = 
+IDKey = 03231147313028637343383
+IDS = 
+JOINID = 
+MNID = 
+NextPage = A1
+PRID = 
+PVALUE = 1
+PageName = INDEX
+ResType = TEST
+STFLAG = S
+STYPE = 
+VC_ID = 03231147313028637343383
+Var = FKEY</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>[2026-03-23T02:47:31.827Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+[2026-03-23T02:47:31.829Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+[2026-03-23T02:47:31.830Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/font-kopubworld@1.0
+[2026-03-23T02:47:31.830Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+[2026-03-23T02:47:31.831Z] [requestfailed] GET https://code.jquery.com/jquery-3.7.1.min.js
+[2026-03-23T02:47:31.832Z] [console.error] Failed to load resource: net::ERR_CONNECTION_CLOSED
+[2026-03-23T02:47:31.832Z] [requestfailed] GET https://dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;libraries=services
+[2026-03-23T02:47:31.843Z] [console.error] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED
+[2026-03-23T02:47:31.857Z] [pageerror] jQuery is not defined
+[2026-03-23T02:47:31.876Z] [pageerror] $ is not defined
+[2026-03-23T02:47:31.892Z] [pageerror] $ is not defined
+[2026-03-23T02:47:31.960Z] [console.error] Failed to load resource: the server responded with a status of 404 ()</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	
+	 var verNumber = get_version_of_IE(); 
+
+	 $(&quot;#FKEY&quot;).val(verNumber);
+
+	 
+
+	document.Survey.submit();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\run.log</summary>
+    <pre>...(tail)
+2026-03-23 11:31:19,280 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;DA6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:20,292 | INFO | [1] step=30 DA5 -&gt; DA6 (expected_next=DA6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/DA5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/DA6.asp)
+2026-03-23 11:31:20,904 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 11:31:20,911 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_1 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:20,922 | INFO | input(tel): DA6_1=2842
+2026-03-23 11:31:20,933 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_2 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:21,019 | INFO | input(tel): DA6_2=6210
+2026-03-23 11:31:21,075 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_3 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:21,089 | INFO | input(tel): DA6_3=8440
+2026-03-23 11:31:21,124 | INFO | checked_count_after_fill=0
+2026-03-23 11:31:21,496 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:21,666 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;D1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:21,699 | WARNING | [1] dialog type=alert message=구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)
+2026-03-23 11:31:22,042 | WARNING | [1] validation alert detected: 구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)
+2026-03-23 11:31:22,132 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:22,174 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,175 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:31:22,191 | INFO | [1] step=31 DA6 -&gt; DA6 (expected_next=D1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/DA6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/DA6.asp)
+2026-03-23 11:31:22,192 | WARNING | [1] URL unchanged and page unchanged. Validation-aware retry. (before=DA6, after=DA6, expected=D1)
+2026-03-23 11:31:22,198 | WARNING | [1] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;D1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:22,246 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,330 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:22,372 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,373 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:31:22,378 | WARNING | [1] next_source_excerpt=function next()
+{
+	var isNone_DA6_1 = ($(&#x27;#DA6_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_1) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_1&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_1&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+	}
+	var isNone_DA6_2 = ($(&#x27;#DA6_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_2) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_2&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_2&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+	}
+	var isNone_DA6_3 = ($(&#x27;#DA6_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_3) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_3&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_3&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+	}
+
+
+const da6_1 = parseInt($(&quot;#DA6_1&quot;).val(), 10);
+const da6_2 = parseInt($(&quot;#DA6_2&quot;).val(), 10);
+const da6_3 = parseInt($(&quot;#DA6_3&quot;).val(), 10);
+
+// 에러 조건: 3번이 1번보다 작거나, 3번이 2번보다 큰 경우
+if (da6_3 &lt; da6_1 || da6_3 &gt; da6_2) {
+    alert(&quot;구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)&quot;);
+    // $(&quot;#DA6_3&quot;).focus(); // 필요하시다면 포커스 이동 추가
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 11:31:22,382 | ERROR | [1] Stuck on same page. step=31 url=https://kstat.surveys.kr/2026/P26031601/DA6.asp
+2026-03-23 11:31:22,910 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=2|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 11:31:22,913 | INFO | run 1/104 DONE ok=False
+2026-03-23 11:31:22,914 | INFO | [coverage] overrides={&#x27;SB3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:31:22,915 | INFO | [coverage] 2/104 out_dir=run_logs_pw\clients\192_168_10_8\case_002 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=3|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;SB3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:31:24,328 | INFO | [2] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:31:24,536 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,541 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,545 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,631 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:31:27,623 | WARNING | 사용자가 브라우저를 닫음.
+2026-03-23 11:43:46,368 | INFO | [ACCESS] internal first ip=192.168.10.8 path=/api/reset_state
+2026-03-23 11:43:47,817 | INFO | [guards] loaded: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:47,952 | INFO | [coverage] guards applied: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:48,056 | INFO | [coverage] extracted=104 (max_cases=150) done=0 bad=0 state=ON
+2026-03-23 11:43:48,285 | INFO | [coverage] overrides={&#x27;R3&#x27;: &#x27;2&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:48,287 | INFO | [coverage] 1/104 out_dir=run_logs_pw\clients\192_168_10_8\case_001 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|R3=2|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;R3&#x27;: &#x27;2&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:52,672 | INFO | [1] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:43:53,048 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,058 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,062 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,484 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:43:55,291 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 11:43:55,561 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 11:43:55,604 | INFO | checked_count_after_fill=2
+2026-03-23 11:43:56,465 | ERROR | [job_runner] failed
+Traceback (most recent call last):
+  File &quot;D:\test-project\dummy\server\job_runner.py&quot;, line 337, in run_job_in_thread
+    ok = bool(run_one(cfg, logger, i))
+              ~~~~~~~^^^^^^^^^^^^^^^^
+  File &quot;D:\test-project\dummy\runner\__init__.py&quot;, line 7, in run_one
+    return _run_one(*args, **kwargs)
+  File &quot;D:\test-project\dummy\runner\core.py&quot;, line 447, in run_one
+    apply_next_constraints(page, meta_after_fill, cfg, logger)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 1097, in apply_next_constraints
+    cons = _build_combined_constraints(page, cfg)
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 983, in _build_combined_constraints
+    js_cons = extract_next_constraints(page)
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 581, in extract_next_constraints
+    for rel in _extract_field_compare_disjunctions(raw_cond, resolve_field, scalar_vars):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name &#x27;_extract_field_compare_disjunctions&#x27; is not defined
+2026-03-23 11:46:39,979 | INFO | [ACCESS] internal first ip=192.168.10.8 path=/api/status
+2026-03-23 11:46:56,936 | INFO | [guards] loaded: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,171 | INFO | [coverage] guards applied: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,176 | INFO | [coverage] extracted=104 (max_cases=150) done=0 bad=0 state=ON
+2026-03-23 11:46:57,396 | INFO | [coverage] overrides={&#x27;P8&#x27;: &#x27;1&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,398 | INFO | [coverage] 1/104 out_dir=run_logs_pw\clients\192_168_10_8\case_001 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|P8=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;P8&#x27;: &#x27;1&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:04,149 | INFO | [1] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:47:04,725 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,757 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,775 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,838 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:07,280 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 11:47:07,701 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 11:47:07,780 | INFO | checked_count_after_fill=2
+2026-03-23 11:47:08,942 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:09,142 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:10,453 | INFO | [1] step=0 A0 -&gt; A0A (expected_next=A0A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0A.asp)
+2026-03-23 11:47:11,685 | INFO | radio(required): SC1=3 (min=None, max=None)
+2026-03-23 11:47:11,755 | INFO | checked_count_after_fill=1
+2026-03-23 11:47:12,533 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:12,721 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:14,070 | INFO | [1] step=1 A0A -&gt; A0B (expected_next=A0B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0B.asp)
+2026-03-23 11:47:15,108 | INFO | radio(required): SC2=1 (min=None, max=None)
+2026-03-23 11:47:15,141 | INFO | checked_count_after_fill=1
+2026-03-23 11:47:15,488 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:15,676 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:16,895 | INFO | [1] step=2 A0B -&gt; A0C (expected_next=A0C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 11:47:19,011 | INFO | rank(SC3) attempt 1: OK slots=[&#x27;32&#x27;, &#x27;33&#x27;, &#x27;37&#x27;] forced={}
+2026-03-23 11:47:19,036 | INFO | [OTHER] filled input: TSC3_37=모름
+2026-03-23 11:47:19,468 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:19,641 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:19,722 | WARNING | [1] dialog type=alert message=질문에 응답해 주십시오.
+2026-03-23 11:47:20,160 | WARNING | [1] validation alert detected: 질문에 응답해 주십시오.
+2026-03-23 11:47:20,296 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:20,313 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:20,396 | INFO | [1] step=3 A0C -&gt; A0C (expected_next=A0D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 11:47:20,397 | WARNING | [1] URL unchanged and page unchanged. Validation-aware retry. (before=A0C, after=A0C, expected=A0D)
+2026-03-23 11:47:20,410 | WARNING | [1] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:20,531 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:47:20,692 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:20,732 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:20,769 | WARNING | [1] next_source_excerpt=function next()
+{
+	if (($(&quot;#SC3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#SC3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#SC3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#SC3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#SC3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VSC3_37&quot;)==&quot;37&quot;)	&amp;&amp; ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSC3_37]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VSC3_37&quot;)!=&quot;37&quot;)	&amp;&amp; ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSC3_37]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TSC3_37]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TSC3_37]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VSC3_37&quot;)==&quot;37&quot;)	{
+		if (openValueCode($(&#x27;input[name=TSC3_37]&#x27;).val().trim(),&quot;11∮테슬라 모델 Y∑12∮기아 EV6∑13∮현대 아이오닉 5∑14∮기아 EV3∑15∮BYD  씨라이언7∑21∮기아 스포티지 HEV∑22∮현대 투싼 HEV∑23∮기아 스포티지∑24∮현대 투싼∑31∮기아 쏘렌토 HEV∑32∮현대 싼타페 HEV∑33∮르노 그랑콜레오스 HEV∑34∮기아 쏘렌토∑35∮현대 싼타페∑36∮르노 그랑콜레오스∑37∮기타*OTHER∑99∮함께 고려한 차량 없음*NONE&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+if ($(&quot;#TSC3_37&quot;).val().trim() != &quot;&quot;)
+{
+		if (getRadioValue(&quot;SC3A&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+}
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 11:47:20,790 | ERROR | [1] Stuck on same page. step=3 url=https://kstat.surveys.kr/2026/P26031601/A0C.asp
+2026-03-23 11:47:24,201 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|P8=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 11:47:24,209 | INFO | run 1/104 DONE ok=False
+2026-03-23 11:47:24,211 | INFO | [coverage] overrides={&#x27;D7_1_NONE&#x27;: &#x27;99&#x27;, &#x27;D7_2_NONE&#x27;: &#x27;99&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:24,213 | INFO | [coverage] 2/104 out_dir=run_logs_pw\clients\192_168_10_8\case_002 key=B1=__NEQ__:1|B3Q=__NEQ__:2|D7_1_NONE=99|D7_2_NONE=99|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;D7_1_NONE&#x27;: &#x27;99&#x27;, &#x27;D7_2_NONE&#x27;: &#x27;99&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:28,920 | INFO | [2] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:47:31,727 | WARNING | [2] [requestfailed] GET https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+2026-03-23 11:47:31,756 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+2026-03-23 11:47:31,769 | WARNING | [2] [requestfailed] GET https://cdn.jsdelivr.net/npm/font-kopubworld@1.0
+2026-03-23 11:47:31,780 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+2026-03-23 11:47:31,789 | WARNING | [2] [requestfailed] GET https://code.jquery.com/jquery-3.7.1.min.js
+2026-03-23 11:47:31,799 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CONNECTION_CLOSED
+2026-03-23 11:47:31,810 | WARNING | [2] [requestfailed] GET https://dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;libraries=services
+2026-03-23 11:47:31,825 | WARNING | [2] [console.error] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED
+2026-03-23 11:47:31,837 | WARNING | [2] [pageerror] jQuery is not defined
+2026-03-23 11:47:31,852 | WARNING | [2] [pageerror] $ is not defined
+2026-03-23 11:47:31,867 | WARNING | [2] [pageerror] $ is not defined
+2026-03-23 11:47:31,944 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:33,164 | INFO | checked_count_after_fill=0
+2026-03-23 11:47:33,531 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:33,706 | INFO | [2] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:34,224 | INFO | [2] step=0 index -&gt; index (expected_next=A1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138 -&gt; https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138)
+2026-03-23 11:47:34,226 | WARNING | [2] URL unchanged and page unchanged. Validation-aware retry. (before=index, after=index, expected=A1)
+2026-03-23 11:47:34,248 | WARNING | [2] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:34,305 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:47:34,390 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:34,405 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:34,419 | WARNING | [2] next_source_excerpt=function next()
+{
+	
+	 var verNumber = get_version_of_IE(); 
+
+	 $(&quot;#FKEY&quot;).val(verNumber);
+
+	 
+
+	document.Survey.submit();
+}
+2026-03-23 11:47:34,433 | WARNING | [2] browser_log_tail=[2026-03-23T02:47:31.827Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js | [2026-03-23T02:47:31.829Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED | [2026-03-23T02:47:31.830Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/font-kopubworld@1.0 | [2026-03-23T02:47:31.830Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED | [2026-03-23T02:47:31.831Z] [requestfailed] GET https://code.jquery.com/jquery-3.7.1.min.js | [2026-03-23T02:47:31.832Z] [console.error] Failed to load resource: net::ERR_CONNECTION_CLOSED | [2026-03-23T02:47:31.832Z] [requestfailed] GET https://dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;libraries=services | [2026-03-23T02:47:31.843Z] [console.error] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED | [2026-03-23T02:47:31.857Z] [pageerror] jQuery is not defined | [2026-03-23T02:47:31.876Z] [pageerror] $ is not defined | [2026-03-23T02:47:31.892Z] [pageerror] $ is not defined | [2026-03-23T02:47:31.960Z] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:34,437 | ERROR | [2] Stuck on same page. step=0 url=https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run.log</summary>
+    <pre>...(tail)
+2026-03-23 11:31:19,280 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;DA6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:20,292 | INFO | [1] step=30 DA5 -&gt; DA6 (expected_next=DA6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/DA5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/DA6.asp)
+2026-03-23 11:31:20,904 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 11:31:20,911 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_1 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:20,922 | INFO | input(tel): DA6_1=2842
+2026-03-23 11:31:20,933 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_2 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:21,019 | INFO | input(tel): DA6_2=6210
+2026-03-23 11:31:21,075 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_3 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:21,089 | INFO | input(tel): DA6_3=8440
+2026-03-23 11:31:21,124 | INFO | checked_count_after_fill=0
+2026-03-23 11:31:21,496 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:21,666 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;D1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:21,699 | WARNING | [1] dialog type=alert message=구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)
+2026-03-23 11:31:22,042 | WARNING | [1] validation alert detected: 구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)
+2026-03-23 11:31:22,132 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:22,174 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,175 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:31:22,191 | INFO | [1] step=31 DA6 -&gt; DA6 (expected_next=D1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/DA6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/DA6.asp)
+2026-03-23 11:31:22,192 | WARNING | [1] URL unchanged and page unchanged. Validation-aware retry. (before=DA6, after=DA6, expected=D1)
+2026-03-23 11:31:22,198 | WARNING | [1] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;D1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:22,246 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,330 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:22,372 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,373 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:31:22,378 | WARNING | [1] next_source_excerpt=function next()
+{
+	var isNone_DA6_1 = ($(&#x27;#DA6_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_1) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_1&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_1&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+	}
+	var isNone_DA6_2 = ($(&#x27;#DA6_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_2) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_2&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_2&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+	}
+	var isNone_DA6_3 = ($(&#x27;#DA6_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_3) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_3&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_3&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+	}
+
+
+const da6_1 = parseInt($(&quot;#DA6_1&quot;).val(), 10);
+const da6_2 = parseInt($(&quot;#DA6_2&quot;).val(), 10);
+const da6_3 = parseInt($(&quot;#DA6_3&quot;).val(), 10);
+
+// 에러 조건: 3번이 1번보다 작거나, 3번이 2번보다 큰 경우
+if (da6_3 &lt; da6_1 || da6_3 &gt; da6_2) {
+    alert(&quot;구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)&quot;);
+    // $(&quot;#DA6_3&quot;).focus(); // 필요하시다면 포커스 이동 추가
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 11:31:22,382 | ERROR | [1] Stuck on same page. step=31 url=https://kstat.surveys.kr/2026/P26031601/DA6.asp
+2026-03-23 11:31:22,910 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=2|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 11:31:22,913 | INFO | run 1/104 DONE ok=False
+2026-03-23 11:31:22,914 | INFO | [coverage] overrides={&#x27;SB3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:31:22,915 | INFO | [coverage] 2/104 out_dir=run_logs_pw\clients\192_168_10_8\case_002 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=3|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;SB3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:31:24,328 | INFO | [2] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:31:24,536 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,541 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,545 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,631 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:31:27,623 | WARNING | 사용자가 브라우저를 닫음.
+2026-03-23 11:43:46,368 | INFO | [ACCESS] internal first ip=192.168.10.8 path=/api/reset_state
+2026-03-23 11:43:47,817 | INFO | [guards] loaded: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:47,952 | INFO | [coverage] guards applied: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:48,056 | INFO | [coverage] extracted=104 (max_cases=150) done=0 bad=0 state=ON
+2026-03-23 11:43:48,285 | INFO | [coverage] overrides={&#x27;R3&#x27;: &#x27;2&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:48,287 | INFO | [coverage] 1/104 out_dir=run_logs_pw\clients\192_168_10_8\case_001 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|R3=2|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;R3&#x27;: &#x27;2&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:52,672 | INFO | [1] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:43:53,048 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,058 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,062 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,484 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:43:55,291 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 11:43:55,561 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 11:43:55,604 | INFO | checked_count_after_fill=2
+2026-03-23 11:43:56,465 | ERROR | [job_runner] failed
+Traceback (most recent call last):
+  File &quot;D:\test-project\dummy\server\job_runner.py&quot;, line 337, in run_job_in_thread
+    ok = bool(run_one(cfg, logger, i))
+              ~~~~~~~^^^^^^^^^^^^^^^^
+  File &quot;D:\test-project\dummy\runner\__init__.py&quot;, line 7, in run_one
+    return _run_one(*args, **kwargs)
+  File &quot;D:\test-project\dummy\runner\core.py&quot;, line 447, in run_one
+    apply_next_constraints(page, meta_after_fill, cfg, logger)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 1097, in apply_next_constraints
+    cons = _build_combined_constraints(page, cfg)
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 983, in _build_combined_constraints
+    js_cons = extract_next_constraints(page)
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 581, in extract_next_constraints
+    for rel in _extract_field_compare_disjunctions(raw_cond, resolve_field, scalar_vars):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name &#x27;_extract_field_compare_disjunctions&#x27; is not defined
+2026-03-23 11:46:39,979 | INFO | [ACCESS] internal first ip=192.168.10.8 path=/api/status
+2026-03-23 11:46:56,936 | INFO | [guards] loaded: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,171 | INFO | [coverage] guards applied: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,176 | INFO | [coverage] extracted=104 (max_cases=150) done=0 bad=0 state=ON
+2026-03-23 11:46:57,396 | INFO | [coverage] overrides={&#x27;P8&#x27;: &#x27;1&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,398 | INFO | [coverage] 1/104 out_dir=run_logs_pw\clients\192_168_10_8\case_001 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|P8=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;P8&#x27;: &#x27;1&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:04,149 | INFO | [1] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:47:04,725 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,757 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,775 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,838 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:07,280 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 11:47:07,701 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 11:47:07,780 | INFO | checked_count_after_fill=2
+2026-03-23 11:47:08,942 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:09,142 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:10,453 | INFO | [1] step=0 A0 -&gt; A0A (expected_next=A0A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0A.asp)
+2026-03-23 11:47:11,685 | INFO | radio(required): SC1=3 (min=None, max=None)
+2026-03-23 11:47:11,755 | INFO | checked_count_after_fill=1
+2026-03-23 11:47:12,533 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:12,721 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:14,070 | INFO | [1] step=1 A0A -&gt; A0B (expected_next=A0B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0B.asp)
+2026-03-23 11:47:15,108 | INFO | radio(required): SC2=1 (min=None, max=None)
+2026-03-23 11:47:15,141 | INFO | checked_count_after_fill=1
+2026-03-23 11:47:15,488 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:15,676 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:16,895 | INFO | [1] step=2 A0B -&gt; A0C (expected_next=A0C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 11:47:19,011 | INFO | rank(SC3) attempt 1: OK slots=[&#x27;32&#x27;, &#x27;33&#x27;, &#x27;37&#x27;] forced={}
+2026-03-23 11:47:19,036 | INFO | [OTHER] filled input: TSC3_37=모름
+2026-03-23 11:47:19,468 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:19,641 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:19,722 | WARNING | [1] dialog type=alert message=질문에 응답해 주십시오.
+2026-03-23 11:47:20,160 | WARNING | [1] validation alert detected: 질문에 응답해 주십시오.
+2026-03-23 11:47:20,296 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:20,313 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:20,396 | INFO | [1] step=3 A0C -&gt; A0C (expected_next=A0D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 11:47:20,397 | WARNING | [1] URL unchanged and page unchanged. Validation-aware retry. (before=A0C, after=A0C, expected=A0D)
+2026-03-23 11:47:20,410 | WARNING | [1] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:20,531 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:47:20,692 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:20,732 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:20,769 | WARNING | [1] next_source_excerpt=function next()
+{
+	if (($(&quot;#SC3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#SC3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#SC3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#SC3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#SC3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VSC3_37&quot;)==&quot;37&quot;)	&amp;&amp; ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSC3_37]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VSC3_37&quot;)!=&quot;37&quot;)	&amp;&amp; ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSC3_37]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TSC3_37]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TSC3_37]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VSC3_37&quot;)==&quot;37&quot;)	{
+		if (openValueCode($(&#x27;input[name=TSC3_37]&#x27;).val().trim(),&quot;11∮테슬라 모델 Y∑12∮기아 EV6∑13∮현대 아이오닉 5∑14∮기아 EV3∑15∮BYD  씨라이언7∑21∮기아 스포티지 HEV∑22∮현대 투싼 HEV∑23∮기아 스포티지∑24∮현대 투싼∑31∮기아 쏘렌토 HEV∑32∮현대 싼타페 HEV∑33∮르노 그랑콜레오스 HEV∑34∮기아 쏘렌토∑35∮현대 싼타페∑36∮르노 그랑콜레오스∑37∮기타*OTHER∑99∮함께 고려한 차량 없음*NONE&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+if ($(&quot;#TSC3_37&quot;).val().trim() != &quot;&quot;)
+{
+		if (getRadioValue(&quot;SC3A&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+}
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 11:47:20,790 | ERROR | [1] Stuck on same page. step=3 url=https://kstat.surveys.kr/2026/P26031601/A0C.asp
+2026-03-23 11:47:24,201 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|P8=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 11:47:24,209 | INFO | run 1/104 DONE ok=False
+2026-03-23 11:47:24,211 | INFO | [coverage] overrides={&#x27;D7_1_NONE&#x27;: &#x27;99&#x27;, &#x27;D7_2_NONE&#x27;: &#x27;99&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:24,213 | INFO | [coverage] 2/104 out_dir=run_logs_pw\clients\192_168_10_8\case_002 key=B1=__NEQ__:1|B3Q=__NEQ__:2|D7_1_NONE=99|D7_2_NONE=99|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;D7_1_NONE&#x27;: &#x27;99&#x27;, &#x27;D7_2_NONE&#x27;: &#x27;99&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:28,920 | INFO | [2] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:47:31,727 | WARNING | [2] [requestfailed] GET https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+2026-03-23 11:47:31,756 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+2026-03-23 11:47:31,769 | WARNING | [2] [requestfailed] GET https://cdn.jsdelivr.net/npm/font-kopubworld@1.0
+2026-03-23 11:47:31,780 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+2026-03-23 11:47:31,789 | WARNING | [2] [requestfailed] GET https://code.jquery.com/jquery-3.7.1.min.js
+2026-03-23 11:47:31,799 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CONNECTION_CLOSED
+2026-03-23 11:47:31,810 | WARNING | [2] [requestfailed] GET https://dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;libraries=services
+2026-03-23 11:47:31,825 | WARNING | [2] [console.error] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED
+2026-03-23 11:47:31,837 | WARNING | [2] [pageerror] jQuery is not defined
+2026-03-23 11:47:31,852 | WARNING | [2] [pageerror] $ is not defined
+2026-03-23 11:47:31,867 | WARNING | [2] [pageerror] $ is not defined
+2026-03-23 11:47:31,944 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:33,164 | INFO | checked_count_after_fill=0
+2026-03-23 11:47:33,531 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:33,706 | INFO | [2] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:34,224 | INFO | [2] step=0 index -&gt; index (expected_next=A1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138 -&gt; https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138)
+2026-03-23 11:47:34,226 | WARNING | [2] URL unchanged and page unchanged. Validation-aware retry. (before=index, after=index, expected=A1)
+2026-03-23 11:47:34,248 | WARNING | [2] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:34,305 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:47:34,390 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:34,405 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:34,419 | WARNING | [2] next_source_excerpt=function next()
+{
+	
+	 var verNumber = get_version_of_IE(); 
+
+	 $(&quot;#FKEY&quot;).val(verNumber);
+
+	 
+
+	document.Survey.submit();
+}
+2026-03-23 11:47:34,433 | WARNING | [2] browser_log_tail=[2026-03-23T02:47:31.827Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js | [2026-03-23T02:47:31.829Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED | [2026-03-23T02:47:31.830Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/font-kopubworld@1.0 | [2026-03-23T02:47:31.830Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED | [2026-03-23T02:47:31.831Z] [requestfailed] GET https://code.jquery.com/jquery-3.7.1.min.js | [2026-03-23T02:47:31.832Z] [console.error] Failed to load resource: net::ERR_CONNECTION_CLOSED | [2026-03-23T02:47:31.832Z] [requestfailed] GET https://dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;libraries=services | [2026-03-23T02:47:31.843Z] [console.error] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED | [2026-03-23T02:47:31.857Z] [pageerror] jQuery is not defined | [2026-03-23T02:47:31.876Z] [pageerror] $ is not defined | [2026-03-23T02:47:31.892Z] [pageerror] $ is not defined | [2026-03-23T02:47:31.960Z] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:34,437 | ERROR | [2] Stuck on same page. step=0 url=https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run_all.log</summary>
+    <pre>...(tail)
+2026-03-23 11:31:19,280 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;DA6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:20,292 | INFO | [1] step=30 DA5 -&gt; DA6 (expected_next=DA6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/DA5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/DA6.asp)
+2026-03-23 11:31:20,904 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 11:31:20,911 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_1 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:20,922 | INFO | input(tel): DA6_1=2842
+2026-03-23 11:31:20,933 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_2 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:21,019 | INFO | input(tel): DA6_2=6210
+2026-03-23 11:31:21,075 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=DA6_3 cmin=None cmax=None forced_val=None
+2026-03-23 11:31:21,089 | INFO | input(tel): DA6_3=8440
+2026-03-23 11:31:21,124 | INFO | checked_count_after_fill=0
+2026-03-23 11:31:21,496 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:21,666 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;D1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:21,699 | WARNING | [1] dialog type=alert message=구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)
+2026-03-23 11:31:22,042 | WARNING | [1] validation alert detected: 구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)
+2026-03-23 11:31:22,132 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:22,174 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,175 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:31:22,191 | INFO | [1] step=31 DA6 -&gt; DA6 (expected_next=D1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/DA6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/DA6.asp)
+2026-03-23 11:31:22,192 | WARNING | [1] URL unchanged and page unchanged. Validation-aware retry. (before=DA6, after=DA6, expected=D1)
+2026-03-23 11:31:22,198 | WARNING | [1] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;D1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:31:22,246 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,330 | INFO | [next_logic] no adjustment
+2026-03-23 11:31:22,372 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:31:22,373 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:31:22,378 | WARNING | [1] next_source_excerpt=function next()
+{
+	var isNone_DA6_1 = ($(&#x27;#DA6_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_1) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_1&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_1&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_1&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_1&quot;).focus(); return; }
+	}
+	var isNone_DA6_2 = ($(&#x27;#DA6_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_2) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_2&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_2&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_2&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_2&quot;).focus(); return; }
+	}
+	var isNone_DA6_3 = ($(&#x27;#DA6_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#DA6_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_DA6_3) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#DA6_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_3&quot;).val().trim()) &lt; 2500) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 2500 이상 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+		if (parseFloat($(&quot;#DA6_3&quot;).val().trim()) &gt; 9999) { alert(&quot;[&quot;+$(&quot;#LDA6_3&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;); $(&quot;#DA6_3&quot;).focus(); return; }
+	}
+
+
+const da6_1 = parseInt($(&quot;#DA6_1&quot;).val(), 10);
+const da6_2 = parseInt($(&quot;#DA6_2&quot;).val(), 10);
+const da6_3 = parseInt($(&quot;#DA6_3&quot;).val(), 10);
+
+// 에러 조건: 3번이 1번보다 작거나, 3번이 2번보다 큰 경우
+if (da6_3 &lt; da6_1 || da6_3 &gt; da6_2) {
+    alert(&quot;구매 예산 응답을 확인해 주십시오. (최소금액 ≤ 적정금액 ≤ 최대금액 이어야 합니다.)&quot;);
+    // $(&quot;#DA6_3&quot;).focus(); // 필요하시다면 포커스 이동 추가
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 11:31:22,382 | ERROR | [1] Stuck on same page. step=31 url=https://kstat.surveys.kr/2026/P26031601/DA6.asp
+2026-03-23 11:31:22,910 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=2|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 11:31:22,913 | INFO | run 1/104 DONE ok=False
+2026-03-23 11:31:22,914 | INFO | [coverage] overrides={&#x27;SB3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:31:22,915 | INFO | [coverage] 2/104 out_dir=run_logs_pw\clients\192_168_10_8\case_002 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=3|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;SB3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:31:24,328 | INFO | [2] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:31:24,536 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,541 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,545 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:31:24,631 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:31:27,623 | WARNING | 사용자가 브라우저를 닫음.
+2026-03-23 11:43:46,368 | INFO | [ACCESS] internal first ip=192.168.10.8 path=/api/reset_state
+2026-03-23 11:43:47,817 | INFO | [guards] loaded: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:47,952 | INFO | [coverage] guards applied: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:48,056 | INFO | [coverage] extracted=104 (max_cases=150) done=0 bad=0 state=ON
+2026-03-23 11:43:48,285 | INFO | [coverage] overrides={&#x27;R3&#x27;: &#x27;2&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:48,287 | INFO | [coverage] 1/104 out_dir=run_logs_pw\clients\192_168_10_8\case_001 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|R3=2|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;R3&#x27;: &#x27;2&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:43:52,672 | INFO | [1] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:43:53,048 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,058 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,062 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:43:53,484 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:43:55,291 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 11:43:55,561 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 11:43:55,604 | INFO | checked_count_after_fill=2
+2026-03-23 11:43:56,465 | ERROR | [job_runner] failed
+Traceback (most recent call last):
+  File &quot;D:\test-project\dummy\server\job_runner.py&quot;, line 337, in run_job_in_thread
+    ok = bool(run_one(cfg, logger, i))
+              ~~~~~~~^^^^^^^^^^^^^^^^
+  File &quot;D:\test-project\dummy\runner\__init__.py&quot;, line 7, in run_one
+    return _run_one(*args, **kwargs)
+  File &quot;D:\test-project\dummy\runner\core.py&quot;, line 447, in run_one
+    apply_next_constraints(page, meta_after_fill, cfg, logger)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 1097, in apply_next_constraints
+    cons = _build_combined_constraints(page, cfg)
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 983, in _build_combined_constraints
+    js_cons = extract_next_constraints(page)
+  File &quot;D:\test-project\dummy\runner\next_logic.py&quot;, line 581, in extract_next_constraints
+    for rel in _extract_field_compare_disjunctions(raw_cond, resolve_field, scalar_vars):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name &#x27;_extract_field_compare_disjunctions&#x27; is not defined
+2026-03-23 11:46:39,979 | INFO | [ACCESS] internal first ip=192.168.10.8 path=/api/status
+2026-03-23 11:46:56,936 | INFO | [guards] loaded: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,171 | INFO | [coverage] guards applied: {&#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,176 | INFO | [coverage] extracted=104 (max_cases=150) done=0 bad=0 state=ON
+2026-03-23 11:46:57,396 | INFO | [coverage] overrides={&#x27;P8&#x27;: &#x27;1&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:46:57,398 | INFO | [coverage] 1/104 out_dir=run_logs_pw\clients\192_168_10_8\case_001 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|P8=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;P8&#x27;: &#x27;1&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:04,149 | INFO | [1] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:47:04,725 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,757 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,775 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 11:47:04,838 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:07,280 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 11:47:07,701 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 11:47:07,780 | INFO | checked_count_after_fill=2
+2026-03-23 11:47:08,942 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:09,142 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:10,453 | INFO | [1] step=0 A0 -&gt; A0A (expected_next=A0A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0A.asp)
+2026-03-23 11:47:11,685 | INFO | radio(required): SC1=3 (min=None, max=None)
+2026-03-23 11:47:11,755 | INFO | checked_count_after_fill=1
+2026-03-23 11:47:12,533 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:12,721 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:14,070 | INFO | [1] step=1 A0A -&gt; A0B (expected_next=A0B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0B.asp)
+2026-03-23 11:47:15,108 | INFO | radio(required): SC2=1 (min=None, max=None)
+2026-03-23 11:47:15,141 | INFO | checked_count_after_fill=1
+2026-03-23 11:47:15,488 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:15,676 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:16,895 | INFO | [1] step=2 A0B -&gt; A0C (expected_next=A0C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 11:47:19,011 | INFO | rank(SC3) attempt 1: OK slots=[&#x27;32&#x27;, &#x27;33&#x27;, &#x27;37&#x27;] forced={}
+2026-03-23 11:47:19,036 | INFO | [OTHER] filled input: TSC3_37=모름
+2026-03-23 11:47:19,468 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:19,641 | INFO | [1] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:19,722 | WARNING | [1] dialog type=alert message=질문에 응답해 주십시오.
+2026-03-23 11:47:20,160 | WARNING | [1] validation alert detected: 질문에 응답해 주십시오.
+2026-03-23 11:47:20,296 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:20,313 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:20,396 | INFO | [1] step=3 A0C -&gt; A0C (expected_next=A0D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 11:47:20,397 | WARNING | [1] URL unchanged and page unchanged. Validation-aware retry. (before=A0C, after=A0C, expected=A0D)
+2026-03-23 11:47:20,410 | WARNING | [1] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:20,531 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:47:20,692 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:20,732 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:20,769 | WARNING | [1] next_source_excerpt=function next()
+{
+	if (($(&quot;#SC3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#SC3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#SC3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#SC3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#SC3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VSC3_37&quot;)==&quot;37&quot;)	&amp;&amp; ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSC3_37]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VSC3_37&quot;)!=&quot;37&quot;)	&amp;&amp; ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSC3_37]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TSC3_37]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TSC3_37]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TSC3_37]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VSC3_37&quot;)==&quot;37&quot;)	{
+		if (openValueCode($(&#x27;input[name=TSC3_37]&#x27;).val().trim(),&quot;11∮테슬라 모델 Y∑12∮기아 EV6∑13∮현대 아이오닉 5∑14∮기아 EV3∑15∮BYD  씨라이언7∑21∮기아 스포티지 HEV∑22∮현대 투싼 HEV∑23∮기아 스포티지∑24∮현대 투싼∑31∮기아 쏘렌토 HEV∑32∮현대 싼타페 HEV∑33∮르노 그랑콜레오스 HEV∑34∮기아 쏘렌토∑35∮현대 싼타페∑36∮르노 그랑콜레오스∑37∮기타*OTHER∑99∮함께 고려한 차량 없음*NONE&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+if ($(&quot;#TSC3_37&quot;).val().trim() != &quot;&quot;)
+{
+		if (getRadioValue(&quot;SC3A&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+}
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 11:47:20,790 | ERROR | [1] Stuck on same page. step=3 url=https://kstat.surveys.kr/2026/P26031601/A0C.asp
+2026-03-23 11:47:24,201 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|P8=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 11:47:24,209 | INFO | run 1/104 DONE ok=False
+2026-03-23 11:47:24,211 | INFO | [coverage] overrides={&#x27;D7_1_NONE&#x27;: &#x27;99&#x27;, &#x27;D7_2_NONE&#x27;: &#x27;99&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:24,213 | INFO | [coverage] 2/104 out_dir=run_logs_pw\clients\192_168_10_8\case_002 key=B1=__NEQ__:1|B3Q=__NEQ__:2|D7_1_NONE=99|D7_2_NONE=99|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;D7_1_NONE&#x27;: &#x27;99&#x27;, &#x27;D7_2_NONE&#x27;: &#x27;99&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_3&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 11:47:28,920 | INFO | [2] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 11:47:31,727 | WARNING | [2] [requestfailed] GET https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+2026-03-23 11:47:31,756 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+2026-03-23 11:47:31,769 | WARNING | [2] [requestfailed] GET https://cdn.jsdelivr.net/npm/font-kopubworld@1.0
+2026-03-23 11:47:31,780 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED
+2026-03-23 11:47:31,789 | WARNING | [2] [requestfailed] GET https://code.jquery.com/jquery-3.7.1.min.js
+2026-03-23 11:47:31,799 | WARNING | [2] [console.error] Failed to load resource: net::ERR_CONNECTION_CLOSED
+2026-03-23 11:47:31,810 | WARNING | [2] [requestfailed] GET https://dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;libraries=services
+2026-03-23 11:47:31,825 | WARNING | [2] [console.error] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED
+2026-03-23 11:47:31,837 | WARNING | [2] [pageerror] jQuery is not defined
+2026-03-23 11:47:31,852 | WARNING | [2] [pageerror] $ is not defined
+2026-03-23 11:47:31,867 | WARNING | [2] [pageerror] $ is not defined
+2026-03-23 11:47:31,944 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:33,164 | INFO | checked_count_after_fill=0
+2026-03-23 11:47:33,531 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:33,706 | INFO | [2] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:34,224 | INFO | [2] step=0 index -&gt; index (expected_next=A1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138 -&gt; https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138)
+2026-03-23 11:47:34,226 | WARNING | [2] URL unchanged and page unchanged. Validation-aware retry. (before=index, after=index, expected=A1)
+2026-03-23 11:47:34,248 | WARNING | [2] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 11:47:34,305 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 11:47:34,390 | INFO | [next_logic] no adjustment
+2026-03-23 11:47:34,405 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 11:47:34,419 | WARNING | [2] next_source_excerpt=function next()
+{
+	
+	 var verNumber = get_version_of_IE(); 
+
+	 $(&quot;#FKEY&quot;).val(verNumber);
+
+	 
+
+	document.Survey.submit();
+}
+2026-03-23 11:47:34,433 | WARNING | [2] browser_log_tail=[2026-03-23T02:47:31.827Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js | [2026-03-23T02:47:31.829Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED | [2026-03-23T02:47:31.830Z] [requestfailed] GET https://cdn.jsdelivr.net/npm/font-kopubworld@1.0 | [2026-03-23T02:47:31.830Z] [console.error] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED | [2026-03-23T02:47:31.831Z] [requestfailed] GET https://code.jquery.com/jquery-3.7.1.min.js | [2026-03-23T02:47:31.832Z] [console.error] Failed to load resource: net::ERR_CONNECTION_CLOSED | [2026-03-23T02:47:31.832Z] [requestfailed] GET https://dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;libraries=services | [2026-03-23T02:47:31.843Z] [console.error] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED | [2026-03-23T02:47:31.857Z] [pageerror] jQuery is not defined | [2026-03-23T02:47:31.876Z] [pageerror] $ is not defined | [2026-03-23T02:47:31.892Z] [pageerror] $ is not defined | [2026-03-23T02:47:31.960Z] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 11:47:34,437 | ERROR | [2] Stuck on same page. step=0 url=https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138</pre>
+  </details>
+</div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603172230&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;국내 신차반응조사 정량 설문지&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//dapi.kakao.com/v2/maps/sdk.js?appkey=d019c78b90e6efed39b9d761341db123&amp;amp;libraries=services&quot;&gt;&lt;/script&gt;&lt;script language=&quot;javascript&quot;&gt;
+function getKAKAO_GPS() {
+	var gps_xy;
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function successCallback(position) {
+                var lat = position.coords.latitude;    // 위도
+                var lng = position.coords.longitude;   // 경도
+
+				gps_xy = lat + &quot;,&quot; +lng;
+
+				$(&quot;#GPS_XY&quot;).val(gps_xy);
+				$(&quot;#GPS_XY&quot;).after(&quot;&lt;div id=&#x27;map&#x27; style=&#x27;display:none;&#x27;&gt;&lt;/div&gt;&quot;);
+                
+                // 카카오 지도 초기화
+                initKakaoMap(lat, lng);
+            }, 
+            function errorCallback() {
+                console.error(&quot;위치 정보를 가져오는데 실패했습니다.&quot;);
+				$(&quot;#GPS_XY&quot;).val(&quot;GPS 비활성화&quot;);
+				$(&quot;#GPS_ADD&quot;).val(&quot;GPS 비활성화&quot;);
+				$(&quot;#GPS_ADDR&quot;).text(&quot;현재위치 : &quot;+$(&quot;#GPS_ADD&quot;).val());		
+            }, 
+            {
+                enableHighAccuracy: true,
+                timeout: 1500,
+                maximumAge: 5000
+            }
+        );
+    } else {
+        console.error(&quot;Geolocation을 지원하지 않는 브라우저입니다.&quot;);
+		$(&quot;#GPS_XY&quot;).val(&quot;GPS 비활성화&quot;);
+		$(&quot;#GPS_ADD&quot;).val(&quot;GPS 비활성화&quot;);
+		$(&quot;#GPS_ADDR&quot;).text(&quot;현재위치 : &quot;+$(&quot;#GPS_ADD&quot;).val());		
+    }
+}
+
+function initKakaoMap(lat, lng) {
+
+	//console.log(lat+&quot;/&quot;+lng);
+    var mapContainer = document.getElementById(&#x27;map&#x27;); // 지도를 표시할 div
+
+    var mapOption = {
+        center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
+        level: 1 // 지도의 확대 레벨
+    };  
+
+    // 지도를 생성합니다    
+    var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
+
+
+   // 지도 중심 좌표에 대한 상세 주소 정보 검색
+	searchDetailAddrFromCoords(map.getCenter(), function(result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+        var detailAddr = &#x27;&#x27;;
+
+        // 도로명 주소가 있는 경우 추가
+		/*
+        if (result[0].road_address) {
+            detailAddr += &#x27;&lt;div&gt;도로명주소 : &#x27; + result[0].road_address.address_name + &#x27;&lt;/div&gt;&#x27;;
+        }
+		*/
+
+        // 지번 주소가 있는 경우 추가
+        if (result[0].address) {			
+            detailAddr =  result[0].address.address_name
+			$(&quot;#GPS_ADD&quot;).val(detailAddr);
+			$(&quot;#GPS_ADDR&quot;).text(&quot;현재위치 : &quot;+$(&quot;#GPS_ADD&quot;).val());			
+        }
+
+        // 주소 정보가 없는 경우
+        if (!detailAddr) {
+            $(&quot;#GPS_ADD&quot;).val(&quot;GPS 비활성화&quot;);
+			$(&quot;#GPS_ADDR&quot;).text(&quot;현재위치 : &quot;+$(&quot;#GPS_ADD&quot;).val());
+        }        
+    } else {
+        $(&quot;#GPS_ADD&quot;).val(&quot;GPS 비활성화&quot;);
+		$(&quot;#GPS_ADDR&quot;).text(&quot;현재위치 : &quot;+$(&quot;#GPS_ADD&quot;).val());		
+    }
+});
+
+    function searchAddrFromCoords(coords, callback) {
+        // 좌표로 행정동 주소 정보를 요청합니다
+        geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);         
+    }
+
+    function searchDetailAddrFromCoords(coords, callback) {
+        // 좌표로 법정동 상세 주소 정보를 요청합니다
+        geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+    }
+
+   
+}
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+
+function prev()
+{
+	history.back(-2);
+}
+
+function next()
+{
+	
+	 var verNumber = get_version_of_IE(); 
+
+	 $(&quot;#FKEY&quot;).val(verNumber);
+
+	 
+
+	document.Survey.submit();
+}
+
+function get_version_of_IE () { 
+
+	 var word; 
+
+	 var agent = navigator.userAgent.toLowerCase(); 
+
+	 // IE old version ( IE 10 or Lower ) 
+	 if ( navigator.appName == &quot;Microsoft Internet Explorer&quot; ) word = &quot;msie &quot;; 
+
+	 // IE 11 
+	 else if ( agent.search( &quot;trident&quot; ) &gt; -1 ) word = &quot;trident/.*rv:&quot;; 
+
+	 // Microsoft Edge  
+	 else if ( agent.search( &quot;edge/&quot; ) &gt; -1 ) word = &quot;edge/&quot;; 
+
+	 // 그외, IE가 아니라면 ( If it&#x27;s not IE or Edge )  
+	 else return -1; 
+
+	 var reg = new RegExp( word + &quot;([0-9]{1,})(\\.{0,}[0-9]{0,1})&quot; ); 
+
+	 if (  reg.exec( agent ) != null  ) return parseFloat( RegExp.$1 + RegExp.$2 ); 
+
+	 return -1; 
+} 
+
+$(document).ready(function(){
+	
+
+	document.Survey.submit();
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+&lt;form name=&quot;Survey&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;FKEY&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;INDEX&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;A1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;03231147313028637343383&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;03231147313028637343383&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;STFLAG&quot; value=&quot;S&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;GPS_XY&quot; id=&quot;GPS_XY&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;GPS_ADD&quot; id=&quot;GPS_ADD&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;FKEY&quot; id=&quot;FKEY&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;STYPE&quot; id=&quot;STYPE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;MNID&quot; id=&quot;MNID&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;JOINID&quot; id=&quot;JOINID&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PRID&quot; id=&quot;PRID&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;AnsType&quot; id=&quot;AnsType&quot; value=&quot;TEST&quot;&gt;
+
+&lt;div class=&quot;container-fluid&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-primary&quot;&gt;				
+				&lt;div id=&quot;GPS_ADDR&quot;&gt;&lt;/div&gt;
+				
+				
+				
+
+				&lt;div class=&quot;border-top p-2&quot;&gt;
+					&lt;span class=&quot;text-danger&quot;&gt;앞으로 가기 및 뒤로가기 버튼 클릭 금지&lt;/span&gt;
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+			
+			&lt;div class=&quot;d-grid gap-2 shadow&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary btn-lg btn-bottom&quot; id=&quot;next&quot; name=&quot;next&quot;&gt;시작&lt;/button&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

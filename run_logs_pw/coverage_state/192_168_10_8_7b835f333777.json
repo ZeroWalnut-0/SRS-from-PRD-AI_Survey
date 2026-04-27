@@ -1,0 +1,32 @@
+{
+  "done_case_keys": [
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=4|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|P8=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|R3=2|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|S2=5|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|S8_99=1|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=2|G2_2=1|G2_3=1|G2_4=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1"
+  ],
+  "bad_case_keys": [
+    "A2=4|B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=2|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|D7_1_NONE=4|D7_2_NONE=99|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|F6_1=99|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|G2_2=1|G2_3=1|G2_4=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|K1B=2|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|K1B=4|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|K1C=21|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|K1C=3|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L1=2|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L1=3|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=3|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=4|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|R3=1|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|S1=1|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|S2=2|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=4|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|T2=3|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|T2=5|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1"
+  ],
+  "runs": 25
+}

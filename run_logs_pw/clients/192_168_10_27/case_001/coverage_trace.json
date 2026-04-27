@@ -1,0 +1,25 @@
+{
+  "idx": 1,
+  "start_url": "https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138",
+  "ok": false,
+  "completed": false,
+  "screen_hit": false,
+  "final_url": "https://kstat.surveys.kr/2026/P26031601/A0C.asp",
+  "visited_pages": [
+    "A0",
+    "A0A",
+    "A0B",
+    "A0C"
+  ],
+  "visited_edges": [
+    "A0->A0A",
+    "A0A->A0B",
+    "A0B->A0C",
+    "A0C->A0C"
+  ],
+  "last_alert": "질문에 응답해 주십시오.",
+  "alert_history": [
+    "질문에 응답해 주십시오."
+  ],
+  "last_dialog_type": "alert"
+}

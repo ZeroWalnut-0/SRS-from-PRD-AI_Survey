@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26031601/C2.asp</div>
+    <div><b>Title</b> 국내 신차반응조사 정량 설문지</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>16%C2귀하가보유하신차량기아EV5기준으로주중/주말일평균주행거리는어느정도입니까?주중일평균주행거리주말일평균주행거리주중5일중일운행주말2일중일운행하루에km하루에km이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+C2_1 = 0
+C2_2 = 210
+C2_3 = 2
+C2_4 = 1000
+ECODE = 
+ENUMBER = 
+IDKey = 03231406207237537346531
+IDS = 
+NextPage = C3
+PVALUE = 26
+PageName = C2
+ResType = TEST
+VC_ID = 03231406207237537346531
+Var = C2_1,C2_3,C2_2,C2_4</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	var isNone_C2_1 = ($(&#x27;#C2_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_1) {
+		if(!/^\d+$/.test($(&quot;#C2_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &gt; 5) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 5 이하 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+	}
+	var isNone_C2_3 = ($(&#x27;#C2_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_3) {
+		if(!/^\d+$/.test($(&quot;#C2_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &gt; 2) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 2 이하 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+	}
+	var isNone_C2_2 = ($(&#x27;#C2_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_2) {
+		if(!/^\d+$/.test($(&quot;#C2_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &gt; 500) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 500 이하 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+	}
+	var isNone_C2_4 = ($(&#x27;#C2_4_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_4_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_4) {
+		if(!/^\d+$/.test($(&quot;#C2_4&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &gt; 1000) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 1000 이하 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+	}
+
+
+const c2_1 = parseInt($(&quot;#C2_1&quot;).val(), 10) || 0; // 주중 운행일
+const c2_2 = parseInt($(&quot;#C2_2&quot;).val(), 10) || 0; // 주중 주행거리
+const c2_3 = parseInt($(&quot;#C2_3&quot;).val(), 10) || 0; // 주말 운행일
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\run.log</summary>
+    <pre>...(tail)
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:06:15,174 | ERROR | [10] Stuck on same page. step=22 url=https://kstat.surveys.kr/2026/P26031601/C2.asp
+2026-03-23 14:06:16,272 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L1=2|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 14:06:16,279 | INFO | run 10/104 DONE ok=False
+2026-03-23 14:06:16,281 | INFO | [coverage] overrides={&#x27;L3_3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 14:06:16,282 | INFO | [coverage] 11/104 out_dir=run_logs_pw\clients\192_168_10_8\case_011 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=3|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;L3_3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 14:06:20,054 | INFO | [11] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 14:06:20,364 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,371 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,381 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,758 | WARNING | [11] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 14:06:22,685 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 14:06:22,881 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 14:06:22,908 | INFO | checked_count_after_fill=2
+2026-03-23 14:06:23,277 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:23,458 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:24,566 | INFO | [11] step=0 A0 -&gt; A0A (expected_next=A0A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0A.asp)
+2026-03-23 14:06:25,555 | INFO | radio(required): SC1=3 (min=None, max=None)
+2026-03-23 14:06:25,621 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:25,985 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:26,168 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:27,224 | INFO | [11] step=1 A0A -&gt; A0B (expected_next=A0B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0B.asp)
+2026-03-23 14:06:28,137 | INFO | radio(required): SC2=2 (min=None, max=None)
+2026-03-23 14:06:28,192 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:28,541 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:28,718 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:29,822 | INFO | [11] step=2 A0B -&gt; A0C (expected_next=A0C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 14:06:31,147 | INFO | rank(SC3) attempt 1: OK slots=[&#x27;21&#x27;, &#x27;35&#x27;, &#x27;12&#x27;] forced={}
+2026-03-23 14:06:31,546 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:31,722 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:32,758 | INFO | [11] step=3 A0C -&gt; A0H (expected_next=A0D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0H.asp)
+2026-03-23 14:06:33,786 | INFO | radio(required): SDQ2=2 (min=None, max=None)
+2026-03-23 14:06:33,852 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:34,218 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:34,396 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:35,486 | INFO | [11] step=4 A0H -&gt; A1 (expected_next=A1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0H.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A1.asp)
+2026-03-23 14:06:36,345 | INFO | radio(required): A1_1 keep existing checked=5
+2026-03-23 14:06:36,362 | INFO | radio(required): A1_2 keep existing checked=2
+2026-03-23 14:06:36,380 | INFO | radio(required): A1_3 keep existing checked=2
+2026-03-23 14:06:36,400 | INFO | checked_count_after_fill=3
+2026-03-23 14:06:36,781 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:36,947 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:38,029 | INFO | [11] step=5 A1 -&gt; A2 (expected_next=A2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A2.asp)
+2026-03-23 14:06:38,828 | INFO | radio(required): A2=2 (min=None, max=None)
+2026-03-23 14:06:38,892 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:39,246 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:39,423 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:40,490 | INFO | [11] step=6 A2 -&gt; A3 (expected_next=A3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A3.asp)
+2026-03-23 14:06:41,204 | INFO | select: A3=270
+2026-03-23 14:06:41,239 | INFO | select: A3_2=
+2026-03-23 14:06:41,267 | INFO | input(skip disabled): A3
+2026-03-23 14:06:41,282 | INFO | input(skip disabled): A3_2
+2026-03-23 14:06:41,295 | INFO | checked_count_after_fill=0
+2026-03-23 14:06:41,719 | INFO | [next_logic] adjusted: A3_2=select:581
+2026-03-23 14:06:41,886 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:42,965 | INFO | [11] step=7 A3 -&gt; B1 (expected_next=A4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B1.asp)
+2026-03-23 14:06:43,939 | INFO | [override] radio(NEQSET): B1 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 14:06:43,965 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:44,343 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:44,519 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:45,694 | INFO | [11] step=8 B1 -&gt; B2 (expected_next=B2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B2.asp)
+2026-03-23 14:06:46,571 | INFO | checkbox(skip): B2_NONE endswith _NONE
+2026-03-23 14:06:46,599 | INFO | checkbox: B2_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIB2_NONECNT=None, MB2_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 14:06:47,668 | INFO | select(skip disabled): B2
+2026-03-23 14:06:47,681 | INFO | select(skip disabled): B2_2
+2026-03-23 14:06:47,694 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B2 cmin=None cmax=None forced_val=None
+2026-03-23 14:06:47,708 | INFO | input(select): B2=모름
+2026-03-23 14:06:47,724 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B2_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:06:47,779 | INFO | input(select): B2_2=특이사항없음
+2026-03-23 14:06:47,795 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:49,135 | INFO | [next_logic] adjusted: B2_2_text=없음 | B2_text=없음
+2026-03-23 14:06:49,309 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:50,556 | INFO | [11] step=9 B2 -&gt; B3 (expected_next=B3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B3.asp)
+2026-03-23 14:06:51,570 | INFO | radio(required): B3=3 (min=None, max=None)
+2026-03-23 14:06:51,642 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:52,004 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:52,174 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:53,287 | INFO | [11] step=10 B3 -&gt; B4 (expected_next=B4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B4.asp)
+2026-03-23 14:06:54,692 | INFO | rank(B4) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;4&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:06:55,083 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:55,262 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:56,385 | INFO | [11] step=11 B4 -&gt; B5 (expected_next=B5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B5.asp)
+2026-03-23 14:06:57,955 | INFO | rank(B5) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;30&#x27;, &#x27;19&#x27;, &#x27;24&#x27;, &#x27;25&#x27;] forced={}
+2026-03-23 14:06:58,347 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:58,515 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:59,661 | INFO | [11] step=12 B5 -&gt; B6 (expected_next=B6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B6.asp)
+2026-03-23 14:07:00,915 | INFO | rank(B6) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;5&#x27;, &#x27;4&#x27;] forced={}
+2026-03-23 14:07:01,307 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:01,481 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:02,622 | INFO | [11] step=13 B6 -&gt; B7 (expected_next=B7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B7.asp)
+2026-03-23 14:07:03,834 | INFO | rank(B7) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;14&#x27;, &#x27;9&#x27;] forced={}
+2026-03-23 14:07:04,210 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:04,386 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:05,439 | INFO | [11] step=14 B7 -&gt; B8 (expected_next=B8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B8.asp)
+2026-03-23 14:07:06,632 | INFO | rank(B8) attempt 1: OK slots=[&#x27;3&#x27;, &#x27;11&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:07:07,015 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:07,183 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:08,233 | INFO | [11] step=15 B8 -&gt; B9 (expected_next=B9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B9.asp)
+2026-03-23 14:07:08,968 | INFO | checkbox(skip): B9_2_NONE endswith _NONE
+2026-03-23 14:07:08,989 | INFO | checkbox: B9_2_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIB9_2_NONECNT=None, MB9_2_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 14:07:10,054 | WARNING | checkbox: B9_2_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 14:07:10,305 | INFO | checkbox(B9_2_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 14:07:11,441 | WARNING | checkbox: B9_2_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 14:07:11,680 | INFO | checkbox(B9_2_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 14:07:11,736 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:11,747 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B9_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:11,767 | INFO | input(tel): B9_1=7199
+2026-03-23 14:07:11,787 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B9_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:11,871 | INFO | input(tel): B9_2=5237
+2026-03-23 14:07:11,895 | INFO | checked_count_after_fill=0
+2026-03-23 14:07:12,286 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:12,455 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B10&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:13,474 | INFO | [11] step=16 B9 -&gt; B10 (expected_next=B10 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B10.asp)
+2026-03-23 14:07:14,300 | INFO | radio(required): B10=5 (min=None, max=None)
+2026-03-23 14:07:14,339 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:14,348 | INFO | checked_count_after_fill=1
+2026-03-23 14:07:14,673 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:14,853 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:15,936 | INFO | [11] step=17 B10 -&gt; B11A (expected_next=B11A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B10.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11A.asp)
+2026-03-23 14:07:17,428 | INFO | rank(B11A) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;17&#x27;, &#x27;23&#x27;, &#x27;6&#x27;] forced={}
+2026-03-23 14:07:17,842 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:18,006 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:19,151 | INFO | [11] step=18 B11A -&gt; B11B (expected_next=B11B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11B.asp)
+2026-03-23 14:07:20,755 | INFO | rank(B11B) attempt 1: OK slots=[&#x27;31&#x27;, &#x27;11&#x27;, &#x27;18&#x27;, &#x27;30&#x27;, &#x27;28&#x27;] forced={}
+2026-03-23 14:07:21,138 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:21,309 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:22,422 | INFO | [11] step=19 B11B -&gt; B11C (expected_next=B11C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11C.asp)
+2026-03-23 14:07:23,969 | INFO | rank(B11C) attempt 1: OK slots=[&#x27;19&#x27;, &#x27;30&#x27;, &#x27;17&#x27;, &#x27;10&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:07:24,331 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:24,509 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B13&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:25,579 | INFO | [11] step=20 B11C -&gt; B13 (expected_next=B13 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B13.asp)
+2026-03-23 14:07:30,625 | INFO | checkbox-group: B13 picks=[&#x27;7&#x27;, &#x27;9&#x27;, &#x27;1&#x27;, &#x27;6&#x27;, &#x27;8&#x27;]
+2026-03-23 14:07:30,628 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:30,637 | INFO | checked_count_after_fill=5
+2026-03-23 14:07:30,973 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:31,150 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;BB1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:32,192 | INFO | [11] step=21 B13 -&gt; C1 (expected_next=BB1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C1.asp)
+2026-03-23 14:07:33,525 | INFO | rank(C1) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;2&#x27;, &#x27;1&#x27;] forced={}
+2026-03-23 14:07:33,916 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:34,090 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;C2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:35,230 | INFO | [11] step=22 C1 -&gt; C2 (expected_next=C2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/C1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C2.asp)
+2026-03-23 14:07:35,923 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:35,938 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,952 | INFO | input(tel): C2_1=0
+2026-03-23 14:07:35,963 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_3 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,973 | INFO | input(tel): C2_3=5
+2026-03-23 14:07:35,984 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,994 | INFO | input(tel): C2_2=210
+2026-03-23 14:07:36,005 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_4 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:36,017 | INFO | input(tel): C2_4=3943
+2026-03-23 14:07:36,024 | INFO | checked_count_after_fill=0
+2026-03-23 14:07:36,516 | INFO | [next_logic] adjusted: C2_3=2(constraint) | C2_4=1900(constraint) | C2_4=1000(final_clamp)
+2026-03-23 14:07:36,688 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;C3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:36,753 | WARNING | [11] dialog type=alert message=[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.
+2026-03-23 14:07:37,163 | WARNING | [11] validation alert detected: [주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.
+2026-03-23 14:07:37,346 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:37,355 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:07:37,386 | INFO | [11] step=23 C2 -&gt; C2 (expected_next=C3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/C2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C2.asp)
+2026-03-23 14:07:37,387 | WARNING | [11] URL unchanged and page unchanged. Validation-aware retry. (before=C2, after=C2, expected=C3)
+2026-03-23 14:07:37,396 | WARNING | [11] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;C3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:37,527 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 14:07:37,681 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:37,688 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:07:37,696 | WARNING | [11] next_source_excerpt=function next()
+{
+	var isNone_C2_1 = ($(&#x27;#C2_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_1) {
+		if(!/^\d+$/.test($(&quot;#C2_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &gt; 5) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 5 이하 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+	}
+	var isNone_C2_3 = ($(&#x27;#C2_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_3) {
+		if(!/^\d+$/.test($(&quot;#C2_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &gt; 2) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 2 이하 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+	}
+	var isNone_C2_2 = ($(&#x27;#C2_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_2) {
+		if(!/^\d+$/.test($(&quot;#C2_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &gt; 500) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 500 이하 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+	}
+	var isNone_C2_4 = ($(&#x27;#C2_4_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_4_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_4) {
+		if(!/^\d+$/.test($(&quot;#C2_4&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &gt; 1000) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 1000 이하 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+	}
+
+
+const c2_1 = parseInt($(&quot;#C2_1&quot;).val(), 10) || 0; // 주중 운행일
+const c2_2 = parseInt($(&quot;#C2_2&quot;).val(), 10) || 0; // 주중 주행거리
+const c2_3 = parseInt($(&quot;#C2_3&quot;).val(), 10) || 0; // 주말 운행일
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:07:37,703 | ERROR | [11] Stuck on same page. step=23 url=https://kstat.surveys.kr/2026/P26031601/C2.asp</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run.log</summary>
+    <pre>...(tail)
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:06:15,174 | ERROR | [10] Stuck on same page. step=22 url=https://kstat.surveys.kr/2026/P26031601/C2.asp
+2026-03-23 14:06:16,272 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L1=2|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 14:06:16,279 | INFO | run 10/104 DONE ok=False
+2026-03-23 14:06:16,281 | INFO | [coverage] overrides={&#x27;L3_3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 14:06:16,282 | INFO | [coverage] 11/104 out_dir=run_logs_pw\clients\192_168_10_8\case_011 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=3|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;L3_3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 14:06:20,054 | INFO | [11] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 14:06:20,364 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,371 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,381 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,758 | WARNING | [11] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 14:06:22,685 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 14:06:22,881 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 14:06:22,908 | INFO | checked_count_after_fill=2
+2026-03-23 14:06:23,277 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:23,458 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:24,566 | INFO | [11] step=0 A0 -&gt; A0A (expected_next=A0A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0A.asp)
+2026-03-23 14:06:25,555 | INFO | radio(required): SC1=3 (min=None, max=None)
+2026-03-23 14:06:25,621 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:25,985 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:26,168 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:27,224 | INFO | [11] step=1 A0A -&gt; A0B (expected_next=A0B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0B.asp)
+2026-03-23 14:06:28,137 | INFO | radio(required): SC2=2 (min=None, max=None)
+2026-03-23 14:06:28,192 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:28,541 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:28,718 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:29,822 | INFO | [11] step=2 A0B -&gt; A0C (expected_next=A0C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 14:06:31,147 | INFO | rank(SC3) attempt 1: OK slots=[&#x27;21&#x27;, &#x27;35&#x27;, &#x27;12&#x27;] forced={}
+2026-03-23 14:06:31,546 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:31,722 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:32,758 | INFO | [11] step=3 A0C -&gt; A0H (expected_next=A0D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0H.asp)
+2026-03-23 14:06:33,786 | INFO | radio(required): SDQ2=2 (min=None, max=None)
+2026-03-23 14:06:33,852 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:34,218 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:34,396 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:35,486 | INFO | [11] step=4 A0H -&gt; A1 (expected_next=A1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0H.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A1.asp)
+2026-03-23 14:06:36,345 | INFO | radio(required): A1_1 keep existing checked=5
+2026-03-23 14:06:36,362 | INFO | radio(required): A1_2 keep existing checked=2
+2026-03-23 14:06:36,380 | INFO | radio(required): A1_3 keep existing checked=2
+2026-03-23 14:06:36,400 | INFO | checked_count_after_fill=3
+2026-03-23 14:06:36,781 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:36,947 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:38,029 | INFO | [11] step=5 A1 -&gt; A2 (expected_next=A2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A2.asp)
+2026-03-23 14:06:38,828 | INFO | radio(required): A2=2 (min=None, max=None)
+2026-03-23 14:06:38,892 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:39,246 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:39,423 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:40,490 | INFO | [11] step=6 A2 -&gt; A3 (expected_next=A3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A3.asp)
+2026-03-23 14:06:41,204 | INFO | select: A3=270
+2026-03-23 14:06:41,239 | INFO | select: A3_2=
+2026-03-23 14:06:41,267 | INFO | input(skip disabled): A3
+2026-03-23 14:06:41,282 | INFO | input(skip disabled): A3_2
+2026-03-23 14:06:41,295 | INFO | checked_count_after_fill=0
+2026-03-23 14:06:41,719 | INFO | [next_logic] adjusted: A3_2=select:581
+2026-03-23 14:06:41,886 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:42,965 | INFO | [11] step=7 A3 -&gt; B1 (expected_next=A4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B1.asp)
+2026-03-23 14:06:43,939 | INFO | [override] radio(NEQSET): B1 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 14:06:43,965 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:44,343 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:44,519 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:45,694 | INFO | [11] step=8 B1 -&gt; B2 (expected_next=B2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B2.asp)
+2026-03-23 14:06:46,571 | INFO | checkbox(skip): B2_NONE endswith _NONE
+2026-03-23 14:06:46,599 | INFO | checkbox: B2_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIB2_NONECNT=None, MB2_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 14:06:47,668 | INFO | select(skip disabled): B2
+2026-03-23 14:06:47,681 | INFO | select(skip disabled): B2_2
+2026-03-23 14:06:47,694 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B2 cmin=None cmax=None forced_val=None
+2026-03-23 14:06:47,708 | INFO | input(select): B2=모름
+2026-03-23 14:06:47,724 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B2_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:06:47,779 | INFO | input(select): B2_2=특이사항없음
+2026-03-23 14:06:47,795 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:49,135 | INFO | [next_logic] adjusted: B2_2_text=없음 | B2_text=없음
+2026-03-23 14:06:49,309 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:50,556 | INFO | [11] step=9 B2 -&gt; B3 (expected_next=B3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B3.asp)
+2026-03-23 14:06:51,570 | INFO | radio(required): B3=3 (min=None, max=None)
+2026-03-23 14:06:51,642 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:52,004 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:52,174 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:53,287 | INFO | [11] step=10 B3 -&gt; B4 (expected_next=B4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B4.asp)
+2026-03-23 14:06:54,692 | INFO | rank(B4) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;4&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:06:55,083 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:55,262 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:56,385 | INFO | [11] step=11 B4 -&gt; B5 (expected_next=B5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B5.asp)
+2026-03-23 14:06:57,955 | INFO | rank(B5) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;30&#x27;, &#x27;19&#x27;, &#x27;24&#x27;, &#x27;25&#x27;] forced={}
+2026-03-23 14:06:58,347 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:58,515 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:59,661 | INFO | [11] step=12 B5 -&gt; B6 (expected_next=B6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B6.asp)
+2026-03-23 14:07:00,915 | INFO | rank(B6) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;5&#x27;, &#x27;4&#x27;] forced={}
+2026-03-23 14:07:01,307 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:01,481 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:02,622 | INFO | [11] step=13 B6 -&gt; B7 (expected_next=B7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B7.asp)
+2026-03-23 14:07:03,834 | INFO | rank(B7) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;14&#x27;, &#x27;9&#x27;] forced={}
+2026-03-23 14:07:04,210 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:04,386 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:05,439 | INFO | [11] step=14 B7 -&gt; B8 (expected_next=B8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B8.asp)
+2026-03-23 14:07:06,632 | INFO | rank(B8) attempt 1: OK slots=[&#x27;3&#x27;, &#x27;11&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:07:07,015 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:07,183 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:08,233 | INFO | [11] step=15 B8 -&gt; B9 (expected_next=B9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B9.asp)
+2026-03-23 14:07:08,968 | INFO | checkbox(skip): B9_2_NONE endswith _NONE
+2026-03-23 14:07:08,989 | INFO | checkbox: B9_2_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIB9_2_NONECNT=None, MB9_2_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 14:07:10,054 | WARNING | checkbox: B9_2_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 14:07:10,305 | INFO | checkbox(B9_2_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 14:07:11,441 | WARNING | checkbox: B9_2_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 14:07:11,680 | INFO | checkbox(B9_2_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 14:07:11,736 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:11,747 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B9_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:11,767 | INFO | input(tel): B9_1=7199
+2026-03-23 14:07:11,787 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B9_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:11,871 | INFO | input(tel): B9_2=5237
+2026-03-23 14:07:11,895 | INFO | checked_count_after_fill=0
+2026-03-23 14:07:12,286 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:12,455 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B10&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:13,474 | INFO | [11] step=16 B9 -&gt; B10 (expected_next=B10 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B10.asp)
+2026-03-23 14:07:14,300 | INFO | radio(required): B10=5 (min=None, max=None)
+2026-03-23 14:07:14,339 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:14,348 | INFO | checked_count_after_fill=1
+2026-03-23 14:07:14,673 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:14,853 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:15,936 | INFO | [11] step=17 B10 -&gt; B11A (expected_next=B11A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B10.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11A.asp)
+2026-03-23 14:07:17,428 | INFO | rank(B11A) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;17&#x27;, &#x27;23&#x27;, &#x27;6&#x27;] forced={}
+2026-03-23 14:07:17,842 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:18,006 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:19,151 | INFO | [11] step=18 B11A -&gt; B11B (expected_next=B11B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11B.asp)
+2026-03-23 14:07:20,755 | INFO | rank(B11B) attempt 1: OK slots=[&#x27;31&#x27;, &#x27;11&#x27;, &#x27;18&#x27;, &#x27;30&#x27;, &#x27;28&#x27;] forced={}
+2026-03-23 14:07:21,138 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:21,309 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:22,422 | INFO | [11] step=19 B11B -&gt; B11C (expected_next=B11C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11C.asp)
+2026-03-23 14:07:23,969 | INFO | rank(B11C) attempt 1: OK slots=[&#x27;19&#x27;, &#x27;30&#x27;, &#x27;17&#x27;, &#x27;10&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:07:24,331 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:24,509 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B13&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:25,579 | INFO | [11] step=20 B11C -&gt; B13 (expected_next=B13 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B13.asp)
+2026-03-23 14:07:30,625 | INFO | checkbox-group: B13 picks=[&#x27;7&#x27;, &#x27;9&#x27;, &#x27;1&#x27;, &#x27;6&#x27;, &#x27;8&#x27;]
+2026-03-23 14:07:30,628 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:30,637 | INFO | checked_count_after_fill=5
+2026-03-23 14:07:30,973 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:31,150 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;BB1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:32,192 | INFO | [11] step=21 B13 -&gt; C1 (expected_next=BB1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C1.asp)
+2026-03-23 14:07:33,525 | INFO | rank(C1) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;2&#x27;, &#x27;1&#x27;] forced={}
+2026-03-23 14:07:33,916 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:34,090 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;C2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:35,230 | INFO | [11] step=22 C1 -&gt; C2 (expected_next=C2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/C1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C2.asp)
+2026-03-23 14:07:35,923 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:35,938 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,952 | INFO | input(tel): C2_1=0
+2026-03-23 14:07:35,963 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_3 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,973 | INFO | input(tel): C2_3=5
+2026-03-23 14:07:35,984 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,994 | INFO | input(tel): C2_2=210
+2026-03-23 14:07:36,005 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_4 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:36,017 | INFO | input(tel): C2_4=3943
+2026-03-23 14:07:36,024 | INFO | checked_count_after_fill=0
+2026-03-23 14:07:36,516 | INFO | [next_logic] adjusted: C2_3=2(constraint) | C2_4=1900(constraint) | C2_4=1000(final_clamp)
+2026-03-23 14:07:36,688 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;C3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:36,753 | WARNING | [11] dialog type=alert message=[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.
+2026-03-23 14:07:37,163 | WARNING | [11] validation alert detected: [주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.
+2026-03-23 14:07:37,346 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:37,355 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:07:37,386 | INFO | [11] step=23 C2 -&gt; C2 (expected_next=C3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/C2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C2.asp)
+2026-03-23 14:07:37,387 | WARNING | [11] URL unchanged and page unchanged. Validation-aware retry. (before=C2, after=C2, expected=C3)
+2026-03-23 14:07:37,396 | WARNING | [11] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;C3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:37,527 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 14:07:37,681 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:37,688 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:07:37,696 | WARNING | [11] next_source_excerpt=function next()
+{
+	var isNone_C2_1 = ($(&#x27;#C2_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_1) {
+		if(!/^\d+$/.test($(&quot;#C2_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &gt; 5) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 5 이하 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+	}
+	var isNone_C2_3 = ($(&#x27;#C2_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_3) {
+		if(!/^\d+$/.test($(&quot;#C2_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &gt; 2) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 2 이하 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+	}
+	var isNone_C2_2 = ($(&#x27;#C2_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_2) {
+		if(!/^\d+$/.test($(&quot;#C2_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &gt; 500) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 500 이하 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+	}
+	var isNone_C2_4 = ($(&#x27;#C2_4_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_4_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_4) {
+		if(!/^\d+$/.test($(&quot;#C2_4&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &gt; 1000) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 1000 이하 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+	}
+
+
+const c2_1 = parseInt($(&quot;#C2_1&quot;).val(), 10) || 0; // 주중 운행일
+const c2_2 = parseInt($(&quot;#C2_2&quot;).val(), 10) || 0; // 주중 주행거리
+const c2_3 = parseInt($(&quot;#C2_3&quot;).val(), 10) || 0; // 주말 운행일
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:07:37,703 | ERROR | [11] Stuck on same page. step=23 url=https://kstat.surveys.kr/2026/P26031601/C2.asp</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run_all.log</summary>
+    <pre>...(tail)
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:06:15,174 | ERROR | [10] Stuck on same page. step=22 url=https://kstat.surveys.kr/2026/P26031601/C2.asp
+2026-03-23 14:06:16,272 | WARNING | [coverage] FAIL -&gt; blacklist key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L1=2|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1
+2026-03-23 14:06:16,279 | INFO | run 10/104 DONE ok=False
+2026-03-23 14:06:16,281 | INFO | [coverage] overrides={&#x27;L3_3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 14:06:16,282 | INFO | [coverage] 11/104 out_dir=run_logs_pw\clients\192_168_10_8\case_011 key=B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=3|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}|valB3=11|valB3Q=__NEQ__:1 overrides={&#x27;L3_3&#x27;: &#x27;3&#x27;, &#x27;SB4&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;RESTYPE&#x27;: &#x27;__NEQ__:TEST&#x27;, &#x27;SB3&#x27;: &#x27;__NEQ__:&#x27;, &#x27;B1&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;B3Q&#x27;: &#x27;__NEQ__:2&#x27;, &#x27;__NUM_CONSTRAINTS__&#x27;: {&#x27;G1&#x27;: {&#x27;min&#x27;: 5}}, &#x27;G2_1&#x27;: &#x27;1&#x27;, &#x27;L3_1&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;L3_2&#x27;: &#x27;__NEQ__:13&#x27;, &#x27;valB3Q&#x27;: &#x27;__NEQ__:1&#x27;, &#x27;valB3&#x27;: &#x27;11&#x27;, &#x27;T1&#x27;: &#x27;__NEQ__:1&#x27;}
+2026-03-23 14:06:20,054 | INFO | [11] START https://kstat.surveys.kr/2026/P26031601/index.asp?ResType=TEST-3138
+2026-03-23 14:06:20,364 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,371 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,381 | WARNING | [11] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-03-23 14:06:20,758 | WARNING | [11] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-03-23 14:06:22,685 | INFO | [override] radio(NEQSET): SB4 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 14:06:22,881 | INFO | [override] radio(NEQSET): SB3 excluded=[&#x27;&#x27;] -&gt; picked=1
+2026-03-23 14:06:22,908 | INFO | checked_count_after_fill=2
+2026-03-23 14:06:23,277 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:23,458 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:24,566 | INFO | [11] step=0 A0 -&gt; A0A (expected_next=A0A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0A.asp)
+2026-03-23 14:06:25,555 | INFO | radio(required): SC1=3 (min=None, max=None)
+2026-03-23 14:06:25,621 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:25,985 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:26,168 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:27,224 | INFO | [11] step=1 A0A -&gt; A0B (expected_next=A0B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0B.asp)
+2026-03-23 14:06:28,137 | INFO | radio(required): SC2=2 (min=None, max=None)
+2026-03-23 14:06:28,192 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:28,541 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:28,718 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:29,822 | INFO | [11] step=2 A0B -&gt; A0C (expected_next=A0C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0C.asp)
+2026-03-23 14:06:31,147 | INFO | rank(SC3) attempt 1: OK slots=[&#x27;21&#x27;, &#x27;35&#x27;, &#x27;12&#x27;] forced={}
+2026-03-23 14:06:31,546 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:31,722 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A0D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:32,758 | INFO | [11] step=3 A0C -&gt; A0H (expected_next=A0D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A0H.asp)
+2026-03-23 14:06:33,786 | INFO | radio(required): SDQ2=2 (min=None, max=None)
+2026-03-23 14:06:33,852 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:34,218 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:34,396 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:35,486 | INFO | [11] step=4 A0H -&gt; A1 (expected_next=A1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A0H.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A1.asp)
+2026-03-23 14:06:36,345 | INFO | radio(required): A1_1 keep existing checked=5
+2026-03-23 14:06:36,362 | INFO | radio(required): A1_2 keep existing checked=2
+2026-03-23 14:06:36,380 | INFO | radio(required): A1_3 keep existing checked=2
+2026-03-23 14:06:36,400 | INFO | checked_count_after_fill=3
+2026-03-23 14:06:36,781 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:36,947 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:38,029 | INFO | [11] step=5 A1 -&gt; A2 (expected_next=A2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A2.asp)
+2026-03-23 14:06:38,828 | INFO | radio(required): A2=2 (min=None, max=None)
+2026-03-23 14:06:38,892 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:39,246 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:39,423 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:40,490 | INFO | [11] step=6 A2 -&gt; A3 (expected_next=A3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/A3.asp)
+2026-03-23 14:06:41,204 | INFO | select: A3=270
+2026-03-23 14:06:41,239 | INFO | select: A3_2=
+2026-03-23 14:06:41,267 | INFO | input(skip disabled): A3
+2026-03-23 14:06:41,282 | INFO | input(skip disabled): A3_2
+2026-03-23 14:06:41,295 | INFO | checked_count_after_fill=0
+2026-03-23 14:06:41,719 | INFO | [next_logic] adjusted: A3_2=select:581
+2026-03-23 14:06:41,886 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;A4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:42,965 | INFO | [11] step=7 A3 -&gt; B1 (expected_next=A4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/A3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B1.asp)
+2026-03-23 14:06:43,939 | INFO | [override] radio(NEQSET): B1 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 14:06:43,965 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:44,343 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:44,519 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:45,694 | INFO | [11] step=8 B1 -&gt; B2 (expected_next=B2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B2.asp)
+2026-03-23 14:06:46,571 | INFO | checkbox(skip): B2_NONE endswith _NONE
+2026-03-23 14:06:46,599 | INFO | checkbox: B2_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIB2_NONECNT=None, MB2_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 14:06:47,668 | INFO | select(skip disabled): B2
+2026-03-23 14:06:47,681 | INFO | select(skip disabled): B2_2
+2026-03-23 14:06:47,694 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B2 cmin=None cmax=None forced_val=None
+2026-03-23 14:06:47,708 | INFO | input(select): B2=모름
+2026-03-23 14:06:47,724 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B2_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:06:47,779 | INFO | input(select): B2_2=특이사항없음
+2026-03-23 14:06:47,795 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:49,135 | INFO | [next_logic] adjusted: B2_2_text=없음 | B2_text=없음
+2026-03-23 14:06:49,309 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:50,556 | INFO | [11] step=9 B2 -&gt; B3 (expected_next=B3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B3.asp)
+2026-03-23 14:06:51,570 | INFO | radio(required): B3=3 (min=None, max=None)
+2026-03-23 14:06:51,642 | INFO | checked_count_after_fill=1
+2026-03-23 14:06:52,004 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:52,174 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:53,287 | INFO | [11] step=10 B3 -&gt; B4 (expected_next=B4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B4.asp)
+2026-03-23 14:06:54,692 | INFO | rank(B4) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;4&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:06:55,083 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:55,262 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:56,385 | INFO | [11] step=11 B4 -&gt; B5 (expected_next=B5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B5.asp)
+2026-03-23 14:06:57,955 | INFO | rank(B5) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;30&#x27;, &#x27;19&#x27;, &#x27;24&#x27;, &#x27;25&#x27;] forced={}
+2026-03-23 14:06:58,347 | INFO | [next_logic] no adjustment
+2026-03-23 14:06:58,515 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:06:59,661 | INFO | [11] step=12 B5 -&gt; B6 (expected_next=B6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B6.asp)
+2026-03-23 14:07:00,915 | INFO | rank(B6) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;5&#x27;, &#x27;4&#x27;] forced={}
+2026-03-23 14:07:01,307 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:01,481 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:02,622 | INFO | [11] step=13 B6 -&gt; B7 (expected_next=B7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B7.asp)
+2026-03-23 14:07:03,834 | INFO | rank(B7) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;14&#x27;, &#x27;9&#x27;] forced={}
+2026-03-23 14:07:04,210 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:04,386 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:05,439 | INFO | [11] step=14 B7 -&gt; B8 (expected_next=B8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B8.asp)
+2026-03-23 14:07:06,632 | INFO | rank(B8) attempt 1: OK slots=[&#x27;3&#x27;, &#x27;11&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:07:07,015 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:07,183 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:08,233 | INFO | [11] step=15 B8 -&gt; B9 (expected_next=B9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B9.asp)
+2026-03-23 14:07:08,968 | INFO | checkbox(skip): B9_2_NONE endswith _NONE
+2026-03-23 14:07:08,989 | INFO | checkbox: B9_2_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIB9_2_NONECNT=None, MB9_2_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 14:07:10,054 | WARNING | checkbox: B9_2_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 14:07:10,305 | INFO | checkbox(B9_2_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 14:07:11,441 | WARNING | checkbox: B9_2_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 14:07:11,680 | INFO | checkbox(B9_2_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 14:07:11,736 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:11,747 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B9_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:11,767 | INFO | input(tel): B9_1=7199
+2026-03-23 14:07:11,787 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=B9_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:11,871 | INFO | input(tel): B9_2=5237
+2026-03-23 14:07:11,895 | INFO | checked_count_after_fill=0
+2026-03-23 14:07:12,286 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:12,455 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B10&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:13,474 | INFO | [11] step=16 B9 -&gt; B10 (expected_next=B10 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B10.asp)
+2026-03-23 14:07:14,300 | INFO | radio(required): B10=5 (min=None, max=None)
+2026-03-23 14:07:14,339 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:14,348 | INFO | checked_count_after_fill=1
+2026-03-23 14:07:14,673 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:14,853 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:15,936 | INFO | [11] step=17 B10 -&gt; B11A (expected_next=B11A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B10.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11A.asp)
+2026-03-23 14:07:17,428 | INFO | rank(B11A) attempt 1: OK slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;17&#x27;, &#x27;23&#x27;, &#x27;6&#x27;] forced={}
+2026-03-23 14:07:17,842 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:18,006 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:19,151 | INFO | [11] step=18 B11A -&gt; B11B (expected_next=B11B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11B.asp)
+2026-03-23 14:07:20,755 | INFO | rank(B11B) attempt 1: OK slots=[&#x27;31&#x27;, &#x27;11&#x27;, &#x27;18&#x27;, &#x27;30&#x27;, &#x27;28&#x27;] forced={}
+2026-03-23 14:07:21,138 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:21,309 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B11C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:22,422 | INFO | [11] step=19 B11B -&gt; B11C (expected_next=B11C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B11C.asp)
+2026-03-23 14:07:23,969 | INFO | rank(B11C) attempt 1: OK slots=[&#x27;19&#x27;, &#x27;30&#x27;, &#x27;17&#x27;, &#x27;10&#x27;, &#x27;8&#x27;] forced={}
+2026-03-23 14:07:24,331 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:24,509 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;B13&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:25,579 | INFO | [11] step=20 B11C -&gt; B13 (expected_next=B13 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B11C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/B13.asp)
+2026-03-23 14:07:30,625 | INFO | checkbox-group: B13 picks=[&#x27;7&#x27;, &#x27;9&#x27;, &#x27;1&#x27;, &#x27;6&#x27;, &#x27;8&#x27;]
+2026-03-23 14:07:30,628 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:30,637 | INFO | checked_count_after_fill=5
+2026-03-23 14:07:30,973 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:31,150 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;BB1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:32,192 | INFO | [11] step=21 B13 -&gt; C1 (expected_next=BB1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/B13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C1.asp)
+2026-03-23 14:07:33,525 | INFO | rank(C1) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;2&#x27;, &#x27;1&#x27;] forced={}
+2026-03-23 14:07:33,916 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:34,090 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;C2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:35,230 | INFO | [11] step=22 C1 -&gt; C2 (expected_next=C2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/C1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C2.asp)
+2026-03-23 14:07:35,923 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:07:35,938 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,952 | INFO | input(tel): C2_1=0
+2026-03-23 14:07:35,963 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_3 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,973 | INFO | input(tel): C2_3=5
+2026-03-23 14:07:35,984 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:35,994 | INFO | input(tel): C2_2=210
+2026-03-23 14:07:36,005 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=C2_4 cmin=None cmax=None forced_val=None
+2026-03-23 14:07:36,017 | INFO | input(tel): C2_4=3943
+2026-03-23 14:07:36,024 | INFO | checked_count_after_fill=0
+2026-03-23 14:07:36,516 | INFO | [next_logic] adjusted: C2_3=2(constraint) | C2_4=1900(constraint) | C2_4=1000(final_clamp)
+2026-03-23 14:07:36,688 | INFO | [11] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;C3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:36,753 | WARNING | [11] dialog type=alert message=[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.
+2026-03-23 14:07:37,163 | WARNING | [11] validation alert detected: [주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.
+2026-03-23 14:07:37,346 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:37,355 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:07:37,386 | INFO | [11] step=23 C2 -&gt; C2 (expected_next=C3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/C2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/C2.asp)
+2026-03-23 14:07:37,387 | WARNING | [11] URL unchanged and page unchanged. Validation-aware retry. (before=C2, after=C2, expected=C3)
+2026-03-23 14:07:37,396 | WARNING | [11] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;C3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:07:37,527 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 14:07:37,681 | INFO | [next_logic] no adjustment
+2026-03-23 14:07:37,688 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:07:37,696 | WARNING | [11] next_source_excerpt=function next()
+{
+	var isNone_C2_1 = ($(&#x27;#C2_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_1) {
+		if(!/^\d+$/.test($(&quot;#C2_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &gt; 5) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 5 이하 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+	}
+	var isNone_C2_3 = ($(&#x27;#C2_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_3) {
+		if(!/^\d+$/.test($(&quot;#C2_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &gt; 2) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 2 이하 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+	}
+	var isNone_C2_2 = ($(&#x27;#C2_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_2) {
+		if(!/^\d+$/.test($(&quot;#C2_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &gt; 500) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 500 이하 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+	}
+	var isNone_C2_4 = ($(&#x27;#C2_4_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_4_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_4) {
+		if(!/^\d+$/.test($(&quot;#C2_4&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &gt; 1000) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 1000 이하 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+	}
+
+
+const c2_1 = parseInt($(&quot;#C2_1&quot;).val(), 10) || 0; // 주중 운행일
+const c2_2 = parseInt($(&quot;#C2_2&quot;).val(), 10) || 0; // 주중 주행거리
+const c2_3 = parseInt($(&quot;#C2_3&quot;).val(), 10) || 0; // 주말 운행일
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:07:37,703 | ERROR | [11] Stuck on same page. step=23 url=https://kstat.surveys.kr/2026/P26031601/C2.asp</pre>
+  </details>
+</div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603172230&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;국내 신차반응조사 정량 설문지&lt;/title&gt;
+&lt;script&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	var isNone_C2_1 = ($(&#x27;#C2_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_1) {
+		if(!/^\d+$/.test($(&quot;#C2_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_1&quot;).val().trim(),10) &gt; 5) { alert(&quot;[&quot;+$(&quot;#LC2_1&quot;).text()+&quot;] 5 이하 입력해 주십시오.&quot;); $(&quot;#C2_1&quot;).focus(); return; }
+	}
+	var isNone_C2_3 = ($(&#x27;#C2_3_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_3_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_3) {
+		if(!/^\d+$/.test($(&quot;#C2_3&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_3&quot;).val().trim(),10) &gt; 2) { alert(&quot;[&quot;+$(&quot;#LC2_3&quot;).text()+&quot;] 2 이하 입력해 주십시오.&quot;); $(&quot;#C2_3&quot;).focus(); return; }
+	}
+	var isNone_C2_2 = ($(&#x27;#C2_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_2) {
+		if(!/^\d+$/.test($(&quot;#C2_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_2&quot;).val().trim(),10) &gt; 500) { alert(&quot;[&quot;+$(&quot;#LC2_2&quot;).text()+&quot;] 500 이하 입력해 주십시오.&quot;); $(&quot;#C2_2&quot;).focus(); return; }
+	}
+	var isNone_C2_4 = ($(&#x27;#C2_4_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#C2_4_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_C2_4) {
+		if(!/^\d+$/.test($(&quot;#C2_4&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+		if (parseInt($(&quot;#C2_4&quot;).val().trim(),10) &gt; 1000) { alert(&quot;[&quot;+$(&quot;#LC2_4&quot;).text()+&quot;] 1000 이하 입력해 주십시오.&quot;); $(&quot;#C2_4&quot;).focus(); return; }
+	}
+
+
+const c2_1 = parseInt($(&quot;#C2_1&quot;).val(), 10) || 0; // 주중 운행일
+const c2_2 = parseInt($(&quot;#C2_2&quot;).val(), 10) || 0; // 주중 주행거리
+const c2_3 = parseInt($(&quot;#C2_3&quot;).val(), 10) || 0; // 주말 운행일
+const c2_4 = parseInt($(&quot;#C2_4&quot;).val(), 10) || 0; // 주말 주행거리
+
+if ((c2_1 === 0 &amp;&amp; c2_2 &gt; 0) || (c2_1 &gt; 0 &amp;&amp; c2_2 === 0)) {
+    alert(&quot;[주중] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+// 2. 주말 로직: 0일인데 거리가 &gt;0 이거나, 1일 이상인데 거리가 0인 경우
+if ((c2_3 === 0 &amp;&amp; c2_4 &gt; 0) || (c2_3 &gt; 0 &amp;&amp; c2_4 === 0)) {
+    alert(&quot;[주말] 운행일과 일평균 주행거리 응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_3&quot;).focus();
+    return;
+}
+
+// 3. 차가 있음에도 주중, 주말 모두 0일/0km인 경우 (기존 &amp;&amp;) 오타 수정)
+if (c2_1 === 0 &amp;&amp; c2_2 === 0 &amp;&amp; c2_3 === 0 &amp;&amp; c2_4 === 0) {
+    alert(&quot;응답을 다시 확인해 주십시오.&quot;);
+    $(&quot;#C2_1&quot;).focus();
+    return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+	
+           
+});
+
+
+
+$(document).ready(function(){
+    // 1. PC에서도 좌측 기본 제목(th)을 숨기고, 입력칸(td)이 2칸(50%)을 차지하도록 조정
+    $(&quot;#C2_table tbody th&quot;).hide();
+    $(&quot;#C2_table tbody td&quot;).attr(&quot;colspan&quot;, &quot;2&quot;);
+
+    // 2. PC 전용 상단 헤더(thead) 2분할 추가
+    if ($(&quot;#C2_table thead&quot;).length === 0) {
+        var theadHtml = &quot;&lt;thead&gt;&quot; +
+                        &quot;    &lt;tr&gt;&quot; +
+                        &quot;        &lt;th colspan=&#x27;2&#x27; class=&#x27;text-center align-middle bg-light&#x27; style=&#x27;font-size: 1.1em;&#x27;&gt;주중 일평균 주행 거리&lt;/th&gt;&quot; +
+                        &quot;        &lt;th colspan=&#x27;2&#x27; class=&#x27;text-center align-middle bg-light&#x27; style=&#x27;font-size: 1.1em;&#x27;&gt;주말 일평균 주행 거리&lt;/th&gt;&quot; +
+                        &quot;    &lt;/tr&gt;&quot; +
+                        &quot;&lt;/thead&gt;&quot;;
+        $(&quot;#C2_table&quot;).prepend(theadHtml);
+    }
+});
+
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;C2_1,C2_3,C2_2,C2_4&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;C2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;C3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;03231406207237537346531&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;03231406207237537346531&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;26&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 16%; font-size:10px !important;&quot; aria-valuenow=&quot;16&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;16%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							C2&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;	귀하가 보유하신 차량 &lt;span class=&quot;BlueBd&quot;&gt;기아 EV5&lt;/span&gt; 기준으로 &lt;span class=&quot;UnBd&quot;&gt;주중/주말 일평균 주행 거리&lt;/span&gt;는 어느 정도입니까?&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;table class=&quot;table table-bordered&quot; id=&quot;C2_table&quot;&gt;&lt;thead&gt;    &lt;tr&gt;        &lt;th colspan=&quot;2&quot; class=&quot;text-center align-middle bg-light&quot; style=&quot;font-size: 1.1em;&quot;&gt;주중 일평균 주행 거리&lt;/th&gt;        &lt;th colspan=&quot;2&quot; class=&quot;text-center align-middle bg-light&quot; style=&quot;font-size: 1.1em;&quot;&gt;주말 일평균 주행 거리&lt;/th&gt;    &lt;/tr&gt;&lt;/thead&gt;
+	&lt;colgroup&gt;
+		&lt;col width=&quot;10%&quot;&gt;
+		&lt;col width=&quot;40%&quot;&gt;
+		&lt;col width=&quot;10%&quot;&gt;
+		&lt;col width=&quot;40%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot; style=&quot;display: none;&quot;&gt;&lt;span id=&quot;LC2_1&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;주중 평균 운행일&lt;/span&gt;&lt;/th&gt;
+		&lt;td colspan=&quot;2&quot;&gt;
+		&lt;div class=&quot;d-flex flex-md-row align-items-md-center mb-3&quot;&gt;
+			&lt;span class=&quot;me-2 mb-2 mb-md-0&quot;&gt;주중 5일 중&lt;/span&gt;			&lt;input name=&quot;C2_1&quot; id=&quot;C2_1&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;input-line&quot; size=&quot;1&quot; maxlength=&quot;1&quot; style=&quot;min-width: 120px; background-color: rgb(230, 255, 255);&quot;&gt;
+			&lt;span class=&quot;ms-2 mt-2 mt-md-0&quot;&gt;일 운행&lt;/span&gt;		&lt;/div&gt;
+
+		&lt;/td&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot; style=&quot;display: none;&quot;&gt;&lt;span id=&quot;LC2_3&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;주말 평균 운행일&lt;/span&gt;&lt;/th&gt;
+		&lt;td colspan=&quot;2&quot;&gt;
+		&lt;div class=&quot;d-flex flex-md-row align-items-md-center mb-3&quot;&gt;
+			&lt;span class=&quot;me-2 mb-2 mb-md-0&quot;&gt;주말 2일 중&lt;/span&gt;			&lt;input name=&quot;C2_3&quot; id=&quot;C2_3&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;input-line&quot; size=&quot;1&quot; maxlength=&quot;1&quot; style=&quot;min-width: 120px; background-color: rgb(255, 255, 255);&quot;&gt;
+			&lt;span class=&quot;ms-2 mt-2 mt-md-0&quot;&gt;일 운행&lt;/span&gt;		&lt;/div&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot; style=&quot;display: none;&quot;&gt;&lt;span id=&quot;LC2_2&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;주중 평균 주행거리&lt;/span&gt;&lt;/th&gt;
+		&lt;td colspan=&quot;2&quot;&gt;
+		&lt;div class=&quot;d-flex flex-md-row align-items-md-center mb-3&quot;&gt;
+			&lt;span class=&quot;me-2 mb-2 mb-md-0&quot;&gt;하루에&lt;/span&gt;			&lt;input name=&quot;C2_2&quot; id=&quot;C2_2&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;input-line&quot; size=&quot;3&quot; maxlength=&quot;3&quot; style=&quot;min-width: 120px; background-color: rgb(255, 255, 255);&quot;&gt;
+			&lt;span class=&quot;ms-2 mt-2 mt-md-0&quot;&gt;km&lt;/span&gt;		&lt;/div&gt;
+
+		&lt;/td&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot; style=&quot;display: none;&quot;&gt;&lt;span id=&quot;LC2_4&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;주말 평균 주행거리&lt;/span&gt;&lt;/th&gt;
+		&lt;td colspan=&quot;2&quot;&gt;
+		&lt;div class=&quot;d-flex flex-md-row align-items-md-center mb-3&quot;&gt;
+			&lt;span class=&quot;me-2 mb-2 mb-md-0&quot;&gt;하루에&lt;/span&gt;			&lt;input name=&quot;C2_4&quot; id=&quot;C2_4&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;input-line&quot; size=&quot;4&quot; maxlength=&quot;4&quot; style=&quot;min-width: 120px; background-color: rgb(255, 255, 255);&quot;&gt;
+			&lt;span class=&quot;ms-2 mt-2 mt-md-0&quot;&gt;km&lt;/span&gt;		&lt;/div&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

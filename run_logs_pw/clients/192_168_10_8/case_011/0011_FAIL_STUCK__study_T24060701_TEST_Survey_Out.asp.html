@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://www.surveys.kr/study/T24060701/TEST_Survey_Out.asp</div>
+    <div><b>Title</b> 선정설문지</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>본페이지는테스트링크에서만제공되며,실사링크에서는다시시작할수없습니다.귀하는ScreenOut되었습니다.확인버튼을클릭하면이전설문으로돌아가셔서다시설문을테스트하실수있습니다.YouhavetheScreenOut.ClicktheOKbuttonagain,gobacktotheprevioussurveyquestionnairecanbetested.이전</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+ECODE = 
+ENUMBER = 
+IDKey = 032713511316817645930091
+IDS = 
+NextPage = SCREEN
+PVALUE = 33
+PageName = SCREEN
+ResType = TEST
+VC_ID = 032713511316817645930091
+Var =</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Failed Question Log</b></summary>
+      <pre>[failed question logs]
+[next_logic] no unresolved issues detected</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603171832&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603171832&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603171832&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;선정설문지&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+&lt;body class=&quot;member_con&quot; onload=&quot;noBack();&quot;&gt;
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;SCREEN&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;SCREEN&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;032713511316817645930091&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;032713511316817645930091&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;33&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+	
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;p class=&quot;lead lh-base p-3&quot;&gt;
+					본 페이지는 테스트링크에서만 제공되며, 실사링크에서는 다시 시작할 수 없습니다.
+					&lt;/p&gt;&lt;hr&gt;
+
+					귀하는 Screen Out 되었습니다.&lt;br&gt;확인 버튼을 클릭하면 이전 설문으로 돌아가셔서 다시 설문을 테스트 하실 수 있습니다.&lt;br&gt;&lt;br&gt;You have the Screen Out.&lt;br&gt; Click the OK button again, go back to the previous survey questionnaire can be tested.
+				&lt;p&gt;&lt;/p&gt;						 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			&lt;div class=&quot; btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+				&lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-secondary btn-lg col-12&quot;&gt;이전&lt;/button&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

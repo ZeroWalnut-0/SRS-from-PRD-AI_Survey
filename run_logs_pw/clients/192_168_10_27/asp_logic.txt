@@ -1,0 +1,766 @@
+Select Case PAGENAME
+	Case "INDEX"
+		If SURVEYSTATUS <>"3" And SURVEYSTATUS<>"2" Then
+			Call_Url "Survey_Close.asp",""
+			Response.End
+		End If
+
+		If RESTYPE = "TEST" Then
+			NEXTPAGE = "A0"
+		Else
+
+			Dim SB3,JoinID,Dic
+
+			Set Dic = getMultiValue("SB3,JOINID")
+
+			SB3 = Dic("SB3")
+			JoinID = Dic("JOINID")
+
+			If IsNull(SB3) Or SB3 = "" Then
+				Dim ASQL,ARs,Save_Array,ix
+				Dim fName, fValue,fiName
+
+				' 1. SQL 실행 및 레코드셋 가져오기 (제공해주신 코드 기반)
+				ASQL = "SELECT B3,TB3_37,B3Q,B4,C1,C2,C3,D4_1,D4_2,D4_3,D4_4,D4_5,D4_6,D4_7,D4_8,D4_9,E6_1,E6_2,E6_3,E6_4,E6_5,E6_6,E6_7,E6_8,E6_9,C3_1,C3_2,C3_3,TC3_37,D1_1,D1_2,D1_3,TD1_37,E4_1,E4_2,E4_3,TE4_37,DQ2 FROM vList_"&PROJECTCODE&" WHERE ListID='" & JoinID & "' OR ListID='" & Request.Form("IDKey") & "'"
+				getRecordSet ASQL,Ars
+
+				' 2. 데이터 추출 루프
+				Save_Array = "" ' 초기화
+
+				Do Until Ars.Eof 
+					For ix = 0 To Ars.Fields.Count - 1					
+						
+						fName  = Ars.Fields(ix).Name       ' 필드명 (예: B3, D4_1 등)
+						fValue = Ars.Fields(ix).Value      ' 필드값
+
+						If Left(fName,1)="T" Then
+							fiName = "TS"&Replace(fName,"T","")
+						Else
+							fiName = "S" & fName
+						End if
+
+						If IsNull(fValue) Then fValue = ""
+						
+						Save_Array = Save_Array & fiName & "=" & fValue & "&"
+					Next
+					
+					Ars.MoveNext
+				Loop
+
+				Ars.Close
+				Set Ars = Nothing
+				DBClose()
+
+				Save_Array = Left(Save_Array,Len(Save_Array)-1)
+
+				SAVEDATA CDAT(Save_Array)
+			End if			
+		End if	
+
+
+
+			
+
+'미디어
+	Case "TMovie"
+		If Request("MovieRan") <> Request("Movies") Then
+			NEXTPAGE = "MEDIA"
+		End if
+
+'설문
+	Case "A0"
+		If Request("SB3") = "1" Then
+			SAVEDATA CDAT("SB3Q=1")
+			NEXTPAGE = "A0A"
+		ElseIf Request("SB3") = "37" Then
+			If Request("SB4") = "1" Then
+				NEXTPAGE = "SCREEN"
+			else
+				SAVEDATA CDAT("SB3Q=3")
+				NEXTPAGE = "A0F"
+			End if
+		Else
+			SAVEDATA CDAT("SB3Q=2")
+			NEXTPAGE = "A0D"
+		End If
+	
+	Case "A0B"
+		SAVEDATA CDAT("SC3="&RandomNum(1,2))
+
+	Case "A0C"
+		NEXTPAGE = "A0H"
+	
+	Case "A0E"
+		NEXTPAGE = "A0H"
+
+	Case "A2"
+		If Request("A2") = "1" Then
+			NEXTPAGE = "B1"
+			PValue = PValue + 2 
+		End If
+
+	Case "A3"
+		If getRedis("A2") = "2" Then
+			NEXTPAGE = "B1"
+			PValue = PValue + 1
+		End if
+	
+	Case "B1"
+		Dim B3Q
+		B3Q = getListValue("B3Q")
+
+		If Request("B1") = "1" Then
+			if B3Q = "3" then
+				NEXTPAGE = "BB1"
+				PValue = PValue + 12
+			Else
+				NEXTPAGE = "B4"
+				PValue = PValue + 2
+			End If
+		End if
+	
+	Case "B3"
+		B3Q = getListValue("B3Q")
+		if B3Q = "3" then
+			NEXTPAGE = "B13"
+			PValue = PValue + 9
+		Else
+			NEXTPAGE = "B4"
+		End If
+
+	Case "B5"
+		If getListValue("B4") <> "1" Then
+			NEXTPAGE = "B9"
+			PValue = PValue + 3
+		End if
+	
+	Case "B10"
+		B3Q = getListValue("B3Q")
+
+		If B3Q = "2" Then
+			NEXTPAGE = "B12"
+			PValue = PValue + 1
+		ElseIf B3Q = "1" Then
+			If getListValue("C3_1") = "99" Then
+				NEXTPAGE = "B13"
+			End if
+		End if
+	
+	Case "B11A"
+		If Trim(getListValue("C3_2") & "") = "" Then
+			NEXTPAGE = "B13"
+		End If 
+	
+	Case "B11B"
+		If Trim(getListValue("C3_3") & "") = "" Then
+			NEXTPAGE = "B13"
+		End If
+
+    Case "B13"
+		Dim isTarget
+        B3Q = getListValue("B3Q")
+        isTarget = False
+
+        If B3Q = "1" Then
+            If IsNotHyundai(getListValue("C3_1")) And IsNotHyundai(getListValue("C3_2")) and IsNotHyundai(getListValue("TC3_37")) Then
+                isTarget = True
+            End If
+        elseIf B3Q = "2" Then
+            If IsNotHyundai(getListValue("D1_1")) And IsNotHyundai(getListValue("D1_2")) And IsNotHyundai(getListValue("TD1_37")) Then
+                isTarget = True
+            End If
+        End If
+
+        If isTarget Then
+             NEXTPAGE = "B14"
+        Else
+             NEXTPAGE = "C1"
+        End If
+
+		If B3Q = "3" Then
+			NEXTPAGE = "BB1"
+		End If
+
+	Case "BB7"
+		If Trim(getListValue("E4_3") & "") = "" Then
+			NEXTPAGE = "BB8"
+		End if
+	
+	Case "BB8"
+		B3Q = getListValue("B3Q")
+        isTarget = False
+
+		If B3Q = "3" Then
+            If IsNotHyundai(getListValue("E4_1")) And IsNotHyundai(getListValue("E4_2")) And IsNotHyundai(getListValue("E4_3")) And IsNotHyundai(getListValue("TE4_37")) Then
+                isTarget = True
+            End If
+        End If
+
+        If isTarget Then
+             NEXTPAGE = "B14"
+        Else
+            NEXTPAGE = "C7"
+        End If
+	
+	Case "B14"
+		B3Q = getListValue("B3Q")
+
+		If B3Q = "3" Then
+			NEXTPAGE = "C7"
+        End If
+
+	Case "C4"
+		If CInt(Request("C4_2")) < 5 Then
+			NEXTPAGE = "C5"
+		ElseIf CInt(Request("C4_3")) < 5 Then
+			NEXTPAGE = "C6"
+			PValue = PValue + 1
+		Else
+			NEXTPAGE = "DA1"
+			PValue = PValue + 10
+		End If
+	
+	Case "C5"
+		If CInt(getRedis("C4_3")) < 5 Then
+			NEXTPAGE = "C6"
+		Else
+			NEXTPAGE = "DA1"
+			PValue = PValue + 10
+		End If
+
+	Case "C6"
+		NEXTPAGE = "DA1"
+		PValue = PValue + 10
+	
+	Case "D2"
+		Dim B4
+		B4 = getListValue("B4")
+
+		If B4 = "1" Then
+			NEXTPAGE = "D3"
+		Else
+			NEXTPAGE = "D9"
+			PValue = PValue + 6
+		End If
+
+	Case "D7"
+'		If Request("D7_1_NONE") = "99" And Request("D7_2_NONE") = "99" Then
+'			NEXTPAGE = "D9"
+'			PValue = PValue + 1
+'		End if
+
+	Case "D9"
+		If getListValue("B4") = "1" Then
+			NEXTPAGE = "D10"
+		Else
+			NEXTPAGE = "E1"
+		End if
+
+	Case "E10"
+		Dim E10_1, E10_2, E10_3, v1, v2, v3
+		Dim hasFront, hasSide, hasRear
+
+		E10_1 = Request("E10_1")
+		E10_2 = Request("E10_2")
+		E10_3 = Request("E10_3")
+		
+		' 1. 빈 값 에러 방지 (값이 없으면 0으로 처리)
+		v1 = 0 : If IsNumeric(E10_1) Then v1 = CInt(E10_1)
+		v2 = 0 : If IsNumeric(E10_2) Then v2 = CInt(E10_2)
+		v3 = 0 : If IsNumeric(E10_3) Then v3 = CInt(E10_3)
+
+		' 2. 각 그룹(전면/측면/후면) 포함 여부를 명확한 범위로 확인
+		hasFront = ((v1>=1 And v1<=7) Or (v2>=1 And v2<=7) Or (v3>=1 And v3<=7))
+		hasSide  = ((v1>=8 And v1<=15) Or (v2>=8 And v2<=15) Or (v3>=8 And v3<=15))
+		hasRear  = ((v1>=16 And v1<=21) Or (v2>=16 And v2<=21) Or (v3>=16 And v3<=21))
+
+		' 3. 라우팅
+		If hasFront Then
+			NEXTPAGE = "E11"
+		ElseIf hasSide Then
+			NEXTPAGE = "E12"
+		ElseIf hasRear Then
+			NEXTPAGE = "E13"
+		Else
+			NEXTPAGE = "F1"
+		End If
+
+	Case "E11"
+		E10_1 = getRedis("E10_1")
+		E10_2 = getRedis("E10_2")
+		E10_3 = getRedis("E10_3")
+		
+		v1 = 0 : If IsNumeric(E10_1) Then v1 = CInt(E10_1)
+		v2 = 0 : If IsNumeric(E10_2) Then v2 = CInt(E10_2)
+		v3 = 0 : If IsNumeric(E10_3) Then v3 = CInt(E10_3)
+
+		hasSide  = ((v1>=8 And v1<=15) Or (v2>=8 And v2<=15) Or (v3>=8 And v3<=15))
+		hasRear  = ((v1>=16 And v1<=21) Or (v2>=16 And v2<=21) Or (v3>=16 And v3<=21))
+
+		If hasSide Then
+			NEXTPAGE = "E12"
+		ElseIf hasRear Then
+			NEXTPAGE = "E13"
+		Else
+			NEXTPAGE = "F1"
+		End If
+	
+	Case "E12"
+		E10_1 = getRedis("E10_1")
+		E10_2 = getRedis("E10_2")
+		E10_3 = getRedis("E10_3")
+		
+		v1 = 0 : If IsNumeric(E10_1) Then v1 = CInt(E10_1)
+		v2 = 0 : If IsNumeric(E10_2) Then v2 = CInt(E10_2)
+		v3 = 0 : If IsNumeric(E10_3) Then v3 = CInt(E10_3)
+
+		hasRear  = ((v1>=16 And v1<=21) Or (v2>=16 And v2<=21) Or (v3>=16 And v3<=21))
+
+		If hasRear Then
+			NEXTPAGE = "E13"
+		Else
+			NEXTPAGE = "F1"
+		End If
+	
+	Case "F6"
+		B3Q = getListValue("B3Q")
+		If Request("F6_1") <> "99" Then
+			NEXTPAGE = "F7"
+		ElseIf B3Q = "1" then
+			NEXTPAGE = "F8"
+			PValue = PValue + 1
+		Else
+			NEXTPAGE = "G1"
+			PValue = PValue + 3
+		End If
+
+	Case "F7"
+		B3Q = getListValue("B3Q")
+		If B3Q = "1"  Then
+			NEXTPAGE = "F8"
+		Else
+			NEXTPAGE = "G1"
+			PValue = PValue + 2
+		End If
+	
+	Case "F8"
+		If CInt(Request("F8")) < 5 Then
+			NEXTPAGE = "F9"
+		Else
+			NEXTPAGE = "G1"
+			PValue = PValue + 1
+		End If
+
+	Case "G1"
+		If CInt(Request("G1")) < 5 Then
+			NEXTPAGE = "G2"
+		Else
+			NEXTPAGE = "K1A"
+			If Trim(getValue("Ran") & "") = "" Then
+				SAVEDATA CDAT("Ran=" & getRandomNum())
+			End If
+		End If
+	
+	Case "G2"
+		If Request("G2_1") <> "1" And Request("G2_2") <> "2" And Request("G2_3") <> "3" And Request("G2_4") <> "4" Then
+			NEXTPAGE = "K1A"
+			If Trim(getValue("Ran") & "") = "" Then
+				SAVEDATA CDAT("Ran=" & getRandomNum())
+			End If
+			PValue = PValue + 1
+		End If
+	
+	Case "G3"
+		If Trim(getValue("Ran") & "") = "" Then
+			SAVEDATA CDAT("Ran=" & getRandomNum())
+		End If
+
+	Case "K1A"
+		If Request("K1A") = "21" Then
+			SAVEDATA CDAT("K1B=21&K1C=21&K1D=21")
+			NEXTPAGE = "K2"
+		End if
+
+	Case "K1B"
+		If Request("K1B") = "21" Then
+			SAVEDATA CDAT("K1C=21&K1D=21")
+			NEXTPAGE = "K2"
+		End if
+		
+	
+	Case "K1C"
+		If Request("K1C") = "21" Then
+			SAVEDATA CDAT("K1D=21")
+			NEXTPAGE = "K2"
+		End if
+		
+
+	Case "K4"
+		B3Q = getListValue("B3Q")
+		If B3Q = "2" Then
+			NEXTPAGE = "K5"
+		ElseIf getListValue("B4") = "1" Then
+			NEXTPAGE = "K6"
+		ElseIf getListValue("B4") <> "1" Or B3Q= "3" Then
+			NEXTPAGE = "K7"
+		Else
+			NEXTPAGE = "L1"
+		End If
+
+	Case "K5"
+		If getListValue("B4") = "1" Then
+			NEXTPAGE = "K6"
+		Else
+			NEXTPAGE = "K7"
+		End If
+	
+	Case "K6"
+		If getListValue("B3Q") = "1" Then
+			SAVEDATA CDAT("L1="& getListValue("C1"))
+			NEXTPAGE = "L2"
+		Else
+			NEXTPAGE = "L1"
+		End if
+	
+	Case "L1"
+		NEXTPAGE = "L3"
+	
+	Case "L3"
+		If Request("L3_1") = "13" Or Request("L3_2") = "13" Or Request("L3_3") = "13" Then
+			If getRedis("L1") = "1" Then
+				NEXTPAGE = "L5"
+			else
+				NEXTPAGE = "L4"
+			End if
+		Else
+			NEXTPAGE = "L5"
+		End If
+
+	Case "L5"
+		If getListValue("B3Q") = "2" or getListValue("B3Q") = "3" Then 
+			NEXTPAGE = "M1"
+		Else 
+			NEXTPAGE = "M7"
+		End If 
+	
+	Case "M1"
+		Dim M1A, M1B, M1C
+		M1A = CLng(Request("M1_1"))
+		M1B = CLng(Request("M1_2"))
+		M1C = CLng(Request("M1_3"))
+		
+		If M1A < 5 Then 
+			NEXTPAGE = "M2"
+		Else 
+			If M1B < 5 Then 
+				NEXTPAGE = "M3"
+			ElseIf M1C < 5 Then 
+				NEXTPAGE = "M4"
+			Else 
+				NEXTPAGE = "M5"
+			End If 
+		End If 
+	
+	Case "M2"
+		M1B = CLng(getRedis("M1_2"))
+		M1C = CLng(getRedis("M1_3"))
+		
+		If M1B < 5 Then 
+			NEXTPAGE = "M3"
+		ElseIf M1C < 5 Then 
+			NEXTPAGE = "M4"
+		Else 
+			NEXTPAGE = "M5"
+		End If 
+		
+	Case "M3"
+		M1C = CLng(getRedis("M1_3"))
+		If M1C < 5 Then 
+			NEXTPAGE = "M4"
+		Else 
+			NEXTPAGE = "M5"
+		End If 
+	
+	Case "M5"
+		Dim M5A, M5B, mFlag
+		M5A = CLng(Request("M5_1"))
+		M5B = CLng(Request("M5_2"))
+		mFlag = False 
+		
+		If M5A < 6 Then 
+			mFlag = True 
+		End If 
+		
+		If M5B < 6 Then 
+			mFlag = True
+		End If 
+		
+		If mFlag Then 
+			NEXTPAGE = "M6"
+		Else
+			NEXTPAGE = "M7"
+		End If 
+		
+	Case "M7"
+		Dim M7A, M7B, M7C
+		M7A = CLng(Request("M7_1"))
+		M7B = CLng(Request("M7_2"))
+		M7C = CLng(Request("M7_3"))
+		mFlag = False 
+		
+		If M7A < 6 Then 
+			mFlag = True
+		End If 
+		
+		If M7B < 6 Then 
+			mFlag = True
+		End If 
+		
+		If M7C < 6 Then 
+			mFlag = True 
+		End If 
+		
+		If mFlag Then 
+			NEXTPAGE = "M8"
+		Else 
+			NEXTPAGE = "M9"
+		End If 
+	
+	Case "M9"
+		Dim M9A, M9B, M9C
+		M9A = CLng(Request("M9_1"))
+		M9B = CLng(Request("M9_2"))
+		M9C = CLng(Request("M9_3"))
+		mFlag = False 
+		
+		If M9A < 6 Then 
+			mFlag = True
+		End If 
+		
+		If M9B < 6 Then 
+			mFlag = True
+		End If 
+		
+		If M9C < 6 Then 
+			mFlag = True 
+		End If 
+		
+		If mFlag Then 
+			NEXTPAGE = "M10"
+		Else 
+			NEXTPAGE = "M11"
+		End If 
+	
+		
+	Case "M11"
+		Dim M11A, M11B, M11C
+		M11A = CLng(Request("M11_1"))
+		M11B = CLng(Request("M11_2"))
+		M11C = CLng(Request("M11_3"))
+		mFlag = False 
+		
+		If M11A < 6 Then 
+			mFlag = True
+		End If 
+		
+		If M11B < 6 Then 
+			mFlag = True
+		End If 
+		
+		If M11C < 6 Then 
+			mFlag = True 
+		End If 
+		
+		If mFlag Then 
+			NEXTPAGE = "M12"
+		Else 
+			NEXTPAGE = "M13"
+		End If 
+	
+	Case "M13"
+		If getListValue("B3Q") = "1" Then 
+			NEXTPAGE = "N1"	
+		Else 
+			NEXTPAGE = "N4"
+		End If 
+		
+	Case "N3"
+		NEXTPAGE = "N7"
+	
+	Case "N8"
+'		If getListValue("B3Q") = "1" Then 
+'			NEXTPAGE = "P1"
+'		Else 
+'			NEXTPAGE = "U1"
+'		End If 
+
+	Case "P5"
+		If getListValue("B3Q") = "1" Then 
+			NEXTPAGE = "P6"
+		Else 
+			NEXTPAGE = "P8"
+		End If
+		
+	Case "P6"
+		If Request("P6") = "6" Then
+			NEXTPAGE = "P8"
+		End if
+	
+	Case "P8"
+		If Request("P8") = "2" Then
+			NEXTPAGE = "U1"
+		End If
+
+	Case "U5C"
+		Dim U1c, chkk, strU1
+		Set U1c = getMultiRedis("U1_1,U1_2,U1_3")
+		chkk = False
+		strU1 = "," & Trim(U1c("U1_1") & "") & "," & Trim(U1c("U1_2") & "") & "," & Trim(U1c("U1_3") & "") & ","
+
+		If InStr(strU1, ",18,") > 0 And InStr(strU1, ",15,") > 0 And InStr(strU1, ",10,") > 0 Then
+			chkk = True
+		End If
+		
+		If chkk Then
+			NEXTPAGE = "R1"
+		End if
+
+	Case "R3"
+		If Request("R3") = "1" Then 
+			NEXTPAGE = "R4"
+		Else 
+			NEXTPAGE = "R5"
+		End If 
+	
+	Case "S1"
+		If Request("S1") = "1" Then 
+			NEXTPAGE = "S2"
+		Else 
+			NEXTPAGE = "S13"
+		End If 
+	
+	Case "S2"
+		If Request("S2") = "1" Then 
+			NEXTPAGE = "S4"
+		Else 
+			NEXTPAGE = "S3"
+		End If 
+	
+	Case "S6"
+		If Request("S6_99") = "99" Then
+			NEXTPAGE = "S8"
+		End If
+
+	Case "S8"
+		If Request("S8_99") = "99" Then
+			NEXTPAGE = "S10"
+		End if
+
+	Case "S10"
+		If getListValue("B3Q") = "1" Then 
+			NEXTPAGE = "S11"
+		Else 
+			NEXTPAGE = "S12"
+		End If 
+		
+	Case "S12"
+		Dim valB3Q, valB3
+		Dim isTeslaOwner, isTeslaComparer
+
+		valB3Q = Trim(getListValue("B3Q") & "")
+		valB3 = Trim(getListValue("B3") & "")
+		
+		isTeslaOwner = False
+		isTeslaComparer = False
+
+		' 1. [테슬라 보유자] 체크
+		If valB3 = "11" Then
+			isTeslaOwner = True
+		End If
+
+		' 2. [테슬라 비교자] 그룹별 체크
+		If valB3Q = "1" Then
+			' 보유자: C3_1 ~ C3_3 중 11(테슬라)이 하나라도 있는지 확인
+			If Trim(getListValue("C3_1") & "") = "11" Or Trim(getListValue("C3_2") & "") = "11" Or Trim(getListValue("C3_3") & "") = "11" Then
+				isTeslaComparer = True
+			End If
+
+		ElseIf valB3Q = "2" Then
+			' 이탈자: 테슬라 보유자가 아니면서 D1_1 ~ D1_3 중 11(테슬라)이 있는지 확인
+			If valB3 <> "11" Then
+				If Trim(getListValue("D1_1") & "") = "11" Or Trim(getListValue("D1_2") & "") = "11" Or Trim(getListValue("D1_3") & "") = "11" Then
+					isTeslaComparer = True
+				End If
+			End If
+
+		ElseIf valB3Q = "3" Then
+			' 의향자: E4_1 ~ E4_3 중 11(테슬라)이 하나라도 있는지 확인
+			If Trim(getListValue("E4_1") & "") = "11" Or Trim(getListValue("E4_2") & "") = "11" Or Trim(getListValue("E4_3") & "") = "11" Then
+				isTeslaComparer = True
+			End If
+		End If
+
+		' 3. 최종 조건 판별 및 페이지 라우팅(이동)
+		If isTeslaOwner = True Or isTeslaComparer = True Then 
+			NEXTPAGE = "S13"
+		ElseIf valB3Q = "1" Then
+			If getListValue("DQ2") = "1" then
+				NEXTPAGE = "DM1"
+			else
+				NEXTPAGE = "T1"
+			end if
+		Else 
+			If getListValue("DQ2") = "1" then
+				NEXTPAGE = "DM1"
+			Else
+				NEXTPAGE = "DM2"
+			End if
+		End If
+		
+	Case "S13"
+		If getListValue("B3Q") = "1" Then 
+			NEXTPAGE = "T1"
+		Else 
+			If getListValue("DQ2") = "1" then
+				NEXTPAGE = "DM1"
+			Else
+				NEXTPAGE = "DM2"
+			End if
+		End If 
+	
+	Case "T1"
+		If Request("T1") = "1" Then 
+			If getListValue("DQ2") = "1" then
+				NEXTPAGE = "DM1"
+			Else
+				NEXTPAGE = "DM2"
+			End if
+		Else 
+			NEXTPAGE = "T2"
+		End If 
+	
+	Case "T2"
+		If Request("T2") = "1" Then 
+			NEXTPAGE = "T3"
+		Else 
+			NEXTPAGE = "T5"
+		End If 
+	
+	Case "T4"
+		NEXTPAGE = "T6"
+		
+	Case "T5"
+		If getListValue("DQ2") = "1" then
+				NEXTPAGE = "DM1"
+			Else
+				NEXTPAGE = "DM2"
+			End if
+	
+	Case "T6"
+		if getListValue("DQ2") = "1" then
+			NEXTPAGE = "DM1"
+		else	
+			NEXTPAGE = "DM2"
+		end if
+
+End Select

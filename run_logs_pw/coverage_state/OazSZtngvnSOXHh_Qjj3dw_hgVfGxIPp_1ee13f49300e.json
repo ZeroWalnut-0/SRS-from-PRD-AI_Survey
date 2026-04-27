@@ -1,0 +1,16 @@
+{
+  "done_case_keys": [
+    "AB9_1=1|AB9_2=1|AB9_3=2|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:",
+    "AB9_1=2|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:",
+    "AB9_1=4|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:",
+    "AB9_1=5|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:",
+    "AB9_2=2|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:",
+    "AB9_2=3|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:",
+    "AB9_2=5|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:",
+    "AB9_3=5|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:"
+  ],
+  "bad_case_keys": [
+    "AB9_1=3|AB9_2=1|AB9_3=1|BA5=__NEQ__:2|OWN2=__NEQ__:1|RESTYPE=TEST|SB3=__NEQ__:"
+  ],
+  "runs": 9
+}

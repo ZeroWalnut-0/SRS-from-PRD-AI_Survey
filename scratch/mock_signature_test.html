@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signature Mock</title>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+    <style>
+        canvas { border: 1px solid #ccc; width: 600px; height: 300px; }
+    </style>
+</head>
+<body>
+    <h3>개인정보 수집 동의</h3>
+    성명: <input type="text" name="NAME2" id="NAME2" value="박지윤"><br><br>
+    서명: <br>
+    <canvas id="sig-canvas" width="600" height="300"></canvas>
+    <br>
+    <button id="next">다음</button>
+
+    <script>
+        const canvas = document.getElementById('sig-canvas');
+        window.signaturePad = new SignaturePad(canvas);
+        
+        document.getElementById('next').onclick = () => {
+            if (window.signaturePad.isEmpty()) {
+                alert("서명이 필요합니다.");
+            } else {
+                alert("성공: " + document.getElementById('NAME2').value);
+            }
+        };
+    </script>
+</body>
+</html>

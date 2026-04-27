@@ -1,0 +1,1197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26031601/L3.asp</div>
+    <div><b>Title</b> 국내 신차반응조사 정량 설문지</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>56%L3귀하께서GT-Line트림을선택하신이유는무엇입니까?중요한순서대로3가지선택해주세요.1트림별적용디자인요소가마음에들어서3출고일정이더유리해서다른트림은선택불가능한옵션이있어서향후잔존가치를고려할때유리할것같아서2구매조건이더유리해서(전시차량,재고차량할인등)차는무조건최상위트림과풀옵션이최고라고생각해서기타이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+ECODE = 
+ENUMBER = 
+IDKey = 03231415185445737346826
+IDS = 
+L3_1 = 12
+L3_2 = 10
+L3_3 = 11
+NextPage = L4
+NoneCheck = N
+NoneValue = 
+PVALUE = 88
+PageName = L3
+ResType = TEST
+TL3_98 = 모름
+VC_ID = 03231415185445737346826
+VL3_10 = 10
+VL3_11 = 11
+VL3_12 = 12
+Var = L3_1,L3_2,L3_3,TL3_98</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(2 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)!=&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TL3_98]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	{
+		if (openValueCode($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;12∮트림별 적용 디자인 요소가 마음에 들어서∑11∮출고 일정이 더 유리해서∑13∮다른 트림은 선택 불가능한 옵션이 있어서∑14∮향후 잔존가치를 고려할 때 유리할 것 같아서∑10∮구매 조건이 더 유리해서 (전시 차량, 재고 차량 할인 등)∑9∮차는 무조건 최상위 트림과 풀옵션이 최고라고 생각해서∑98∮기타*OTHER&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\run.log</summary>
+    <pre>...(tail)
+2026-03-23 14:18:07,718 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:08,729 | INFO | [13] step=48 E4 -&gt; E5 (expected_next=E5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E5.asp)
+2026-03-23 14:18:09,455 | INFO | radio(required): E5=5 (min=None, max=None)
+2026-03-23 14:18:09,486 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:09,496 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:09,804 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:09,975 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:10,995 | INFO | [13] step=49 E5 -&gt; E6 (expected_next=E6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E6.asp)
+2026-03-23 14:18:11,780 | INFO | radio(required): E6=4 (min=None, max=None)
+2026-03-23 14:18:11,815 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:11,822 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:12,144 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:12,310 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:13,325 | INFO | [13] step=50 E6 -&gt; E7 (expected_next=E7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E7.asp)
+2026-03-23 14:18:14,327 | INFO | radio(required): E7=1 (min=None, max=None)
+2026-03-23 14:18:14,360 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:14,367 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:14,683 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:14,844 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:15,866 | INFO | [13] step=51 E7 -&gt; E8 (expected_next=E8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E8.asp)
+2026-03-23 14:18:31,726 | INFO | checkbox-group: E8 picks=[&#x27;23&#x27;, &#x27;1&#x27;, &#x27;17&#x27;, &#x27;27&#x27;, &#x27;20&#x27;, &#x27;15&#x27;, &#x27;25&#x27;, &#x27;24&#x27;, &#x27;26&#x27;, &#x27;5&#x27;, &#x27;4&#x27;, &#x27;19&#x27;, &#x27;16&#x27;, &#x27;21&#x27;, &#x27;18&#x27;, &#x27;29&#x27;, &#x27;2&#x27;, &#x27;7&#x27;, &#x27;13&#x27;, &#x27;3&#x27;, &#x27;6&#x27;, &#x27;9&#x27;, &#x27;30&#x27;, &#x27;22&#x27;, &#x27;11&#x27;, &#x27;28&#x27;, &#x27;12&#x27;, &#x27;10&#x27;, &#x27;14&#x27;]
+2026-03-23 14:18:31,727 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:31,735 | INFO | checked_count_after_fill=29
+2026-03-23 14:18:32,104 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:32,271 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:33,396 | INFO | [13] step=52 E8 -&gt; E9 (expected_next=E9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E9.asp)
+2026-03-23 14:18:34,424 | INFO | rank(E9) attempt 1: OK slots=[&#x27;6&#x27;, &#x27;2&#x27;, &#x27;14&#x27;] forced={}
+2026-03-23 14:18:34,744 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:34,920 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E10&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:36,006 | INFO | [13] step=53 E9 -&gt; E10 (expected_next=E10 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E10.asp)
+2026-03-23 14:18:37,166 | INFO | rank(E10) attempt 1: OK slots=[&#x27;20&#x27;, &#x27;5&#x27;, &#x27;21&#x27;] forced={}
+2026-03-23 14:18:37,522 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:37,685 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E11&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:38,716 | INFO | [13] step=54 E10 -&gt; E11 (expected_next=E11 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E10.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E11.asp)
+2026-03-23 14:18:39,507 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:39,517 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=E11 cmin=None cmax=None forced_val=None
+2026-03-23 14:18:39,526 | INFO | input(text): E11=없음
+2026-03-23 14:18:39,533 | INFO | checked_count_after_fill=0
+2026-03-23 14:18:39,848 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:40,013 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E12&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:41,067 | INFO | [13] step=55 E11 -&gt; E13 (expected_next=E12 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E11.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E13.asp)
+2026-03-23 14:18:41,766 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:41,778 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=E13 cmin=None cmax=None forced_val=None
+2026-03-23 14:18:41,792 | INFO | input(text): E13=해당없음
+2026-03-23 14:18:41,801 | INFO | checked_count_after_fill=0
+2026-03-23 14:18:42,181 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:42,351 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:43,613 | INFO | [13] step=56 E13 -&gt; F1 (expected_next=F1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F1.asp)
+2026-03-23 14:18:44,565 | INFO | radio(required): F1=4 (min=None, max=None)
+2026-03-23 14:18:44,647 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:44,665 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:45,068 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:45,258 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:46,461 | INFO | [13] step=57 F1 -&gt; F2 (expected_next=F2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F2.asp)
+2026-03-23 14:18:47,800 | INFO | radio(required): F2=7 (min=None, max=None)
+2026-03-23 14:18:47,901 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:47,918 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:48,894 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:49,073 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:50,405 | INFO | [13] step=58 F2 -&gt; F3 (expected_next=F3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F3.asp)
+2026-03-23 14:18:51,407 | INFO | radio(required): F3=1 (min=None, max=None)
+2026-03-23 14:18:51,477 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:51,490 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:51,957 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:52,135 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:53,480 | INFO | [13] step=59 F3 -&gt; F4 (expected_next=F4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F4.asp)
+2026-03-23 14:19:02,115 | INFO | checkbox-group: F4 picks=[&#x27;17&#x27;, &#x27;25&#x27;, &#x27;15&#x27;, &#x27;18&#x27;]
+2026-03-23 14:19:02,116 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:02,129 | INFO | checked_count_after_fill=4
+2026-03-23 14:19:02,541 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:02,713 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:04,069 | INFO | [13] step=60 F4 -&gt; F5 (expected_next=F5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F5.asp)
+2026-03-23 14:19:05,418 | INFO | rank(F5) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;16&#x27;, &#x27;10&#x27;] forced={}
+2026-03-23 14:19:05,829 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:06,003 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:07,216 | INFO | [13] step=61 F5 -&gt; F6 (expected_next=F6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F6.asp)
+2026-03-23 14:19:08,513 | INFO | rank(F6) attempt 1: OK slots=[&#x27;5&#x27;, &#x27;4&#x27;, &#x27;98&#x27;] forced={}
+2026-03-23 14:19:08,521 | INFO | [OTHER] filled input: TF6_98=모름
+2026-03-23 14:19:08,880 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:09,048 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:10,043 | INFO | [13] step=62 F6 -&gt; F7 (expected_next=F7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F7.asp)
+2026-03-23 14:19:10,646 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:10,657 | INFO | input(skip disabled): F7
+2026-03-23 14:19:10,673 | INFO | textarea: F7=해당없음
+2026-03-23 14:19:10,681 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:10,998 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:11,162 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:12,134 | INFO | [13] step=63 F7 -&gt; F8 (expected_next=F8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F8.asp)
+2026-03-23 14:19:12,925 | INFO | radio(required): F8=7 (min=None, max=None)
+2026-03-23 14:19:12,962 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:12,969 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:13,288 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:13,462 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:14,462 | INFO | [13] step=64 F8 -&gt; G1 (expected_next=F9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/G1.asp)
+2026-03-23 14:19:15,296 | INFO | radio(required): G1=5 (min=5, max=None)
+2026-03-23 14:19:15,322 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:15,328 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:15,637 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:15,812 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;G2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:16,846 | INFO | [13] step=65 G1 -&gt; K1A (expected_next=G2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/G1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1A.asp)
+2026-03-23 14:19:17,598 | INFO | radio(required): K1A=3 (min=None, max=None)
+2026-03-23 14:19:17,630 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:17,640 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:17,937 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:18,101 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:19,103 | INFO | [13] step=66 K1A -&gt; K1B (expected_next=K1B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1B.asp)
+2026-03-23 14:19:20,075 | INFO | radio(required): K1B=17 (min=None, max=None)
+2026-03-23 14:19:20,153 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:20,169 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:20,558 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:20,733 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:21,878 | INFO | [13] step=67 K1B -&gt; K1C (expected_next=K1C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1C.asp)
+2026-03-23 14:19:22,942 | INFO | radio(required): K1C=21 (min=None, max=None)
+2026-03-23 14:19:22,998 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:23,012 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:23,375 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:23,553 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:24,662 | INFO | [13] step=68 K1C -&gt; K2 (expected_next=K1D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K2.asp)
+2026-03-23 14:19:25,632 | INFO | radio(required): K2=2 (min=None, max=None)
+2026-03-23 14:19:25,691 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:25,709 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:26,063 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:26,243 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:27,253 | INFO | [13] step=69 K2 -&gt; K3 (expected_next=K3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K3.asp)
+2026-03-23 14:19:27,845 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:27,854 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=K3_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:19:27,862 | INFO | input(tel): K3_1=6549
+2026-03-23 14:19:27,880 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=K3_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:19:27,918 | INFO | input(tel): K3_2=9962
+2026-03-23 14:19:27,965 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:28,353 | INFO | [next_logic] adjusted: K3_1=3800(constraint) | K3_2=3800(constraint) | K3_2=3801(relation:K3_2&gt;K3_1)
+2026-03-23 14:19:28,523 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:29,922 | INFO | [13] step=70 K3 -&gt; K4 (expected_next=K4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K4.asp)
+2026-03-23 14:19:31,559 | WARNING | radio ensure failed:required: K4_1 wanted=2 got=
+2026-03-23 14:19:31,561 | INFO | radio(required): K4_1=2 (min=None, max=None)
+2026-03-23 14:19:34,827 | WARNING | radio ensure failed:required-retry: K4_1 wanted=1 got=
+2026-03-23 14:19:34,829 | INFO | radio(required): K4_1 re-try by value=1 (min=None, max=None)
+2026-03-23 14:19:34,836 | INFO | radio(required): K4_1 re-try checked=False
+2026-03-23 14:19:34,897 | INFO | radio(required): K4_2 no enabled radios -&gt; skip
+2026-03-23 14:19:34,917 | INFO | radio(required): K4_3 no enabled radios -&gt; skip
+2026-03-23 14:19:34,939 | INFO | radio(required): K4_4 no enabled radios -&gt; skip
+2026-03-23 14:19:34,959 | INFO | radio(required): K4_5 no enabled radios -&gt; skip
+2026-03-23 14:19:34,978 | INFO | radio(required): K4_6 no enabled radios -&gt; skip
+2026-03-23 14:19:34,998 | INFO | radio(required): K4_7 no enabled radios -&gt; skip
+2026-03-23 14:19:35,019 | INFO | radio(required): K4_8 no enabled radios -&gt; skip
+2026-03-23 14:19:35,038 | INFO | radio(required): K4_9 no enabled radios -&gt; skip
+2026-03-23 14:19:35,062 | INFO | radio(required): K4_10 no enabled radios -&gt; skip
+2026-03-23 14:19:35,084 | INFO | radio(required): K4_11 no enabled radios -&gt; skip
+2026-03-23 14:19:35,106 | INFO | radio(required): K4_12 no enabled radios -&gt; skip
+2026-03-23 14:19:35,127 | INFO | radio(required): K4_13 no enabled radios -&gt; skip
+2026-03-23 14:19:35,147 | INFO | radio(required): K4_14 no enabled radios -&gt; skip
+2026-03-23 14:19:35,167 | INFO | radio(required): K4_15 no enabled radios -&gt; skip
+2026-03-23 14:19:35,187 | INFO | radio(required): K4_16 no enabled radios -&gt; skip
+2026-03-23 14:19:35,208 | INFO | radio(required): K4_17 no enabled radios -&gt; skip
+2026-03-23 14:19:35,229 | INFO | radio(required): K4_18 no enabled radios -&gt; skip
+2026-03-23 14:19:35,249 | INFO | radio(required): K4_19 no enabled radios -&gt; skip
+2026-03-23 14:19:35,269 | INFO | radio(required): K4_20 no enabled radios -&gt; skip
+2026-03-23 14:19:35,289 | INFO | radio(required): K4_21 no enabled radios -&gt; skip
+2026-03-23 14:19:35,291 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:35,305 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:36,161 | INFO | [next_logic] adjusted: K6_1=1916(constraint) | K6_2=2004(constraint)
+2026-03-23 14:19:36,373 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:38,442 | INFO | [13] step=71 K4 -&gt; L2 (expected_next=K5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L2.asp)
+2026-03-23 14:19:39,673 | INFO | radio(required): L2=99 (min=None, max=None)
+2026-03-23 14:19:39,747 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:39,763 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:40,141 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:40,319 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;L3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:41,454 | INFO | [13] step=72 L2 -&gt; L3 (expected_next=L3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/L2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L3.asp)
+2026-03-23 14:19:42,059 | INFO | [override] input: L3_3=4
+2026-03-23 14:19:42,070 | INFO | [override] input: L3_1=__NEQ__:13
+2026-03-23 14:19:42,080 | INFO | [override] input: L3_2=__NEQ__:13
+2026-03-23 14:19:44,029 | WARNING | rank(L3) attempt 1: FAIL slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] picked=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:45,856 | WARNING | rank(L3) attempt 2: FAIL slots=[&#x27;11&#x27;, &#x27;12&#x27;, &#x27;9&#x27;] picked=[&#x27;11&#x27;, &#x27;12&#x27;, &#x27;9&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:48,118 | WARNING | rank(L3) attempt 3: FAIL slots=[&#x27;98&#x27;, &#x27;11&#x27;, &#x27;13&#x27;] picked=[&#x27;98&#x27;, &#x27;11&#x27;, &#x27;13&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,245 | WARNING | rank(L3) attempt 4: FAIL slots=[&#x27;12&#x27;, &#x27;10&#x27;, &#x27;11&#x27;] picked=[&#x27;12&#x27;, &#x27;10&#x27;, &#x27;11&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,268 | WARNING | rank(L3): giving best-effort slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,379 | INFO | [OTHER] filled input: TL3_98=모름
+2026-03-23 14:19:50,866 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,030 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;L4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:51,068 | WARNING | [13] dialog type=alert message=기타에 응답해 주십시오.
+2026-03-23 14:19:51,516 | WARNING | [13] validation alert detected: 기타에 응답해 주십시오.
+2026-03-23 14:19:51,630 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,643 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:19:51,680 | INFO | [13] step=73 L3 -&gt; L3 (expected_next=L4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/L3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L3.asp)
+2026-03-23 14:19:51,681 | WARNING | [13] URL unchanged and page unchanged. Validation-aware retry. (before=L3, after=L3, expected=L4)
+2026-03-23 14:19:51,693 | WARNING | [13] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;L4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:51,769 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 14:19:51,873 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,883 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:19:51,894 | WARNING | [13] next_source_excerpt=function next()
+{
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(2 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)!=&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TL3_98]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	{
+		if (openValueCode($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;12∮트림별 적용 디자인 요소가 마음에 들어서∑11∮출고 일정이 더 유리해서∑13∮다른 트림은 선택 불가능한 옵션이 있어서∑14∮향후 잔존가치를 고려할 때 유리할 것 같아서∑10∮구매 조건이 더 유리해서 (전시 차량, 재고 차량 할인 등)∑9∮차는 무조건 최상위 트림과 풀옵션이 최고라고 생각해서∑98∮기타*OTHER&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:19:51,905 | ERROR | [13] Stuck on same page. step=73 url=https://kstat.surveys.kr/2026/P26031601/L3.asp</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run.log</summary>
+    <pre>...(tail)
+2026-03-23 14:18:07,718 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:08,729 | INFO | [13] step=48 E4 -&gt; E5 (expected_next=E5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E5.asp)
+2026-03-23 14:18:09,455 | INFO | radio(required): E5=5 (min=None, max=None)
+2026-03-23 14:18:09,486 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:09,496 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:09,804 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:09,975 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:10,995 | INFO | [13] step=49 E5 -&gt; E6 (expected_next=E6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E6.asp)
+2026-03-23 14:18:11,780 | INFO | radio(required): E6=4 (min=None, max=None)
+2026-03-23 14:18:11,815 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:11,822 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:12,144 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:12,310 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:13,325 | INFO | [13] step=50 E6 -&gt; E7 (expected_next=E7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E7.asp)
+2026-03-23 14:18:14,327 | INFO | radio(required): E7=1 (min=None, max=None)
+2026-03-23 14:18:14,360 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:14,367 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:14,683 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:14,844 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:15,866 | INFO | [13] step=51 E7 -&gt; E8 (expected_next=E8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E8.asp)
+2026-03-23 14:18:31,726 | INFO | checkbox-group: E8 picks=[&#x27;23&#x27;, &#x27;1&#x27;, &#x27;17&#x27;, &#x27;27&#x27;, &#x27;20&#x27;, &#x27;15&#x27;, &#x27;25&#x27;, &#x27;24&#x27;, &#x27;26&#x27;, &#x27;5&#x27;, &#x27;4&#x27;, &#x27;19&#x27;, &#x27;16&#x27;, &#x27;21&#x27;, &#x27;18&#x27;, &#x27;29&#x27;, &#x27;2&#x27;, &#x27;7&#x27;, &#x27;13&#x27;, &#x27;3&#x27;, &#x27;6&#x27;, &#x27;9&#x27;, &#x27;30&#x27;, &#x27;22&#x27;, &#x27;11&#x27;, &#x27;28&#x27;, &#x27;12&#x27;, &#x27;10&#x27;, &#x27;14&#x27;]
+2026-03-23 14:18:31,727 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:31,735 | INFO | checked_count_after_fill=29
+2026-03-23 14:18:32,104 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:32,271 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:33,396 | INFO | [13] step=52 E8 -&gt; E9 (expected_next=E9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E9.asp)
+2026-03-23 14:18:34,424 | INFO | rank(E9) attempt 1: OK slots=[&#x27;6&#x27;, &#x27;2&#x27;, &#x27;14&#x27;] forced={}
+2026-03-23 14:18:34,744 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:34,920 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E10&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:36,006 | INFO | [13] step=53 E9 -&gt; E10 (expected_next=E10 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E10.asp)
+2026-03-23 14:18:37,166 | INFO | rank(E10) attempt 1: OK slots=[&#x27;20&#x27;, &#x27;5&#x27;, &#x27;21&#x27;] forced={}
+2026-03-23 14:18:37,522 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:37,685 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E11&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:38,716 | INFO | [13] step=54 E10 -&gt; E11 (expected_next=E11 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E10.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E11.asp)
+2026-03-23 14:18:39,507 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:39,517 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=E11 cmin=None cmax=None forced_val=None
+2026-03-23 14:18:39,526 | INFO | input(text): E11=없음
+2026-03-23 14:18:39,533 | INFO | checked_count_after_fill=0
+2026-03-23 14:18:39,848 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:40,013 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E12&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:41,067 | INFO | [13] step=55 E11 -&gt; E13 (expected_next=E12 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E11.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E13.asp)
+2026-03-23 14:18:41,766 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:41,778 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=E13 cmin=None cmax=None forced_val=None
+2026-03-23 14:18:41,792 | INFO | input(text): E13=해당없음
+2026-03-23 14:18:41,801 | INFO | checked_count_after_fill=0
+2026-03-23 14:18:42,181 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:42,351 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:43,613 | INFO | [13] step=56 E13 -&gt; F1 (expected_next=F1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F1.asp)
+2026-03-23 14:18:44,565 | INFO | radio(required): F1=4 (min=None, max=None)
+2026-03-23 14:18:44,647 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:44,665 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:45,068 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:45,258 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:46,461 | INFO | [13] step=57 F1 -&gt; F2 (expected_next=F2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F2.asp)
+2026-03-23 14:18:47,800 | INFO | radio(required): F2=7 (min=None, max=None)
+2026-03-23 14:18:47,901 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:47,918 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:48,894 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:49,073 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:50,405 | INFO | [13] step=58 F2 -&gt; F3 (expected_next=F3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F3.asp)
+2026-03-23 14:18:51,407 | INFO | radio(required): F3=1 (min=None, max=None)
+2026-03-23 14:18:51,477 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:51,490 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:51,957 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:52,135 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:53,480 | INFO | [13] step=59 F3 -&gt; F4 (expected_next=F4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F4.asp)
+2026-03-23 14:19:02,115 | INFO | checkbox-group: F4 picks=[&#x27;17&#x27;, &#x27;25&#x27;, &#x27;15&#x27;, &#x27;18&#x27;]
+2026-03-23 14:19:02,116 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:02,129 | INFO | checked_count_after_fill=4
+2026-03-23 14:19:02,541 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:02,713 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:04,069 | INFO | [13] step=60 F4 -&gt; F5 (expected_next=F5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F5.asp)
+2026-03-23 14:19:05,418 | INFO | rank(F5) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;16&#x27;, &#x27;10&#x27;] forced={}
+2026-03-23 14:19:05,829 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:06,003 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:07,216 | INFO | [13] step=61 F5 -&gt; F6 (expected_next=F6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F6.asp)
+2026-03-23 14:19:08,513 | INFO | rank(F6) attempt 1: OK slots=[&#x27;5&#x27;, &#x27;4&#x27;, &#x27;98&#x27;] forced={}
+2026-03-23 14:19:08,521 | INFO | [OTHER] filled input: TF6_98=모름
+2026-03-23 14:19:08,880 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:09,048 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:10,043 | INFO | [13] step=62 F6 -&gt; F7 (expected_next=F7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F7.asp)
+2026-03-23 14:19:10,646 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:10,657 | INFO | input(skip disabled): F7
+2026-03-23 14:19:10,673 | INFO | textarea: F7=해당없음
+2026-03-23 14:19:10,681 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:10,998 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:11,162 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:12,134 | INFO | [13] step=63 F7 -&gt; F8 (expected_next=F8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F8.asp)
+2026-03-23 14:19:12,925 | INFO | radio(required): F8=7 (min=None, max=None)
+2026-03-23 14:19:12,962 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:12,969 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:13,288 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:13,462 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:14,462 | INFO | [13] step=64 F8 -&gt; G1 (expected_next=F9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/G1.asp)
+2026-03-23 14:19:15,296 | INFO | radio(required): G1=5 (min=5, max=None)
+2026-03-23 14:19:15,322 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:15,328 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:15,637 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:15,812 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;G2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:16,846 | INFO | [13] step=65 G1 -&gt; K1A (expected_next=G2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/G1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1A.asp)
+2026-03-23 14:19:17,598 | INFO | radio(required): K1A=3 (min=None, max=None)
+2026-03-23 14:19:17,630 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:17,640 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:17,937 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:18,101 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:19,103 | INFO | [13] step=66 K1A -&gt; K1B (expected_next=K1B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1B.asp)
+2026-03-23 14:19:20,075 | INFO | radio(required): K1B=17 (min=None, max=None)
+2026-03-23 14:19:20,153 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:20,169 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:20,558 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:20,733 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:21,878 | INFO | [13] step=67 K1B -&gt; K1C (expected_next=K1C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1C.asp)
+2026-03-23 14:19:22,942 | INFO | radio(required): K1C=21 (min=None, max=None)
+2026-03-23 14:19:22,998 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:23,012 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:23,375 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:23,553 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:24,662 | INFO | [13] step=68 K1C -&gt; K2 (expected_next=K1D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K2.asp)
+2026-03-23 14:19:25,632 | INFO | radio(required): K2=2 (min=None, max=None)
+2026-03-23 14:19:25,691 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:25,709 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:26,063 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:26,243 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:27,253 | INFO | [13] step=69 K2 -&gt; K3 (expected_next=K3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K3.asp)
+2026-03-23 14:19:27,845 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:27,854 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=K3_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:19:27,862 | INFO | input(tel): K3_1=6549
+2026-03-23 14:19:27,880 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=K3_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:19:27,918 | INFO | input(tel): K3_2=9962
+2026-03-23 14:19:27,965 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:28,353 | INFO | [next_logic] adjusted: K3_1=3800(constraint) | K3_2=3800(constraint) | K3_2=3801(relation:K3_2&gt;K3_1)
+2026-03-23 14:19:28,523 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:29,922 | INFO | [13] step=70 K3 -&gt; K4 (expected_next=K4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K4.asp)
+2026-03-23 14:19:31,559 | WARNING | radio ensure failed:required: K4_1 wanted=2 got=
+2026-03-23 14:19:31,561 | INFO | radio(required): K4_1=2 (min=None, max=None)
+2026-03-23 14:19:34,827 | WARNING | radio ensure failed:required-retry: K4_1 wanted=1 got=
+2026-03-23 14:19:34,829 | INFO | radio(required): K4_1 re-try by value=1 (min=None, max=None)
+2026-03-23 14:19:34,836 | INFO | radio(required): K4_1 re-try checked=False
+2026-03-23 14:19:34,897 | INFO | radio(required): K4_2 no enabled radios -&gt; skip
+2026-03-23 14:19:34,917 | INFO | radio(required): K4_3 no enabled radios -&gt; skip
+2026-03-23 14:19:34,939 | INFO | radio(required): K4_4 no enabled radios -&gt; skip
+2026-03-23 14:19:34,959 | INFO | radio(required): K4_5 no enabled radios -&gt; skip
+2026-03-23 14:19:34,978 | INFO | radio(required): K4_6 no enabled radios -&gt; skip
+2026-03-23 14:19:34,998 | INFO | radio(required): K4_7 no enabled radios -&gt; skip
+2026-03-23 14:19:35,019 | INFO | radio(required): K4_8 no enabled radios -&gt; skip
+2026-03-23 14:19:35,038 | INFO | radio(required): K4_9 no enabled radios -&gt; skip
+2026-03-23 14:19:35,062 | INFO | radio(required): K4_10 no enabled radios -&gt; skip
+2026-03-23 14:19:35,084 | INFO | radio(required): K4_11 no enabled radios -&gt; skip
+2026-03-23 14:19:35,106 | INFO | radio(required): K4_12 no enabled radios -&gt; skip
+2026-03-23 14:19:35,127 | INFO | radio(required): K4_13 no enabled radios -&gt; skip
+2026-03-23 14:19:35,147 | INFO | radio(required): K4_14 no enabled radios -&gt; skip
+2026-03-23 14:19:35,167 | INFO | radio(required): K4_15 no enabled radios -&gt; skip
+2026-03-23 14:19:35,187 | INFO | radio(required): K4_16 no enabled radios -&gt; skip
+2026-03-23 14:19:35,208 | INFO | radio(required): K4_17 no enabled radios -&gt; skip
+2026-03-23 14:19:35,229 | INFO | radio(required): K4_18 no enabled radios -&gt; skip
+2026-03-23 14:19:35,249 | INFO | radio(required): K4_19 no enabled radios -&gt; skip
+2026-03-23 14:19:35,269 | INFO | radio(required): K4_20 no enabled radios -&gt; skip
+2026-03-23 14:19:35,289 | INFO | radio(required): K4_21 no enabled radios -&gt; skip
+2026-03-23 14:19:35,291 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:35,305 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:36,161 | INFO | [next_logic] adjusted: K6_1=1916(constraint) | K6_2=2004(constraint)
+2026-03-23 14:19:36,373 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:38,442 | INFO | [13] step=71 K4 -&gt; L2 (expected_next=K5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L2.asp)
+2026-03-23 14:19:39,673 | INFO | radio(required): L2=99 (min=None, max=None)
+2026-03-23 14:19:39,747 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:39,763 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:40,141 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:40,319 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;L3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:41,454 | INFO | [13] step=72 L2 -&gt; L3 (expected_next=L3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/L2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L3.asp)
+2026-03-23 14:19:42,059 | INFO | [override] input: L3_3=4
+2026-03-23 14:19:42,070 | INFO | [override] input: L3_1=__NEQ__:13
+2026-03-23 14:19:42,080 | INFO | [override] input: L3_2=__NEQ__:13
+2026-03-23 14:19:44,029 | WARNING | rank(L3) attempt 1: FAIL slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] picked=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:45,856 | WARNING | rank(L3) attempt 2: FAIL slots=[&#x27;11&#x27;, &#x27;12&#x27;, &#x27;9&#x27;] picked=[&#x27;11&#x27;, &#x27;12&#x27;, &#x27;9&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:48,118 | WARNING | rank(L3) attempt 3: FAIL slots=[&#x27;98&#x27;, &#x27;11&#x27;, &#x27;13&#x27;] picked=[&#x27;98&#x27;, &#x27;11&#x27;, &#x27;13&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,245 | WARNING | rank(L3) attempt 4: FAIL slots=[&#x27;12&#x27;, &#x27;10&#x27;, &#x27;11&#x27;] picked=[&#x27;12&#x27;, &#x27;10&#x27;, &#x27;11&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,268 | WARNING | rank(L3): giving best-effort slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,379 | INFO | [OTHER] filled input: TL3_98=모름
+2026-03-23 14:19:50,866 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,030 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;L4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:51,068 | WARNING | [13] dialog type=alert message=기타에 응답해 주십시오.
+2026-03-23 14:19:51,516 | WARNING | [13] validation alert detected: 기타에 응답해 주십시오.
+2026-03-23 14:19:51,630 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,643 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:19:51,680 | INFO | [13] step=73 L3 -&gt; L3 (expected_next=L4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/L3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L3.asp)
+2026-03-23 14:19:51,681 | WARNING | [13] URL unchanged and page unchanged. Validation-aware retry. (before=L3, after=L3, expected=L4)
+2026-03-23 14:19:51,693 | WARNING | [13] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;L4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:51,769 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 14:19:51,873 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,883 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:19:51,894 | WARNING | [13] next_source_excerpt=function next()
+{
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(2 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)!=&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TL3_98]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	{
+		if (openValueCode($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;12∮트림별 적용 디자인 요소가 마음에 들어서∑11∮출고 일정이 더 유리해서∑13∮다른 트림은 선택 불가능한 옵션이 있어서∑14∮향후 잔존가치를 고려할 때 유리할 것 같아서∑10∮구매 조건이 더 유리해서 (전시 차량, 재고 차량 할인 등)∑9∮차는 무조건 최상위 트림과 풀옵션이 최고라고 생각해서∑98∮기타*OTHER&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:19:51,905 | ERROR | [13] Stuck on same page. step=73 url=https://kstat.surveys.kr/2026/P26031601/L3.asp</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run_all.log</summary>
+    <pre>...(tail)
+2026-03-23 14:18:07,718 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:08,729 | INFO | [13] step=48 E4 -&gt; E5 (expected_next=E5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E5.asp)
+2026-03-23 14:18:09,455 | INFO | radio(required): E5=5 (min=None, max=None)
+2026-03-23 14:18:09,486 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:09,496 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:09,804 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:09,975 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:10,995 | INFO | [13] step=49 E5 -&gt; E6 (expected_next=E6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E6.asp)
+2026-03-23 14:18:11,780 | INFO | radio(required): E6=4 (min=None, max=None)
+2026-03-23 14:18:11,815 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:11,822 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:12,144 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:12,310 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:13,325 | INFO | [13] step=50 E6 -&gt; E7 (expected_next=E7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E7.asp)
+2026-03-23 14:18:14,327 | INFO | radio(required): E7=1 (min=None, max=None)
+2026-03-23 14:18:14,360 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:14,367 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:14,683 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:14,844 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:15,866 | INFO | [13] step=51 E7 -&gt; E8 (expected_next=E8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E8.asp)
+2026-03-23 14:18:31,726 | INFO | checkbox-group: E8 picks=[&#x27;23&#x27;, &#x27;1&#x27;, &#x27;17&#x27;, &#x27;27&#x27;, &#x27;20&#x27;, &#x27;15&#x27;, &#x27;25&#x27;, &#x27;24&#x27;, &#x27;26&#x27;, &#x27;5&#x27;, &#x27;4&#x27;, &#x27;19&#x27;, &#x27;16&#x27;, &#x27;21&#x27;, &#x27;18&#x27;, &#x27;29&#x27;, &#x27;2&#x27;, &#x27;7&#x27;, &#x27;13&#x27;, &#x27;3&#x27;, &#x27;6&#x27;, &#x27;9&#x27;, &#x27;30&#x27;, &#x27;22&#x27;, &#x27;11&#x27;, &#x27;28&#x27;, &#x27;12&#x27;, &#x27;10&#x27;, &#x27;14&#x27;]
+2026-03-23 14:18:31,727 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:31,735 | INFO | checked_count_after_fill=29
+2026-03-23 14:18:32,104 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:32,271 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:33,396 | INFO | [13] step=52 E8 -&gt; E9 (expected_next=E9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E9.asp)
+2026-03-23 14:18:34,424 | INFO | rank(E9) attempt 1: OK slots=[&#x27;6&#x27;, &#x27;2&#x27;, &#x27;14&#x27;] forced={}
+2026-03-23 14:18:34,744 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:34,920 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E10&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:36,006 | INFO | [13] step=53 E9 -&gt; E10 (expected_next=E10 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E10.asp)
+2026-03-23 14:18:37,166 | INFO | rank(E10) attempt 1: OK slots=[&#x27;20&#x27;, &#x27;5&#x27;, &#x27;21&#x27;] forced={}
+2026-03-23 14:18:37,522 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:37,685 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E11&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:38,716 | INFO | [13] step=54 E10 -&gt; E11 (expected_next=E11 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E10.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E11.asp)
+2026-03-23 14:18:39,507 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:39,517 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=E11 cmin=None cmax=None forced_val=None
+2026-03-23 14:18:39,526 | INFO | input(text): E11=없음
+2026-03-23 14:18:39,533 | INFO | checked_count_after_fill=0
+2026-03-23 14:18:39,848 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:40,013 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;E12&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:41,067 | INFO | [13] step=55 E11 -&gt; E13 (expected_next=E12 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E11.asp -&gt; https://kstat.surveys.kr/2026/P26031601/E13.asp)
+2026-03-23 14:18:41,766 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:41,778 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=E13 cmin=None cmax=None forced_val=None
+2026-03-23 14:18:41,792 | INFO | input(text): E13=해당없음
+2026-03-23 14:18:41,801 | INFO | checked_count_after_fill=0
+2026-03-23 14:18:42,181 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:42,351 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:43,613 | INFO | [13] step=56 E13 -&gt; F1 (expected_next=F1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/E13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F1.asp)
+2026-03-23 14:18:44,565 | INFO | radio(required): F1=4 (min=None, max=None)
+2026-03-23 14:18:44,647 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:44,665 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:45,068 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:45,258 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:46,461 | INFO | [13] step=57 F1 -&gt; F2 (expected_next=F2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F2.asp)
+2026-03-23 14:18:47,800 | INFO | radio(required): F2=7 (min=None, max=None)
+2026-03-23 14:18:47,901 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:47,918 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:48,894 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:49,073 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:50,405 | INFO | [13] step=58 F2 -&gt; F3 (expected_next=F3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F3.asp)
+2026-03-23 14:18:51,407 | INFO | radio(required): F3=1 (min=None, max=None)
+2026-03-23 14:18:51,477 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:18:51,490 | INFO | checked_count_after_fill=1
+2026-03-23 14:18:51,957 | INFO | [next_logic] no adjustment
+2026-03-23 14:18:52,135 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:18:53,480 | INFO | [13] step=59 F3 -&gt; F4 (expected_next=F4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F4.asp)
+2026-03-23 14:19:02,115 | INFO | checkbox-group: F4 picks=[&#x27;17&#x27;, &#x27;25&#x27;, &#x27;15&#x27;, &#x27;18&#x27;]
+2026-03-23 14:19:02,116 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:02,129 | INFO | checked_count_after_fill=4
+2026-03-23 14:19:02,541 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:02,713 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:04,069 | INFO | [13] step=60 F4 -&gt; F5 (expected_next=F5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F5.asp)
+2026-03-23 14:19:05,418 | INFO | rank(F5) attempt 1: OK slots=[&#x27;12&#x27;, &#x27;16&#x27;, &#x27;10&#x27;] forced={}
+2026-03-23 14:19:05,829 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:06,003 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:07,216 | INFO | [13] step=61 F5 -&gt; F6 (expected_next=F6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F6.asp)
+2026-03-23 14:19:08,513 | INFO | rank(F6) attempt 1: OK slots=[&#x27;5&#x27;, &#x27;4&#x27;, &#x27;98&#x27;] forced={}
+2026-03-23 14:19:08,521 | INFO | [OTHER] filled input: TF6_98=모름
+2026-03-23 14:19:08,880 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:09,048 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:10,043 | INFO | [13] step=62 F6 -&gt; F7 (expected_next=F7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F7.asp)
+2026-03-23 14:19:10,646 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:10,657 | INFO | input(skip disabled): F7
+2026-03-23 14:19:10,673 | INFO | textarea: F7=해당없음
+2026-03-23 14:19:10,681 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:10,998 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:11,162 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:12,134 | INFO | [13] step=63 F7 -&gt; F8 (expected_next=F8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/F8.asp)
+2026-03-23 14:19:12,925 | INFO | radio(required): F8=7 (min=None, max=None)
+2026-03-23 14:19:12,962 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:12,969 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:13,288 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:13,462 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;F9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:14,462 | INFO | [13] step=64 F8 -&gt; G1 (expected_next=F9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/F8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/G1.asp)
+2026-03-23 14:19:15,296 | INFO | radio(required): G1=5 (min=5, max=None)
+2026-03-23 14:19:15,322 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:15,328 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:15,637 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:15,812 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;G2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:16,846 | INFO | [13] step=65 G1 -&gt; K1A (expected_next=G2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/G1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1A.asp)
+2026-03-23 14:19:17,598 | INFO | radio(required): K1A=3 (min=None, max=None)
+2026-03-23 14:19:17,630 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:17,640 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:17,937 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:18,101 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:19,103 | INFO | [13] step=66 K1A -&gt; K1B (expected_next=K1B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1B.asp)
+2026-03-23 14:19:20,075 | INFO | radio(required): K1B=17 (min=None, max=None)
+2026-03-23 14:19:20,153 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:20,169 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:20,558 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:20,733 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:21,878 | INFO | [13] step=67 K1B -&gt; K1C (expected_next=K1C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K1C.asp)
+2026-03-23 14:19:22,942 | INFO | radio(required): K1C=21 (min=None, max=None)
+2026-03-23 14:19:22,998 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:23,012 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:23,375 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:23,553 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K1D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:24,662 | INFO | [13] step=68 K1C -&gt; K2 (expected_next=K1D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K1C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K2.asp)
+2026-03-23 14:19:25,632 | INFO | radio(required): K2=2 (min=None, max=None)
+2026-03-23 14:19:25,691 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:25,709 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:26,063 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:26,243 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:27,253 | INFO | [13] step=69 K2 -&gt; K3 (expected_next=K3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K3.asp)
+2026-03-23 14:19:27,845 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:27,854 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=K3_1 cmin=None cmax=None forced_val=None
+2026-03-23 14:19:27,862 | INFO | input(tel): K3_1=6549
+2026-03-23 14:19:27,880 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=K3_2 cmin=None cmax=None forced_val=None
+2026-03-23 14:19:27,918 | INFO | input(tel): K3_2=9962
+2026-03-23 14:19:27,965 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:28,353 | INFO | [next_logic] adjusted: K3_1=3800(constraint) | K3_2=3800(constraint) | K3_2=3801(relation:K3_2&gt;K3_1)
+2026-03-23 14:19:28,523 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:29,922 | INFO | [13] step=70 K3 -&gt; K4 (expected_next=K4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/K4.asp)
+2026-03-23 14:19:31,559 | WARNING | radio ensure failed:required: K4_1 wanted=2 got=
+2026-03-23 14:19:31,561 | INFO | radio(required): K4_1=2 (min=None, max=None)
+2026-03-23 14:19:34,827 | WARNING | radio ensure failed:required-retry: K4_1 wanted=1 got=
+2026-03-23 14:19:34,829 | INFO | radio(required): K4_1 re-try by value=1 (min=None, max=None)
+2026-03-23 14:19:34,836 | INFO | radio(required): K4_1 re-try checked=False
+2026-03-23 14:19:34,897 | INFO | radio(required): K4_2 no enabled radios -&gt; skip
+2026-03-23 14:19:34,917 | INFO | radio(required): K4_3 no enabled radios -&gt; skip
+2026-03-23 14:19:34,939 | INFO | radio(required): K4_4 no enabled radios -&gt; skip
+2026-03-23 14:19:34,959 | INFO | radio(required): K4_5 no enabled radios -&gt; skip
+2026-03-23 14:19:34,978 | INFO | radio(required): K4_6 no enabled radios -&gt; skip
+2026-03-23 14:19:34,998 | INFO | radio(required): K4_7 no enabled radios -&gt; skip
+2026-03-23 14:19:35,019 | INFO | radio(required): K4_8 no enabled radios -&gt; skip
+2026-03-23 14:19:35,038 | INFO | radio(required): K4_9 no enabled radios -&gt; skip
+2026-03-23 14:19:35,062 | INFO | radio(required): K4_10 no enabled radios -&gt; skip
+2026-03-23 14:19:35,084 | INFO | radio(required): K4_11 no enabled radios -&gt; skip
+2026-03-23 14:19:35,106 | INFO | radio(required): K4_12 no enabled radios -&gt; skip
+2026-03-23 14:19:35,127 | INFO | radio(required): K4_13 no enabled radios -&gt; skip
+2026-03-23 14:19:35,147 | INFO | radio(required): K4_14 no enabled radios -&gt; skip
+2026-03-23 14:19:35,167 | INFO | radio(required): K4_15 no enabled radios -&gt; skip
+2026-03-23 14:19:35,187 | INFO | radio(required): K4_16 no enabled radios -&gt; skip
+2026-03-23 14:19:35,208 | INFO | radio(required): K4_17 no enabled radios -&gt; skip
+2026-03-23 14:19:35,229 | INFO | radio(required): K4_18 no enabled radios -&gt; skip
+2026-03-23 14:19:35,249 | INFO | radio(required): K4_19 no enabled radios -&gt; skip
+2026-03-23 14:19:35,269 | INFO | radio(required): K4_20 no enabled radios -&gt; skip
+2026-03-23 14:19:35,289 | INFO | radio(required): K4_21 no enabled radios -&gt; skip
+2026-03-23 14:19:35,291 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:35,305 | INFO | checked_count_after_fill=0
+2026-03-23 14:19:36,161 | INFO | [next_logic] adjusted: K6_1=1916(constraint) | K6_2=2004(constraint)
+2026-03-23 14:19:36,373 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;K7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:38,442 | INFO | [13] step=71 K4 -&gt; L2 (expected_next=K5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/K6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L2.asp)
+2026-03-23 14:19:39,673 | INFO | radio(required): L2=99 (min=None, max=None)
+2026-03-23 14:19:39,747 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 14:19:39,763 | INFO | checked_count_after_fill=1
+2026-03-23 14:19:40,141 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:40,319 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;L3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:41,454 | INFO | [13] step=72 L2 -&gt; L3 (expected_next=L3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/L2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L3.asp)
+2026-03-23 14:19:42,059 | INFO | [override] input: L3_3=4
+2026-03-23 14:19:42,070 | INFO | [override] input: L3_1=__NEQ__:13
+2026-03-23 14:19:42,080 | INFO | [override] input: L3_2=__NEQ__:13
+2026-03-23 14:19:44,029 | WARNING | rank(L3) attempt 1: FAIL slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] picked=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:45,856 | WARNING | rank(L3) attempt 2: FAIL slots=[&#x27;11&#x27;, &#x27;12&#x27;, &#x27;9&#x27;] picked=[&#x27;11&#x27;, &#x27;12&#x27;, &#x27;9&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:48,118 | WARNING | rank(L3) attempt 3: FAIL slots=[&#x27;98&#x27;, &#x27;11&#x27;, &#x27;13&#x27;] picked=[&#x27;98&#x27;, &#x27;11&#x27;, &#x27;13&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,245 | WARNING | rank(L3) attempt 4: FAIL slots=[&#x27;12&#x27;, &#x27;10&#x27;, &#x27;11&#x27;] picked=[&#x27;12&#x27;, &#x27;10&#x27;, &#x27;11&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,268 | WARNING | rank(L3): giving best-effort slots=[&#x27;10&#x27;, &#x27;13&#x27;, &#x27;98&#x27;] forced={3: &#x27;4&#x27;, 1: &#x27;__NEQ__:13&#x27;, 2: &#x27;__NEQ__:13&#x27;}
+2026-03-23 14:19:50,379 | INFO | [OTHER] filled input: TL3_98=모름
+2026-03-23 14:19:50,866 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,030 | INFO | [13] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;L4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:51,068 | WARNING | [13] dialog type=alert message=기타에 응답해 주십시오.
+2026-03-23 14:19:51,516 | WARNING | [13] validation alert detected: 기타에 응답해 주십시오.
+2026-03-23 14:19:51,630 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,643 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:19:51,680 | INFO | [13] step=73 L3 -&gt; L3 (expected_next=L4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/L3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/L3.asp)
+2026-03-23 14:19:51,681 | WARNING | [13] URL unchanged and page unchanged. Validation-aware retry. (before=L3, after=L3, expected=L4)
+2026-03-23 14:19:51,693 | WARNING | [13] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;L4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 14:19:51,769 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 14:19:51,873 | INFO | [next_logic] no adjustment
+2026-03-23 14:19:51,883 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 14:19:51,894 | WARNING | [13] next_source_excerpt=function next()
+{
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(2 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)!=&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TL3_98]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	{
+		if (openValueCode($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;12∮트림별 적용 디자인 요소가 마음에 들어서∑11∮출고 일정이 더 유리해서∑13∮다른 트림은 선택 불가능한 옵션이 있어서∑14∮향후 잔존가치를 고려할 때 유리할 것 같아서∑10∮구매 조건이 더 유리해서 (전시 차량, 재고 차량 할인 등)∑9∮차는 무조건 최상위 트림과 풀옵션이 최고라고 생각해서∑98∮기타*OTHER&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 14:19:51,905 | ERROR | [13] Stuck on same page. step=73 url=https://kstat.surveys.kr/2026/P26031601/L3.asp</pre>
+  </details>
+</div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603172230&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;국내 신차반응조사 정량 설문지&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+		$(&quot;input[type=checkbox]&quot;).prop(&quot;checked&quot;,false);
+		$(&quot;input[type=checkbox]&quot;).prop(&quot;disabled&quot;,false);
+		$(&quot;#L3_1&quot;).val(&quot;&quot;);
+		$(&quot;#L3_2&quot;).val(&quot;&quot;);
+		$(&quot;#L3_3&quot;).val(&quot;&quot;);
+		$(&quot;input[type=text][name*=TL3_]&quot;).prop(&quot;disabled&quot;,false);
+		$(&quot;input[type=text][name*=TL3_]&quot;).val(&quot;&quot;);
+	});
+
+//--&gt;
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(1 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#NoneCheck&quot;).val()==&quot;N&quot;))
+	{
+		alert(&quot;(2 순위) 질문에 응답해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_1&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_2&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;1순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (($(&quot;#L3_2&quot;).val().trim()==&quot;&quot;) &amp;&amp; ($(&quot;#L3_3&quot;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;2순위를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ((getCheckBoxValue(&quot;VL3_98&quot;)!=&quot;98&quot;)	&amp;&amp; ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TL3_98]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TL3_98]&#x27;).val().trim()!=&quot;&quot;)	{
+		if (containsChars($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TL3_98]&#x27;).focus();
+			return;
+		}
+	}
+	if (getCheckBoxValue(&quot;VL3_98&quot;)==&quot;98&quot;)	{
+		if (openValueCode($(&#x27;input[name=TL3_98]&#x27;).val().trim(),&quot;12∮트림별 적용 디자인 요소가 마음에 들어서∑11∮출고 일정이 더 유리해서∑13∮다른 트림은 선택 불가능한 옵션이 있어서∑14∮향후 잔존가치를 고려할 때 유리할 것 같아서∑10∮구매 조건이 더 유리해서 (전시 차량, 재고 차량 할인 등)∑9∮차는 무조건 최상위 트림과 풀옵션이 최고라고 생각해서∑98∮기타*OTHER&quot;)==true)		{
+			alert(&quot;[기타] 의 값은 보기와 중복됩니다.&quot;);
+			return;
+		}
+	}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;L3_1,L3_2,L3_3,TL3_98&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;L3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;L4&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;03231415185445737346826&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;03231415185445737346826&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;88&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 56%; font-size:10px !important;&quot; aria-valuenow=&quot;56&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;56%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+				
+				&lt;div class=&quot;text-center&quot;&gt;
+					&lt;img src=&quot;https://trendresearch.speedgabia.com/Survey/P26031601/card15.JPG&quot; class=&quot;img-fluid mt-2&quot;&gt;
+				&lt;/div&gt;
+				
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							L3&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;	귀하께서 &lt;span class=&quot;BlueBd&quot;&gt;GT-Line&lt;/span&gt; 트림을 선택하신 이유는 무엇입니까? 중요한 순서대로 3가지 선택해 주세요.&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;!--데이터 영역//--&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;L3_1&quot; id=&quot;L3_1&quot; value=&quot;12&quot;&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;L3_2&quot; id=&quot;L3_2&quot; value=&quot;10&quot;&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;L3_3&quot; id=&quot;L3_3&quot; value=&quot;11&quot;&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;NoneCheck&quot; id=&quot;NoneCheck&quot; value=&quot;N&quot;&gt;
+&lt;!--데이터 영역 끝//--&gt;
+&lt;table class=&quot;table table-bordered&quot; id=&quot;L3_table&quot;&gt;
+	&lt;colgroup&gt;
+		&lt;col width=&quot;5%&quot;&gt;
+		&lt;col width=&quot;95%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-center text-white align-middle border-end-0 bg-primary&quot; style=&quot;width:50px;&quot; id=&quot;Rank_12&quot; onclick=&quot;javascript:checkedRank2(&#x27;L3&#x27;,&#x27;12&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;1&lt;/td&gt;
+&lt;td id=&quot;TD_L3_12&quot; class=&quot;border-start-0&quot;&gt;
+	&lt;input class=&quot;visually-hidden&quot; type=&quot;checkbox&quot; name=&quot;VL3_12&quot; id=&quot;VL3_12&quot; value=&quot;12&quot; onclick=&quot;javascript:setRank2(&#x27;L3&#x27;,&#x27;12&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;
+	&lt;label style=&quot;cursor:pointer;width:90%;&quot; for=&quot;VL3_12&quot; id=&quot;LL3_12&quot;&gt;트림별 적용 디자인 요소가 마음에 들어서&lt;/label&gt;
+
+					&lt;/td&gt;&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-center text-white align-middle border-end-0 bg-primary&quot; style=&quot;width:50px;&quot; id=&quot;Rank_11&quot; onclick=&quot;javascript:checkedRank2(&#x27;L3&#x27;,&#x27;11&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;3&lt;/td&gt;
+&lt;td id=&quot;TD_L3_11&quot; class=&quot;border-start-0&quot;&gt;
+	&lt;input class=&quot;visually-hidden&quot; type=&quot;checkbox&quot; name=&quot;VL3_11&quot; id=&quot;VL3_11&quot; value=&quot;11&quot; onclick=&quot;javascript:setRank2(&#x27;L3&#x27;,&#x27;11&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;
+	&lt;label style=&quot;cursor:pointer;width:90%;&quot; for=&quot;VL3_11&quot; id=&quot;LL3_11&quot;&gt;출고 일정이 더 유리해서&lt;/label&gt;
+
+					&lt;/td&gt;&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-center text-white align-middle border-end-0 bg-primary&quot; style=&quot;width:50px;&quot; id=&quot;Rank_13&quot; onclick=&quot;javascript:checkedRank2(&#x27;L3&#x27;,&#x27;13&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;&lt;/td&gt;
+&lt;td id=&quot;TD_L3_13&quot; class=&quot;border-start-0&quot;&gt;
+	&lt;input class=&quot;visually-hidden&quot; type=&quot;checkbox&quot; name=&quot;VL3_13&quot; id=&quot;VL3_13&quot; value=&quot;13&quot; onclick=&quot;javascript:setRank2(&#x27;L3&#x27;,&#x27;13&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;
+	&lt;label style=&quot;cursor:pointer;width:90%;&quot; for=&quot;VL3_13&quot; id=&quot;LL3_13&quot;&gt;다른 트림은 선택 불가능한 옵션이 있어서&lt;/label&gt;
+
+					&lt;/td&gt;&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-center bg-light text-white align-middle border-end-0&quot; style=&quot;width:50px;&quot; id=&quot;Rank_14&quot; onclick=&quot;javascript:checkedRank2(&#x27;L3&#x27;,&#x27;14&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;&lt;/td&gt;
+&lt;td id=&quot;TD_L3_14&quot; class=&quot;border-start-0&quot;&gt;
+	&lt;input class=&quot;visually-hidden&quot; type=&quot;checkbox&quot; name=&quot;VL3_14&quot; id=&quot;VL3_14&quot; value=&quot;14&quot; onclick=&quot;javascript:setRank2(&#x27;L3&#x27;,&#x27;14&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;
+	&lt;label style=&quot;cursor:pointer;width:90%;&quot; for=&quot;VL3_14&quot; id=&quot;LL3_14&quot;&gt;향후 잔존가치를 고려할 때 유리할 것 같아서&lt;/label&gt;
+
+					&lt;/td&gt;&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-center text-white align-middle border-end-0 bg-primary&quot; style=&quot;width:50px;&quot; id=&quot;Rank_10&quot; onclick=&quot;javascript:checkedRank2(&#x27;L3&#x27;,&#x27;10&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;2&lt;/td&gt;
+&lt;td id=&quot;TD_L3_10&quot; class=&quot;border-start-0&quot;&gt;
+	&lt;input class=&quot;visually-hidden&quot; type=&quot;checkbox&quot; name=&quot;VL3_10&quot; id=&quot;VL3_10&quot; value=&quot;10&quot; onclick=&quot;javascript:setRank2(&#x27;L3&#x27;,&#x27;10&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;
+	&lt;label style=&quot;cursor:pointer;width:90%;&quot; for=&quot;VL3_10&quot; id=&quot;LL3_10&quot;&gt;구매 조건이 더 유리해서 (전시 차량, 재고 차량 할인 등)&lt;/label&gt;
+
+					&lt;/td&gt;&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-center text-white align-middle border-end-0 bg-primary&quot; style=&quot;width:50px;&quot; id=&quot;Rank_9&quot; onclick=&quot;javascript:checkedRank2(&#x27;L3&#x27;,&#x27;9&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;&lt;/td&gt;
+&lt;td id=&quot;TD_L3_9&quot; class=&quot;border-start-0&quot;&gt;
+	&lt;input class=&quot;visually-hidden&quot; type=&quot;checkbox&quot; name=&quot;VL3_9&quot; id=&quot;VL3_9&quot; value=&quot;9&quot; onclick=&quot;javascript:setRank2(&#x27;L3&#x27;,&#x27;9&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;
+	&lt;label style=&quot;cursor:pointer;width:90%;&quot; for=&quot;VL3_9&quot; id=&quot;LL3_9&quot;&gt;차는 무조건 최상위 트림과 풀옵션이 최고라고 생각해서&lt;/label&gt;
+
+					&lt;/td&gt;&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-center text-white align-middle border-end-0 bg-primary&quot; style=&quot;width:50px;&quot; id=&quot;Rank_98&quot; onclick=&quot;javascript:checkedRank2(&#x27;L3&#x27;,&#x27;98&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;&lt;/td&gt;
+&lt;td id=&quot;TD_L3_98&quot; class=&quot;border-start-0&quot;&gt;
+	&lt;input class=&quot;visually-hidden&quot; type=&quot;checkbox&quot; name=&quot;VL3_98&quot; id=&quot;VL3_98&quot; value=&quot;98&quot; onclick=&quot;javascript:setRank2(&#x27;L3&#x27;,&#x27;98&#x27;,&#x27;&#x27;,&#x27;3&#x27;);&quot;&gt;
+	&lt;label style=&quot;cursor:pointer;width:90%;&quot; for=&quot;VL3_98&quot; id=&quot;LL3_98&quot;&gt;기타&lt;/label&gt;
+	&lt;input type=&quot;text&quot; name=&quot;TL3_98&quot; id=&quot;TL3_98&quot; class=&quot;form-control&quot; maxlength=&quot;255&quot; style=&quot;background-color: rgb(230, 255, 255);&quot;&gt; 
+
+					&lt;/td&gt;&lt;/tr&gt;
+					
+				&lt;/tbody&gt;&lt;/table&gt;
+				&lt;input type=&quot;hidden&quot; name=&quot;NoneValue&quot; id=&quot;NoneValue&quot; value=&quot;&quot;&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

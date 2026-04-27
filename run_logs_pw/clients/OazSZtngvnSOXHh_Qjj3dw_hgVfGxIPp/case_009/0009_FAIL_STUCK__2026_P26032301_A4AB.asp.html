@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26032301/A4AB.asp</div>
+    <div><b>Title</b> 자동차 품평회 조사</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>6%A4a/b귀하께서보유하신기아레이_EV의월할부/리스금액과할부/리스기간을말씀해주세요.금액의경우,해당차량만을위해리스회사에납부하는총비용을기입해주세요.귀하께서응답하신기아레이_EV의지불금액총액은15982만원입니다.안내:금액입력범위는0~지불금액총액/기간입력범위는0~300개월입니다.월할부/리스금액만원(칠천육백칠십칠만원)총할부/리스기간개월이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+A4AB_1 = 7677
+A4AB_2 = 12
+ECODE = 
+ENUMBER = 
+IDKey = 040114054924703540391500
+IDS = 
+NextPage = A5
+PVALUE = 12
+PageName = A4AB
+ResType = TEST
+VC_ID = 040114054924703540391500
+Var = A4AB_1,A4AB_2</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Failed Question Log</b></summary>
+      <pre>[failed question logs]
+[next_logic] no unresolved issues detected</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	var _originalAlert = window.alert;
+	window.alert = function(msg) {
+		$(&quot;#validation_guide&quot;).fadeIn(300);
+		_originalAlert(msg);
+		window.alert = _originalAlert; 
+    };
+	var isNone_A4AB_1 = ($(&#x27;#A4AB_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#A4AB_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_A4AB_1) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#A4AB_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LA4AB_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#A4AB_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#A4AB_1&quot;).val().trim()) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LA4AB_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#A4AB_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#A4AB_1&quot;).val().trim()) &gt; 15982) { alert(&quot;[&quot;+$(&quot;#LA4AB_1&quot;).text()+&quot;] 15982 이하 입력해 주십시오.&quot;); $(&quot;#A4AB_1&quot;).focus(); return; }
+	}
+	var isNone_A4AB_2 = ($(&#x27;#A4AB_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#A4AB_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_A4AB_2) {
+		if(!/^\d+$/.test($(&quot;#A4AB_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LA4AB_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#A4AB_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#A4AB_2&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LA4AB_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#A4AB_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#A4AB_2&quot;).val().trim(),10) &gt; 300) { alert(&quot;[&quot;+$(&quot;#LA4AB_2&quot;).text()+&quot;] 300 이하 입력해 주십시오.&quot;); $(&quot;#A4AB_2&quot;).focus(); return; }
+	}
+
+
+var a4a = parseInt($(&quot;#A4AB_1&quot;).val().replace(/,/g, &#x27;&#x27;), 10) || 0; // 월 할부금
+var a4b = parseInt($(&quot;#A4AB_2&quot;).val().replace(/,/g, &#x27;&#x27;), 10) || 0; // 할부 기간(개월)
+var ccount = a4a * a4b;
+var limitAmount = parseInt(&quot;15982&quot;.replace(/,/g, &#x27;&#x27;), 10) || 0;
+
+if (limitAmount &lt; ccount) {
+    // 응답자가 이해하기 쉽도록 계산된 금액을 함께 보여주면 좋습니다.
+    alert(&quot;계산된 총 할부금액이 한도 금액을 초과합니다.\n할부금 또는 할부 기간을 다시 확인해 주십시오.&quot;);
+    $(&quot;#A4AB_1&quot;).focus(); // 에러 발생 시 수정할 수 있도록 첫 번째 칸으로 포커스 이동
+    return;
+}
+
+	window.alert = _originalAlert;
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603231829&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603261434&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603231916&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;자동차 품평회 조사&lt;/title&gt;
+&lt;script&gt;
+	$(document).ready(function(){
+		$(&#x27;input[name=A4AB_1]&#x27;).keyup(function(){ var attr = $(this).attr(&#x27;name&#x27;); if (parseFloat($(this).val()||0)&gt;0){ var money = $(this).val()*10000; NUM_HAN(money,3,&#x27;M&#x27;+attr); } else { $(&#x27;#M&#x27;+attr).text(&#x27;&#x27;); } });
+	});
+&lt;/script&gt;&lt;script&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	var _originalAlert = window.alert;
+	window.alert = function(msg) {
+		$(&quot;#validation_guide&quot;).fadeIn(300);
+		_originalAlert(msg);
+		window.alert = _originalAlert; 
+    };
+	var isNone_A4AB_1 = ($(&#x27;#A4AB_1_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#A4AB_1_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_A4AB_1) {
+		if(!/^\d+(\.\d+)?$/.test($(&quot;#A4AB_1&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LA4AB_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#A4AB_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#A4AB_1&quot;).val().trim()) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LA4AB_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#A4AB_1&quot;).focus(); return; }
+		if (parseFloat($(&quot;#A4AB_1&quot;).val().trim()) &gt; 15982) { alert(&quot;[&quot;+$(&quot;#LA4AB_1&quot;).text()+&quot;] 15982 이하 입력해 주십시오.&quot;); $(&quot;#A4AB_1&quot;).focus(); return; }
+	}
+	var isNone_A4AB_2 = ($(&#x27;#A4AB_2_NONE&#x27;).length &gt; 0 &amp;&amp; $(&#x27;#A4AB_2_NONE&#x27;).is(&#x27;:checked&#x27;));
+	if (!isNone_A4AB_2) {
+		if(!/^\d+$/.test($(&quot;#A4AB_2&quot;).val().trim())) { alert(&quot;[&quot;+$(&quot;#LA4AB_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;); $(&quot;#A4AB_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#A4AB_2&quot;).val().trim(),10) &lt; 0) { alert(&quot;[&quot;+$(&quot;#LA4AB_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;); $(&quot;#A4AB_2&quot;).focus(); return; }
+		if (parseInt($(&quot;#A4AB_2&quot;).val().trim(),10) &gt; 300) { alert(&quot;[&quot;+$(&quot;#LA4AB_2&quot;).text()+&quot;] 300 이하 입력해 주십시오.&quot;); $(&quot;#A4AB_2&quot;).focus(); return; }
+	}
+
+
+var a4a = parseInt($(&quot;#A4AB_1&quot;).val().replace(/,/g, &#x27;&#x27;), 10) || 0; // 월 할부금
+var a4b = parseInt($(&quot;#A4AB_2&quot;).val().replace(/,/g, &#x27;&#x27;), 10) || 0; // 할부 기간(개월)
+var ccount = a4a * a4b;
+var limitAmount = parseInt(&quot;15982&quot;.replace(/,/g, &#x27;&#x27;), 10) || 0;
+
+if (limitAmount &lt; ccount) {
+    // 응답자가 이해하기 쉽도록 계산된 금액을 함께 보여주면 좋습니다.
+    alert(&quot;계산된 총 할부금액이 한도 금액을 초과합니다.\n할부금 또는 할부 기간을 다시 확인해 주십시오.&quot;);
+    $(&quot;#A4AB_1&quot;).focus(); // 에러 발생 시 수정할 수 있도록 첫 번째 칸으로 포커스 이동
+    return;
+}
+
+	window.alert = _originalAlert;
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;A4AB_1,A4AB_2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;A4AB&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;A5&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;040114054924703540391500&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;040114054924703540391500&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;12&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 6%; font-size:10px !important;&quot; aria-valuenow=&quot;6&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;6%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							A4a/b&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;귀하께서 보유하신 &lt;span class=&quot;BlueBd&quot;&gt;기아 레이_EV&lt;/span&gt;의 월 할부/리스 금액과 할부/리스 기간을 말씀해주세요. &lt;br&gt;금액의 경우, 해당 차량만을 위해 리스 회사에 납부하는 총 비용을 기입해 주세요.&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+
+				&lt;div class=&quot;mt-1 p-3 st-box&quot;&gt;
+					귀하께서 응답하신 &lt;span class=&quot;BlueBd&quot;&gt;기아 레이_EV&lt;/span&gt;의 지불 금액 총액은 &lt;span class=&quot;BlueBd&quot;&gt;15982&lt;/span&gt;만원 입니다.
+				&lt;/div&gt;
+
+				
+				&lt;div id=&quot;validation_guide&quot; style=&quot;text-align: center; margin-bottom: 15px;&quot;&gt;
+					&lt;span class=&quot;BlueBd&quot;&gt;안내: 금액 입력범위는 0 ~ 지불 금액 총액 / 기간 입력범위는 0 ~ 300 개월 입니다.&lt;/span&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;table class=&quot;table table-bordered&quot; id=&quot;A4AB_table&quot;&gt;
+	&lt;colgroup&gt;
+		&lt;col width=&quot;25%&quot;&gt;
+		&lt;col width=&quot;90%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LA4AB_1&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;월 할부/리스 금액&lt;/span&gt;&lt;/th&gt;
+		&lt;td&gt;
+		&lt;div class=&quot;d-flex flex-md-row align-items-md-center mb-3&quot;&gt;
+			&lt;input name=&quot;A4AB_1&quot; id=&quot;A4AB_1&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;input-line&quot; size=&quot;5&quot; maxlength=&quot;5&quot; style=&quot;min-width: 120px; background-color: rgb(230, 255, 255);&quot;&gt;
+			&lt;span class=&quot;mt-2 ms-2 mt-md-0&quot;&gt;만원&lt;/span&gt;		&lt;/div&gt;
+		&lt;div class=&quot;text-end&quot;&gt;
+			&lt;span class=&quot;BlueBd&quot; id=&quot;MA4AB_1&quot;&gt; ( 칠천 육백 칠십칠만  원 )&lt;/span&gt;
+		&lt;/div&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LA4AB_2&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;총 할부/리스 기간&lt;/span&gt;&lt;/th&gt;
+		&lt;td&gt;
+		&lt;div class=&quot;d-flex flex-md-row align-items-md-center mb-3&quot;&gt;
+			&lt;input name=&quot;A4AB_2&quot; id=&quot;A4AB_2&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;input-line&quot; size=&quot;3&quot; maxlength=&quot;3&quot; style=&quot;min-width: 120px; background-color: rgb(255, 255, 255);&quot;&gt;
+			&lt;span class=&quot;ms-2 mt-2 mt-md-0&quot;&gt;개월&lt;/span&gt;		&lt;/div&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

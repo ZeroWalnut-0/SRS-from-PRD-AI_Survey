@@ -1,0 +1,42 @@
+Select Case PAGENAME
+	Case "INDEX"
+		If SURVEYSTATUS <>"3" And SURVEYSTATUS<>"2" Then
+			Call_Url "Survey_Close.asp",""
+			Response.End
+		End If
+
+'미디어
+	Case "TMovie"
+		If Request("MovieRan") <> Request("Movies") Then
+			NEXTPAGE = "MEDIA"
+		End if
+
+'설문
+	Case "Q4"
+		If Request("Q4") = "1" Then 
+			NEXTPAGE = "Q4A"
+		ElseIf Request("Q4") = "2" Then 
+			NEXTPAGE = "Q4B"
+			PValue = PValue + 1
+		Else 
+			NEXTPAGE = "Q5"
+			PValue = PValue + 3
+		End If 
+	
+	Case "Q13"
+		Dim Q13
+		Q13 = Request("Q13_1")
+		If Q13 = "4" Or Q13 = "5" Then 
+			NEXTPAGE = "Q13A"
+		ElseIf Q13 = "1" Or Q13 = "2" Then 
+			NEXTPAGE = "Q13B"
+			PValue = PValue + 1
+		Else 
+			NEXTPAGE = "Q14"
+			PValue = PValue + 2
+		End If 
+		
+	Case "Q13A"
+		NEXTPAGE = "Q14"
+
+End Select

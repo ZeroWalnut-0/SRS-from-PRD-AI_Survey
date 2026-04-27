@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://www.surveys.kr/study/T24060701/B3.asp</div>
+    <div><b>Title</b> 선정설문지</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>ID:0324171146581922068348832%B3현재주로운전하신다는자동차는어떤모델입니까?보유차량경승용EV의향자경승용보유자가솔린(ICE)기아모닝_가솔린현대캐스퍼_가솔린기아레이_가솔린소형SUV가솔린(ICE)기아셀토스_가솔린현대베뉴_가솔린르노아르카나_가솔린현대코나_가솔린쉐보레트랙스_가솔린KGM티볼리_가솔린쉐보레트레일블레이져_가솔린준중형SUV가솔린(ICE)기아스포티지_가솔린KGM엑티언_가솔린현대투싼_가솔린이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+ECODE = 
+ENUMBER = 
+IDKey = 03241711465819220683488
+IDS = 
+NextPage = B4
+PVALUE = 13
+PageName = B3
+ResType = TEST
+VC_ID = 03241711465819220683488
+Var = B3</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Failed Question Log</b></summary>
+      <pre>[failed question logs]
+[next_logic] no unresolved issues detected</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next() {
+    	if (getRadioValue(&quot;B3&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+
+    var B3val = getRadioValue(&quot;B3&quot;);
+	var B2val = &#x27;1&#x27;
+
+    var checkList1 = [&quot;1&quot;, &quot;2&quot;, &quot;21&quot;, &quot;22&quot;, &quot;23&quot;, &quot;41&quot;, &quot;42&quot;, &quot;43&quot;, &quot;61&quot;, &quot;62&quot;];
+    var checkList2 = [&quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;, &quot;34&quot;, &quot;35&quot;, &quot;36&quot;, &quot;37&quot;, &quot;51&quot;, &quot;52&quot;, &quot;53&quot;];
+    var checkList3 = [&quot;71&quot;, &quot;72&quot;, &quot;73&quot;, &quot;74&quot;, &quot;81&quot;, &quot;82&quot;, &quot;83&quot;];
+
+    if (checkList1.indexOf(B3val) &gt; -1 &amp;&amp; B2val == &quot;1&quot;) {
+        alert(&quot;주로 사용하는 차량의 엔진 타입을 가솔린이라고 응답하셨습니다. 선택하신 차량 모델을 확인해 주십시오.&quot;);
+        return; 
+    }
+	
+	if (checkList2.indexOf(B3val) &gt; -1 &amp;&amp; B2val == &quot;5&quot;) {
+        alert(&quot;주로 사용하는 차량의 엔진 타입을 전기차라고 응답하셨습니다. 선택하신 차량 모델을 확인해 주십시오.&quot;);
+        return; 
+    }
+
+	
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603171832&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603171832&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603171832&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;선정설문지&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+var B3_flag1 = false;
+var B3_flag2 = false;
+
+function next() {
+    	if (getRadioValue(&quot;B3&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+
+    var B3val = getRadioValue(&quot;B3&quot;);
+	var B2val = &#x27;1&#x27;
+
+    var checkList1 = [&quot;1&quot;, &quot;2&quot;, &quot;21&quot;, &quot;22&quot;, &quot;23&quot;, &quot;41&quot;, &quot;42&quot;, &quot;43&quot;, &quot;61&quot;, &quot;62&quot;];
+    var checkList2 = [&quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;31&quot;, &quot;32&quot;, &quot;33&quot;, &quot;34&quot;, &quot;35&quot;, &quot;36&quot;, &quot;37&quot;, &quot;51&quot;, &quot;52&quot;, &quot;53&quot;];
+    var checkList3 = [&quot;71&quot;, &quot;72&quot;, &quot;73&quot;, &quot;74&quot;, &quot;81&quot;, &quot;82&quot;, &quot;83&quot;];
+
+    if (checkList1.indexOf(B3val) &gt; -1 &amp;&amp; B2val == &quot;1&quot;) {
+        alert(&quot;주로 사용하는 차량의 엔진 타입을 가솔린이라고 응답하셨습니다. 선택하신 차량 모델을 확인해 주십시오.&quot;);
+        return; 
+    }
+	
+	if (checkList2.indexOf(B3val) &gt; -1 &amp;&amp; B2val == &quot;5&quot;) {
+        alert(&quot;주로 사용하는 차량의 엔진 타입을 전기차라고 응답하셨습니다. 선택하신 차량 모델을 확인해 주십시오.&quot;);
+        return; 
+    }
+
+	
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;B3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;B3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;B4&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;03241711465819220683488&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;03241711465819220683488&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;13&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;offcanvas offcanvas-start&quot; tabindex=&quot;-1&quot; id=&quot;offcanvasExample&quot; aria-labelledby=&quot;offcanvasExampleLabel&quot;&gt;
+  &lt;div class=&quot;offcanvas-header&quot;&gt;
+    &lt;h5 class=&quot;offcanvas-title&quot; id=&quot;offcanvasExampleLabel&quot;&gt;목차보기&lt;/h5&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn-close text-reset&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;offcanvas-body&quot;&gt;   
+    &lt;div class=&quot;left-menu&quot;&gt;
+       &lt;ul class=&quot;menu-list&quot;&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A0&#x27;);&quot; class=&quot;menu-item&quot;&gt;1. A0&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A1&#x27;);&quot; class=&quot;menu-item&quot;&gt;2. A1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A2&#x27;);&quot; class=&quot;menu-item&quot;&gt;3. A2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A3&#x27;);&quot; class=&quot;menu-item&quot;&gt;4. A3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A4&#x27;);&quot; class=&quot;menu-item&quot;&gt;5. A4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A5&#x27;);&quot; class=&quot;menu-item&quot;&gt;6. A5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A6A&#x27;);&quot; class=&quot;menu-item&quot;&gt;7. A6A&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A7&#x27;);&quot; class=&quot;menu-item&quot;&gt;8. A7&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A8&#x27;);&quot; class=&quot;menu-item&quot;&gt;9. A8&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B1&#x27;);&quot; class=&quot;menu-item&quot;&gt;10. B1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B2&#x27;);&quot; class=&quot;menu-item&quot;&gt;11. B2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B3&#x27;);&quot; class=&quot;menu-item&quot;&gt;12. B3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B4&#x27;);&quot; class=&quot;menu-item&quot;&gt;13. B4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B5&#x27;);&quot; class=&quot;menu-item&quot;&gt;14. B5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B6&#x27;);&quot; class=&quot;menu-item&quot;&gt;15. B6&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C1&#x27;);&quot; class=&quot;menu-item&quot;&gt;16. C1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C2&#x27;);&quot; class=&quot;menu-item&quot;&gt;17. C2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C3&#x27;);&quot; class=&quot;menu-item&quot;&gt;18. C3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C4&#x27;);&quot; class=&quot;menu-item&quot;&gt;19. C4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C5&#x27;);&quot; class=&quot;menu-item&quot;&gt;20. C5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C6&#x27;);&quot; class=&quot;menu-item&quot;&gt;21. C6&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C7&#x27;);&quot; class=&quot;menu-item&quot;&gt;22. C7&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D1&#x27;);&quot; class=&quot;menu-item&quot;&gt;23. D1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D2&#x27;);&quot; class=&quot;menu-item&quot;&gt;24. D2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D3&#x27;);&quot; class=&quot;menu-item&quot;&gt;25. D3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D4&#x27;);&quot; class=&quot;menu-item&quot;&gt;26. D4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D5&#x27;);&quot; class=&quot;menu-item&quot;&gt;27. D5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D6&#x27;);&quot; class=&quot;menu-item&quot;&gt;28. D6&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D7&#x27;);&quot; class=&quot;menu-item&quot;&gt;29. D7&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D8&#x27;);&quot; class=&quot;menu-item&quot;&gt;30. D8&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D9&#x27;);&quot; class=&quot;menu-item&quot;&gt;31. D9&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E1&#x27;);&quot; class=&quot;menu-item&quot;&gt;32. E1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E2&#x27;);&quot; class=&quot;menu-item&quot;&gt;33. E2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E3&#x27;);&quot; class=&quot;menu-item&quot;&gt;34. E3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E4&#x27;);&quot; class=&quot;menu-item&quot;&gt;35. E4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E5&#x27;);&quot; class=&quot;menu-item&quot;&gt;36. E5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G1&#x27;);&quot; class=&quot;menu-item&quot;&gt;37. G1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G2&#x27;);&quot; class=&quot;menu-item&quot;&gt;38. G2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G3&#x27;);&quot; class=&quot;menu-item&quot;&gt;39. G3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G4&#x27;);&quot; class=&quot;menu-item&quot;&gt;40. G4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G5&#x27;);&quot; class=&quot;menu-item&quot;&gt;41. G5&lt;/a&gt;
+            &lt;/li&gt;
+        
+        &lt;/ul&gt;
+    &lt;/div&gt; &lt;div class=&quot;mt-2 mb-2&quot;&gt;
+&lt;!--         &lt;button type=&quot;button&quot; class=&quot;btn btn-danger col-12&quot; onclick=&quot;javascript:end_survey();&quot;&gt;최종완료&lt;/button&gt; --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;	
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;			
+				&lt;div class=&quot;row justify-content-end align-items-center mb-2&quot;&gt;
+    &lt;div class=&quot;col-auto pe-1&quot;&gt;
+        &lt;span style=&quot;font-size: 0.9rem; font-weight: 600; color: #555;&quot;&gt;ID : 03241711465819220683488&lt;/span&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+        &lt;div class=&quot;progress&quot; style=&quot;height: 15px;&quot;&gt;
+        
+            &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 32%; font-size: 10px !important; line-height: 15px;&quot; aria-valuenow=&quot;32&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                32%
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							B3&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;현재 주로 운전하신다는 자동차는 &lt;span class=&quot;UnBd&quot;&gt;어떤 모델&lt;/span&gt;입니까?&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+					
+				
+					&lt;table class=&quot;table table-bordered&quot; id=&quot;B3_table&quot;&gt;
+						&lt;colgroup&gt;
+							&lt;col width=&quot;20%&quot;&gt;
+							&lt;col width=&quot;15%&quot;&gt;
+							&lt;col width=&quot;15%&quot;&gt;
+							&lt;col width=&quot;25%&quot;&gt;
+							&lt;col width=&quot;25%&quot;&gt;
+						&lt;/colgroup&gt;
+						&lt;thead&gt;
+							&lt;tr&gt;
+								&lt;td class=&quot;bg-dark&quot; colspan=&quot;3&quot;&gt;&amp;nbsp;&lt;/td&gt;
+								&lt;td class=&quot;bg-dark text-white text-center v_mid&quot; colspan=&quot;2&quot;&gt;보유차량&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/thead&gt;
+						&lt;tbody&gt;
+						
+						&lt;tr&gt;
+							
+							&lt;td rowspan=&quot;8&quot; class=&quot;text-center bg-light&quot; style=&quot;vertical-align:middle;&quot;&gt;경승용 EV 의향자&lt;/td&gt;
+							
+							&lt;td rowspan=&quot;2&quot; class=&quot;text-center bg-light&quot; style=&quot;vertical-align:middle;&quot;&gt;경승용 보유자&lt;/td&gt;
+							&lt;td rowspan=&quot;2&quot; class=&quot;text-center bg-light&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;label class=&quot;font16&quot;&gt;가솔린 (ICE)&lt;/label&gt;&lt;/td&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_11&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;11&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_11&quot; value=&quot;11&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_11&quot; id=&quot;LB3_11&quot;&gt;기아 모닝_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_13&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;13&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_13&quot; value=&quot;13&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_13&quot; id=&quot;LB3_13&quot;&gt;현대 캐스퍼_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+ 
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_12&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;12&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_12&quot; value=&quot;12&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_12&quot; id=&quot;LB3_12&quot;&gt;기아 레이_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+   
+						&lt;/tr&gt;
+						
+						&lt;tr&gt;
+							
+							&lt;td rowspan=&quot;4&quot; class=&quot;text-center bg-light&quot; style=&quot;vertical-align:middle;&quot;&gt;소형 SUV&lt;/td&gt;
+							
+
+							&lt;td rowspan=&quot;4&quot; class=&quot;text-center bg-light&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;label class=&quot;font16&quot;&gt;가솔린 (ICE)&lt;/label&gt;&lt;/td&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_31&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;31&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_31&quot; value=&quot;31&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_31&quot; id=&quot;LB3_31&quot;&gt;기아 셀토스_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_35&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;35&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_35&quot; value=&quot;35&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_35&quot; id=&quot;LB3_35&quot;&gt;현대 베뉴_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+ 
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_32&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;32&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_32&quot; value=&quot;32&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_32&quot; id=&quot;LB3_32&quot;&gt;르노 아르카나_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_36&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;36&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_36&quot; value=&quot;36&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_36&quot; id=&quot;LB3_36&quot;&gt;현대 코나_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+ 
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_33&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;33&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_33&quot; value=&quot;33&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_33&quot; id=&quot;LB3_33&quot;&gt;쉐보레 트랙스_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_37&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;37&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_37&quot; value=&quot;37&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_37&quot; id=&quot;LB3_37&quot;&gt;KGM 티볼리_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+ 
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_34&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;34&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_34&quot; value=&quot;34&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_34&quot; id=&quot;LB3_34&quot;&gt;쉐보레 트레일블레이져_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+
+						&lt;/tr&gt;
+						
+						&lt;tr&gt;
+							
+							&lt;td rowspan=&quot;2&quot; class=&quot;text-center bg-light&quot; style=&quot;vertical-align:middle;&quot;&gt;준중형 SUV&lt;/td&gt;
+							
+
+							&lt;td rowspan=&quot;2&quot; class=&quot;text-center bg-light&quot; style=&quot;vertical-align:middle;&quot;&gt;&lt;label class=&quot;font16&quot;&gt;가솔린 (ICE)&lt;/label&gt;&lt;/td&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_51&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;51&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_51&quot; value=&quot;51&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_51&quot; id=&quot;LB3_51&quot;&gt;기아 스포티지_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_53&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;53&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_53&quot; value=&quot;53&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_53&quot; id=&quot;LB3_53&quot;&gt;KGM 엑티언_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+ 
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style=&quot;vertical-align:middle; cursor:pointer;&quot; id=&quot;TD_B3_52&quot; onclick=&quot;javascript:setRadioValue(&#x27;B3&#x27;,&#x27;52&#x27;);&quot;&gt;
+    &lt;div class=&quot;form-check&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;B3&quot; id=&quot;B3_52&quot; value=&quot;52&quot;&gt;
+        &lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;B3_52&quot; id=&quot;LB3_52&quot;&gt;현대 투싼_가솔린&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+
+						&lt;/tr&gt;
+						
+						
+					&lt;/tbody&gt;
+					&lt;/table&gt;
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+
+function data_save()
+
+{
+
+document.Survey.action = &quot;Survey1.asp&quot;;
+
+
+
+next();
+
+}
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

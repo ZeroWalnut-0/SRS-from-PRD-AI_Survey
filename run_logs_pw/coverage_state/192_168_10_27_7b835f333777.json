@@ -1,0 +1,10 @@
+{
+  "done_case_keys": [],
+  "bad_case_keys": [
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|D7_1_NONE=2|D7_2_NONE=99|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|K1A=21|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|K1C=2|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=__NEQ__:13|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1",
+    "B1=__NEQ__:1|B3Q=__NEQ__:2|G2_1=1|L3_1=__NEQ__:13|L3_2=__NEQ__:13|L3_3=2|RESTYPE=__NEQ__:TEST|SB3=__NEQ__:|SB4=__NEQ__:1|T1=__NEQ__:1|__NUM_CONSTRAINTS__={'G1': {'min': 5}}|valB3=11|valB3Q=__NEQ__:1"
+  ],
+  "runs": 4
+}

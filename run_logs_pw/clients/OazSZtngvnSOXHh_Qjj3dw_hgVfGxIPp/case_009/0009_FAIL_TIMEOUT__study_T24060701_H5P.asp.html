@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://www.surveys.kr/study/T24060701/H5P.asp</div>
+    <div><b>Title</b> 자동차 품평회 조사</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>100%H5P아래의항목중CAR-P의실내디자인에잘어울리는항목을모두체크해주십시오.편안한(Comfortable)깔끔한(Simple/Clean)고급스러운(Premium)혁신적(Innovative)균형잡힌(Well-balanced)젊은(Youthful)직관적인(Intuitive)앞서가는(Advanced)기능적인(Functional)평범한(Ordinary)저렴한(Cheap)스타일리시(Stylish)독특한(Unique)모던(Modern)가족지향적(Family-oriented)하이테크(High-tech)사용하기편리한(Easytouse)좁은(Narrow)미래지향적(Futuristic)유연한(Flexible)넓은(Roomy)트렌디(Trendy)올드한(Old-fashioned)스포티(Sporty)정제된(Refined)운전자중심(Driver-Oriented)실용적(Practical)복잡한(Complex)이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+ECODE = 
+ENUMBER = 
+H5PCNT = 0
+IDKey = 0416145919862201060603211
+IDS = 
+MH5PCNT = 0
+MIH5PCNT = 2
+NextPage = H5O
+PVALUE = 98
+PageName = H5P
+ResType = TEST
+VC_ID = 0416145919862201060603211
+Var = H5P_17,H5P_15,H5P_9,H5P_20,H5P_14,H5P_10,H5P_23,H5P_13,H5P_6,H5P_27,H5P_26,H5P_4,H5P_12,H5P_2,H5P_11,H5P_19,H5P_1,H5P_28,H5P_8,H5P_16,H5P_5,H5P_7,H5P_25,H5P_22,H5P_3,H5P_18,H5P_21,H5P_24</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Failed Question Log</b></summary>
+      <pre>[failed question logs]
+[next_logic] no unresolved issues detected</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	if (chkCheckBox(&quot;H5P&quot;)==false)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+if (checkNoneflag==false){
+	if ((CheckBoxCount(&#x27;H5P_17,H5P_15,H5P_9,H5P_20,H5P_14,H5P_10,H5P_23,H5P_13,H5P_6,H5P_27,H5P_26,H5P_4,H5P_12,H5P_2,H5P_11,H5P_19,H5P_1,H5P_28,H5P_8,H5P_16,H5P_5,H5P_7,H5P_25,H5P_22,H5P_3,H5P_18,H5P_21,H5P_24&#x27;))&lt;parseFloat($(&quot;#MIH5PCNT&quot;).val()))
+	{
+		alert(&quot;2 개 이상 선택해 주십시오.&quot;);
+		$(&quot;#H5P:eq(0)&quot;).focus();
+		return;
+	}
+
+}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202604161034&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202604161034&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202604161034&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;자동차 품평회 조사&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+ var checkNoneflag = false;
+	$(document).ready(function(){
+		$(&quot;input[name=H5P_17]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_17&#x27;);})
+		$(&quot;input[name=H5P_15]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_15&#x27;);})
+		$(&quot;input[name=H5P_9]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_9&#x27;);})
+		$(&quot;input[name=H5P_20]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_20&#x27;);})
+		$(&quot;input[name=H5P_14]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_14&#x27;);})
+		$(&quot;input[name=H5P_10]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_10&#x27;);})
+		$(&quot;input[name=H5P_23]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_23&#x27;);})
+		$(&quot;input[name=H5P_13]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_13&#x27;);})
+		$(&quot;input[name=H5P_6]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_6&#x27;);})
+		$(&quot;input[name=H5P_27]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_27&#x27;);})
+		$(&quot;input[name=H5P_26]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_26&#x27;);})
+		$(&quot;input[name=H5P_4]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_4&#x27;);})
+		$(&quot;input[name=H5P_12]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_12&#x27;);})
+		$(&quot;input[name=H5P_2]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_2&#x27;);})
+		$(&quot;input[name=H5P_11]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_11&#x27;);})
+		$(&quot;input[name=H5P_19]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_19&#x27;);})
+		$(&quot;input[name=H5P_1]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_1&#x27;);})
+		$(&quot;input[name=H5P_28]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_28&#x27;);})
+		$(&quot;input[name=H5P_8]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_8&#x27;);})
+		$(&quot;input[name=H5P_16]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_16&#x27;);})
+		$(&quot;input[name=H5P_5]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_5&#x27;);})
+		$(&quot;input[name=H5P_7]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_7&#x27;);})
+		$(&quot;input[name=H5P_25]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_25&#x27;);})
+		$(&quot;input[name=H5P_22]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_22&#x27;);})
+		$(&quot;input[name=H5P_3]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_3&#x27;);})
+		$(&quot;input[name=H5P_18]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_18&#x27;);})
+		$(&quot;input[name=H5P_21]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_21&#x27;);})
+		$(&quot;input[name=H5P_24]&quot;).click(function(){CheckBoxCnt(&#x27;H5PCNT&#x27;,&#x27;MH5PCNT&#x27;,&#x27;H5P_24&#x27;);})
+	});
+//--&gt;
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	if (chkCheckBox(&quot;H5P&quot;)==false)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+if (checkNoneflag==false){
+	if ((CheckBoxCount(&#x27;H5P_17,H5P_15,H5P_9,H5P_20,H5P_14,H5P_10,H5P_23,H5P_13,H5P_6,H5P_27,H5P_26,H5P_4,H5P_12,H5P_2,H5P_11,H5P_19,H5P_1,H5P_28,H5P_8,H5P_16,H5P_5,H5P_7,H5P_25,H5P_22,H5P_3,H5P_18,H5P_21,H5P_24&#x27;))&lt;parseFloat($(&quot;#MIH5PCNT&quot;).val()))
+	{
+		alert(&quot;2 개 이상 선택해 주십시오.&quot;);
+		$(&quot;#H5P:eq(0)&quot;).focus();
+		return;
+	}
+
+}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;H5P_17,H5P_15,H5P_9,H5P_20,H5P_14,H5P_10,H5P_23,H5P_13,H5P_6,H5P_27,H5P_26,H5P_4,H5P_12,H5P_2,H5P_11,H5P_19,H5P_1,H5P_28,H5P_8,H5P_16,H5P_5,H5P_7,H5P_25,H5P_22,H5P_3,H5P_18,H5P_21,H5P_24&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;H5P&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;H5O&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;0416145919862201060603211&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;0416145919862201060603211&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;98&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 100%; font-size:10px !important;&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;100%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							H5&lt;span class=&quot;BlueBd&quot;&gt;P&lt;/span&gt;&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;아래의 항목 중 &lt;span class=&quot;bg-light&quot;&gt;CAR-P&lt;/span&gt;의 &lt;span class=&quot;UnBd&quot;&gt;실내 디자인&lt;/span&gt;에 잘 어울리는 항목을 모두 체크해 주십시오.&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+										&lt;input type=&quot;hidden&quot; name=&quot;H5PCNT&quot; id=&quot;H5PCNT&quot; value=&quot;0&quot;&gt;
+					&lt;input type=&quot;hidden&quot; name=&quot;MH5PCNT&quot; id=&quot;MH5PCNT&quot; value=&quot;0&quot;&gt;
+					&lt;input type=&quot;hidden&quot; name=&quot;MIH5PCNT&quot; id=&quot;MIH5PCNT&quot; value=&quot;2&quot;&gt;
+&lt;table class=&quot;table table-bordered&quot; id=&quot;H5P_table&quot;&gt;
+	&lt;colgroup&gt;
+						&lt;col width=&quot;49.00%&quot;&gt;
+						&lt;col width=&quot;49.00%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_17&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_17&quot; name=&quot;H5P_17&quot; value=&quot;17&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_17&quot; id=&quot;LH5P_17&quot;&gt;편안한 (Comfortable)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_15&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_15&quot; name=&quot;H5P_15&quot; value=&quot;15&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_15&quot; id=&quot;LH5P_15&quot;&gt;깔끔한 (Simple/Clean)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_9&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_9&quot; name=&quot;H5P_9&quot; value=&quot;9&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_9&quot; id=&quot;LH5P_9&quot;&gt;고급스러운 (Premium)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_20&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_20&quot; name=&quot;H5P_20&quot; value=&quot;20&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_20&quot; id=&quot;LH5P_20&quot;&gt;혁신적 (Innovative)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_14&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_14&quot; name=&quot;H5P_14&quot; value=&quot;14&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_14&quot; id=&quot;LH5P_14&quot;&gt;균형 잡힌 (Well-balanced)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_10&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_10&quot; name=&quot;H5P_10&quot; value=&quot;10&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_10&quot; id=&quot;LH5P_10&quot;&gt;젊은 (Youthful)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_23&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_23&quot; name=&quot;H5P_23&quot; value=&quot;23&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_23&quot; id=&quot;LH5P_23&quot;&gt;직관적인 (Intuitive)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_13&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_13&quot; name=&quot;H5P_13&quot; value=&quot;13&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_13&quot; id=&quot;LH5P_13&quot;&gt;앞서가는 (Advanced)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_6&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_6&quot; name=&quot;H5P_6&quot; value=&quot;6&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_6&quot; id=&quot;LH5P_6&quot;&gt;기능적인 (Functional)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_27&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_27&quot; name=&quot;H5P_27&quot; value=&quot;27&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_27&quot; id=&quot;LH5P_27&quot;&gt;평범한 (Ordinary)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_26&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_26&quot; name=&quot;H5P_26&quot; value=&quot;26&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_26&quot; id=&quot;LH5P_26&quot;&gt;저렴한 (Cheap)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_4&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_4&quot; name=&quot;H5P_4&quot; value=&quot;4&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_4&quot; id=&quot;LH5P_4&quot;&gt;스타일리시 (Stylish)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_12&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_12&quot; name=&quot;H5P_12&quot; value=&quot;12&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_12&quot; id=&quot;LH5P_12&quot;&gt;독특한 (Unique)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_2&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_2&quot; name=&quot;H5P_2&quot; value=&quot;2&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_2&quot; id=&quot;LH5P_2&quot;&gt;모던 (Modern)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_11&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_11&quot; name=&quot;H5P_11&quot; value=&quot;11&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_11&quot; id=&quot;LH5P_11&quot;&gt;가족지향적(Family-oriented)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_19&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_19&quot; name=&quot;H5P_19&quot; value=&quot;19&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_19&quot; id=&quot;LH5P_19&quot;&gt;하이테크 (High-tech)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_1&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_1&quot; name=&quot;H5P_1&quot; value=&quot;1&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_1&quot; id=&quot;LH5P_1&quot;&gt;사용하기 편리한(Easy to use)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_28&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_28&quot; name=&quot;H5P_28&quot; value=&quot;28&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_28&quot; id=&quot;LH5P_28&quot;&gt;좁은 (Narrow)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_8&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_8&quot; name=&quot;H5P_8&quot; value=&quot;8&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_8&quot; id=&quot;LH5P_8&quot;&gt;미래지향적 (Futuristic)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_16&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_16&quot; name=&quot;H5P_16&quot; value=&quot;16&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_16&quot; id=&quot;LH5P_16&quot;&gt;유연한 (Flexible)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_5&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_5&quot; name=&quot;H5P_5&quot; value=&quot;5&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_5&quot; id=&quot;LH5P_5&quot;&gt;넓은 (Roomy)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_7&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_7&quot; name=&quot;H5P_7&quot; value=&quot;7&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_7&quot; id=&quot;LH5P_7&quot;&gt;트렌디 (Trendy)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_25&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_25&quot; name=&quot;H5P_25&quot; value=&quot;25&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_25&quot; id=&quot;LH5P_25&quot;&gt;올드한 (Old-fashioned)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_22&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_22&quot; name=&quot;H5P_22&quot; value=&quot;22&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_22&quot; id=&quot;LH5P_22&quot;&gt;스포티 (Sporty)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_3&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_3&quot; name=&quot;H5P_3&quot; value=&quot;3&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_3&quot; id=&quot;LH5P_3&quot;&gt;정제된 (Refined)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_18&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_18&quot; name=&quot;H5P_18&quot; value=&quot;18&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_18&quot; id=&quot;LH5P_18&quot;&gt;운전자중심 (Driver-Oriented)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_21&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_21&quot; name=&quot;H5P_21&quot; value=&quot;21&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_21&quot; id=&quot;LH5P_21&quot;&gt;실용적 (Practical)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+&lt;td class=&quot;text-left&quot; id=&quot;TD_H5P_24&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;H5P_24&quot; name=&quot;H5P_24&quot; value=&quot;24&quot; onclick=&quot;javascript:colorCheckbox(&#x27;H5P&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;width:90%;&quot; for=&quot;H5P_24&quot; id=&quot;LH5P_24&quot;&gt;복잡한 (Complex)&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+				&lt;/tbody&gt;&lt;/table&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

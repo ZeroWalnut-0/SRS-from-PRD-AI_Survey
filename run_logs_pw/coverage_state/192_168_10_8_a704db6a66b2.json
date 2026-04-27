@@ -1,0 +1,8 @@
+{
+  "done_case_keys": [],
+  "bad_case_keys": [
+    "SQ0=1|__TARGET_IS_SCREEN__=True",
+    "SQ0=3|__NUM_CONSTRAINTS__={'SQ2': {'max': 17}}|__TARGET_IS_SCREEN__=True"
+  ],
+  "runs": 2
+}

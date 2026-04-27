@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26032301/D2.asp</div>
+    <div><b>Title</b> 자동차 품평회 조사</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>19%D.전기차기대수준D2향후경소형EV를구매하게된다면,1회충전시주행가능거리는최소한어느정도되어야한다고생각하시나요?(경소형EV란,기아레이EV,현대캐스퍼EV와비슷한크기의EV입니다.)현재출시된SmallEV차량들의주행가능거리를참고하여응답하여주세요.*주행가능거리는전기차가격에서큰비중을차지하는배터리용량과밀접한관련이있으며,주행거리가길수록차량가격이더높아지는점을고려해주시기바랍니다.*현재출시된EV중일부모델의주행가능거리는아래와같습니다.모델명완충후주행가능거리(스탠다드기준)기아레이EV205km현대캐스퍼EV315km기아EV3350km경소형EV라도매우부족하다(1)부족하다(2)적절하다(3)경소형EV라면매우적절(4)151km~200km201km~250km251km~300km301km~350km351km~400km이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+D2_1 = 2
+D2_2 = 3
+D2_3 = 4
+ECODE = 
+ENUMBER = 
+IDKey = 040114420744550540392714
+IDS = 
+NextPage = D3
+PVALUE = 40
+PageName = D2
+ResType = TEST
+VC_ID = 040114420744550540392714
+Var = D2_1,D2_2,D2_3,D2_4,D2_5</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Failed Question Log</b></summary>
+      <pre>[failed question logs]
+[next_logic] no unresolved issues detected</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	if (getRadioValue(&quot;D2_1&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_1&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_1&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_2&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_2&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_2&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_3&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_3&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_3&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_4&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_4&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_4&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_5&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_5&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_5&#x27;);
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603231829&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603261434&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603231916&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;자동차 품평회 조사&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	if (getRadioValue(&quot;D2_1&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_1&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_1&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_2&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_2&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_2&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_3&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_3&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_3&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_4&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_4&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_4&#x27;);
+		return;
+	}
+
+	if (getRadioValue(&quot;D2_5&quot;)==undefined)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD2_5&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+		chkAnswer(&#x27;D2_5&#x27;);
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+$(document).ready(function() {
+    // 제약 조건을 검사하고 UI를 업데이트하는 핵심 함수
+    function enforceMonotonicity() {
+        var minAllowed = 1; // 허용되는 최소값 (초기엔 1번 보기부터 가능)
+
+        // D2_1 부터 D2_5 까지 순회
+        for (var i = 1; i &lt;= 5; i++) {
+            var rowName = &quot;D2_&quot; + i;
+            
+            // 1. 현재 행의 1~4번 보기를 돌면서 허용치 검사
+            for (var j = 1; j &lt;= 4; j++) {
+                var $td = $(&quot;#TD_&quot; + rowName + &quot;_&quot; + j);
+                var $input = $(&quot;#&quot; + rowName + &quot;_&quot; + j);
+
+                if (j &lt; minAllowed) {
+                    // [조건 미달] 보기 숨기기 및 클릭 차단
+                    // display:none 대신 visibility:hidden을 써야 표가 안 찌그러집니다!
+                    $td.css({&quot;visibility&quot;: &quot;hidden&quot;, &quot;pointer-events&quot;: &quot;none&quot;});
+                    $input.prop(&quot;disabled&quot;, true);
+                    
+                    // 만약 규칙에 위배되는데 이미 체크되어 있다면 강제 해제 (사용자가 이전 응답을 바꾼 경우)
+                    if ($input.is(&quot;:checked&quot;)) {
+                        $input.prop(&quot;checked&quot;, false);
+                    }
+                } else {
+                    // [조건 충족] 보기 원상복구
+                    $td.css({&quot;visibility&quot;: &quot;visible&quot;, &quot;pointer-events&quot;: &quot;auto&quot;});
+                    $input.prop(&quot;disabled&quot;, false);
+                }
+            }
+
+            // 2. 현재 행에서 선택된 값이 있다면, 다음 행의 최소 허용값을 업데이트
+            var $checked = $(&quot;input[name=&#x27;&quot; + rowName + &quot;&#x27;]:checked&quot;);
+            if ($checked.length &gt; 0) {
+                var currentVal = parseInt($checked.val(), 10);
+                if (currentVal &gt; minAllowed) {
+                    minAllowed = currentVal; // 다음 행은 무조건 이 값 이상이어야 함
+                }
+            }
+        }
+    }
+
+    // 라디오 버튼의 값이 변할 때마다 제약조건 함수 실행
+    $(&quot;input[type=&#x27;radio&#x27;][name^=&#x27;D2_&#x27;]&quot;).on(&quot;change&quot;, function() {
+        enforceMonotonicity();
+    });
+
+    // 🚨 [안전장치] 솔루션 내장 함수(setRadioMatrixValue)가 작동한 직후에도 
+    // 로직이 돌아갈 수 있도록 TD 클릭 이벤트에도 살짝 지연을 주어 걸어줍니다.
+    $(&quot;td[id^=&#x27;TD_D2_&#x27;]&quot;).on(&quot;click&quot;, function() {
+        setTimeout(enforceMonotonicity, 50);
+    });
+
+    // 페이지가 처음 로딩될 때 (뒤로가기로 돌아왔을 때를 대비) 초기 1회 실행
+    enforceMonotonicity();
+});
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;D2_1,D2_2,D2_3,D2_4,D2_5&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;D2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;D3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;040114420744550540392714&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;040114420744550540392714&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;40&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 19%; font-size:10px !important;&quot; aria-valuenow=&quot;19&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;19%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+
+				&lt;div class=&quot;p-2 mt-2&quot;&gt;
+					&lt;div class=&quot;Bd pt-str&quot;&gt;D. 전기차 기대 수준&lt;/div&gt;
+						
+					
+
+					&lt;div class=&quot;dashed-bottom&quot;&gt;&lt;/div&gt;
+				&lt;/div&gt;
+
+				
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							D2&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;향후 경소형 EV를 구매하게 된다면, &lt;span class=&quot;UnBd&quot;&gt;1회 충전 시 주행 가능 거리는 최소한 어느 정도&lt;/span&gt; 되어야 한다고 생각하시나요?&lt;br&gt;(경소형 EV란, 기아 레이 EV, 현대 캐스퍼 EV와 비슷한 크기의 EV입니다.)&lt;br&gt;    현재 출시된 Small EV 차량들의 주행 가능 거리를 참고하여 응답하여 주세요.    &lt;br&gt;* 주행가능거리는 전기차 가격에서 큰 비중을 차지하는 배터리 용량과 밀접한 관련이 있으며, &lt;span class=&quot;UnBd&quot;&gt;주행거리가 길수록 차량 가격이 더 높아지는 점을 고려&lt;/span&gt;해 주시기 바랍니다.&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+
+				&lt;div class=&quot;mt-1 p-3 st-box&quot;&gt;
+					*현재 출시된 EV 중 일부 모델의 주행 가능거리는 아래와 같습니다.&lt;table class=&quot;table table-bordered&quot;&gt;&lt;colgroup&gt;&lt;col width=&quot;40%&quot;&gt;&lt;col width=&quot;60%&quot;&gt;&lt;/colgroup&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;text-center v_mid Bd bg-light&quot;&gt;모델명&lt;/td&gt;&lt;td class=&quot;text-center v_mid Bd bg-light&quot;&gt;완충 후 주행가능거리 (스탠다드 기준)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;text-center v_mid Bd&quot;&gt;기아 레이 EV&lt;/td&gt;&lt;td class=&quot;text-center v_mid&quot;&gt;205 km&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;text-center v_mid Bd&quot;&gt;현대 캐스퍼 EV&lt;/td&gt;&lt;td class=&quot;text-center v_mid&quot;&gt;315 km&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;text-center v_mid Bd&quot;&gt;기아 EV3&lt;/td&gt;&lt;td class=&quot;text-center v_mid&quot;&gt;350 km&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;table class=&quot;table table-hover table-bordered&quot; id=&quot;D2_table&quot;&gt;
+	&lt;colgroup&gt;
+		&lt;col width=&quot;*&quot;&gt;
+		&lt;col width=&quot;16.67%&quot;&gt;
+		&lt;col width=&quot;16.67%&quot;&gt;
+		&lt;col width=&quot;16.67%&quot;&gt;
+		&lt;col width=&quot;16.67%&quot;&gt;
+	&lt;/colgroup&gt;
+&lt;thead&gt;
+			&lt;tr id=&quot;HCOLD2_1&quot;&gt;
+				&lt;td class=&quot;align-middle text-center bg-light&quot;&gt;
+						&lt;/td&gt;&lt;td class=&quot;align-bottom text-center bg-light&quot; id=&quot;CD2_1&quot;&gt;
+							&lt;label&gt;경소형 EV라도 매우 부족하다&lt;/label&gt;&lt;br&gt;(1)
+						&lt;/td&gt;
+						&lt;td class=&quot;align-bottom text-center bg-light&quot; id=&quot;CD2_2&quot;&gt;
+							&lt;label&gt;부족하다&lt;/label&gt;&lt;br&gt;(2)
+						&lt;/td&gt;
+						&lt;td class=&quot;align-bottom text-center bg-light&quot; id=&quot;CD2_3&quot;&gt;
+							&lt;label&gt;적절하다&lt;/label&gt;&lt;br&gt;(3)
+						&lt;/td&gt;
+						&lt;td class=&quot;align-bottom text-center bg-light&quot; id=&quot;CD2_4&quot;&gt;
+							&lt;label&gt;경소형 EV라면 매우 적절&lt;/label&gt;&lt;br&gt;(4)
+						&lt;/td&gt;
+					&lt;/tr&gt;
+&lt;/thead&gt;
+
+					&lt;tbody&gt;&lt;tr id=&quot;HCOLD2_1&quot;&gt;
+			&lt;td&gt;&lt;label id=&quot;LD2_1&quot;&gt;151km ~ 200km&lt;/label&gt;
+			&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_1_1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;1&#x27;,&#x27;2&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_1&quot; id=&quot;D2_1_1&quot; class=&quot;form-check-input&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;1&#x27;,&#x27;2&#x27;);&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_1_2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;2&#x27;,&#x27;2&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_1&quot; id=&quot;D2_1_2&quot; class=&quot;form-check-input&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;2&#x27;,&#x27;2&#x27;);&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_1_3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;3&#x27;,&#x27;2&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_1&quot; id=&quot;D2_1_3&quot; class=&quot;form-check-input&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;3&#x27;,&#x27;2&#x27;);&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_1_4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;4&#x27;,&#x27;2&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_1&quot; id=&quot;D2_1_4&quot; class=&quot;form-check-input&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_1&#x27;,&#x27;4&#x27;,&#x27;2&#x27;);&quot;&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+
+					&lt;tr style=&quot;&quot; id=&quot;HCOLD2_2&quot;&gt;
+			&lt;td&gt;&lt;label id=&quot;LD2_2&quot;&gt;201km ~ 250km&lt;/label&gt;
+			&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_2_1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;1&#x27;,&#x27;3&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_2&quot; id=&quot;D2_2_1&quot; class=&quot;form-check-input&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;1&#x27;,&#x27;3&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_2_2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;2&#x27;,&#x27;3&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_2&quot; id=&quot;D2_2_2&quot; class=&quot;form-check-input&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;2&#x27;,&#x27;3&#x27;);&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_2_3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;3&#x27;,&#x27;3&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_2&quot; id=&quot;D2_2_3&quot; class=&quot;form-check-input&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;3&#x27;,&#x27;3&#x27;);&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_2_4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;4&#x27;,&#x27;3&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_2&quot; id=&quot;D2_2_4&quot; class=&quot;form-check-input&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_2&#x27;,&#x27;4&#x27;,&#x27;3&#x27;);&quot;&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+
+					&lt;tr style=&quot;&quot; id=&quot;HCOLD2_3&quot;&gt;
+			&lt;td&gt;&lt;label id=&quot;LD2_3&quot;&gt;251km ~ 300km&lt;/label&gt;
+			&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_3_1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;1&#x27;,&#x27;4&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_3&quot; id=&quot;D2_3_1&quot; class=&quot;form-check-input&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;1&#x27;,&#x27;4&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_3_2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;2&#x27;,&#x27;4&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_3&quot; id=&quot;D2_3_2&quot; class=&quot;form-check-input&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;2&#x27;,&#x27;4&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_3_3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;3&#x27;,&#x27;4&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_3&quot; id=&quot;D2_3_3&quot; class=&quot;form-check-input&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;3&#x27;,&#x27;4&#x27;);&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_3_4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;4&#x27;,&#x27;4&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_3&quot; id=&quot;D2_3_4&quot; class=&quot;form-check-input&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_3&#x27;,&#x27;4&#x27;,&#x27;4&#x27;);&quot;&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+
+					&lt;tr style=&quot;&quot; id=&quot;HCOLD2_4&quot;&gt;
+			&lt;td&gt;&lt;label id=&quot;LD2_4&quot;&gt;301km ~ 350km&lt;/label&gt;
+			&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_4_1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;1&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_4&quot; id=&quot;D2_4_1&quot; class=&quot;form-check-input&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;1&#x27;,&#x27;5&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_4_2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;2&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_4&quot; id=&quot;D2_4_2&quot; class=&quot;form-check-input&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;2&#x27;,&#x27;5&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_4_3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;3&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_4&quot; id=&quot;D2_4_3&quot; class=&quot;form-check-input&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;3&#x27;,&#x27;5&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_4_4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;4&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_4&quot; id=&quot;D2_4_4&quot; class=&quot;form-check-input&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_4&#x27;,&#x27;4&#x27;,&#x27;5&#x27;);&quot;&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+
+					&lt;tr style=&quot;&quot; id=&quot;HCOLD2_5&quot;&gt;
+			&lt;td&gt;&lt;label id=&quot;LD2_5&quot;&gt;351km ~ 400km&lt;/label&gt;
+			&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_5_1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;1&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_5&quot; id=&quot;D2_5_1&quot; class=&quot;form-check-input&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;1&#x27;,&#x27;5&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_5_2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;2&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_5&quot; id=&quot;D2_5_2&quot; class=&quot;form-check-input&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;2&#x27;,&#x27;5&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: hidden; pointer-events: none;&quot; id=&quot;TD_D2_5_3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;3&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_5&quot; id=&quot;D2_5_3&quot; class=&quot;form-check-input&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;3&#x27;,&#x27;5&#x27;);&quot; disabled=&quot;&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class=&quot;text-center align-middle&quot; style=&quot;visibility: visible; pointer-events: auto;&quot; id=&quot;TD_D2_5_4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;4&#x27;,&#x27;5&#x27;);&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;D2_5&quot; id=&quot;D2_5_4&quot; class=&quot;form-check-input&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioMatrixValue(&#x27;D2_5&#x27;,&#x27;4&#x27;,&#x27;5&#x27;);&quot;&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+
+				&lt;/tbody&gt;&lt;/table&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

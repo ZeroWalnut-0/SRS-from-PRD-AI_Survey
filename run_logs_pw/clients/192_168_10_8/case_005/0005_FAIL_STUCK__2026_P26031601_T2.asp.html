@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26031601/T2.asp</div>
+    <div><b>Title</b> 국내 신차반응조사 정량 설문지</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>84%T2귀하께서는기아커넥트스토어를통해실제로기능을구매하거나구독해본적이있습니까?예,구매또는구독해본적이있다아니요,구매또는구독해본적이없다이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=Survey.asp
+
+[form data]
+ECODE = 
+ENUMBER = 
+IDKey = 03231344329715137345986
+IDS = 
+NextPage = T3
+PVALUE = 132
+PageName = T2
+ResType = TEST
+VC_ID = 03231344329715137345986
+Var = T2</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+	if (getRadioValue(&quot;T2&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\run.log</summary>
+    <pre>...(tail)
+2026-03-23 13:49:32,512 | INFO | checkbox(skip): M12_3_NONE endswith _NONE
+2026-03-23 13:49:32,530 | INFO | checkbox: M12_1_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIM12_1_NONECNT=None, MM12_1_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 13:49:33,664 | WARNING | checkbox: M12_1_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:33,898 | INFO | checkbox(M12_1_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 13:49:34,830 | WARNING | checkbox: M12_1_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:35,072 | INFO | checkbox(M12_1_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 13:49:35,133 | INFO | checkbox: M12_3_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIM12_3_NONECNT=None, MM12_3_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 13:49:36,176 | WARNING | checkbox: M12_3_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:36,424 | INFO | checkbox(M12_3_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 13:49:37,463 | WARNING | checkbox: M12_3_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:37,698 | INFO | checkbox(M12_3_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 13:49:37,735 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:37,745 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=M12_1 cmin=None cmax=None forced_val=None
+2026-03-23 13:49:37,757 | INFO | input(tel): M12_1=707
+2026-03-23 13:49:37,764 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=M12_3 cmin=None cmax=None forced_val=None
+2026-03-23 13:49:37,774 | INFO | input(tel): M12_3=513
+2026-03-23 13:49:37,783 | INFO | checked_count_after_fill=0
+2026-03-23 13:49:38,169 | INFO | [next_logic] adjusted: M12_3=281(constraint)
+2026-03-23 13:49:38,329 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;M13&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:39,545 | INFO | [5] step=83 M12 -&gt; M13 (expected_next=M13 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/M12.asp -&gt; https://kstat.surveys.kr/2026/P26031601/M13.asp)
+2026-03-23 13:49:40,553 | INFO | radio(required): M13=3 (min=None, max=None)
+2026-03-23 13:49:40,586 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:40,595 | INFO | checked_count_after_fill=1
+2026-03-23 13:49:40,960 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:41,125 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:42,292 | INFO | [5] step=84 M13 -&gt; N1 (expected_next=N1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/M13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N1.asp)
+2026-03-23 13:49:47,820 | INFO | checkbox-group: N1 picks=[&#x27;8&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;9&#x27;, &#x27;7&#x27;, &#x27;1&#x27;]
+2026-03-23 13:49:47,821 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:47,829 | INFO | checked_count_after_fill=6
+2026-03-23 13:49:48,157 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:48,324 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:49,506 | INFO | [5] step=85 N1 -&gt; N2 (expected_next=N2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N2.asp)
+2026-03-23 13:49:50,426 | INFO | radio(required): N2_1=6 (min=None, max=None)
+2026-03-23 13:49:50,681 | INFO | radio(required): N2_3=2 (min=None, max=None)
+2026-03-23 13:49:50,924 | INFO | radio(required): N2_4=2 (min=None, max=None)
+2026-03-23 13:49:51,161 | INFO | radio(required): N2_7=1 (min=None, max=None)
+2026-03-23 13:49:51,418 | INFO | radio(required): N2_8=1 (min=None, max=None)
+2026-03-23 13:49:51,648 | INFO | radio(required): N2_9=1 (min=None, max=None)
+2026-03-23 13:49:51,694 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:51,702 | INFO | checked_count_after_fill=6
+2026-03-23 13:49:52,031 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:52,190 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:53,327 | INFO | [5] step=86 N2 -&gt; N3 (expected_next=N3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N3.asp)
+2026-03-23 13:49:54,402 | INFO | rank(N3) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;3&#x27;, &#x27;1&#x27;] forced={}
+2026-03-23 13:49:54,727 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:54,886 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:56,014 | INFO | [5] step=87 N3 -&gt; N7 (expected_next=N4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N7.asp)
+2026-03-23 13:49:56,767 | INFO | radio(required): N7_1=4 (min=None, max=None)
+2026-03-23 13:49:57,009 | INFO | radio(required): N7_2=1 (min=None, max=None)
+2026-03-23 13:49:57,250 | INFO | radio(required): N7_3=3 (min=None, max=None)
+2026-03-23 13:49:57,484 | INFO | radio(required): N7_4=4 (min=None, max=None)
+2026-03-23 13:49:57,696 | INFO | radio(required): N7_5=3 (min=None, max=None)
+2026-03-23 13:49:57,727 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:57,735 | INFO | checked_count_after_fill=5
+2026-03-23 13:49:58,067 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:58,244 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:59,341 | INFO | [5] step=88 N7 -&gt; N8 (expected_next=N8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N8.asp)
+2026-03-23 13:49:59,967 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:59,983 | INFO | input(skip disabled): N8
+2026-03-23 13:50:00,016 | INFO | textarea: N8=특이사항없음
+2026-03-23 13:50:00,024 | INFO | checked_count_after_fill=0
+2026-03-23 13:50:00,352 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:00,527 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:01,637 | INFO | [5] step=89 N8 -&gt; P1 (expected_next=P1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P1.asp)
+2026-03-23 13:50:02,536 | INFO | radio(required): P1=4 (min=None, max=None)
+2026-03-23 13:50:02,563 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:02,571 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:02,890 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:03,059 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P2S&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:04,106 | INFO | [5] step=90 P1 -&gt; P2S (expected_next=P2S action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P2S.asp)
+2026-03-23 13:50:04,681 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:04,692 | INFO | checked_count_after_fill=0
+2026-03-23 13:50:05,008 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:05,171 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:05,613 | INFO | [5] step=91 P2S -&gt; P2 (expected_next=P2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P2S.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P2.asp)
+2026-03-23 13:50:06,630 | INFO | radio(required): P2=6 (min=None, max=None)
+2026-03-23 13:50:06,678 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:06,687 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:07,078 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:07,252 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:08,448 | INFO | [5] step=92 P2 -&gt; P3 (expected_next=P3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P3.asp)
+2026-03-23 13:50:09,586 | INFO | radio(required): P3=1 (min=None, max=None)
+2026-03-23 13:50:09,638 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:09,650 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:10,001 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:10,169 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:11,306 | INFO | [5] step=93 P3 -&gt; P4 (expected_next=P4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P4.asp)
+2026-03-23 13:50:12,178 | INFO | radio(required): P4=6 (min=None, max=None)
+2026-03-23 13:50:12,218 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:12,228 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:12,558 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:12,735 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:13,838 | INFO | [5] step=94 P4 -&gt; P5 (expected_next=P5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P5.asp)
+2026-03-23 13:50:14,629 | WARNING | [5] [pageerror] Cannot read properties of undefined (reading &#x27;top&#x27;)
+2026-03-23 13:50:14,632 | WARNING | [5] [pageerror] Cannot read properties of undefined (reading &#x27;top&#x27;)
+2026-03-23 13:50:14,784 | INFO | radio(required): P5_1=1 (min=None, max=None)
+2026-03-23 13:50:14,839 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:14,850 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:15,210 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:15,385 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:16,505 | INFO | [5] step=95 P5 -&gt; P6 (expected_next=P6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P6.asp)
+2026-03-23 13:50:17,364 | INFO | radio(required): P6=1 (min=None, max=None)
+2026-03-23 13:50:17,392 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:17,398 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:17,721 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:17,896 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:19,014 | INFO | [5] step=96 P6 -&gt; P7 (expected_next=P7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P7.asp)
+2026-03-23 13:50:22,458 | INFO | checkbox-group: P7 picks=[&#x27;98&#x27;, &#x27;2&#x27;, &#x27;4&#x27;]
+2026-03-23 13:50:22,459 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:22,468 | INFO | checked_count_after_fill=3
+2026-03-23 13:50:22,799 | INFO | [next_logic] adjusted: TP7_98=OTHER
+2026-03-23 13:50:22,968 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:24,042 | INFO | [5] step=97 P7 -&gt; P8 (expected_next=P8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P8.asp)
+2026-03-23 13:50:25,089 | INFO | radio(required): P8=1 (min=None, max=None)
+2026-03-23 13:50:25,147 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:25,157 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:25,468 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:25,635 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:26,759 | INFO | [5] step=98 P8 -&gt; P9 (expected_next=P9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P9.asp)
+2026-03-23 13:50:27,553 | INFO | radio(required): P9=2 (min=None, max=None)
+2026-03-23 13:50:27,591 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:27,601 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:27,920 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:28,089 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:29,208 | INFO | [5] step=99 P9 -&gt; U1 (expected_next=U1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U1.asp)
+2026-03-23 13:50:30,304 | INFO | rank(U1) attempt 1: OK slots=[&#x27;5&#x27;, &#x27;9&#x27;, &#x27;3&#x27;] forced={}
+2026-03-23 13:50:30,640 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:30,808 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:31,943 | INFO | [5] step=100 U1 -&gt; U2 (expected_next=U2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U2.asp)
+2026-03-23 13:50:33,067 | INFO | rank(U2) attempt 1: OK slots=[&#x27;1&#x27;, &#x27;10&#x27;, &#x27;7&#x27;] forced={}
+2026-03-23 13:50:33,412 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:33,581 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:34,711 | INFO | [5] step=101 U2 -&gt; U3 (expected_next=U3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U3.asp)
+2026-03-23 13:50:35,901 | INFO | rank(U3) attempt 1: OK slots=[&#x27;9&#x27;, &#x27;3&#x27;, &#x27;2&#x27;] forced={}
+2026-03-23 13:50:36,227 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:36,397 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:37,496 | INFO | [5] step=102 U3 -&gt; U4 (expected_next=U4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U4.asp)
+2026-03-23 13:50:38,555 | INFO | rank(U4) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;9&#x27;, &#x27;6&#x27;] forced={}
+2026-03-23 13:50:38,875 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:39,049 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:40,179 | INFO | [5] step=103 U4 -&gt; U5A (expected_next=U5A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5A.asp)
+2026-03-23 13:50:49,280 | INFO | checkbox-group: U5A picks=[&#x27;20&#x27;, &#x27;22&#x27;, &#x27;11&#x27;, &#x27;12&#x27;, &#x27;26&#x27;, &#x27;30&#x27;, &#x27;7&#x27;]
+2026-03-23 13:50:49,283 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:49,292 | INFO | checked_count_after_fill=7
+2026-03-23 13:50:49,626 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:49,799 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:51,010 | INFO | [5] step=104 U5A -&gt; U5B (expected_next=U5B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5B.asp)
+2026-03-23 13:51:06,728 | INFO | checkbox-group: U5B picks=[&#x27;25&#x27;, &#x27;20&#x27;, &#x27;3&#x27;, &#x27;11&#x27;, &#x27;2&#x27;, &#x27;1&#x27;, &#x27;17&#x27;, &#x27;14&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;19&#x27;, &#x27;9&#x27;, &#x27;28&#x27;, &#x27;16&#x27;, &#x27;29&#x27;, &#x27;30&#x27;, &#x27;21&#x27;, &#x27;10&#x27;, &#x27;12&#x27;, &#x27;26&#x27;, &#x27;24&#x27;, &#x27;6&#x27;, &#x27;5&#x27;, &#x27;13&#x27;, &#x27;27&#x27;, &#x27;4&#x27;, &#x27;18&#x27;]
+2026-03-23 13:51:06,729 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:06,735 | INFO | checked_count_after_fill=27
+2026-03-23 13:51:07,092 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:07,272 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:08,502 | INFO | [5] step=105 U5B -&gt; U5C (expected_next=U5C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5C.asp)
+2026-03-23 13:51:22,092 | INFO | checkbox-group: U5C picks=[&#x27;25&#x27;, &#x27;27&#x27;, &#x27;6&#x27;, &#x27;8&#x27;, &#x27;18&#x27;, &#x27;21&#x27;, &#x27;17&#x27;, &#x27;16&#x27;, &#x27;7&#x27;, &#x27;13&#x27;, &#x27;3&#x27;, &#x27;2&#x27;, &#x27;15&#x27;, &#x27;12&#x27;, &#x27;4&#x27;, &#x27;20&#x27;, &#x27;19&#x27;]
+2026-03-23 13:51:22,093 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:22,104 | INFO | checked_count_after_fill=17
+2026-03-23 13:51:22,460 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:22,627 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:23,920 | INFO | [5] step=106 U5C -&gt; U5D (expected_next=U5D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5D.asp)
+2026-03-23 13:51:32,874 | INFO | checkbox-group: U5D picks=[&#x27;16&#x27;, &#x27;7&#x27;, &#x27;10&#x27;, &#x27;6&#x27;, &#x27;17&#x27;, &#x27;24&#x27;]
+2026-03-23 13:51:32,875 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:32,878 | INFO | checked_count_after_fill=6
+2026-03-23 13:51:33,236 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:33,405 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:34,571 | INFO | [5] step=107 U5D -&gt; R1 (expected_next=R1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5D.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R1.asp)
+2026-03-23 13:51:35,593 | INFO | radio(required): R1=1 (min=None, max=None)
+2026-03-23 13:51:35,629 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:35,640 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:35,966 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:36,145 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:37,249 | INFO | [5] step=108 R1 -&gt; R2 (expected_next=R2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R2.asp)
+2026-03-23 13:51:38,231 | INFO | radio(required): R2=2 (min=None, max=None)
+2026-03-23 13:51:38,253 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:38,259 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:38,564 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:38,739 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:39,847 | INFO | [5] step=109 R2 -&gt; R3 (expected_next=R3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R3.asp)
+2026-03-23 13:51:40,848 | INFO | radio(required): R3=1 (min=None, max=None)
+2026-03-23 13:51:40,880 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:40,889 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:41,206 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:41,377 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:42,562 | INFO | [5] step=110 R3 -&gt; R4 (expected_next=R4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R4.asp)
+2026-03-23 13:51:46,525 | INFO | checkbox-group: R4 picks=[&#x27;2&#x27;, &#x27;6&#x27;, &#x27;5&#x27;]
+2026-03-23 13:51:46,526 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:46,534 | INFO | checked_count_after_fill=3
+2026-03-23 13:51:46,885 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:47,049 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:48,238 | INFO | [5] step=111 R4 -&gt; R5 (expected_next=R5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R5.asp)
+2026-03-23 13:51:49,233 | INFO | radio(required): R5=2 (min=None, max=None)
+2026-03-23 13:51:49,264 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:49,271 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:49,589 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:49,770 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:50,886 | INFO | [5] step=112 R5 -&gt; R6 (expected_next=R6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R6.asp)
+2026-03-23 13:51:51,799 | INFO | radio(required): R6=1 (min=None, max=None)
+2026-03-23 13:51:51,839 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:51,846 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:52,181 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:52,351 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;S1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:53,448 | INFO | [5] step=113 R6 -&gt; S1 (expected_next=S1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/S1.asp)
+2026-03-23 13:51:54,285 | INFO | radio(required): S1=2 (min=None, max=None)
+2026-03-23 13:51:54,336 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:54,342 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:54,670 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:54,835 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;S2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:55,960 | INFO | [5] step=114 S1 -&gt; S13 (expected_next=S2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/S1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/S13.asp)
+2026-03-23 13:51:56,758 | INFO | radio(required): S13=4 (min=None, max=None)
+2026-03-23 13:51:56,787 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:56,796 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:57,134 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:57,294 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:58,406 | INFO | [5] step=115 S13 -&gt; T1 (expected_next=T1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/S13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T1.asp)
+2026-03-23 13:51:59,183 | INFO | [override] radio(NEQSET): T1 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 13:51:59,188 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:59,199 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:59,510 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:59,687 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:00,804 | INFO | [5] step=116 T1 -&gt; T2 (expected_next=T2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/T1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T2.asp)
+2026-03-23 13:52:04,808 | INFO | [override] radio: T2=5
+2026-03-23 13:52:04,818 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:52:04,828 | INFO | checked_count_after_fill=0
+2026-03-23 13:52:05,139 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,313 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:05,342 | WARNING | [5] dialog type=alert message=질문에 응답해 주십시오.
+2026-03-23 13:52:05,682 | WARNING | [5] validation alert detected: 질문에 응답해 주십시오.
+2026-03-23 13:52:05,754 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,759 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 13:52:05,772 | INFO | [5] step=117 T2 -&gt; T2 (expected_next=T3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/T2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T2.asp)
+2026-03-23 13:52:05,772 | WARNING | [5] URL unchanged and page unchanged. Validation-aware retry. (before=T2, after=T2, expected=T3)
+2026-03-23 13:52:05,778 | WARNING | [5] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;T3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:05,799 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 13:52:05,836 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,843 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 13:52:05,847 | WARNING | [5] next_source_excerpt=function next()
+{
+	if (getRadioValue(&quot;T2&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 13:52:05,852 | ERROR | [5] Stuck on same page. step=117 url=https://kstat.surveys.kr/2026/P26031601/T2.asp</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run.log</summary>
+    <pre>...(tail)
+2026-03-23 13:49:32,512 | INFO | checkbox(skip): M12_3_NONE endswith _NONE
+2026-03-23 13:49:32,530 | INFO | checkbox: M12_1_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIM12_1_NONECNT=None, MM12_1_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 13:49:33,664 | WARNING | checkbox: M12_1_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:33,898 | INFO | checkbox(M12_1_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 13:49:34,830 | WARNING | checkbox: M12_1_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:35,072 | INFO | checkbox(M12_1_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 13:49:35,133 | INFO | checkbox: M12_3_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIM12_3_NONECNT=None, MM12_3_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 13:49:36,176 | WARNING | checkbox: M12_3_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:36,424 | INFO | checkbox(M12_3_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 13:49:37,463 | WARNING | checkbox: M12_3_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:37,698 | INFO | checkbox(M12_3_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 13:49:37,735 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:37,745 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=M12_1 cmin=None cmax=None forced_val=None
+2026-03-23 13:49:37,757 | INFO | input(tel): M12_1=707
+2026-03-23 13:49:37,764 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=M12_3 cmin=None cmax=None forced_val=None
+2026-03-23 13:49:37,774 | INFO | input(tel): M12_3=513
+2026-03-23 13:49:37,783 | INFO | checked_count_after_fill=0
+2026-03-23 13:49:38,169 | INFO | [next_logic] adjusted: M12_3=281(constraint)
+2026-03-23 13:49:38,329 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;M13&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:39,545 | INFO | [5] step=83 M12 -&gt; M13 (expected_next=M13 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/M12.asp -&gt; https://kstat.surveys.kr/2026/P26031601/M13.asp)
+2026-03-23 13:49:40,553 | INFO | radio(required): M13=3 (min=None, max=None)
+2026-03-23 13:49:40,586 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:40,595 | INFO | checked_count_after_fill=1
+2026-03-23 13:49:40,960 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:41,125 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:42,292 | INFO | [5] step=84 M13 -&gt; N1 (expected_next=N1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/M13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N1.asp)
+2026-03-23 13:49:47,820 | INFO | checkbox-group: N1 picks=[&#x27;8&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;9&#x27;, &#x27;7&#x27;, &#x27;1&#x27;]
+2026-03-23 13:49:47,821 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:47,829 | INFO | checked_count_after_fill=6
+2026-03-23 13:49:48,157 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:48,324 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:49,506 | INFO | [5] step=85 N1 -&gt; N2 (expected_next=N2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N2.asp)
+2026-03-23 13:49:50,426 | INFO | radio(required): N2_1=6 (min=None, max=None)
+2026-03-23 13:49:50,681 | INFO | radio(required): N2_3=2 (min=None, max=None)
+2026-03-23 13:49:50,924 | INFO | radio(required): N2_4=2 (min=None, max=None)
+2026-03-23 13:49:51,161 | INFO | radio(required): N2_7=1 (min=None, max=None)
+2026-03-23 13:49:51,418 | INFO | radio(required): N2_8=1 (min=None, max=None)
+2026-03-23 13:49:51,648 | INFO | radio(required): N2_9=1 (min=None, max=None)
+2026-03-23 13:49:51,694 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:51,702 | INFO | checked_count_after_fill=6
+2026-03-23 13:49:52,031 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:52,190 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:53,327 | INFO | [5] step=86 N2 -&gt; N3 (expected_next=N3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N3.asp)
+2026-03-23 13:49:54,402 | INFO | rank(N3) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;3&#x27;, &#x27;1&#x27;] forced={}
+2026-03-23 13:49:54,727 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:54,886 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:56,014 | INFO | [5] step=87 N3 -&gt; N7 (expected_next=N4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N7.asp)
+2026-03-23 13:49:56,767 | INFO | radio(required): N7_1=4 (min=None, max=None)
+2026-03-23 13:49:57,009 | INFO | radio(required): N7_2=1 (min=None, max=None)
+2026-03-23 13:49:57,250 | INFO | radio(required): N7_3=3 (min=None, max=None)
+2026-03-23 13:49:57,484 | INFO | radio(required): N7_4=4 (min=None, max=None)
+2026-03-23 13:49:57,696 | INFO | radio(required): N7_5=3 (min=None, max=None)
+2026-03-23 13:49:57,727 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:57,735 | INFO | checked_count_after_fill=5
+2026-03-23 13:49:58,067 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:58,244 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:59,341 | INFO | [5] step=88 N7 -&gt; N8 (expected_next=N8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N8.asp)
+2026-03-23 13:49:59,967 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:59,983 | INFO | input(skip disabled): N8
+2026-03-23 13:50:00,016 | INFO | textarea: N8=특이사항없음
+2026-03-23 13:50:00,024 | INFO | checked_count_after_fill=0
+2026-03-23 13:50:00,352 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:00,527 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:01,637 | INFO | [5] step=89 N8 -&gt; P1 (expected_next=P1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P1.asp)
+2026-03-23 13:50:02,536 | INFO | radio(required): P1=4 (min=None, max=None)
+2026-03-23 13:50:02,563 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:02,571 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:02,890 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:03,059 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P2S&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:04,106 | INFO | [5] step=90 P1 -&gt; P2S (expected_next=P2S action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P2S.asp)
+2026-03-23 13:50:04,681 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:04,692 | INFO | checked_count_after_fill=0
+2026-03-23 13:50:05,008 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:05,171 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:05,613 | INFO | [5] step=91 P2S -&gt; P2 (expected_next=P2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P2S.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P2.asp)
+2026-03-23 13:50:06,630 | INFO | radio(required): P2=6 (min=None, max=None)
+2026-03-23 13:50:06,678 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:06,687 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:07,078 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:07,252 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:08,448 | INFO | [5] step=92 P2 -&gt; P3 (expected_next=P3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P3.asp)
+2026-03-23 13:50:09,586 | INFO | radio(required): P3=1 (min=None, max=None)
+2026-03-23 13:50:09,638 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:09,650 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:10,001 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:10,169 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:11,306 | INFO | [5] step=93 P3 -&gt; P4 (expected_next=P4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P4.asp)
+2026-03-23 13:50:12,178 | INFO | radio(required): P4=6 (min=None, max=None)
+2026-03-23 13:50:12,218 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:12,228 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:12,558 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:12,735 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:13,838 | INFO | [5] step=94 P4 -&gt; P5 (expected_next=P5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P5.asp)
+2026-03-23 13:50:14,629 | WARNING | [5] [pageerror] Cannot read properties of undefined (reading &#x27;top&#x27;)
+2026-03-23 13:50:14,632 | WARNING | [5] [pageerror] Cannot read properties of undefined (reading &#x27;top&#x27;)
+2026-03-23 13:50:14,784 | INFO | radio(required): P5_1=1 (min=None, max=None)
+2026-03-23 13:50:14,839 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:14,850 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:15,210 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:15,385 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:16,505 | INFO | [5] step=95 P5 -&gt; P6 (expected_next=P6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P6.asp)
+2026-03-23 13:50:17,364 | INFO | radio(required): P6=1 (min=None, max=None)
+2026-03-23 13:50:17,392 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:17,398 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:17,721 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:17,896 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:19,014 | INFO | [5] step=96 P6 -&gt; P7 (expected_next=P7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P7.asp)
+2026-03-23 13:50:22,458 | INFO | checkbox-group: P7 picks=[&#x27;98&#x27;, &#x27;2&#x27;, &#x27;4&#x27;]
+2026-03-23 13:50:22,459 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:22,468 | INFO | checked_count_after_fill=3
+2026-03-23 13:50:22,799 | INFO | [next_logic] adjusted: TP7_98=OTHER
+2026-03-23 13:50:22,968 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:24,042 | INFO | [5] step=97 P7 -&gt; P8 (expected_next=P8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P8.asp)
+2026-03-23 13:50:25,089 | INFO | radio(required): P8=1 (min=None, max=None)
+2026-03-23 13:50:25,147 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:25,157 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:25,468 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:25,635 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:26,759 | INFO | [5] step=98 P8 -&gt; P9 (expected_next=P9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P9.asp)
+2026-03-23 13:50:27,553 | INFO | radio(required): P9=2 (min=None, max=None)
+2026-03-23 13:50:27,591 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:27,601 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:27,920 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:28,089 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:29,208 | INFO | [5] step=99 P9 -&gt; U1 (expected_next=U1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U1.asp)
+2026-03-23 13:50:30,304 | INFO | rank(U1) attempt 1: OK slots=[&#x27;5&#x27;, &#x27;9&#x27;, &#x27;3&#x27;] forced={}
+2026-03-23 13:50:30,640 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:30,808 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:31,943 | INFO | [5] step=100 U1 -&gt; U2 (expected_next=U2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U2.asp)
+2026-03-23 13:50:33,067 | INFO | rank(U2) attempt 1: OK slots=[&#x27;1&#x27;, &#x27;10&#x27;, &#x27;7&#x27;] forced={}
+2026-03-23 13:50:33,412 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:33,581 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:34,711 | INFO | [5] step=101 U2 -&gt; U3 (expected_next=U3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U3.asp)
+2026-03-23 13:50:35,901 | INFO | rank(U3) attempt 1: OK slots=[&#x27;9&#x27;, &#x27;3&#x27;, &#x27;2&#x27;] forced={}
+2026-03-23 13:50:36,227 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:36,397 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:37,496 | INFO | [5] step=102 U3 -&gt; U4 (expected_next=U4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U4.asp)
+2026-03-23 13:50:38,555 | INFO | rank(U4) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;9&#x27;, &#x27;6&#x27;] forced={}
+2026-03-23 13:50:38,875 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:39,049 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:40,179 | INFO | [5] step=103 U4 -&gt; U5A (expected_next=U5A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5A.asp)
+2026-03-23 13:50:49,280 | INFO | checkbox-group: U5A picks=[&#x27;20&#x27;, &#x27;22&#x27;, &#x27;11&#x27;, &#x27;12&#x27;, &#x27;26&#x27;, &#x27;30&#x27;, &#x27;7&#x27;]
+2026-03-23 13:50:49,283 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:49,292 | INFO | checked_count_after_fill=7
+2026-03-23 13:50:49,626 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:49,799 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:51,010 | INFO | [5] step=104 U5A -&gt; U5B (expected_next=U5B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5B.asp)
+2026-03-23 13:51:06,728 | INFO | checkbox-group: U5B picks=[&#x27;25&#x27;, &#x27;20&#x27;, &#x27;3&#x27;, &#x27;11&#x27;, &#x27;2&#x27;, &#x27;1&#x27;, &#x27;17&#x27;, &#x27;14&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;19&#x27;, &#x27;9&#x27;, &#x27;28&#x27;, &#x27;16&#x27;, &#x27;29&#x27;, &#x27;30&#x27;, &#x27;21&#x27;, &#x27;10&#x27;, &#x27;12&#x27;, &#x27;26&#x27;, &#x27;24&#x27;, &#x27;6&#x27;, &#x27;5&#x27;, &#x27;13&#x27;, &#x27;27&#x27;, &#x27;4&#x27;, &#x27;18&#x27;]
+2026-03-23 13:51:06,729 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:06,735 | INFO | checked_count_after_fill=27
+2026-03-23 13:51:07,092 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:07,272 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:08,502 | INFO | [5] step=105 U5B -&gt; U5C (expected_next=U5C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5C.asp)
+2026-03-23 13:51:22,092 | INFO | checkbox-group: U5C picks=[&#x27;25&#x27;, &#x27;27&#x27;, &#x27;6&#x27;, &#x27;8&#x27;, &#x27;18&#x27;, &#x27;21&#x27;, &#x27;17&#x27;, &#x27;16&#x27;, &#x27;7&#x27;, &#x27;13&#x27;, &#x27;3&#x27;, &#x27;2&#x27;, &#x27;15&#x27;, &#x27;12&#x27;, &#x27;4&#x27;, &#x27;20&#x27;, &#x27;19&#x27;]
+2026-03-23 13:51:22,093 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:22,104 | INFO | checked_count_after_fill=17
+2026-03-23 13:51:22,460 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:22,627 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:23,920 | INFO | [5] step=106 U5C -&gt; U5D (expected_next=U5D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5D.asp)
+2026-03-23 13:51:32,874 | INFO | checkbox-group: U5D picks=[&#x27;16&#x27;, &#x27;7&#x27;, &#x27;10&#x27;, &#x27;6&#x27;, &#x27;17&#x27;, &#x27;24&#x27;]
+2026-03-23 13:51:32,875 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:32,878 | INFO | checked_count_after_fill=6
+2026-03-23 13:51:33,236 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:33,405 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:34,571 | INFO | [5] step=107 U5D -&gt; R1 (expected_next=R1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5D.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R1.asp)
+2026-03-23 13:51:35,593 | INFO | radio(required): R1=1 (min=None, max=None)
+2026-03-23 13:51:35,629 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:35,640 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:35,966 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:36,145 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:37,249 | INFO | [5] step=108 R1 -&gt; R2 (expected_next=R2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R2.asp)
+2026-03-23 13:51:38,231 | INFO | radio(required): R2=2 (min=None, max=None)
+2026-03-23 13:51:38,253 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:38,259 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:38,564 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:38,739 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:39,847 | INFO | [5] step=109 R2 -&gt; R3 (expected_next=R3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R3.asp)
+2026-03-23 13:51:40,848 | INFO | radio(required): R3=1 (min=None, max=None)
+2026-03-23 13:51:40,880 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:40,889 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:41,206 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:41,377 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:42,562 | INFO | [5] step=110 R3 -&gt; R4 (expected_next=R4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R4.asp)
+2026-03-23 13:51:46,525 | INFO | checkbox-group: R4 picks=[&#x27;2&#x27;, &#x27;6&#x27;, &#x27;5&#x27;]
+2026-03-23 13:51:46,526 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:46,534 | INFO | checked_count_after_fill=3
+2026-03-23 13:51:46,885 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:47,049 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:48,238 | INFO | [5] step=111 R4 -&gt; R5 (expected_next=R5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R5.asp)
+2026-03-23 13:51:49,233 | INFO | radio(required): R5=2 (min=None, max=None)
+2026-03-23 13:51:49,264 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:49,271 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:49,589 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:49,770 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:50,886 | INFO | [5] step=112 R5 -&gt; R6 (expected_next=R6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R6.asp)
+2026-03-23 13:51:51,799 | INFO | radio(required): R6=1 (min=None, max=None)
+2026-03-23 13:51:51,839 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:51,846 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:52,181 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:52,351 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;S1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:53,448 | INFO | [5] step=113 R6 -&gt; S1 (expected_next=S1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/S1.asp)
+2026-03-23 13:51:54,285 | INFO | radio(required): S1=2 (min=None, max=None)
+2026-03-23 13:51:54,336 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:54,342 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:54,670 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:54,835 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;S2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:55,960 | INFO | [5] step=114 S1 -&gt; S13 (expected_next=S2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/S1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/S13.asp)
+2026-03-23 13:51:56,758 | INFO | radio(required): S13=4 (min=None, max=None)
+2026-03-23 13:51:56,787 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:56,796 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:57,134 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:57,294 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:58,406 | INFO | [5] step=115 S13 -&gt; T1 (expected_next=T1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/S13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T1.asp)
+2026-03-23 13:51:59,183 | INFO | [override] radio(NEQSET): T1 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 13:51:59,188 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:59,199 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:59,510 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:59,687 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:00,804 | INFO | [5] step=116 T1 -&gt; T2 (expected_next=T2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/T1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T2.asp)
+2026-03-23 13:52:04,808 | INFO | [override] radio: T2=5
+2026-03-23 13:52:04,818 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:52:04,828 | INFO | checked_count_after_fill=0
+2026-03-23 13:52:05,139 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,313 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:05,342 | WARNING | [5] dialog type=alert message=질문에 응답해 주십시오.
+2026-03-23 13:52:05,682 | WARNING | [5] validation alert detected: 질문에 응답해 주십시오.
+2026-03-23 13:52:05,754 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,759 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 13:52:05,772 | INFO | [5] step=117 T2 -&gt; T2 (expected_next=T3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/T2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T2.asp)
+2026-03-23 13:52:05,772 | WARNING | [5] URL unchanged and page unchanged. Validation-aware retry. (before=T2, after=T2, expected=T3)
+2026-03-23 13:52:05,778 | WARNING | [5] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;T3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:05,799 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 13:52:05,836 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,843 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 13:52:05,847 | WARNING | [5] next_source_excerpt=function next()
+{
+	if (getRadioValue(&quot;T2&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 13:52:05,852 | ERROR | [5] Stuck on same page. step=117 url=https://kstat.surveys.kr/2026/P26031601/T2.asp</pre>
+  </details>
+</div>
+<div class="box">
+  <details open>
+    <summary><b>Failure Log Tail</b> - ..\..\..\run_all.log</summary>
+    <pre>...(tail)
+2026-03-23 13:49:32,512 | INFO | checkbox(skip): M12_3_NONE endswith _NONE
+2026-03-23 13:49:32,530 | INFO | checkbox: M12_1_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIM12_1_NONECNT=None, MM12_1_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 13:49:33,664 | WARNING | checkbox: M12_1_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:33,898 | INFO | checkbox(M12_1_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 13:49:34,830 | WARNING | checkbox: M12_1_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:35,072 | INFO | checkbox(M12_1_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 13:49:35,133 | INFO | checkbox: M12_3_NONE opt=1 normal=1 exclusive=[] min=1-&gt;1 max=1-&gt;1 (MIM12_3_NONECNT=None, MM12_3_NONECNT=None) pick_count=1 picks=[&#x27;99&#x27;]
+2026-03-23 13:49:36,176 | WARNING | checkbox: M12_3_NONE skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:36,424 | INFO | checkbox(M12_3_NONE): normal picked but checked&lt;1 (got=0). will try top-up.
+2026-03-23 13:49:37,463 | WARNING | checkbox: M12_3_NONE TOP-UP skip value=99 (caused new disabled controls: 1)
+2026-03-23 13:49:37,698 | INFO | checkbox(M12_3_NONE): TOP-UP failed: checked&lt;1 (got=0). checked=[]
+2026-03-23 13:49:37,735 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:37,745 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=M12_1 cmin=None cmax=None forced_val=None
+2026-03-23 13:49:37,757 | INFO | input(tel): M12_1=707
+2026-03-23 13:49:37,764 | WARNING | [DEBUG constrained pick] file=D:\test-project\dummy\runner\autofill.py name=M12_3 cmin=None cmax=None forced_val=None
+2026-03-23 13:49:37,774 | INFO | input(tel): M12_3=513
+2026-03-23 13:49:37,783 | INFO | checked_count_after_fill=0
+2026-03-23 13:49:38,169 | INFO | [next_logic] adjusted: M12_3=281(constraint)
+2026-03-23 13:49:38,329 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;M13&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:39,545 | INFO | [5] step=83 M12 -&gt; M13 (expected_next=M13 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/M12.asp -&gt; https://kstat.surveys.kr/2026/P26031601/M13.asp)
+2026-03-23 13:49:40,553 | INFO | radio(required): M13=3 (min=None, max=None)
+2026-03-23 13:49:40,586 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:40,595 | INFO | checked_count_after_fill=1
+2026-03-23 13:49:40,960 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:41,125 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:42,292 | INFO | [5] step=84 M13 -&gt; N1 (expected_next=N1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/M13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N1.asp)
+2026-03-23 13:49:47,820 | INFO | checkbox-group: N1 picks=[&#x27;8&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;9&#x27;, &#x27;7&#x27;, &#x27;1&#x27;]
+2026-03-23 13:49:47,821 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:47,829 | INFO | checked_count_after_fill=6
+2026-03-23 13:49:48,157 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:48,324 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:49,506 | INFO | [5] step=85 N1 -&gt; N2 (expected_next=N2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N2.asp)
+2026-03-23 13:49:50,426 | INFO | radio(required): N2_1=6 (min=None, max=None)
+2026-03-23 13:49:50,681 | INFO | radio(required): N2_3=2 (min=None, max=None)
+2026-03-23 13:49:50,924 | INFO | radio(required): N2_4=2 (min=None, max=None)
+2026-03-23 13:49:51,161 | INFO | radio(required): N2_7=1 (min=None, max=None)
+2026-03-23 13:49:51,418 | INFO | radio(required): N2_8=1 (min=None, max=None)
+2026-03-23 13:49:51,648 | INFO | radio(required): N2_9=1 (min=None, max=None)
+2026-03-23 13:49:51,694 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:51,702 | INFO | checked_count_after_fill=6
+2026-03-23 13:49:52,031 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:52,190 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:53,327 | INFO | [5] step=86 N2 -&gt; N3 (expected_next=N3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N3.asp)
+2026-03-23 13:49:54,402 | INFO | rank(N3) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;3&#x27;, &#x27;1&#x27;] forced={}
+2026-03-23 13:49:54,727 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:54,886 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:56,014 | INFO | [5] step=87 N3 -&gt; N7 (expected_next=N4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N7.asp)
+2026-03-23 13:49:56,767 | INFO | radio(required): N7_1=4 (min=None, max=None)
+2026-03-23 13:49:57,009 | INFO | radio(required): N7_2=1 (min=None, max=None)
+2026-03-23 13:49:57,250 | INFO | radio(required): N7_3=3 (min=None, max=None)
+2026-03-23 13:49:57,484 | INFO | radio(required): N7_4=4 (min=None, max=None)
+2026-03-23 13:49:57,696 | INFO | radio(required): N7_5=3 (min=None, max=None)
+2026-03-23 13:49:57,727 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:57,735 | INFO | checked_count_after_fill=5
+2026-03-23 13:49:58,067 | INFO | [next_logic] no adjustment
+2026-03-23 13:49:58,244 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;N8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:49:59,341 | INFO | [5] step=88 N7 -&gt; N8 (expected_next=N8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/N8.asp)
+2026-03-23 13:49:59,967 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:49:59,983 | INFO | input(skip disabled): N8
+2026-03-23 13:50:00,016 | INFO | textarea: N8=특이사항없음
+2026-03-23 13:50:00,024 | INFO | checked_count_after_fill=0
+2026-03-23 13:50:00,352 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:00,527 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:01,637 | INFO | [5] step=89 N8 -&gt; P1 (expected_next=P1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/N8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P1.asp)
+2026-03-23 13:50:02,536 | INFO | radio(required): P1=4 (min=None, max=None)
+2026-03-23 13:50:02,563 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:02,571 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:02,890 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:03,059 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P2S&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:04,106 | INFO | [5] step=90 P1 -&gt; P2S (expected_next=P2S action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P2S.asp)
+2026-03-23 13:50:04,681 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:04,692 | INFO | checked_count_after_fill=0
+2026-03-23 13:50:05,008 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:05,171 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:05,613 | INFO | [5] step=91 P2S -&gt; P2 (expected_next=P2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P2S.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P2.asp)
+2026-03-23 13:50:06,630 | INFO | radio(required): P2=6 (min=None, max=None)
+2026-03-23 13:50:06,678 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:06,687 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:07,078 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:07,252 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:08,448 | INFO | [5] step=92 P2 -&gt; P3 (expected_next=P3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P3.asp)
+2026-03-23 13:50:09,586 | INFO | radio(required): P3=1 (min=None, max=None)
+2026-03-23 13:50:09,638 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:09,650 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:10,001 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:10,169 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:11,306 | INFO | [5] step=93 P3 -&gt; P4 (expected_next=P4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P4.asp)
+2026-03-23 13:50:12,178 | INFO | radio(required): P4=6 (min=None, max=None)
+2026-03-23 13:50:12,218 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:12,228 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:12,558 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:12,735 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:13,838 | INFO | [5] step=94 P4 -&gt; P5 (expected_next=P5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P5.asp)
+2026-03-23 13:50:14,629 | WARNING | [5] [pageerror] Cannot read properties of undefined (reading &#x27;top&#x27;)
+2026-03-23 13:50:14,632 | WARNING | [5] [pageerror] Cannot read properties of undefined (reading &#x27;top&#x27;)
+2026-03-23 13:50:14,784 | INFO | radio(required): P5_1=1 (min=None, max=None)
+2026-03-23 13:50:14,839 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:14,850 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:15,210 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:15,385 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:16,505 | INFO | [5] step=95 P5 -&gt; P6 (expected_next=P6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P6.asp)
+2026-03-23 13:50:17,364 | INFO | radio(required): P6=1 (min=None, max=None)
+2026-03-23 13:50:17,392 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:17,398 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:17,721 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:17,896 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P7&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:19,014 | INFO | [5] step=96 P6 -&gt; P7 (expected_next=P7 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P7.asp)
+2026-03-23 13:50:22,458 | INFO | checkbox-group: P7 picks=[&#x27;98&#x27;, &#x27;2&#x27;, &#x27;4&#x27;]
+2026-03-23 13:50:22,459 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:22,468 | INFO | checked_count_after_fill=3
+2026-03-23 13:50:22,799 | INFO | [next_logic] adjusted: TP7_98=OTHER
+2026-03-23 13:50:22,968 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P8&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:24,042 | INFO | [5] step=97 P7 -&gt; P8 (expected_next=P8 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P7.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P8.asp)
+2026-03-23 13:50:25,089 | INFO | radio(required): P8=1 (min=None, max=None)
+2026-03-23 13:50:25,147 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:25,157 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:25,468 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:25,635 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;P9&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:26,759 | INFO | [5] step=98 P8 -&gt; P9 (expected_next=P9 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P8.asp -&gt; https://kstat.surveys.kr/2026/P26031601/P9.asp)
+2026-03-23 13:50:27,553 | INFO | radio(required): P9=2 (min=None, max=None)
+2026-03-23 13:50:27,591 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:27,601 | INFO | checked_count_after_fill=1
+2026-03-23 13:50:27,920 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:28,089 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:29,208 | INFO | [5] step=99 P9 -&gt; U1 (expected_next=U1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/P9.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U1.asp)
+2026-03-23 13:50:30,304 | INFO | rank(U1) attempt 1: OK slots=[&#x27;5&#x27;, &#x27;9&#x27;, &#x27;3&#x27;] forced={}
+2026-03-23 13:50:30,640 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:30,808 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:31,943 | INFO | [5] step=100 U1 -&gt; U2 (expected_next=U2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U2.asp)
+2026-03-23 13:50:33,067 | INFO | rank(U2) attempt 1: OK slots=[&#x27;1&#x27;, &#x27;10&#x27;, &#x27;7&#x27;] forced={}
+2026-03-23 13:50:33,412 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:33,581 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:34,711 | INFO | [5] step=101 U2 -&gt; U3 (expected_next=U3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U3.asp)
+2026-03-23 13:50:35,901 | INFO | rank(U3) attempt 1: OK slots=[&#x27;9&#x27;, &#x27;3&#x27;, &#x27;2&#x27;] forced={}
+2026-03-23 13:50:36,227 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:36,397 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:37,496 | INFO | [5] step=102 U3 -&gt; U4 (expected_next=U4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U4.asp)
+2026-03-23 13:50:38,555 | INFO | rank(U4) attempt 1: OK slots=[&#x27;8&#x27;, &#x27;9&#x27;, &#x27;6&#x27;] forced={}
+2026-03-23 13:50:38,875 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:39,049 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5A&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:40,179 | INFO | [5] step=103 U4 -&gt; U5A (expected_next=U5A action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5A.asp)
+2026-03-23 13:50:49,280 | INFO | checkbox-group: U5A picks=[&#x27;20&#x27;, &#x27;22&#x27;, &#x27;11&#x27;, &#x27;12&#x27;, &#x27;26&#x27;, &#x27;30&#x27;, &#x27;7&#x27;]
+2026-03-23 13:50:49,283 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:50:49,292 | INFO | checked_count_after_fill=7
+2026-03-23 13:50:49,626 | INFO | [next_logic] no adjustment
+2026-03-23 13:50:49,799 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5B&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:50:51,010 | INFO | [5] step=104 U5A -&gt; U5B (expected_next=U5B action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5A.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5B.asp)
+2026-03-23 13:51:06,728 | INFO | checkbox-group: U5B picks=[&#x27;25&#x27;, &#x27;20&#x27;, &#x27;3&#x27;, &#x27;11&#x27;, &#x27;2&#x27;, &#x27;1&#x27;, &#x27;17&#x27;, &#x27;14&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;19&#x27;, &#x27;9&#x27;, &#x27;28&#x27;, &#x27;16&#x27;, &#x27;29&#x27;, &#x27;30&#x27;, &#x27;21&#x27;, &#x27;10&#x27;, &#x27;12&#x27;, &#x27;26&#x27;, &#x27;24&#x27;, &#x27;6&#x27;, &#x27;5&#x27;, &#x27;13&#x27;, &#x27;27&#x27;, &#x27;4&#x27;, &#x27;18&#x27;]
+2026-03-23 13:51:06,729 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:06,735 | INFO | checked_count_after_fill=27
+2026-03-23 13:51:07,092 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:07,272 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5C&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:08,502 | INFO | [5] step=105 U5B -&gt; U5C (expected_next=U5C action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5B.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5C.asp)
+2026-03-23 13:51:22,092 | INFO | checkbox-group: U5C picks=[&#x27;25&#x27;, &#x27;27&#x27;, &#x27;6&#x27;, &#x27;8&#x27;, &#x27;18&#x27;, &#x27;21&#x27;, &#x27;17&#x27;, &#x27;16&#x27;, &#x27;7&#x27;, &#x27;13&#x27;, &#x27;3&#x27;, &#x27;2&#x27;, &#x27;15&#x27;, &#x27;12&#x27;, &#x27;4&#x27;, &#x27;20&#x27;, &#x27;19&#x27;]
+2026-03-23 13:51:22,093 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:22,104 | INFO | checked_count_after_fill=17
+2026-03-23 13:51:22,460 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:22,627 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;U5D&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:23,920 | INFO | [5] step=106 U5C -&gt; U5D (expected_next=U5D action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5C.asp -&gt; https://kstat.surveys.kr/2026/P26031601/U5D.asp)
+2026-03-23 13:51:32,874 | INFO | checkbox-group: U5D picks=[&#x27;16&#x27;, &#x27;7&#x27;, &#x27;10&#x27;, &#x27;6&#x27;, &#x27;17&#x27;, &#x27;24&#x27;]
+2026-03-23 13:51:32,875 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:32,878 | INFO | checked_count_after_fill=6
+2026-03-23 13:51:33,236 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:33,405 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:34,571 | INFO | [5] step=107 U5D -&gt; R1 (expected_next=R1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/U5D.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R1.asp)
+2026-03-23 13:51:35,593 | INFO | radio(required): R1=1 (min=None, max=None)
+2026-03-23 13:51:35,629 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:35,640 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:35,966 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:36,145 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:37,249 | INFO | [5] step=108 R1 -&gt; R2 (expected_next=R2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R2.asp)
+2026-03-23 13:51:38,231 | INFO | radio(required): R2=2 (min=None, max=None)
+2026-03-23 13:51:38,253 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:38,259 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:38,564 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:38,739 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:39,847 | INFO | [5] step=109 R2 -&gt; R3 (expected_next=R3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R3.asp)
+2026-03-23 13:51:40,848 | INFO | radio(required): R3=1 (min=None, max=None)
+2026-03-23 13:51:40,880 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:40,889 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:41,206 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:41,377 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R4&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:42,562 | INFO | [5] step=110 R3 -&gt; R4 (expected_next=R4 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R3.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R4.asp)
+2026-03-23 13:51:46,525 | INFO | checkbox-group: R4 picks=[&#x27;2&#x27;, &#x27;6&#x27;, &#x27;5&#x27;]
+2026-03-23 13:51:46,526 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:46,534 | INFO | checked_count_after_fill=3
+2026-03-23 13:51:46,885 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:47,049 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R5&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:48,238 | INFO | [5] step=111 R4 -&gt; R5 (expected_next=R5 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R4.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R5.asp)
+2026-03-23 13:51:49,233 | INFO | radio(required): R5=2 (min=None, max=None)
+2026-03-23 13:51:49,264 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:49,271 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:49,589 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:49,770 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;R6&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:50,886 | INFO | [5] step=112 R5 -&gt; R6 (expected_next=R6 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R5.asp -&gt; https://kstat.surveys.kr/2026/P26031601/R6.asp)
+2026-03-23 13:51:51,799 | INFO | radio(required): R6=1 (min=None, max=None)
+2026-03-23 13:51:51,839 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:51,846 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:52,181 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:52,351 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;S1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:53,448 | INFO | [5] step=113 R6 -&gt; S1 (expected_next=S1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/R6.asp -&gt; https://kstat.surveys.kr/2026/P26031601/S1.asp)
+2026-03-23 13:51:54,285 | INFO | radio(required): S1=2 (min=None, max=None)
+2026-03-23 13:51:54,336 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:54,342 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:54,670 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:54,835 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;S2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:55,960 | INFO | [5] step=114 S1 -&gt; S13 (expected_next=S2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/S1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/S13.asp)
+2026-03-23 13:51:56,758 | INFO | radio(required): S13=4 (min=None, max=None)
+2026-03-23 13:51:56,787 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:56,796 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:57,134 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:57,294 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T1&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:51:58,406 | INFO | [5] step=115 S13 -&gt; T1 (expected_next=T1 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/S13.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T1.asp)
+2026-03-23 13:51:59,183 | INFO | [override] radio(NEQSET): T1 excluded=[&#x27;1&#x27;] -&gt; picked=2
+2026-03-23 13:51:59,188 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:51:59,199 | INFO | checked_count_after_fill=1
+2026-03-23 13:51:59,510 | INFO | [next_logic] no adjustment
+2026-03-23 13:51:59,687 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T2&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:00,804 | INFO | [5] step=116 T1 -&gt; T2 (expected_next=T2 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/T1.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T2.asp)
+2026-03-23 13:52:04,808 | INFO | [override] radio: T2=5
+2026-03-23 13:52:04,818 | WARNING | checkbox unstable summary(scope=run): {&#x27;B9_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D3_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D5_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;D7_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M8_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_2_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M10_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_1_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;], &#x27;M12_3_NONE&#x27;: [&#x27;caused_disable_other_inputs&#x27;, &#x27;min_not_met&#x27;]}
+2026-03-23 13:52:04,828 | INFO | checked_count_after_fill=0
+2026-03-23 13:52:05,139 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,313 | INFO | [5] submit_state method=POST action=Survey.asp keys={&#x27;NextPage&#x27;: &#x27;T3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:05,342 | WARNING | [5] dialog type=alert message=질문에 응답해 주십시오.
+2026-03-23 13:52:05,682 | WARNING | [5] validation alert detected: 질문에 응답해 주십시오.
+2026-03-23 13:52:05,754 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,759 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 13:52:05,772 | INFO | [5] step=117 T2 -&gt; T2 (expected_next=T3 action=Survey.asp url=https://kstat.surveys.kr/2026/P26031601/T2.asp -&gt; https://kstat.surveys.kr/2026/P26031601/T2.asp)
+2026-03-23 13:52:05,772 | WARNING | [5] URL unchanged and page unchanged. Validation-aware retry. (before=T2, after=T2, expected=T3)
+2026-03-23 13:52:05,778 | WARNING | [5] stuck_submit_state keys={&#x27;NextPage&#x27;: &#x27;T3&#x27;, &#x27;ResType&#x27;: &#x27;TEST&#x27;} a0={}
+2026-03-23 13:52:05,799 | INFO | [next_logic] no unresolved issues detected
+2026-03-23 13:52:05,836 | INFO | [next_logic] no adjustment
+2026-03-23 13:52:05,843 | INFO | [next_logic] alert_repair: no changes
+2026-03-23 13:52:05,847 | WARNING | [5] next_source_excerpt=function next()
+{
+	if (getRadioValue(&quot;T2&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+2026-03-23 13:52:05,852 | ERROR | [5] Stuck on same page. step=117 url=https://kstat.surveys.kr/2026/P26031601/T2.asp</pre>
+  </details>
+</div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603161144&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603172230&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;국내 신차반응조사 정량 설문지&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	if (getRadioValue(&quot;T2&quot;)==undefined)
+	{
+		alert(&quot;질문에 응답해 주십시오.&quot;)
+		return;
+	}
+
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;T2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;T2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;T3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;03231344329715137345986&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;03231344329715137345986&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;132&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 84%; font-size:10px !important;&quot; aria-valuenow=&quot;84&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;84%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							T2&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;	귀하께서는 기아 커넥트 스토어를 통해 실제로 기능을 &lt;span class=&quot;UnBd&quot;&gt;구매하거나 구독&lt;/span&gt;해본 적이 있습니까?&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;table class=&quot;table table-bordered&quot; id=&quot;T2_table&quot;&gt;
+	&lt;colgroup&gt;
+						&lt;col width=&quot;99.00%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_T2_1&quot; onclick=&quot;javascript:setRadioValue(&#x27;T2&#x27;,&#x27;1&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;T2&quot; id=&quot;T2_1&quot; value=&quot;1&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;T2_1&quot; id=&quot;LT2_1&quot;&gt;예, 구매 또는 구독해본 적이 있다&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_T2_2&quot; onclick=&quot;javascript:setRadioValue(&#x27;T2&#x27;,&#x27;2&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;T2&quot; id=&quot;T2_2&quot; value=&quot;2&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;T2_2&quot; id=&quot;LT2_2&quot;&gt;아니요, 구매 또는 구독해본 적이 없다&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+				&lt;/tbody&gt;&lt;/table&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mock Signature Page</title>
+</head>
+<body>
+    <form name="Survey" onsubmit="return false;">
+        <canvas id="mockCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
+        <button type="button" id="upload">Upload & Next</button>
+    </form>
+
+    <script>
+        // Simple mock SignaturePad-like object
+        window.signaturePad = {
+            isEmpty: function() {
+                const canvas = document.getElementById('mockCanvas');
+                const ctx = canvas.getContext('2d');
+                const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+                for (let i = 0; i < data.length; i += 4) {
+                    if (data[i+3] > 0) return false;
+                }
+                return true;
+            },
+            fromDataURL: function(dataURL) {
+                const canvas = document.getElementById('mockCanvas');
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'black';
+                ctx.fillRect(10, 10, 5, 5); // Draw a dot
+            }
+        };
+
+        document.getElementById('upload').addEventListener('click', function() {
+            if (window.signaturePad.isEmpty()) {
+                alert("Please sign first!");
+                return;
+            }
+            alert("Success! Uploading...");
+            setTimeout(() => {
+                alert("성공적으로 업로드되었습니다");
+                window.location.href = "about:blank?success=1";
+            }, 500);
+        });
+
+        // Function that runner expects
+        window.next = function() {
+            document.Survey.submit();
+        };
+    </script>
+</body>
+</html>

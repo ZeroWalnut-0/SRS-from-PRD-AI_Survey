@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26041503/SQ1.asp</div>
+    <div><b>Title</b> 광역형 비자 제도 활용 현황 실태조사 (소상공인)</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>7%응답자및사업장정보귀하의기본정보를작성해주십시오.광역구분울산시경상남도소재지선택서울특별시부산광역시대구광역시인천광역시광주광역시대전광역시울산광역시세종특별자치시경기도강원특별자치도충청북도충청남도전북특별자치도전라남도경상북도경상남도제주특별자치도시/도선택남구동구북구울주군중구시/군/구주요업종도·소매업음식점업숙박업부동산업건설업제조업기타업력(사업유지기간)1년이하2~3년이하4~7년이하7~10년이하10년초과성별남성여성연령만세다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Form Snapshot</b></summary>
+      <pre>method=POST
+action=
+
+[form data]
+ECODE = 
+ENUMBER = 
+IDKey = 042413253820499352079668
+IDS = 
+NextPage = Q1
+PVALUE = 2
+PageName = SQ1
+ResType = TEST
+SQ1_1 = 1
+SQ1_2_1 = 울산광역시
+SQ1_2_2 = 남구
+SQ1_3 = 5
+SQ1_4 = 3
+SQ1_5 = 2
+SQ1_6 = 40
+TSQ1_3_7 = 
+VC_ID = 042413253820499352079668
+Var = SQ1_1,SQ1_2,SQ1_2_1,SQ1_2_2,SQ1_3,TSQ1_3_7,SQ1_4,SQ1_5,SQ1_6</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Failed Question Log</b></summary>
+      <pre>[failed question logs]
+[next_logic] no unresolved issues detected</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Browser Log Snapshot</b></summary>
+      <pre>(no browser log entries)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Diagnostics</b></summary>
+      <pre>(no next() issues detected)</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>next() Source</b></summary>
+      <pre>function next()
+{
+if (getRadioValue(&quot;SQ1_1&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_1&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_1&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+    if ($(&quot;#SQ1_2&quot;).val()==&quot;&quot;)
+    {
+  var el=document.getElementById(&quot;LSQ1_2&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+        alert(&quot;시/도를 선택해 주세요.&quot;);
+        $(&quot;#SQ1_2&quot;).focus();
+        return;
+    }
+    if ($(&quot;#SQ1_2&quot;).val()!=&quot;8&quot; &amp;&amp; $(&quot;#SQ1_2&quot;).val()!=&quot;18&quot;)
+    {
+        if ($(&quot;#SQ1_2_2&quot;).val()==&quot;&quot;)
+        {
+  var el=document.getElementById(&quot;LSQ1_2&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+            alert(&quot;시/군/구를 선택해 주세요.&quot;);
+            $(&quot;#SQ1_2_2&quot;).focus();
+            return;
+        }
+    }
+    var siName;
+    siName = $(&quot;#SQ1_2 option:selected&quot;).text();
+    $(&quot;#SQ1_2_1&quot;).val(siName);
+if (getRadioValue(&quot;SQ1_3&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_3&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+	if ((getRadioValue(&quot;SQ1_3&quot;)==&quot;7&quot;)	&amp;&amp; ($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+		return;
+	}
+	if ((getRadioValue(&quot;SQ1_3&quot;)!=&quot;7&quot;)	&amp;&amp; ($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()!=&quot;&quot;)
+	{
+		if (containsChars($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+			return;
+		}
+	}
+	if (getRadioValue(&quot;SQ1_3&quot;)==&quot;7&quot;)
+	{
+		if (openValueCode($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim(),&quot;S^2^1∮울산시∑2∮경상남도|ADDR^0|S^3^1∮도·소매업∑2∮음식점업∑3∮숙박업∑4∮부동산업∑5∮건설업∑6∮제조업∑7∮기타*OTHER|S^3^∮1년 이하∑2∮2 ~ 3년 이하∑3∮4 ~ 7년 이하∑4∮7 ~ 10년 이하∑5∮10년 초과|S^2^1∮남성∑2∮여성|N^19^99^만^세|&quot;)==true)
+		{
+			alert(&quot;[&quot;+$(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()+&quot;] 의 값은 보기와 중복됩니다.&quot;);
+			$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+			return;
+		}
+	}
+if (getRadioValue(&quot;SQ1_4&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_4&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_4&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+if (getRadioValue(&quot;SQ1_5&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_5&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_5&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+	if(!/^\d+$/.test($(&quot;#SQ1_6&quot;).val().trim()))
+	{
+  var el=document.getElementById(&quot;LSQ1_6&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+		alert(&quot;[&quot;+$(&quot;#LSQ1_6&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;);
+		$(&quot;#SQ1_6&quot;).focus();
+		return;
+	}
+	if (parseInt($(&quot;#SQ1_6&quot;).val().trim(),10) &lt; 19)
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_6&quot;).text()+&quot;] 19 이상 입력해 주십시오.&quot;);
+		$(&quot;#SQ1_6&quot;).focus();
+		return;
+	}
+	if (parseInt($(&quot;#SQ1_6&quot;).val().trim(),10) &gt; 99)
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_6&quot;).text()+&quot;] 99 이하 입력해 주십시오.&quot;);
+		$(&quot;#SQ1_6&quot;).focus();
+		return;
+	}
+
+
+	var obj;
+	
+	$(&quot;#SQ1_2&quot;).prop(&quot;disabled&quot;, false);
+	document.Survey.action=&quot;Survey.asp&quot;;
+	document.Survey.submit();
+
+	LoadingWithMask();
+}</pre>
+    </details>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202604201158&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202604201158&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202604201158&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;광역형 비자 제도 활용 현황 실태조사 (소상공인)&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function(){
+        $(&quot;#SQ1_2&quot;).val(&quot;&quot;);
+        $(&quot;#SQ1_2_2&quot;).val(&quot;&quot;);
+    });
+    &lt;/script&gt;&lt;script&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script languge=&quot;javascript&quot;&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script&gt;
+	$(document).ready(function(){
+	});
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;/script&gt;&lt;style&gt;
+  .qm-popover{--bs-popover-bg:#fff3cd;--bs-popover-border-color:#ffe69c;--bs-popover-body-color:#212529;--bs-popover-max-width:240px;}
+  .qm-popover .popover-body{padding:.35rem .5rem;font-size:.85rem;line-height:1.2;}
+  .qm-pop-body{display:flex;align-items:flex-start;gap:.4rem;}
+  .qm-warn-icon{display:inline-flex;align-items:center;justify-content:center;width:1.1rem;height:1.1rem;font-size:.8rem;font-weight:700;background:#ffe69c;color:#212529;border-radius:50%;flex:0 0 auto;border:1px solid rgba(0,0,0,.12);}
+  .qm-warn-text{word-break:keep-all;}
+&lt;/style&gt;&lt;style&gt;
+	#survey-container{display:none;}
+&lt;/style&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+if (getRadioValue(&quot;SQ1_1&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_1&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_1&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+    if ($(&quot;#SQ1_2&quot;).val()==&quot;&quot;)
+    {
+  var el=document.getElementById(&quot;LSQ1_2&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+        alert(&quot;시/도를 선택해 주세요.&quot;);
+        $(&quot;#SQ1_2&quot;).focus();
+        return;
+    }
+    if ($(&quot;#SQ1_2&quot;).val()!=&quot;8&quot; &amp;&amp; $(&quot;#SQ1_2&quot;).val()!=&quot;18&quot;)
+    {
+        if ($(&quot;#SQ1_2_2&quot;).val()==&quot;&quot;)
+        {
+  var el=document.getElementById(&quot;LSQ1_2&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+            alert(&quot;시/군/구를 선택해 주세요.&quot;);
+            $(&quot;#SQ1_2_2&quot;).focus();
+            return;
+        }
+    }
+    var siName;
+    siName = $(&quot;#SQ1_2 option:selected&quot;).text();
+    $(&quot;#SQ1_2_1&quot;).val(siName);
+if (getRadioValue(&quot;SQ1_3&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_3&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+	if ((getRadioValue(&quot;SQ1_3&quot;)==&quot;7&quot;)	&amp;&amp; ($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()==&quot;&quot;))
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+		return;
+	}
+	if ((getRadioValue(&quot;SQ1_3&quot;)!=&quot;7&quot;)	&amp;&amp; ($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()!=&quot;&quot;))
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 기타에 응답해 주십시오.&quot;)
+		$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+		return;
+	}
+	if ($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()!=&quot;&quot;)
+	{
+		if (containsChars($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim(),&quot;ㅂㅈㄷㄱㅅㅁㄴㅇㄹㅎㅋㅌㅊㅍㅛㅕㅑㅐㅔㅗㅓㅏㅣㅠㅜㅡ&quot;))
+		{
+			alert(&quot;[&quot;+$(&quot;#LSQ1_3&quot;).text()+&quot;] 특수문자는 입력하실 수 없습니다.&quot;);
+			$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+			return;
+		}
+	}
+	if (getRadioValue(&quot;SQ1_3&quot;)==&quot;7&quot;)
+	{
+		if (openValueCode($(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim(),&quot;S^2^1∮울산시∑2∮경상남도|ADDR^0|S^3^1∮도·소매업∑2∮음식점업∑3∮숙박업∑4∮부동산업∑5∮건설업∑6∮제조업∑7∮기타*OTHER|S^3^∮1년 이하∑2∮2 ~ 3년 이하∑3∮4 ~ 7년 이하∑4∮7 ~ 10년 이하∑5∮10년 초과|S^2^1∮남성∑2∮여성|N^19^99^만^세|&quot;)==true)
+		{
+			alert(&quot;[&quot;+$(&#x27;input[name=TSQ1_3_7]&#x27;).val().trim()+&quot;] 의 값은 보기와 중복됩니다.&quot;);
+			$(&#x27;input[name=TSQ1_3_7]&#x27;).focus();
+			return;
+		}
+	}
+if (getRadioValue(&quot;SQ1_4&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_4&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_4&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+if (getRadioValue(&quot;SQ1_5&quot;)==undefined) {
+  var el=document.getElementById(&quot;LSQ1_5&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+  alert(&quot;[&quot;+$(&quot;#LSQ1_5&quot;).text()+&quot;] 질문에 응답해 주십시오.&quot;);
+  return;
+}
+
+	if(!/^\d+$/.test($(&quot;#SQ1_6&quot;).val().trim()))
+	{
+  var el=document.getElementById(&quot;LSQ1_6&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+		alert(&quot;[&quot;+$(&quot;#LSQ1_6&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;);
+		$(&quot;#SQ1_6&quot;).focus();
+		return;
+	}
+	if (parseInt($(&quot;#SQ1_6&quot;).val().trim(),10) &lt; 19)
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_6&quot;).text()+&quot;] 19 이상 입력해 주십시오.&quot;);
+		$(&quot;#SQ1_6&quot;).focus();
+		return;
+	}
+	if (parseInt($(&quot;#SQ1_6&quot;).val().trim(),10) &gt; 99)
+	{
+		alert(&quot;[&quot;+$(&quot;#LSQ1_6&quot;).text()+&quot;] 99 이하 입력해 주십시오.&quot;);
+		$(&quot;#SQ1_6&quot;).focus();
+		return;
+	}
+
+
+	var obj;
+	
+	$(&quot;#SQ1_2&quot;).prop(&quot;disabled&quot;, false);
+	document.Survey.action=&quot;Survey.asp&quot;;
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	document.getElementById(&#x27;survey-container&#x27;).style.display = &#x27;block&#x27;;
+	
+
+	$(document).on(&quot;click&quot;, &quot;#SQ1_1_inner td, input[name=&#x27;SQ1_1&#x27;]&quot;, function () {
+		setTimeout(function () {
+
+			var val = getRadioValue(&quot;SQ1_1&quot;);
+
+			if (val === &quot;1&quot;) {
+				$(&quot;#SQ1_2&quot;).val(&quot;7&quot;).trigger(&quot;change&quot;);
+				$(&quot;#SQ1_2&quot;).prop(&quot;disabled&quot;, true);
+			} 
+			else if (val === &quot;2&quot;) {
+				$(&quot;#SQ1_2&quot;).val(&quot;16&quot;).trigger(&quot;change&quot;);
+				$(&quot;#SQ1_2&quot;).prop(&quot;disabled&quot;, true);
+			} 
+			else {
+				$(&quot;#SQ1_2&quot;).prop(&quot;disabled&quot;, false);
+			}
+
+		}, 0);
+	});
+
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+    
+
+
+&lt;!-- rowVar=SQ1_6 RowType=N thisRowCode=N^19^99^&amp;#47564;^&amp;#49464; --&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;div id=&quot;survey-container&quot; style=&quot;display: block;&quot;&gt;
+&lt;form name=&quot;Survey&quot; method=&quot;post&quot; action=&quot;&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;SQ1_1,SQ1_2,SQ1_2_1,SQ1_2_2,SQ1_3,TSQ1_3_7,SQ1_4,SQ1_5,SQ1_6&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;SQ1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;Q1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;042413253820499352079668&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;042413253820499352079668&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 7%; font-size:10px !important;&quot; aria-valuenow=&quot;7&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;7%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+
+				&lt;div class=&quot;p-2 mt-2&quot;&gt;
+					&lt;div class=&quot;Bd pt-str&quot;&gt;응답자 및 사업장 정보&lt;/div&gt;
+						
+					
+					&lt;div class=&quot;mt-2&quot;&gt;귀하의 기본 정보를 작성해 주십시오.&lt;/div&gt;
+					
+
+					&lt;div class=&quot;dashed-bottom&quot;&gt;&lt;/div&gt;
+				&lt;/div&gt;
+
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;table class=&quot;table table-bordered&quot; id=&quot;SQ1_table&quot;&gt;
+	&lt;colgroup&gt;
+		&lt;col width=&quot;10%&quot;&gt;
+		&lt;col width=&quot;90%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LSQ1_1&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;광역 구분&lt;/span&gt;&lt;/th&gt;
+		&lt;td&gt;
+&lt;table class=&quot;table mb-0&quot; id=&quot;SQ1_1_inner&quot; data-rv=&quot;SQ1_1&quot; style=&quot;border-bottom:1px solid #FFFFFF;margin-bottom:0rem;&quot;&gt;
+	&lt;colgroup&gt;
+						&lt;col width=&quot;49%&quot;&gt;
+						&lt;col width=&quot;49%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_1_1&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_1&#x27;,&#x27;1&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_1&quot; id=&quot;SQ1_1_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_1&#x27;,&#x27;1&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_1_1&quot; id=&quot;LSQ1_1_1&quot;&gt;울산시&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_1_2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_1&#x27;,&#x27;2&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_1&quot; id=&quot;SQ1_1_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_1&#x27;,&#x27;2&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_1_2&quot; id=&quot;LSQ1_1_2&quot;&gt;경상남도&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+				&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LSQ1_2&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;소재지&lt;/span&gt;&lt;/th&gt;
+		&lt;td class=&quot;align-middle text-center&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;SQ1_2_1&quot; id=&quot;SQ1_2_1&quot; value=&quot;울산광역시&quot;&gt;
+        &lt;div class=&quot;d-flex flex-column&quot;&gt;
+            &lt;div class=&quot;input-group mt-1&quot;&gt;
+                &lt;select id=&quot;SQ1_2&quot; name=&quot;SQ1_2&quot; class=&quot;form-control input-lg&quot; onchange=&quot;Areas(&#x27;SQ1_2&#x27;);&quot; disabled=&quot;&quot;&gt;
+                    &lt;option value=&quot;&quot;&gt;선택&lt;/option&gt;
+                    &lt;option value=&quot;1&quot;&gt;서울특별시&lt;/option&gt;
+                    &lt;option value=&quot;2&quot;&gt;부산광역시&lt;/option&gt;
+                    &lt;option value=&quot;3&quot;&gt;대구광역시&lt;/option&gt;
+                    &lt;option value=&quot;4&quot;&gt;인천광역시&lt;/option&gt;
+                    &lt;option value=&quot;5&quot;&gt;광주광역시&lt;/option&gt;
+                    &lt;option value=&quot;6&quot;&gt;대전광역시&lt;/option&gt;
+                    &lt;option value=&quot;7&quot;&gt;울산광역시&lt;/option&gt;
+                    &lt;option value=&quot;8&quot;&gt;세종특별자치시&lt;/option&gt;
+                    &lt;option value=&quot;9&quot;&gt;경기도&lt;/option&gt;
+                    &lt;option value=&quot;10&quot;&gt;강원특별자치도&lt;/option&gt;
+                    &lt;option value=&quot;11&quot;&gt;충청북도&lt;/option&gt;
+                    &lt;option value=&quot;12&quot;&gt;충청남도&lt;/option&gt;
+                    &lt;option value=&quot;13&quot;&gt;전북특별자치도&lt;/option&gt;
+                    &lt;option value=&quot;14&quot;&gt;전라남도&lt;/option&gt;
+                    &lt;option value=&quot;15&quot;&gt;경상북도&lt;/option&gt;
+                    &lt;option value=&quot;16&quot;&gt;경상남도&lt;/option&gt;
+                    &lt;option value=&quot;17&quot;&gt;제주특별자치도&lt;/option&gt;
+                &lt;/select&gt;&lt;span class=&quot;input-group-text&quot;&gt;시/도&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;input-group mt-1&quot;&gt;
+                &lt;select id=&quot;SQ1_2_2&quot; name=&quot;SQ1_2_2&quot; class=&quot;form-control input-lg&quot;&gt;
+                    
+                &lt;option value=&quot;&quot;&gt;선택&lt;/option&gt;&lt;option value=&quot;남구&quot;&gt;남구&lt;/option&gt;&lt;option value=&quot;동구&quot;&gt;동구&lt;/option&gt;&lt;option value=&quot;북구&quot;&gt;북구&lt;/option&gt;&lt;option value=&quot;울주군&quot;&gt;울주군&lt;/option&gt;&lt;option value=&quot;중구&quot;&gt;중구&lt;/option&gt;&lt;/select&gt;&lt;span class=&quot;input-group-text&quot;&gt;시/군/구&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LSQ1_3&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;주요 업종&lt;/span&gt;&lt;/th&gt;
+		&lt;td&gt;
+&lt;table class=&quot;table mb-0&quot; id=&quot;SQ1_3_inner&quot; data-rv=&quot;SQ1_3&quot; style=&quot;border-bottom:1px solid #FFFFFF;margin-bottom:0rem;&quot;&gt;
+	&lt;colgroup&gt;
+						&lt;col width=&quot;32.33%&quot;&gt;
+						&lt;col width=&quot;32.33%&quot;&gt;
+						&lt;col width=&quot;32.33%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_3_1&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;1&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_3&quot; id=&quot;SQ1_3_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;1&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_3_1&quot; id=&quot;LSQ1_3_1&quot;&gt;도·소매업&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_3_2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;2&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_3&quot; id=&quot;SQ1_3_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;2&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_3_2&quot; id=&quot;LSQ1_3_2&quot;&gt;음식점업&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_3_3&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;3&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_3&quot; id=&quot;SQ1_3_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;3&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_3_3&quot; id=&quot;LSQ1_3_3&quot;&gt;숙박업&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_3_4&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;4&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_3&quot; id=&quot;SQ1_3_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;4&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_3_4&quot; id=&quot;LSQ1_3_4&quot;&gt;부동산업&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_3_5&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;5&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_3&quot; id=&quot;SQ1_3_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;5&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_3_5&quot; id=&quot;LSQ1_3_5&quot;&gt;건설업&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_3_6&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;6&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_3&quot; id=&quot;SQ1_3_6&quot; value=&quot;6&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;6&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_3_6&quot; id=&quot;LSQ1_3_6&quot;&gt;제조업&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_3_7&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;7&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_3&quot; id=&quot;SQ1_3_7&quot; value=&quot;7&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_3&#x27;,&#x27;7&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_3_7&quot; id=&quot;LSQ1_3_7&quot;&gt;기타
+			&lt;input type=&quot;text&quot; class=&quot;form-control d-inline-block text-end&quot; id=&quot;TSQ1_3_7&quot; name=&quot;TSQ1_3_7&quot; onclick=&quot;event.stopPropagation();&quot; maxlength=&quot;255&quot; style=&quot;background-color: rgb(230, 255, 255);&quot;&gt;
+			&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+					&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+
+				&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LSQ1_4&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;업력(사업 유지기간)&lt;/span&gt;&lt;/th&gt;
+		&lt;td&gt;
+&lt;table class=&quot;table mb-0&quot; id=&quot;SQ1_4_inner&quot; data-rv=&quot;SQ1_4&quot; style=&quot;border-bottom:1px solid #FFFFFF;margin-bottom:0rem;&quot;&gt;
+	&lt;colgroup&gt;
+						&lt;col width=&quot;32.33%&quot;&gt;
+						&lt;col width=&quot;32.33%&quot;&gt;
+						&lt;col width=&quot;32.33%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_4_&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_4&quot; id=&quot;SQ1_4_&quot; value=&quot;&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_4_&quot; id=&quot;LSQ1_4_&quot;&gt;1년 이하&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_4_2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;2&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_4&quot; id=&quot;SQ1_4_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;2&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_4_2&quot; id=&quot;LSQ1_4_2&quot;&gt;2 ~ 3년 이하&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_4_3&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;3&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_4&quot; id=&quot;SQ1_4_3&quot; value=&quot;3&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;3&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_4_3&quot; id=&quot;LSQ1_4_3&quot;&gt;4 ~ 7년 이하&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_4_4&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;4&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_4&quot; id=&quot;SQ1_4_4&quot; value=&quot;4&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;4&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_4_4&quot; id=&quot;LSQ1_4_4&quot;&gt;7 ~ 10년 이하&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_4_5&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;5&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_4&quot; id=&quot;SQ1_4_5&quot; value=&quot;5&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_4&#x27;,&#x27;5&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_4_5&quot; id=&quot;LSQ1_4_5&quot;&gt;10년 초과&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+					&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+
+					&lt;/tr&gt;
+				&lt;/tbody&gt;&lt;/table&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LSQ1_5&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;성별&lt;/span&gt;&lt;/th&gt;
+		&lt;td&gt;
+&lt;table class=&quot;table mb-0&quot; id=&quot;SQ1_5_inner&quot; data-rv=&quot;SQ1_5&quot; style=&quot;border-bottom:1px solid #FFFFFF;margin-bottom:0rem;&quot;&gt;
+	&lt;colgroup&gt;
+						&lt;col width=&quot;49%&quot;&gt;
+						&lt;col width=&quot;49%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+					&lt;tr&gt;
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_5_1&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_5&#x27;,&#x27;1&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_5&quot; id=&quot;SQ1_5_1&quot; value=&quot;1&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_5&#x27;,&#x27;1&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_5_1&quot; id=&quot;LSQ1_5_1&quot;&gt;남성&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;td class=&quot;text-left&quot; style=&quot;cursor:pointer;&quot; id=&quot;TD_SQ1_5_2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_5&#x27;,&#x27;2&#x27;);&quot;&gt;
+		&lt;div class=&quot;form-check&quot;&gt;
+			&lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;SQ1_5&quot; id=&quot;SQ1_5_2&quot; value=&quot;2&quot; onclick=&quot;javascript:setRadioValue(&#x27;SQ1_5&#x27;,&#x27;2&#x27;);&quot;&gt;
+			&lt;label class=&quot;form-check-label&quot; style=&quot;cursor:pointer;&quot; for=&quot;SQ1_5_2&quot; id=&quot;LSQ1_5_2&quot;&gt;여성&lt;/label&gt;
+		&lt;/div&gt;
+&lt;/td&gt;
+
+					&lt;/tr&gt;
+					&lt;tr&gt;
+				&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LSQ1_6&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;연령&lt;/span&gt;&lt;/th&gt;
+		&lt;td class=&quot;align-middle text-center&quot;&gt;
+		&lt;div class=&quot;input-group&quot;&gt;
+			&lt;span class=&quot;input-group-text&quot;&gt;만&lt;/span&gt;			&lt;input name=&quot;SQ1_6&quot; id=&quot;SQ1_6&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;form-control input-lg&quot; maxlength=&quot;2&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;
+			&lt;span class=&quot;input-group-text&quot;&gt;세&lt;/span&gt;		&lt;/div&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-12 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+&lt;/script&gt;
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+
+&lt;noscript&gt;
+    &lt;div style=&quot;background:red; color:white; padding:20px; text-align:center;&quot;&gt;
+        &lt;strong&gt;경고:&lt;/strong&gt; 이 설문조사는 JavaScript가 활성화되어야 진행할 수 있습니다. 
+        브라우저 설정에서 JavaScript를 허용해 주세요.
+    &lt;/div&gt;
+&lt;/noscript&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

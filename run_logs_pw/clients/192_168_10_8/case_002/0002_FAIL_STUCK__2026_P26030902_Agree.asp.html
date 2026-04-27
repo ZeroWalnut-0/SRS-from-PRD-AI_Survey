@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26030902/Agree.asp</div>
+    <div><b>Title</b> 조합원 인식조사</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>100%응답자개인정보(휴대폰)■답례품지급을위하여귀하의개인정보를입력해주시기바랍니다.제공하신개인정보는답례품지급이외의목적으로절대사용하지않습니다.□공무직조합원노동환경및임금실태조사답례품수령을위한개인정보활용에동의합니다.(개인정보보호법제15조,제17조및제22조에따라아래와같이동의를얻고자합니다.)개인정보수집및이용목적:공무직조합원노동환경및임금실태조사답례품발송개인정보수집항목:휴대전화번호답례품:편의점모바일쿠폰개인정보보유및이용기간:2026.03.10.~2027.03.09.개인정보취급업무는외부전문업체에위탁하여운영하고있습니다.※답례품발송시잘못된번호기재로인하여오발송된기프티콘은재발송되지않사오니,정확하게기재부탁드립니다.동의여부동의비동의휴대전화번호*숫자만입력해주세요(예,01012345678)이전다음</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202603100942&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202603100942&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603101139&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;조합원 인식조사&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+
+
+function next()
+{
+
+	if (getRadioValue(&quot;Agree&quot;)==undefined)
+	{
+		alert(&quot;동의여부를 선택해 주십시오.&quot;);
+		return;
+	}
+
+	if (getRadioValue(&quot;Agree&quot;)==&quot;Y&quot;)
+	{
+//		if ($(&quot;#NAME&quot;).val().trim()==&quot;&quot;)
+//		{
+//			alert(&quot;성명을 입력해 주십시오.&quot;);
+//			$(&quot;#NAME&quot;).focus();
+//			return;
+//		}
+
+		if ($(&quot;#HP&quot;).val().trim()==&quot;&quot;)
+		{
+			alert(&quot;휴대폰 번호를 입력해 주십시오.&quot;);
+			$(&quot;#HP&quot;).focus();
+			return;
+		}
+
+		var regExp = /^(?:(010-\d{4})|(01[1|6|7|8|9]-\d{3,4}))-(\d{4})$/;
+		
+		if(!regExp.test($(&quot;#HP&quot;).val())){
+			alert(&quot;휴대폰번호가 올바르지 않습니다.&quot;);
+			return false;
+		}
+
+		
+		
+
+	}
+	
+	if (getRadioValue(&quot;Agree&quot;)==&quot;Y&quot;)
+	{		
+		hp = $(&quot;#HP&quot;).val();
+		
+
+		if (confirm(&quot;입력하신 휴대폰 번호가 다음과 같습니까? 답례품 발송시 잘못된 번호 기재로 인하여 오발송 된 경우에는 재발송되지 않습니다.\n[&quot;+hp+&quot;]&quot;))
+		{
+			document.Survey.submit();	
+		}
+	}
+	else
+	{
+		document.Survey.submit();
+	}
+}
+
+
+
+$(document).ready(function(){	
+	
+	
+
+
+
+		   $(&quot;#HP&quot;).css(&quot;ime-mode&quot;,&quot;disabled&quot;);
+		   //$(&quot;#HP&quot;).numeric();
+
+		   $(&quot;input[name=Agree]&quot;).click(function(){
+			   if ($(this).val()==&quot;Y&quot;)
+			   {
+				   $(&quot;#HP&quot;).prop(&quot;disabled&quot;,false);
+				   //$(&quot;#NAME&quot;).prop(&quot;disabled&quot;,false);
+			   }
+			   else
+			   {
+				    $(&quot;#HP&quot;).prop(&quot;disabled&quot;,true);
+					$(&quot;#HP&quot;).val(&quot;&quot;);
+					//$(&quot;#NAME&quot;).prop(&quot;disabled&quot;,true);
+					//$(&quot;#NAME&quot;).val(&quot;&quot;);
+			   }
+		   });
+
+		   $(&quot;#HP&quot;).keyup(function(){
+			$(this).val( $(this).val().replace(/[^0-9]/g, &quot;&quot;).replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,&quot;$1-$2-$3&quot;).replace(&quot;--&quot;, &quot;-&quot;) );
+			});
+
+});
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;HP,AGREE&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;Agree&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;SURVEY_END&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;031311050341324461017812&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;031311050341324461017812&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;54&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+	
+
+&lt;div class=&quot;container-fluid&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;				
+								&lt;div class=&quot;row justify-content-end&quot;&gt;
+					 &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+						&lt;div class=&quot;progress&quot;&gt;
+						
+						  &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 100%; font-size:10px !important;&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;100%&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt; &lt;!--col-2--&gt;
+				&lt;/div&gt;&lt;!--justify-end--&gt;
+				&lt;div style=&quot;border-bottom:1px dashed #aaa;color:#000;&quot; class=&quot;p-1 mt-2&quot;&gt;
+					&lt;span style=&quot;color:#000;&quot;&gt;응답자 개인 정보 (휴대폰)&lt;/span&gt;
+
+					
+					&lt;br&gt;■ 답례품 지급을 위하여 귀하의 개인정보를 입력해 주시기 바랍니다.
+				&lt;/div&gt;				
+					
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+						
+			
+					&lt;table class=&quot;table table-bordered&quot;&gt;
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td class=&quot;text-start bg-gray&quot; style=&quot;padding-left:20px&quot;&gt;
+
+								제공하신 개인정보는 답례품 지급 이외의 목적으로 절대 사용하지 않습니다.&lt;br&gt;&lt;br&gt;			
+
+								□ 공무직 조합원 노동환경 및 임금 실태조사 답례품 수령을 위한 개인정보 활용에 동의합니다.&lt;br&gt;
+								(개인정보보호법 제15조, 제17조 및 제22조에 따라 아래와 같이 동의를 얻고자 합니다.)&lt;br&gt;&lt;br&gt;
+							
+							   &lt;ul&gt;
+								&lt;li&gt;개인정보 수집 및 이용 목적 : 공무직 조합원 노동환경 및 임금 실태조사 답례품 발송&lt;/li&gt;
+								&lt;li&gt;개인정보 수집 항목 : 휴대전화번호&lt;/li&gt;
+								&lt;li&gt;답 례 품 : 편의점 모바일 쿠폰&lt;/li&gt;
+								&lt;li&gt;개인정보 보유 및 이용기간 : 2026.03.10. ~ 2027.03.09.&lt;/li&gt;
+								&lt;li&gt;개인정보 취급 업무는 외부 전문 업체에 위탁하여 운영하고 있습니다.&lt;/li&gt;
+							   &lt;/ul&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+
+					&lt;div class=&quot;panel-footer text-danger&quot;&gt;
+					※ 답례품 발송시 잘못된 번호 기재로 인하여 오발송된 기프티콘은 재발송되지 않사오니, 정확하게 기재 부탁드립니다.
+					&lt;/div&gt;
+			
+
+				
+					&lt;table class=&quot;table table-bordered&quot;&gt;
+						&lt;colgroup&gt;
+							&lt;col width=&quot;20%&quot;&gt;
+							&lt;col width=&quot;*&quot;&gt;
+							&lt;col width=&quot;40%&quot;&gt;
+						&lt;/colgroup&gt;
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td class=&quot;text-start v_mid bg-gray&quot;&gt;동의여부&lt;/td&gt;
+							&lt;td class=&quot;v_mid&quot;&gt;
+								&lt;div class=&quot;form-check&quot;&gt;
+									&lt;label class=&quot;form-check-label&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;Agree&quot; id=&quot;Agree_1&quot; value=&quot;Y&quot; class=&quot;form-check-input&quot;&gt;
+									동의
+									&lt;/label&gt;
+								&lt;/div&gt;							
+							&lt;/td&gt;
+
+							&lt;td class=&quot;v_mid&quot;&gt;
+								&lt;div class=&quot;form-check&quot;&gt;
+								&lt;label class=&quot;form-check-label&quot;&gt;
+									&lt;input type=&quot;radio&quot; name=&quot;Agree&quot; id=&quot;Agree_2&quot; value=&quot;N&quot; class=&quot;form-check-input&quot;&gt;
+									비동의
+								&lt;/label&gt;									
+								&lt;/div&gt;							
+							&lt;/td&gt;
+							
+						&lt;/tr&gt;
+						&lt;!--
+						&lt;tr&gt;
+							&lt;td class=&quot;text-start v_mid bg-gray&quot;&gt;성명&lt;/td&gt;
+							&lt;td class=&quot;text-start v_mid&quot; colspan=&quot;2&quot;&gt;
+							&lt;input type=&#x27;TEXT&#x27; name=&quot;NAME&quot; id=&quot;NAME&quot; class=&quot;form-control input-sm&quot; maxlength=&quot;20&quot;&gt;						
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						--&gt;
+						&lt;tr&gt;
+							&lt;td class=&quot;text-start v_mid bg-gray&quot;&gt;휴대전화번호&lt;/td&gt;
+							&lt;td class=&quot;text-start v_mid&quot; colspan=&quot;2&quot;&gt;
+							&lt;input type=&quot;tel&quot; pattern=&quot;[0-9]*&quot; inputmode=&quot;numeric&quot; name=&quot;HP&quot; id=&quot;HP&quot; class=&quot;form-control input-sm&quot; maxlength=&quot;13&quot;&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td class=&quot;text-start v_mid&quot; colspan=&quot;3&quot;&gt;*숫자만 입력해 주세요 (예, 01012345678)&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+					
+				&lt;/div&gt;&lt;!--mt1--&gt;
+
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot; btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+	
+	&lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+	
+	&lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot; class=&quot;&quot;&gt;&lt;/div&gt;
+
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>

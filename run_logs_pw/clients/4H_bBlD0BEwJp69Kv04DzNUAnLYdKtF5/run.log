@@ -1,0 +1,1528 @@
+2026-04-06 10:43:01,513 | INFO | [guards] loaded: {'__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]}
+2026-04-06 10:43:01,514 | INFO | [check_rules] loaded: {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}
+2026-04-06 10:43:01,544 | INFO | [coverage] guards applied: {'__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]}
+2026-04-06 10:43:01,548 | INFO | [coverage] extracted=45 (max_cases=50) done=0 bad=0 state=ON
+2026-04-06 10:43:01,601 | INFO | [parallel] workers=3 timeout_sec=600 total=45
+2026-04-06 10:43:01,607 | INFO | [coverage] 1 out_dir=run_logs_pw\clients\4H_bBlD0BEwJp69Kv04DzNUAnLYdKtF5\case_001 key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_1=|E1_10=10|E1_2=|E1_3=|E1_4=|E1_5=|E1_6=|E1_7=|E1_8=|E1_9=|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr= overrides={'E1_1': '', 'E1_2': '', 'E1_3': '', 'E1_4': '', 'E1_5': '', 'E1_6': '', 'E1_7': '', 'E1_8': '', 'E1_9': '', 'E1_10': '10', '__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}], '__CHECK_COUNT_RULES__': {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}}
+2026-04-06 10:43:01,607 | INFO | [coverage] 2 out_dir=run_logs_pw\clients\4H_bBlD0BEwJp69Kv04DzNUAnLYdKtF5\case_002 key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_1=1|E1_10=|E1_2=2|E1_3=3|E1_4=4|E1_5=|E1_6=|E1_7=|E1_8=|E1_9=|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr= overrides={'E1_1': '1', 'E1_2': '2', 'E1_3': '3', 'E1_4': '4', 'E1_5': '', 'E1_6': '', 'E1_7': '', 'E1_8': '', 'E1_9': '', 'E1_10': '', '__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}], '__CHECK_COUNT_RULES__': {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}}
+2026-04-06 10:43:01,607 | INFO | [coverage] 3 out_dir=run_logs_pw\clients\4H_bBlD0BEwJp69Kv04DzNUAnLYdKtF5\case_003 key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_10=1|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr= overrides={'E1_10': '1', '__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}], '__CHECK_COUNT_RULES__': {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}}
+2026-04-06 10:43:05,266 | INFO | [1] START https://www.surveys.kr/study/T24060701/index.asp?ResType=TEST-
+2026-04-06 10:43:05,338 | INFO | [3] START https://www.surveys.kr/study/T24060701/index.asp?ResType=TEST-
+2026-04-06 10:43:05,339 | INFO | [2] START https://www.surveys.kr/study/T24060701/index.asp?ResType=TEST-
+2026-04-06 10:43:05,521 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,577 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,597 | WARNING | [1] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,631 | WARNING | [3] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,636 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,645 | WARNING | [3] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,647 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,648 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:43:05,667 | WARNING | [2] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,668 | WARNING | [3] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:43:05,724 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:43:05,735 | WARNING | [3] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:43:05,831 | WARNING | [1] [requestfailed] GET https://trendresearch.speedgabia.com/Survey/ajax-loader.gif
+2026-04-06 10:43:06,585 | INFO | input(series): A0_1=12 base=A0
+2026-04-06 10:43:06,617 | INFO | input(series): A0_2=58 base=A0
+2026-04-06 10:43:06,662 | INFO | input(series): A0_3=96 base=A0
+2026-04-06 10:43:06,663 | INFO | input(series): A0_1=7 base=A0
+2026-04-06 10:43:06,700 | INFO | input(series): A0_4=96 base=A0
+2026-04-06 10:43:06,701 | INFO | input(series): A0_2=34 base=A0
+2026-04-06 10:43:06,746 | INFO | input(series): A0_3=38 base=A0
+2026-04-06 10:43:06,820 | INFO | input(series): A0_4=46 base=A0
+2026-04-06 10:43:06,948 | INFO | input(tel): HP=016-2890-5208
+2026-04-06 10:43:07,047 | INFO | input(series): A0_1=78 base=A0
+2026-04-06 10:43:07,130 | INFO | input(tel): HP=019-1734-8347
+2026-04-06 10:43:07,180 | INFO | input(text): NAME=최유진
+2026-04-06 10:43:07,227 | INFO | input(series): A0_2=93 base=A0
+2026-04-06 10:43:07,376 | INFO | input(text): NAME=최유진
+2026-04-06 10:43:07,382 | INFO | input(series): A0_3=95 base=A0
+2026-04-06 10:43:07,528 | INFO | input(text): midd=해당 없음
+2026-04-06 10:43:07,678 | INFO | input(series): A0_4=98 base=A0
+2026-04-06 10:43:08,049 | INFO | input(text): midd=보통
+2026-04-06 10:43:08,180 | INFO | input(text): RECKEY=기타
+2026-04-06 10:43:08,184 | INFO | input(tel): HP=017-359-0256
+2026-04-06 10:43:08,210 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:08,244 | INFO | input(text): NAME=최유진
+2026-04-06 10:43:08,280 | INFO | input(text): midd=해당 없음
+2026-04-06 10:43:08,284 | WARNING | [2] dialog type=alert message=컨택 일시 - 일 입력을 확인하여 주십시오.
+2026-04-06 10:43:08,332 | INFO | [2] next_trigger main method=window.next() duration_ms=47.3 submitted=True error=-
+2026-04-06 10:43:08,343 | INFO | input(text): RECKEY=기타
+2026-04-06 10:43:08,365 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:08,370 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:08,454 | WARNING | [3] dialog type=alert message=컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:43:08,521 | WARNING | [2] validation alert detected: 컨택 일시 - 일 입력을 확인하여 주십시오.
+2026-04-06 10:43:08,522 | INFO | [3] next_trigger main method=window.next() duration_ms=37.1 submitted=True error=-
+2026-04-06 10:43:08,553 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:08,568 | INFO | input(text): RECKEY=보통
+2026-04-06 10:43:08,588 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:08,791 | WARNING | [1] dialog type=alert message=컨택 일시 - 일 입력을 확인하여 주십시오.
+2026-04-06 10:43:08,811 | WARNING | [3] validation alert detected: 컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:43:08,829 | WARNING | [next_logic] unresolved: numeric_max:A0_2>31 | numeric_max:A0_3>23 | numeric_max:A0_4>59 | numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:43:08,854 | INFO | [1] next_trigger main method=window.next() duration_ms=47.1 submitted=True error=-
+2026-04-06 10:43:08,868 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:09,003 | WARNING | [next_logic] unresolved: numeric_max:A0_1>12 | numeric_max:A0_2>31 | numeric_max:A0_3>23 | numeric_max:A0_4>59 | numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:43:09,032 | WARNING | [1] validation alert detected: 컨택 일시 - 일 입력을 확인하여 주십시오.
+2026-04-06 10:43:09,117 | INFO | [next_logic] issue_repair: A0_2=17(issue:max) | A0_3=0(issue:max) | A0_4=15(issue:max)
+2026-04-06 10:43:09,222 | WARNING | [next_logic] unresolved: numeric_max:A0_2>31 | numeric_max:A0_3>23 | numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:43:09,296 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:43:09,341 | INFO | [next_logic] issue_repair: A0_1=8(issue:max) | A0_2=29(issue:max) | A0_3=16(issue:max) | A0_4=18(issue:max)
+2026-04-06 10:43:09,491 | INFO | [next_logic] issue_repair: A0_2=30(issue:max) | A0_3=10(issue:max)
+2026-04-06 10:43:09,491 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:43:09,500 | INFO | [next_logic] alert_repair: A0_2=17(issue:max) | A0_3=0(issue:max) | A0_4=15(issue:max) | A0_3=15(alert:day) | A0_3=15(alert:hour)
+2026-04-06 10:43:09,521 | INFO | [2] alert_retry=1 changed=['A0_2=17(issue:max)', 'A0_3=0(issue:max)', 'A0_4=15(issue:max)', 'A0_3=15(alert:day)', 'A0_3=15(alert:hour)']
+2026-04-06 10:43:09,623 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:43:09,656 | INFO | [2] next_trigger repair method=window.next() duration_ms=36.7 submitted=True error=-
+2026-04-06 10:43:09,699 | INFO | [next_logic] alert_repair: A0_1=8(issue:max) | A0_2=29(issue:max) | A0_3=16(issue:max) | A0_4=18(issue:max) | A0_2=1(alert:month) | A0_3=6(alert:hour)
+2026-04-06 10:43:09,701 | INFO | [3] alert_retry=1 changed=['A0_1=8(issue:max)', 'A0_2=29(issue:max)', 'A0_3=16(issue:max)', 'A0_4=18(issue:max)', 'A0_2=1(alert:month)', 'A0_3=6(alert:hour)']
+2026-04-06 10:43:09,711 | INFO | [2] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:09,784 | INFO | [next_logic] alert_repair: A0_2=30(issue:max) | A0_3=10(issue:max) | A0_3=7(alert:day) | A0_3=21(alert:hour)
+2026-04-06 10:43:09,785 | INFO | [1] alert_retry=1 changed=['A0_2=30(issue:max)', 'A0_3=10(issue:max)', 'A0_3=7(alert:day)', 'A0_3=21(alert:hour)']
+2026-04-06 10:43:09,861 | INFO | [3] next_trigger repair method=window.next() duration_ms=97.8 submitted=True error=-
+2026-04-06 10:43:09,862 | INFO | [1] next_trigger repair method=window.next() duration_ms=28.5 submitted=True error=-
+2026-04-06 10:43:09,923 | INFO | [1] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:09,925 | INFO | [3] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:10,180 | INFO | [2] step=0 A0 -> A1 (expected_next=A1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A0.asp -> https://www.surveys.kr/study/T24060701/A1.asp)
+2026-04-06 10:43:10,556 | INFO | [1] step=0 A0 -> A1 (expected_next=A1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A0.asp -> https://www.surveys.kr/study/T24060701/A1.asp)
+2026-04-06 10:43:10,636 | INFO | [3] step=0 A0 -> A1 (expected_next=A1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A0.asp -> https://www.surveys.kr/study/T24060701/A1.asp)
+2026-04-06 10:43:10,856 | INFO | radio(required): A1=2 (min=None, max=None)
+2026-04-06 10:43:10,990 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:11,133 | INFO | [2] next_trigger main method=window.next() duration_ms=4.4 submitted=True error=-
+2026-04-06 10:43:11,212 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:11,718 | INFO | [2] step=1 A1 -> Survey (expected_next=A2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:11,743 | INFO | radio(required): A1=2 (min=None, max=None)
+2026-04-06 10:43:11,887 | INFO | radio(required): A1=2 (min=None, max=None)
+2026-04-06 10:43:11,961 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:11,990 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:12,012 | INFO | [1] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:43:12,051 | INFO | [3] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:43:12,069 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:12,104 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:13,036 | INFO | [3] step=1 A1 -> Survey (expected_next=A2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:13,038 | INFO | input(tel, constrained): A2=32 (min=20, max=None)
+2026-04-06 10:43:13,076 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:13,078 | INFO | [1] step=1 A1 -> Survey (expected_next=A2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:13,124 | INFO | [2] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:43:13,180 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:13,602 | INFO | input(tel, constrained): A2=37 (min=20, max=None)
+2026-04-06 10:43:13,613 | INFO | [2] step=2 A2 -> Survey (expected_next=A3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:13,636 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:13,699 | INFO | [3] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:43:13,700 | INFO | input(tel, constrained): A2=30 (min=20, max=None)
+2026-04-06 10:43:13,719 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:13,750 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:13,886 | INFO | [1] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:43:13,937 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:14,614 | INFO | [3] step=2 A2 -> Survey (expected_next=A3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:14,639 | INFO | [1] step=2 A2 -> A3 (expected_next=A3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A2.asp -> https://www.surveys.kr/study/T24060701/A3.asp)
+2026-04-06 10:43:14,739 | INFO | [override] radio(NEQSET): A3 excluded=['1'] -> picked=2
+2026-04-06 10:43:14,773 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:14,822 | INFO | [2] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:43:14,868 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:15,303 | INFO | [2] step=3 A3 -> Survey (expected_next=A4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:15,343 | INFO | [override] radio(NEQSET): A3 excluded=['1'] -> picked=2
+2026-04-06 10:43:15,376 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:15,377 | INFO | [override] radio(NEQSET): A3 excluded=['1'] -> picked=2
+2026-04-06 10:43:15,409 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:15,429 | INFO | [3] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:43:15,457 | INFO | [1] next_trigger main method=window.next() duration_ms=2.9 submitted=True error=-
+2026-04-06 10:43:15,546 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:15,683 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:15,904 | INFO | [override] radio: A4=9
+2026-04-06 10:43:15,959 | INFO | [3] step=3 A3 -> Survey (expected_next=A4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:16,007 | INFO | [1] step=3 A3 -> A4 (expected_next=A4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A3.asp -> https://www.surveys.kr/study/T24060701/A4.asp)
+2026-04-06 10:43:16,012 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:16,068 | INFO | [2] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:43:16,122 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:16,327 | INFO | [override] radio: A4=9
+2026-04-06 10:43:16,394 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:16,428 | INFO | [2] step=4 A4 -> Survey (expected_next=A5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:16,460 | INFO | [3] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:43:16,515 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:16,654 | INFO | [override] radio: A4=9
+2026-04-06 10:43:16,696 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:16,755 | INFO | [1] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:43:16,799 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:16,845 | INFO | [3] step=4 A4 -> Survey (expected_next=A5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:17,052 | INFO | radio(required): A5=3 (min=None, max=None)
+2026-04-06 10:43:17,090 | INFO | [1] step=4 A4 -> Survey (expected_next=A5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:17,128 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:17,187 | INFO | [2] next_trigger main method=window.next() duration_ms=3.9 submitted=True error=-
+2026-04-06 10:43:17,233 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:17,398 | INFO | radio(required): A5=3 (min=None, max=None)
+2026-04-06 10:43:17,485 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:17,568 | INFO | [3] next_trigger main method=window.next() duration_ms=4.5 submitted=True error=-
+2026-04-06 10:43:17,615 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:17,692 | INFO | [2] step=5 A5 -> Survey (expected_next=A6A action=Survey.asp url=https://www.surveys.kr/study/T24060701/A5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:17,807 | INFO | radio(required): A5=1 (min=None, max=None)
+2026-04-06 10:43:17,855 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:17,913 | INFO | [1] next_trigger main method=window.next() duration_ms=3.1 submitted=True error=-
+2026-04-06 10:43:17,957 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:18,112 | INFO | [3] step=5 A5 -> Survey (expected_next=A6A action=Survey.asp url=https://www.surveys.kr/study/T24060701/A5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:18,186 | INFO | input(tel): A6A_1=144
+2026-04-06 10:43:18,219 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:18,257 | INFO | [1] step=5 A5 -> Survey (expected_next=A6A action=Survey.asp url=https://www.surveys.kr/study/T24060701/A5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:18,286 | INFO | [2] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:43:18,341 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:18,744 | INFO | [2] step=6 A6A -> Survey (expected_next=A7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A6A.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:18,814 | INFO | input(tel): A6A_1=302
+2026-04-06 10:43:18,828 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:18,899 | INFO | [3] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:43:18,913 | INFO | input(tel): A6A_1=84
+2026-04-06 10:43:18,940 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:18,963 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:19,031 | INFO | [1] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:43:19,122 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:19,396 | INFO | [3] step=6 A6A -> Survey (expected_next=A7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A6A.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:19,436 | INFO | radio(required): A7=2 (min=None, max=None)
+2026-04-06 10:43:19,525 | INFO | [1] step=6 A6A -> Survey (expected_next=A7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A6A.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:19,590 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:19,641 | INFO | [2] next_trigger main method=window.next() duration_ms=4.6 submitted=True error=-
+2026-04-06 10:43:19,705 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:20,181 | INFO | [2] step=7 A7 -> Survey (expected_next=A8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:20,188 | INFO | radio(required): A7=1 (min=None, max=None)
+2026-04-06 10:43:20,258 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:20,273 | INFO | radio(required): A7=1 (min=None, max=None)
+2026-04-06 10:43:20,313 | INFO | [3] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:43:20,356 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:20,374 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:20,444 | INFO | [1] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:43:20,519 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:20,878 | INFO | [3] step=7 A7 -> Survey (expected_next=A8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:20,940 | INFO | [1] step=7 A7 -> Survey (expected_next=A8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:21,247 | INFO | radio(required): A8=4 (min=None, max=None)
+2026-04-06 10:43:21,359 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:21,376 | INFO | [override] radio(NEQSET): B1 excluded=['3'] -> picked=2
+2026-04-06 10:43:21,416 | INFO | [override] radio(NEQSET): B1 excluded=['3'] -> picked=1
+2026-04-06 10:43:21,416 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:21,423 | INFO | [2] next_trigger main method=window.next() duration_ms=2.7 submitted=True error=-
+2026-04-06 10:43:21,452 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:21,472 | INFO | [3] next_trigger main method=window.next() duration_ms=3.1 submitted=True error=-
+2026-04-06 10:43:21,485 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:21,544 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:21,547 | INFO | [1] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:43:21,812 | INFO | [2] step=8 A8 -> B1 (expected_next=B1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A8.asp -> https://www.surveys.kr/study/T24060701/B1.asp)
+2026-04-06 10:43:21,815 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:21,953 | INFO | [3] step=8 B1 -> B2 (expected_next=B2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B1.asp -> https://www.surveys.kr/study/T24060701/B2.asp)
+2026-04-06 10:43:22,018 | INFO | [1] step=8 B1 -> B2 (expected_next=B2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B1.asp -> https://www.surveys.kr/study/T24060701/B2.asp)
+2026-04-06 10:43:22,345 | INFO | [override] radio(NEQSET): B1 excluded=['3'] -> picked=1
+2026-04-06 10:43:22,391 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:22,434 | INFO | [override] radio(NEQSET): B2 excluded=['2', '6', '7', '8'] -> picked=1
+2026-04-06 10:43:22,461 | INFO | [2] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:43:22,487 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:22,511 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:22,562 | INFO | [3] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:43:22,613 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:22,757 | INFO | [override] radio(NEQSET): B2 excluded=['2', '6', '7', '8'] -> picked=1
+2026-04-06 10:43:22,913 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:22,960 | INFO | [2] step=9 B1 -> Survey (expected_next=B2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:23,034 | INFO | [1] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:43:23,080 | INFO | [3] step=9 B2 -> Survey (expected_next=B3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:23,284 | INFO | [override] radio(NEQSET): B2 excluded=['2', '6', '7', '8'] -> picked=1
+2026-04-06 10:43:23,314 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:23,318 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:23,368 | INFO | [2] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:43:23,418 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:23,739 | INFO | radio(required): B3=52 (min=None, max=None)
+2026-04-06 10:43:23,780 | INFO | [1] step=9 B2 -> Survey (expected_next=B3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:23,876 | INFO | [2] step=10 B2 -> Survey (expected_next=B3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:23,891 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:23,941 | INFO | [3] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:43:23,989 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:24,352 | INFO | [3] step=10 B3 -> Survey (expected_next=B4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:24,360 | INFO | radio(required): B3=11 (min=None, max=None)
+2026-04-06 10:43:24,421 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:24,449 | INFO | radio(required): B3=37 (min=None, max=None)
+2026-04-06 10:43:24,470 | INFO | [1] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:43:24,507 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:24,514 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:24,561 | INFO | [2] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:43:24,613 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:24,881 | INFO | [1] step=10 B3 -> Survey (expected_next=B4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:25,026 | INFO | [2] step=11 B3 -> Survey (expected_next=B4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:25,113 | INFO | [override] radio(NEQSET): B4 excluded=['2'] -> picked=3
+2026-04-06 10:43:25,140 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:25,195 | INFO | [3] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:43:25,246 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:25,547 | INFO | [override] radio(NEQSET): B4 excluded=['2'] -> picked=3
+2026-04-06 10:43:25,579 | INFO | [3] step=11 B4 -> Survey (expected_next=B5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:25,592 | INFO | [override] radio(NEQSET): B4 excluded=['2'] -> picked=1
+2026-04-06 10:43:25,601 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:25,626 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:25,646 | INFO | [1] next_trigger main method=window.next() duration_ms=3.7 submitted=True error=-
+2026-04-06 10:43:25,681 | INFO | [2] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:43:25,696 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:25,722 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:25,942 | INFO | [override] radio: B5=1
+2026-04-06 10:43:25,990 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:26,089 | INFO | [3] next_trigger main method=window.next() duration_ms=3.9 submitted=True error=-
+2026-04-06 10:43:26,116 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:26,156 | INFO | [1] step=11 B4 -> Survey (expected_next=B5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:26,199 | INFO | [2] step=12 B4 -> Survey (expected_next=B5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:26,499 | INFO | [3] step=12 B5 -> Survey (expected_next=B6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:26,748 | INFO | [override] radio: B5=1
+2026-04-06 10:43:26,769 | INFO | [override] radio: B5=1
+2026-04-06 10:43:26,788 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:26,810 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:26,846 | INFO | [1] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:43:26,887 | INFO | [2] next_trigger main method=window.next() duration_ms=5.5 submitted=True error=-
+2026-04-06 10:43:26,901 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:26,931 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:27,138 | INFO | [override] radio: B6=1
+2026-04-06 10:43:27,178 | INFO | [OTHER] cleared input name=TB6_2 id=TB6_2 reason=selected-option-nearby
+2026-04-06 10:43:27,195 | INFO | [OTHER] cleared input name=TB6_3 id=TB6_3 reason=selected-option-nearby
+2026-04-06 10:43:27,246 | INFO | [OTHER] cleared input name=TB6_4 id=TB6_4 reason=selected-option-nearby
+2026-04-06 10:43:27,351 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:27,423 | INFO | [3] next_trigger main method=window.next() duration_ms=5.1 submitted=True error=-
+2026-04-06 10:43:27,539 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:27,737 | INFO | [1] step=12 B5 -> Survey (expected_next=B6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:27,753 | INFO | [2] step=13 B5 -> Survey (expected_next=B6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:27,823 | INFO | [3] step=13 B6 -> Survey (expected_next=C1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:28,365 | INFO | [override] radio: D1=1
+2026-04-06 10:43:28,381 | INFO | [override] radio: B6=1
+2026-04-06 10:43:28,403 | INFO | [override] radio: B6=1
+2026-04-06 10:43:28,407 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:28,429 | INFO | [OTHER] cleared input name=TB6_2 id=TB6_2 reason=selected-option-nearby
+2026-04-06 10:43:28,439 | INFO | [OTHER] cleared input name=TB6_3 id=TB6_3 reason=selected-option-nearby
+2026-04-06 10:43:28,451 | INFO | [OTHER] cleared input name=TB6_2 id=TB6_2 reason=selected-option-nearby
+2026-04-06 10:43:28,454 | INFO | [OTHER] cleared input name=TB6_4 id=TB6_4 reason=selected-option-nearby
+2026-04-06 10:43:28,471 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:28,486 | INFO | [OTHER] cleared input name=TB6_3 id=TB6_3 reason=selected-option-nearby
+2026-04-06 10:43:28,487 | INFO | [3] next_trigger main method=window.next() duration_ms=3.7 submitted=True error=-
+2026-04-06 10:43:28,509 | INFO | [OTHER] cleared input name=TB6_4 id=TB6_4 reason=selected-option-nearby
+2026-04-06 10:43:28,529 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:28,552 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:28,570 | INFO | [2] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:43:28,612 | INFO | [1] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:43:28,628 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:28,716 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:28,978 | INFO | [3] step=14 D1 -> Survey (expected_next=D2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:29,121 | INFO | [2] step=14 B6 -> Survey (expected_next=C1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:29,158 | INFO | [1] step=13 B6 -> Survey (expected_next=C1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:29,620 | INFO | [override] radio: D1=1
+2026-04-06 10:43:29,649 | INFO | [override] checkbox UNCHECK: D2_NONE (val='')
+2026-04-06 10:43:29,661 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:29,663 | INFO | checkbox(skip): D2_NONE endswith _NONE
+2026-04-06 10:43:29,698 | INFO | input(tel): D2=96
+2026-04-06 10:43:29,734 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:29,756 | INFO | [2] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:43:29,801 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:29,842 | INFO | [3] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:43:29,854 | INFO | [override] radio: D1=1
+2026-04-06 10:43:29,891 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:29,910 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:29,963 | INFO | [1] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:43:30,003 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:30,181 | INFO | [2] step=15 D1 -> Survey (expected_next=D2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:30,277 | INFO | [3] step=15 D2 -> Survey (expected_next=D3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:30,351 | INFO | [1] step=14 D1 -> Survey (expected_next=D2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:30,583 | INFO | [override] checkbox UNCHECK: D2_NONE (val='')
+2026-04-06 10:43:30,592 | INFO | checkbox(skip): D2_NONE endswith _NONE
+2026-04-06 10:43:30,642 | INFO | input(tel): D2=57
+2026-04-06 10:43:30,663 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:30,732 | INFO | [2] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:43:30,798 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:30,862 | INFO | [override] checkbox UNCHECK: D2_NONE (val='')
+2026-04-06 10:43:30,882 | INFO | checkbox(skip): D2_NONE endswith _NONE
+2026-04-06 10:43:30,920 | INFO | input(tel): D2=49
+2026-04-06 10:43:30,958 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:31,071 | INFO | [1] next_trigger main method=window.next() duration_ms=2.7 submitted=True error=-
+2026-04-06 10:43:31,138 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:31,211 | INFO | [2] step=16 D2 -> Survey (expected_next=D3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:31,454 | INFO | [1] step=15 D2 -> Survey (expected_next=D3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:31,646 | INFO | rank(D3) attempt 1: OK slots=['1', '4', '3', '6', '2'] forced={}
+2026-04-06 10:43:31,737 | INFO | [3] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:43:31,801 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:32,316 | INFO | [3] step=16 D3 -> Survey (expected_next=D4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:32,627 | INFO | rank(D3) attempt 1: OK slots=['4', '5', '3', '1', '2'] forced={}
+2026-04-06 10:43:32,700 | INFO | [2] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:43:32,755 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:32,920 | INFO | rank(D3) attempt 1: OK slots=['2', '4', '3', '5', '1'] forced={}
+2026-04-06 10:43:32,995 | INFO | [1] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:43:33,049 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:33,215 | INFO | radio(series): D4_1=3 base=D4 freq={'3': 1}
+2026-04-06 10:43:33,322 | INFO | [2] step=17 D3 -> Survey (expected_next=D4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:33,459 | INFO | [1] step=16 D3 -> Survey (expected_next=D4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:33,471 | INFO | radio(series): D4_2=5 base=D4 freq={'3': 1, '5': 1}
+2026-04-06 10:43:33,595 | INFO | radio(series): D4_3=4 base=D4 freq={'3': 1, '5': 1, '4': 1}
+2026-04-06 10:43:33,717 | INFO | radio(series): D4_4=6 base=D4 freq={'3': 1, '5': 1, '4': 1, '6': 1}
+2026-04-06 10:43:33,879 | INFO | radio(series): D4_5=2 base=D4 freq={'3': 1, '5': 1, '4': 1, '6': 1, '2': 1}
+2026-04-06 10:43:34,084 | INFO | radio(series): D4_6=7 base=D4 freq={'3': 1, '5': 1, '4': 1, '6': 1, '2': 1, '7': 1}
+2026-04-06 10:43:34,210 | INFO | checked_count_after_fill=6
+2026-04-06 10:43:34,351 | INFO | [3] next_trigger main method=window.next() duration_ms=3.2 submitted=True error=-
+2026-04-06 10:43:34,435 | INFO | radio(series): D4_1=2 base=D4 freq={'2': 1}
+2026-04-06 10:43:34,611 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:34,733 | INFO | radio(series): D4_1=6 base=D4 freq={'6': 1}
+2026-04-06 10:43:34,794 | INFO | radio(series): D4_2=6 base=D4 freq={'2': 1, '6': 1}
+2026-04-06 10:43:35,051 | INFO | [3] step=17 D4 -> D5 (expected_next=D5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D4.asp -> https://www.surveys.kr/study/T24060701/D5.asp)
+2026-04-06 10:43:35,099 | INFO | radio(series): D4_2=1 base=D4 freq={'6': 1, '1': 1}
+2026-04-06 10:43:35,102 | INFO | radio(series): D4_3=7 base=D4 freq={'2': 1, '6': 1, '7': 1}
+2026-04-06 10:43:35,223 | INFO | radio(series): D4_4=3 base=D4 freq={'2': 1, '6': 1, '7': 1, '3': 1}
+2026-04-06 10:43:35,224 | INFO | radio(series): D4_3=3 base=D4 freq={'6': 1, '1': 1, '3': 1}
+2026-04-06 10:43:35,355 | INFO | radio(series): D4_5=4 base=D4 freq={'2': 1, '6': 1, '7': 1, '3': 1, '4': 1}
+2026-04-06 10:43:35,383 | INFO | radio(series): D4_4=2 base=D4 freq={'6': 1, '1': 1, '3': 1, '2': 1}
+2026-04-06 10:43:35,569 | INFO | radio(series): D4_6=1 base=D4 freq={'2': 1, '6': 1, '7': 1, '3': 1, '4': 1, '1': 1}
+2026-04-06 10:43:35,569 | INFO | radio(series): D4_5=4 base=D4 freq={'6': 1, '1': 1, '3': 1, '2': 1, '4': 1}
+2026-04-06 10:43:35,642 | INFO | checked_count_after_fill=6
+2026-04-06 10:43:35,709 | INFO | [1] next_trigger main method=window.next() duration_ms=2.9 submitted=True error=-
+2026-04-06 10:43:35,760 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:35,762 | INFO | radio(series): D4_6=7 base=D4 freq={'6': 1, '1': 1, '3': 1, '2': 1, '4': 1, '7': 1}
+2026-04-06 10:43:35,829 | INFO | checked_count_after_fill=6
+2026-04-06 10:43:35,893 | INFO | [2] next_trigger main method=window.next() duration_ms=5.5 submitted=True error=-
+2026-04-06 10:43:35,947 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:36,113 | INFO | [1] step=17 D4 -> Survey (expected_next=D5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:36,269 | INFO | [2] step=18 D4 -> Survey (expected_next=D5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:36,303 | INFO | rank(D5) attempt 1: OK slots=['5', '3', '1', '2', '4'] forced={}
+2026-04-06 10:43:36,403 | INFO | [3] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:43:36,454 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:36,964 | INFO | [3] step=18 D5 -> Survey (expected_next=D6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:37,185 | INFO | rank(D5) attempt 1: OK slots=['4', '3', '5', '2', '1'] forced={}
+2026-04-06 10:43:37,262 | INFO | [1] next_trigger main method=window.next() duration_ms=2.7 submitted=True error=-
+2026-04-06 10:43:37,319 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:37,687 | INFO | [1] step=18 D5 -> Survey (expected_next=D6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:37,690 | INFO | radio(series): D6_1=3 base=D6 freq={'3': 1}
+2026-04-06 10:43:37,729 | INFO | rank(D5) attempt 1: OK slots=['1', '2', '4', '5', '3'] forced={}
+2026-04-06 10:43:37,802 | INFO | [2] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:43:37,829 | INFO | radio(series): D6_2=1 base=D6 freq={'3': 1, '1': 1}
+2026-04-06 10:43:37,856 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:38,011 | INFO | radio(series): D6_3=2 base=D6 freq={'3': 1, '1': 1, '2': 1}
+2026-04-06 10:43:38,241 | INFO | radio(series): D6_4=7 base=D6 freq={'3': 1, '1': 1, '2': 1, '7': 1}
+2026-04-06 10:43:38,418 | INFO | [2] step=19 D5 -> Survey (expected_next=D6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:38,464 | INFO | radio(series): D6_5=5 base=D6 freq={'3': 1, '1': 1, '2': 1, '7': 1, '5': 1}
+2026-04-06 10:43:38,526 | INFO | checked_count_after_fill=5
+2026-04-06 10:43:38,591 | INFO | [3] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:43:38,599 | INFO | radio(series): D6_1=5 base=D6 freq={'5': 1}
+2026-04-06 10:43:38,628 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:38,722 | INFO | radio(series): D6_2=7 base=D6 freq={'5': 1, '7': 1}
+2026-04-06 10:43:38,894 | INFO | radio(series): D6_3=3 base=D6 freq={'5': 1, '7': 1, '3': 1}
+2026-04-06 10:43:39,047 | INFO | [3] step=19 D6 -> Survey (expected_next=D7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:39,064 | INFO | radio(series): D6_4=6 base=D6 freq={'5': 1, '7': 1, '3': 1, '6': 1}
+2026-04-06 10:43:39,177 | INFO | radio(series): D6_5=2 base=D6 freq={'5': 1, '7': 1, '3': 1, '6': 1, '2': 1}
+2026-04-06 10:43:39,241 | INFO | radio(series): D6_1=4 base=D6 freq={'4': 1}
+2026-04-06 10:43:39,247 | INFO | checked_count_after_fill=5
+2026-04-06 10:43:39,307 | INFO | [1] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:43:39,369 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:39,396 | INFO | radio(series): D6_2=6 base=D6 freq={'4': 1, '6': 1}
+2026-04-06 10:43:39,503 | INFO | input(series): D7_1=21 base=D7
+2026-04-06 10:43:39,534 | INFO | input(series): D7_2=2500 base=D7
+2026-04-06 10:43:39,571 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:39,589 | INFO | radio(series): D6_3=2 base=D6 freq={'4': 1, '6': 1, '2': 1}
+2026-04-06 10:43:39,658 | INFO | [3] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:43:39,753 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:39,817 | INFO | [1] step=19 D6 -> Survey (expected_next=D7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:39,831 | INFO | radio(series): D6_4=7 base=D6 freq={'4': 1, '6': 1, '2': 1, '7': 1}
+2026-04-06 10:43:40,008 | INFO | radio(series): D6_5=5 base=D6 freq={'4': 1, '6': 1, '2': 1, '7': 1, '5': 1}
+2026-04-06 10:43:40,048 | INFO | [3] step=20 D7 -> Survey (expected_next=D8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:40,096 | INFO | checked_count_after_fill=5
+2026-04-06 10:43:40,153 | INFO | [2] next_trigger main method=window.next() duration_ms=4.9 submitted=True error=-
+2026-04-06 10:43:40,212 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:40,517 | INFO | input(series): D7_1=16 base=D7
+2026-04-06 10:43:40,584 | INFO | input(series): D7_2=2500 base=D7
+2026-04-06 10:43:40,629 | INFO | [2] step=20 D6 -> Survey (expected_next=D7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:40,632 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:40,641 | INFO | [override] radio(NEQSET): D8 excluded=['3', '4'] -> picked=1
+2026-04-06 10:43:40,674 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:40,684 | INFO | [1] next_trigger main method=window.next() duration_ms=2.6 submitted=True error=-
+2026-04-06 10:43:40,728 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:40,731 | INFO | [3] next_trigger main method=window.next() duration_ms=4.6 submitted=True error=-
+2026-04-06 10:43:40,784 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:41,064 | INFO | [1] step=20 D7 -> Survey (expected_next=D8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:41,219 | INFO | [3] step=21 D8 -> Survey (expected_next=D9 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:41,284 | INFO | input(series): D7_1=33 base=D7
+2026-04-06 10:43:41,302 | INFO | input(series): D7_2=2500 base=D7
+2026-04-06 10:43:41,313 | INFO | checked_count_after_fill=0
+2026-04-06 10:43:41,394 | INFO | [2] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:43:41,417 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:41,529 | INFO | [override] radio(NEQSET): D8 excluded=['3', '4'] -> picked=2
+2026-04-06 10:43:41,564 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:41,618 | INFO | [1] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:43:41,671 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:41,862 | INFO | [2] step=21 D7 -> Survey (expected_next=D8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:42,106 | INFO | [1] step=21 D8 -> Survey (expected_next=D9 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:42,106 | INFO | [override] checkbox: D9_1 picks=['1']
+2026-04-06 10:43:42,289 | INFO | [override] radio(NEQSET): D8 excluded=['3', '4'] -> picked=1
+2026-04-06 10:43:42,293 | INFO | [override] checkbox: D9_2 picks=['2']
+2026-04-06 10:43:42,330 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:42,384 | INFO | [2] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:43:42,463 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:42,464 | INFO | [override] checkbox UNCHECK: D9_3 (val='')
+2026-04-06 10:43:42,638 | INFO | [override] checkbox UNCHECK: D9_4 (val='')
+2026-04-06 10:43:42,731 | INFO | [override] checkbox: D9_1 picks=['1']
+2026-04-06 10:43:42,788 | INFO | [2] step=22 D8 -> Survey (expected_next=D9 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:42,843 | INFO | [override] checkbox UNCHECK: D9_5 (val='')
+2026-04-06 10:43:42,901 | INFO | [override] checkbox: D9_2 picks=['2']
+2026-04-06 10:43:43,026 | INFO | [override] checkbox UNCHECK: D9_6 (val='')
+2026-04-06 10:43:43,046 | INFO | [override] checkbox UNCHECK: D9_3 (val='')
+2026-04-06 10:43:43,197 | INFO | [override] checkbox UNCHECK: D9_7 (val='')
+2026-04-06 10:43:43,214 | INFO | [override] checkbox UNCHECK: D9_4 (val='')
+2026-04-06 10:43:43,371 | INFO | [override] checkbox UNCHECK: D9_8 (val='')
+2026-04-06 10:43:43,372 | INFO | [override] checkbox UNCHECK: D9_5 (val='')
+2026-04-06 10:43:43,448 | INFO | [override] checkbox: D9_1 picks=['1']
+2026-04-06 10:43:43,468 | INFO | checkbox-group: D9 has count-rule, so handled overrides will be normalized by group logic: ['D9_1', 'D9_2', 'D9_3', 'D9_4', 'D9_5', 'D9_6', 'D9_7', 'D9_8']
+2026-04-06 10:43:43,540 | INFO | [override] checkbox UNCHECK: D9_6 (val='')
+2026-04-06 10:43:43,638 | INFO | [override] checkbox: D9_2 picks=['2']
+2026-04-06 10:43:43,700 | INFO | [override] checkbox UNCHECK: D9_7 (val='')
+2026-04-06 10:43:43,807 | INFO | [override] checkbox UNCHECK: D9_3 (val='')
+2026-04-06 10:43:43,868 | INFO | [override] checkbox UNCHECK: D9_8 (val='')
+2026-04-06 10:43:43,965 | INFO | checkbox-group: D9 has count-rule, so handled overrides will be normalized by group logic: ['D9_1', 'D9_2', 'D9_3', 'D9_4', 'D9_5', 'D9_6', 'D9_7', 'D9_8']
+2026-04-06 10:43:43,972 | INFO | [override] checkbox UNCHECK: D9_4 (val='')
+2026-04-06 10:43:44,164 | INFO | [override] checkbox UNCHECK: D9_5 (val='')
+2026-04-06 10:43:44,321 | INFO | [override] checkbox UNCHECK: D9_6 (val='')
+2026-04-06 10:43:44,488 | INFO | [override] checkbox UNCHECK: D9_7 (val='')
+2026-04-06 10:43:44,660 | INFO | [override] checkbox UNCHECK: D9_8 (val='')
+2026-04-06 10:43:44,773 | INFO | checkbox-group: D9 has count-rule, so handled overrides will be normalized by group logic: ['D9_1', 'D9_2', 'D9_3', 'D9_4', 'D9_5', 'D9_6', 'D9_7', 'D9_8']
+2026-04-06 10:43:45,111 | INFO | checkbox-group: D9 picks=['1', '2', '3', '4', '5', '6', '7', '8'] checked=[]
+2026-04-06 10:43:45,122 | INFO | checked_count_after_fill=8
+2026-04-06 10:43:45,185 | INFO | [3] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:43:45,236 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:45,606 | INFO | [3] step=22 D9 -> Survey (expected_next=E1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D9.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:45,637 | INFO | checkbox-group: D9 picks=['1', '2', '3', '4', '5', '6', '7', '8'] checked=[]
+2026-04-06 10:43:45,645 | INFO | checked_count_after_fill=8
+2026-04-06 10:43:45,692 | INFO | [1] next_trigger main method=window.next() duration_ms=2.1 submitted=True error=-
+2026-04-06 10:43:45,744 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:46,169 | INFO | [1] step=22 D9 -> Survey (expected_next=E1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D9.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:46,301 | WARNING | [override] checkbox fallback: E1_10 requested value='1' missing -> picked first
+2026-04-06 10:43:46,302 | INFO | [override] checkbox: E1_10 picks=['1']
+2026-04-06 10:43:46,335 | INFO | checkbox-group: E1 has count-rule, so handled overrides will be normalized by group logic: ['E1_10']
+2026-04-06 10:43:46,349 | INFO | checkbox-group: D9 picks=['1', '2', '3', '4', '5', '6', '7', '8'] checked=[]
+2026-04-06 10:43:46,356 | INFO | checked_count_after_fill=8
+2026-04-06 10:43:46,412 | INFO | [2] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:43:46,468 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:46,759 | INFO | checkbox-group: E1 picks=['10'] checked=[]
+2026-04-06 10:43:46,771 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:46,848 | INFO | [3] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:43:46,914 | INFO | [2] step=23 D9 -> Survey (expected_next=E1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D9.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:46,939 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:47,080 | INFO | [override] checkbox UNCHECK: E1_1 (val='')
+2026-04-06 10:43:47,215 | INFO | [3] step=23 E1 -> Survey (expected_next=E2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:47,218 | INFO | [override] checkbox UNCHECK: E1_2 (val='')
+2026-04-06 10:43:47,359 | INFO | [override] checkbox UNCHECK: E1_3 (val='')
+2026-04-06 10:43:47,513 | INFO | [override] checkbox UNCHECK: E1_4 (val='')
+2026-04-06 10:43:47,529 | INFO | [override] checkbox: E1_1 picks=['1']
+2026-04-06 10:43:47,668 | INFO | [override] checkbox UNCHECK: E1_5 (val='')
+2026-04-06 10:43:47,700 | INFO | [override] checkbox: E1_2 picks=['2']
+2026-04-06 10:43:47,731 | INFO | [override] radio(NEQSET): G1 excluded=['1'] -> picked=2
+2026-04-06 10:43:47,760 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:47,809 | INFO | [3] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:43:47,826 | INFO | [override] checkbox UNCHECK: E1_6 (val='')
+2026-04-06 10:43:47,853 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:47,859 | INFO | [override] checkbox: E1_3 picks=['3']
+2026-04-06 10:43:47,979 | INFO | [override] checkbox UNCHECK: E1_7 (val='')
+2026-04-06 10:43:48,043 | INFO | [override] checkbox: E1_4 picks=['4']
+2026-04-06 10:43:48,121 | INFO | [override] checkbox UNCHECK: E1_8 (val='')
+2026-04-06 10:43:48,168 | INFO | [3] step=24 G1 -> Survey (expected_next=G2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:48,230 | INFO | [override] checkbox UNCHECK: E1_5 (val='')
+2026-04-06 10:43:48,278 | INFO | [override] checkbox UNCHECK: E1_9 (val='')
+2026-04-06 10:43:48,385 | INFO | [override] checkbox UNCHECK: E1_6 (val='')
+2026-04-06 10:43:48,433 | INFO | [override] checkbox: E1_10 picks=['10']
+2026-04-06 10:43:48,496 | INFO | checkbox-group: E1 has count-rule, so handled overrides will be normalized by group logic: ['E1_1', 'E1_2', 'E1_3', 'E1_4', 'E1_5', 'E1_6', 'E1_7', 'E1_8', 'E1_9', 'E1_10']
+2026-04-06 10:43:48,532 | INFO | [override] checkbox UNCHECK: E1_7 (val='')
+2026-04-06 10:43:48,670 | INFO | [override] checkbox UNCHECK: E1_8 (val='')
+2026-04-06 10:43:48,782 | INFO | [override] radio(NEQSET): G2 excluded=['2'] -> picked=1
+2026-04-06 10:43:48,809 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:48,838 | INFO | checkbox-group: E1 picks=['10'] checked=[]
+2026-04-06 10:43:48,849 | INFO | [override] checkbox UNCHECK: E1_9 (val='')
+2026-04-06 10:43:48,865 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:48,889 | INFO | [3] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:43:48,956 | INFO | [1] next_trigger main method=window.next() duration_ms=2.6 submitted=True error=-
+2026-04-06 10:43:48,977 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:49,031 | INFO | [override] checkbox UNCHECK: E1_10 (val='')
+2026-04-06 10:43:49,062 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:49,214 | INFO | checkbox-group: E1 has count-rule, so handled overrides will be normalized by group logic: ['E1_1', 'E1_2', 'E1_3', 'E1_4', 'E1_5', 'E1_6', 'E1_7', 'E1_8', 'E1_9', 'E1_10']
+2026-04-06 10:43:49,398 | INFO | [3] step=25 G2 -> Survey (expected_next=G3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:49,486 | INFO | [1] step=23 E1 -> Survey (expected_next=E2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:49,870 | INFO | checkbox(skip): G3_NONE endswith _NONE
+2026-04-06 10:43:49,885 | INFO | checkbox: G3_1_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_1CNT=None, MG3_1_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:50,084 | INFO | [override] radio(NEQSET): G1 excluded=['1'] -> picked=2
+2026-04-06 10:43:50,127 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:50,178 | INFO | [1] next_trigger main method=window.next() duration_ms=2.6 submitted=True error=-
+2026-04-06 10:43:50,197 | INFO | checkbox: G3_1_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_2CNT=None, MG3_1_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:50,224 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:50,495 | INFO | checkbox: G3_1_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_3CNT=None, MG3_1_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:50,593 | INFO | [1] step=24 G1 -> Survey (expected_next=G2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:50,827 | INFO | checkbox: G3_2_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_1CNT=None, MG3_2_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:51,075 | INFO | checkbox: G3_2_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_2CNT=None, MG3_2_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:51,262 | INFO | [override] radio(NEQSET): G2 excluded=['2'] -> picked=1
+2026-04-06 10:43:51,274 | INFO | checkbox-group: E1 picks=['1', '2', '3', '4', '5', '6', '7', '8', '9'] checked=[]
+2026-04-06 10:43:51,286 | INFO | checked_count_after_fill=9
+2026-04-06 10:43:51,306 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:51,346 | INFO | [2] next_trigger main method=window.next() duration_ms=4.6 submitted=True error=-
+2026-04-06 10:43:51,368 | INFO | [1] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:43:51,389 | INFO | checkbox: G3_2_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_3CNT=None, MG3_2_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:51,409 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:51,463 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:51,707 | INFO | checkbox: G3_3_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_1CNT=None, MG3_3_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:52,111 | INFO | [1] step=25 G2 -> Survey (expected_next=G3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:52,154 | INFO | [2] step=24 E1 -> Survey (expected_next=E2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:52,208 | INFO | checkbox: G3_3_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_2CNT=None, MG3_3_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:52,474 | INFO | checkbox: G3_3_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_3CNT=None, MG3_3_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:52,500 | INFO | checkbox(skip): G3_NONE endswith _NONE
+2026-04-06 10:43:52,527 | INFO | checkbox: G3_1_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_1CNT=None, MG3_1_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:52,799 | INFO | checkbox: G3_4_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_1CNT=None, MG3_4_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:52,821 | INFO | checkbox: G3_1_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_2CNT=None, MG3_1_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:52,892 | INFO | radio(series): E2_1=1 base=E2 freq={'1': 1}
+2026-04-06 10:43:53,016 | INFO | radio(series): E2_2=2 base=E2 freq={'1': 1, '2': 1}
+2026-04-06 10:43:53,118 | INFO | checkbox: G3_4_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_2CNT=None, MG3_4_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:53,128 | INFO | checkbox: G3_1_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_3CNT=None, MG3_1_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:53,193 | INFO | radio(series): E2_3=3 base=E2 freq={'1': 1, '2': 1, '3': 1}
+2026-04-06 10:43:53,334 | INFO | radio(series): E2_4=4 base=E2 freq={'1': 1, '2': 1, '3': 1, '4': 1}
+2026-04-06 10:43:53,453 | INFO | checkbox: G3_4_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_3CNT=None, MG3_4_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:53,462 | INFO | checkbox: G3_2_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_1CNT=None, MG3_2_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:53,527 | INFO | radio(series): E2_5=5 base=E2 freq={'1': 1, '2': 1, '3': 1, '4': 1, '5': 1}
+2026-04-06 10:43:53,587 | INFO | checked_count_after_fill=5
+2026-04-06 10:43:53,656 | INFO | [2] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:43:53,729 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:53,761 | INFO | checkbox(skip): G3_NONE endswith _NONE (general loop)
+2026-04-06 10:43:53,781 | INFO | input(skip disabled): G3A
+2026-04-06 10:43:53,802 | INFO | checkbox: G3_2_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_2CNT=None, MG3_2_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:53,824 | INFO | textarea: G3A=사용 방법이 조금 어려웠습니다
+2026-04-06 10:43:54,084 | INFO | [2] step=25 E2 -> Survey (expected_next=E3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:54,098 | INFO | checkbox: G3_2_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_3CNT=None, MG3_2_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:54,317 | INFO | checkbox: G3_3_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_1CNT=None, MG3_3_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:54,434 | INFO | checked_count_after_fill=12
+2026-04-06 10:43:54,490 | INFO | [3] next_trigger main method=window.next() duration_ms=3.7 submitted=True error=-
+2026-04-06 10:43:54,533 | INFO | radio(required): E3=1 (min=None, max=None)
+2026-04-06 10:43:54,576 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:54,630 | INFO | checkbox: G3_3_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_2CNT=None, MG3_3_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:54,639 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:54,694 | INFO | [2] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:43:54,822 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:54,992 | INFO | checkbox: G3_3_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_3CNT=None, MG3_3_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:54,993 | INFO | [3] step=26 G3 -> Survey (expected_next=G4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:55,151 | INFO | [2] step=26 E3 -> Survey (expected_next=E4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:55,300 | INFO | checkbox: G3_4_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_1CNT=None, MG3_4_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:43:55,410 | INFO | radio(required): G4=2 (min=None, max=None)
+2026-04-06 10:43:55,481 | INFO | input(skip disabled): G4A
+2026-04-06 10:43:55,508 | INFO | textarea: G4A=선택지가 더 다양했으면 좋겠습니다
+2026-04-06 10:43:55,522 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:55,536 | INFO | checkbox: G3_4_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_2CNT=None, MG3_4_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:43:55,594 | INFO | [3] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:43:55,667 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:55,951 | INFO | [override] radio(NEQSET): G1 excluded=['1'] -> picked=2
+2026-04-06 10:43:56,064 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:56,098 | INFO | checkbox: G3_4_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_3CNT=None, MG3_4_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:43:56,121 | INFO | [2] next_trigger main method=window.next() duration_ms=2.8 submitted=True error=-
+2026-04-06 10:43:56,188 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:56,245 | INFO | [3] step=27 G4 -> Survey (expected_next=G5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:56,522 | INFO | checkbox(skip): G3_NONE endswith _NONE (general loop)
+2026-04-06 10:43:56,535 | INFO | input(skip disabled): G3A
+2026-04-06 10:43:56,627 | INFO | textarea: G3A=가격이 적절해서
+2026-04-06 10:43:56,670 | INFO | [2] step=27 G1 -> Survey (expected_next=G2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:56,671 | INFO | checked_count_after_fill=12
+2026-04-06 10:43:56,730 | INFO | [1] next_trigger main method=window.next() duration_ms=2.7 submitted=True error=-
+2026-04-06 10:43:56,797 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:56,815 | INFO | radio(required): G5=2 (min=None, max=None)
+2026-04-06 10:43:56,953 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:57,086 | INFO | [3] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:43:57,151 | INFO | [3] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:57,305 | WARNING | [3] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:43:57,313 | WARNING | [3] [requestfailed] GET https://www.surveys.kr/study/T24060701/js/jquery.alphanumeric.pack.js
+2026-04-06 10:43:57,526 | INFO | [1] step=26 G3 -> Survey (expected_next=G4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:43:57,647 | INFO | [3] step=28 G5 -> Survey_End (expected_next=SURVEY_END action=Survey.asp url=https://www.surveys.kr/study/T24060701/G5.asp -> https://www.surveys.kr/study/T24060701/Survey_End.asp)
+2026-04-06 10:43:57,790 | INFO | [override] radio(NEQSET): G2 excluded=['2'] -> picked=1
+2026-04-06 10:43:57,865 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:57,937 | INFO | [2] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:43:58,101 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:58,297 | INFO | [3] COMPLETED url=https://www.surveys.kr/study/T24060701/Survey_End.asp
+2026-04-06 10:43:58,676 | INFO | [2] step=28 G2 -> G3 (expected_next=G3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G2.asp -> https://www.surveys.kr/study/T24060701/G3.asp)
+2026-04-06 10:43:58,708 | INFO | radio(required): G4=2 (min=None, max=None)
+2026-04-06 10:43:58,766 | INFO | input(skip disabled): G4A
+2026-04-06 10:43:58,790 | INFO | textarea: G4A=전반적으로 이용이 편리했습니다
+2026-04-06 10:43:58,825 | INFO | checked_count_after_fill=1
+2026-04-06 10:43:58,906 | INFO | [1] next_trigger main method=window.next() duration_ms=2.5 submitted=True error=-
+2026-04-06 10:43:58,955 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:43:59,639 | INFO | [coverage] 4 out_dir=run_logs_pw\clients\4H_bBlD0BEwJp69Kv04DzNUAnLYdKtF5\case_004 key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_10=2|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr= overrides={'E1_10': '2', '__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}], '__CHECK_COUNT_RULES__': {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}}
+2026-04-06 10:43:59,649 | INFO | [coverage] OK key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_10=1|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr=
+2026-04-06 10:43:59,815 | INFO | run 3/45 DONE ok=True
+2026-04-06 10:43:59,830 | INFO | checkbox(skip): G3_NONE endswith _NONE
+2026-04-06 10:43:59,828 | INFO | [1] step=27 G4 -> G5 (expected_next=G5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G4.asp -> https://www.surveys.kr/study/T24060701/G5.asp)
+2026-04-06 10:43:59,858 | INFO | checkbox: G3_1_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_1CNT=None, MG3_1_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:00,500 | INFO | checkbox: G3_1_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_2CNT=None, MG3_1_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:00,744 | INFO | radio(required): G5=2 (min=None, max=None)
+2026-04-06 10:44:00,928 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:01,099 | INFO | [1] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:44:01,132 | INFO | checkbox: G3_1_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_3CNT=None, MG3_1_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:01,151 | INFO | [1] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:01,241 | WARNING | [1] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:01,351 | WARNING | [1] [requestfailed] GET https://www.surveys.kr/study/T24060701/js/jquery.alphanumeric.pack.js
+2026-04-06 10:44:01,422 | INFO | [1] step=28 G5 -> Survey_End (expected_next=SURVEY_END action=Survey.asp url=https://www.surveys.kr/study/T24060701/G5.asp -> https://www.surveys.kr/study/T24060701/Survey_End.asp)
+2026-04-06 10:44:01,578 | INFO | checkbox: G3_2_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_1CNT=None, MG3_2_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:01,725 | INFO | [1] COMPLETED url=https://www.surveys.kr/study/T24060701/Survey_End.asp
+2026-04-06 10:44:02,015 | INFO | checkbox: G3_2_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_2CNT=None, MG3_2_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:02,879 | INFO | checkbox: G3_2_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_3CNT=None, MG3_2_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:02,904 | INFO | [4] START https://www.surveys.kr/study/T24060701/index.asp?ResType=TEST-
+2026-04-06 10:44:03,337 | WARNING | [4] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:03,426 | WARNING | [4] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:03,449 | WARNING | [4] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:03,600 | INFO | [coverage] 5 out_dir=run_logs_pw\clients\4H_bBlD0BEwJp69Kv04DzNUAnLYdKtF5\case_005 key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_10=3|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr= overrides={'E1_10': '3', '__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}], '__CHECK_COUNT_RULES__': {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}}
+2026-04-06 10:44:03,609 | WARNING | [4] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:03,615 | INFO | [coverage] OK key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_1=|E1_10=10|E1_2=|E1_3=|E1_4=|E1_5=|E1_6=|E1_7=|E1_8=|E1_9=|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr=
+2026-04-06 10:44:03,740 | INFO | run 1/45 DONE ok=True
+2026-04-06 10:44:03,766 | INFO | checkbox: G3_3_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_1CNT=None, MG3_3_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:04,190 | INFO | checkbox: G3_3_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_2CNT=None, MG3_3_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:04,484 | INFO | checkbox: G3_3_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_3CNT=None, MG3_3_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:04,492 | INFO | input(series): A0_1=87 base=A0
+2026-04-06 10:44:04,601 | INFO | input(series): A0_2=96 base=A0
+2026-04-06 10:44:04,665 | INFO | input(series): A0_3=97 base=A0
+2026-04-06 10:44:04,735 | INFO | input(series): A0_4=99 base=A0
+2026-04-06 10:44:04,748 | INFO | checkbox: G3_4_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_1CNT=None, MG3_4_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:04,821 | INFO | input(tel): HP=017-2590-4680
+2026-04-06 10:44:04,874 | INFO | input(text): NAME=박지윤
+2026-04-06 10:44:04,937 | INFO | input(text): midd=해당 없음
+2026-04-06 10:44:04,972 | INFO | checkbox: G3_4_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_2CNT=None, MG3_4_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:04,997 | INFO | input(text): RECKEY=특별한 이유 없음
+2026-04-06 10:44:05,006 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:05,179 | INFO | checkbox: G3_4_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_3CNT=None, MG3_4_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:05,362 | INFO | checkbox(skip): G3_NONE endswith _NONE (general loop)
+2026-04-06 10:44:05,378 | INFO | input(skip disabled): G3A
+2026-04-06 10:44:05,384 | WARNING | [4] dialog type=alert message=컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:05,415 | INFO | textarea: G3A=가격이 다소 부담되었습니다
+2026-04-06 10:44:05,428 | INFO | checked_count_after_fill=12
+2026-04-06 10:44:05,437 | INFO | [4] next_trigger main method=window.next() duration_ms=37.1 submitted=True error=-
+2026-04-06 10:44:05,463 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:05,475 | INFO | [2] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:44:05,547 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:06,076 | WARNING | [4] validation alert detected: 컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:06,267 | INFO | [2] step=29 G3 -> G4 (expected_next=G4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G3.asp -> https://www.surveys.kr/study/T24060701/G4.asp)
+2026-04-06 10:44:06,460 | INFO | [5] START https://www.surveys.kr/study/T24060701/index.asp?ResType=TEST-
+2026-04-06 10:44:06,503 | WARNING | [next_logic] unresolved: numeric_max:A0_1>12 | numeric_max:A0_2>31 | numeric_max:A0_3>23 | numeric_max:A0_4>59 | numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:06,639 | WARNING | [5] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:06,670 | WARNING | [5] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:06,800 | WARNING | [5] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:07,049 | WARNING | [5] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:07,322 | INFO | [next_logic] issue_repair: A0_1=1(issue:max) | A0_2=11(issue:max) | A0_3=19(issue:max) | A0_4=31(issue:max)
+2026-04-06 10:44:07,559 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:07,696 | INFO | radio(required): G4=2 (min=None, max=None)
+2026-04-06 10:44:07,834 | INFO | input(skip disabled): G4A
+2026-04-06 10:44:07,869 | INFO | [next_logic] alert_repair: A0_1=1(issue:max) | A0_2=11(issue:max) | A0_3=19(issue:max) | A0_4=31(issue:max) | A0_2=11(alert:month) | A0_3=2(alert:hour)
+2026-04-06 10:44:07,870 | INFO | [4] alert_retry=1 changed=['A0_1=1(issue:max)', 'A0_2=11(issue:max)', 'A0_3=19(issue:max)', 'A0_4=31(issue:max)', 'A0_2=11(alert:month)', 'A0_3=2(alert:hour)']
+2026-04-06 10:44:07,873 | INFO | textarea: G4A=기회가 되면 다시 이용할 의향이 있습니다
+2026-04-06 10:44:07,884 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:07,948 | INFO | input(series): A0_1=37 base=A0
+2026-04-06 10:44:07,948 | INFO | [2] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:44:07,980 | INFO | [4] next_trigger repair method=window.next() duration_ms=44.7 submitted=True error=-
+2026-04-06 10:44:08,016 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:08,108 | INFO | [4] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:08,111 | INFO | input(series): A0_2=49 base=A0
+2026-04-06 10:44:08,179 | INFO | input(series): A0_3=71 base=A0
+2026-04-06 10:44:08,256 | INFO | input(series): A0_4=87 base=A0
+2026-04-06 10:44:08,424 | INFO | input(tel): HP=016-8418-6615
+2026-04-06 10:44:08,491 | INFO | input(text): NAME=정하윤
+2026-04-06 10:44:08,517 | INFO | [2] step=30 G4 -> Survey (expected_next=G5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:08,599 | INFO | input(text): midd=해당 없음
+2026-04-06 10:44:08,629 | INFO | [4] step=0 A0 -> A1 (expected_next=A1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A0.asp -> https://www.surveys.kr/study/T24060701/A1.asp)
+2026-04-06 10:44:08,831 | INFO | radio(required): G5=1 (min=None, max=None)
+2026-04-06 10:44:08,885 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:08,936 | INFO | [2] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:44:08,955 | INFO | input(text): RECKEY=기타
+2026-04-06 10:44:08,990 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:09,011 | INFO | [2] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:09,085 | WARNING | [2] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:09,099 | WARNING | [2] [requestfailed] GET https://www.surveys.kr/study/T24060701/js/jquery.alphanumeric.pack.js
+2026-04-06 10:44:09,131 | WARNING | [5] dialog type=alert message=컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:09,168 | INFO | [2] step=31 G5 -> Survey_End (expected_next=SURVEY_END action=Survey.asp url=https://www.surveys.kr/study/T24060701/G5.asp -> https://www.surveys.kr/study/T24060701/Survey_End.asp)
+2026-04-06 10:44:09,169 | INFO | [5] next_trigger main method=window.next() duration_ms=47.4 submitted=True error=-
+2026-04-06 10:44:09,209 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:09,395 | INFO | [2] COMPLETED url=https://www.surveys.kr/study/T24060701/Survey_End.asp
+2026-04-06 10:44:09,628 | WARNING | [5] validation alert detected: 컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:09,779 | INFO | radio(required): A1=1 (min=None, max=None)
+2026-04-06 10:44:09,837 | WARNING | [next_logic] unresolved: numeric_max:A0_1>12 | numeric_max:A0_2>31 | numeric_max:A0_3>23 | numeric_max:A0_4>59 | numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:09,984 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:10,046 | INFO | [4] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:44:10,099 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:10,360 | INFO | [next_logic] issue_repair: A0_1=4(issue:max) | A0_2=22(issue:max) | A0_3=23(issue:max) | A0_4=53(issue:max)
+2026-04-06 10:44:10,457 | INFO | [coverage] 6 out_dir=run_logs_pw\clients\4H_bBlD0BEwJp69Kv04DzNUAnLYdKtF5\case_006 key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_10=4|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr= overrides={'E1_10': '4', '__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', 'D9_1': '1', 'D9_2': '2', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}], '__CHECK_COUNT_RULES__': {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}}
+2026-04-06 10:44:10,497 | INFO | [coverage] OK key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_1=1|E1_10=|E1_2=2|E1_3=3|E1_4=4|E1_5=|E1_6=|E1_7=|E1_8=|E1_9=|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr=
+2026-04-06 10:44:10,503 | INFO | run 2/45 DONE ok=True
+2026-04-06 10:44:10,521 | INFO | [4] step=1 A1 -> Survey (expected_next=A2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:10,596 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:10,693 | INFO | [next_logic] alert_repair: A0_1=4(issue:max) | A0_2=22(issue:max) | A0_3=23(issue:max) | A0_4=53(issue:max) | A0_2=9(alert:month) | A0_3=6(alert:hour)
+2026-04-06 10:44:10,694 | INFO | [5] alert_retry=1 changed=['A0_1=4(issue:max)', 'A0_2=22(issue:max)', 'A0_3=23(issue:max)', 'A0_4=53(issue:max)', 'A0_2=9(alert:month)', 'A0_3=6(alert:hour)']
+2026-04-06 10:44:10,787 | INFO | [5] next_trigger repair method=window.next() duration_ms=31.2 submitted=True error=-
+2026-04-06 10:44:10,827 | INFO | [5] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:10,886 | INFO | input(tel, constrained): A2=38 (min=20, max=None)
+2026-04-06 10:44:10,897 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:10,945 | INFO | [4] next_trigger main method=window.next() duration_ms=3.2 submitted=True error=-
+2026-04-06 10:44:11,002 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:11,227 | INFO | [5] step=0 A0 -> A1 (expected_next=A1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A0.asp -> https://www.surveys.kr/study/T24060701/A1.asp)
+2026-04-06 10:44:11,298 | INFO | [4] step=2 A2 -> Survey (expected_next=A3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:11,624 | INFO | [override] radio(NEQSET): A3 excluded=['1'] -> picked=2
+2026-04-06 10:44:11,648 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:11,716 | INFO | [4] next_trigger main method=window.next() duration_ms=3.1 submitted=True error=-
+2026-04-06 10:44:11,778 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:11,895 | INFO | radio(required): A1=1 (min=None, max=None)
+2026-04-06 10:44:11,953 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:12,026 | INFO | [5] next_trigger main method=window.next() duration_ms=3.9 submitted=True error=-
+2026-04-06 10:44:12,066 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:12,139 | INFO | [4] step=3 A3 -> Survey (expected_next=A4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:13,043 | INFO | [5] step=1 A1 -> Survey (expected_next=A2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:13,078 | INFO | [6] START https://www.surveys.kr/study/T24060701/index.asp?ResType=TEST-
+2026-04-06 10:44:13,204 | WARNING | [6] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:13,221 | WARNING | [6] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:13,228 | WARNING | [6] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:13,493 | INFO | [override] radio: A4=9
+2026-04-06 10:44:13,552 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:13,619 | WARNING | [6] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:13,647 | INFO | input(tel, constrained): A2=22 (min=20, max=None)
+2026-04-06 10:44:13,656 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:13,664 | INFO | [4] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:44:13,757 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:13,820 | INFO | [5] next_trigger main method=window.next() duration_ms=4.4 submitted=True error=-
+2026-04-06 10:44:14,060 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:14,506 | INFO | [4] step=4 A4 -> A5 (expected_next=A5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A4.asp -> https://www.surveys.kr/study/T24060701/A5.asp)
+2026-04-06 10:44:14,550 | INFO | [5] step=2 A2 -> A3 (expected_next=A3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A2.asp -> https://www.surveys.kr/study/T24060701/A3.asp)
+2026-04-06 10:44:14,613 | INFO | input(series): A0_1=71 base=A0
+2026-04-06 10:44:14,667 | INFO | input(series): A0_2=71 base=A0
+2026-04-06 10:44:14,693 | INFO | input(series): A0_3=92 base=A0
+2026-04-06 10:44:14,721 | INFO | input(series): A0_4=93 base=A0
+2026-04-06 10:44:14,844 | INFO | input(tel): HP=010-2489-4016
+2026-04-06 10:44:14,916 | INFO | input(text): NAME=김민수
+2026-04-06 10:44:14,943 | INFO | [override] radio(NEQSET): A3 excluded=['1'] -> picked=2
+2026-04-06 10:44:14,979 | INFO | input(text): midd=해당 없음
+2026-04-06 10:44:14,995 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:15,055 | INFO | input(text): RECKEY=특별한 이유 없음
+2026-04-06 10:44:15,056 | INFO | [5] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:15,101 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:15,146 | INFO | radio(required): A5=3 (min=None, max=None)
+2026-04-06 10:44:15,321 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:15,438 | INFO | [4] next_trigger main method=window.next() duration_ms=4.9 submitted=True error=-
+2026-04-06 10:44:15,486 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:15,576 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:15,848 | WARNING | [6] dialog type=alert message=컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:15,956 | INFO | [6] next_trigger main method=window.next() duration_ms=105.4 submitted=True error=-
+2026-04-06 10:44:16,072 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:16,283 | INFO | [5] step=3 A3 -> Survey (expected_next=A4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:16,336 | INFO | [4] step=5 A5 -> A6A (expected_next=A6A action=Survey.asp url=https://www.surveys.kr/study/T24060701/A5.asp -> https://www.surveys.kr/study/T24060701/A6A.asp)
+2026-04-06 10:44:16,363 | WARNING | [6] validation alert detected: 컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:16,490 | WARNING | [next_logic] unresolved: numeric_max:A0_1>12 | numeric_max:A0_2>31 | numeric_max:A0_3>23 | numeric_max:A0_4>59 | numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:16,729 | INFO | [override] radio: A4=9
+2026-04-06 10:44:16,779 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:16,853 | INFO | [5] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:16,890 | INFO | input(tel): A6A_1=761
+2026-04-06 10:44:16,904 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:16,924 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:16,932 | INFO | [next_logic] issue_repair: A0_1=3(issue:max) | A0_2=19(issue:max) | A0_3=9(issue:max) | A0_4=58(issue:max)
+2026-04-06 10:44:17,079 | INFO | [4] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:44:17,154 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:17,225 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:17,481 | INFO | [5] step=4 A4 -> Survey (expected_next=A5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:17,504 | INFO | [next_logic] alert_repair: A0_1=3(issue:max) | A0_2=19(issue:max) | A0_3=9(issue:max) | A0_4=58(issue:max) | A0_2=2(alert:month) | A0_3=13(alert:hour)
+2026-04-06 10:44:17,521 | INFO | [6] alert_retry=1 changed=['A0_1=3(issue:max)', 'A0_2=19(issue:max)', 'A0_3=9(issue:max)', 'A0_4=58(issue:max)', 'A0_2=2(alert:month)', 'A0_3=13(alert:hour)']
+2026-04-06 10:44:17,550 | INFO | [4] step=6 A6A -> Survey (expected_next=A7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A6A.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:17,601 | INFO | [6] next_trigger repair method=window.next() duration_ms=30.9 submitted=True error=-
+2026-04-06 10:44:17,661 | INFO | [6] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:18,194 | INFO | [6] step=0 A0 -> A1 (expected_next=A1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A0.asp -> https://www.surveys.kr/study/T24060701/A1.asp)
+2026-04-06 10:44:18,201 | INFO | radio(required): A5=3 (min=None, max=None)
+2026-04-06 10:44:18,270 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:18,299 | INFO | radio(required): A7=1 (min=None, max=None)
+2026-04-06 10:44:18,327 | INFO | [5] next_trigger main method=window.next() duration_ms=4.5 submitted=True error=-
+2026-04-06 10:44:18,374 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:18,381 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:18,446 | INFO | [4] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:44:18,498 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:18,780 | INFO | [5] step=5 A5 -> Survey (expected_next=A6A action=Survey.asp url=https://www.surveys.kr/study/T24060701/A5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:18,875 | INFO | [4] step=7 A7 -> Survey (expected_next=A8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:18,902 | INFO | radio(required): A1=2 (min=None, max=None)
+2026-04-06 10:44:18,962 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:19,016 | INFO | [6] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:44:19,060 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:19,201 | INFO | input(tel): A6A_1=362
+2026-04-06 10:44:19,234 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:19,327 | INFO | [5] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:44:19,347 | INFO | [override] radio(NEQSET): B1 excluded=['3'] -> picked=1
+2026-04-06 10:44:19,376 | INFO | [6] step=1 A1 -> Survey (expected_next=A2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:19,405 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:19,411 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:19,461 | INFO | [4] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:19,504 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:19,788 | INFO | [5] step=6 A6A -> Survey (expected_next=A7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A6A.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:19,979 | INFO | [4] step=8 B1 -> Survey (expected_next=B2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:20,002 | INFO | input(tel, constrained): A2=31 (min=20, max=None)
+2026-04-06 10:44:20,012 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:20,065 | INFO | [6] next_trigger main method=window.next() duration_ms=2.9 submitted=True error=-
+2026-04-06 10:44:20,116 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:20,339 | INFO | radio(required): A7=2 (min=None, max=None)
+2026-04-06 10:44:20,479 | INFO | [6] step=2 A2 -> Survey (expected_next=A3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:20,492 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:20,548 | INFO | [5] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:44:20,597 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:20,721 | INFO | [override] radio(NEQSET): B2 excluded=['2', '6', '7', '8'] -> picked=5
+2026-04-06 10:44:20,784 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:20,871 | INFO | [4] next_trigger main method=window.next() duration_ms=5.0 submitted=True error=-
+2026-04-06 10:44:20,925 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:21,226 | INFO | [5] step=7 A7 -> Survey (expected_next=A8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:21,331 | INFO | [4] step=9 B2 -> B3 (expected_next=B3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B2.asp -> https://www.surveys.kr/study/T24060701/B3.asp)
+2026-04-06 10:44:21,369 | INFO | [override] radio(NEQSET): A3 excluded=['1'] -> picked=2
+2026-04-06 10:44:21,394 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:21,441 | INFO | [6] next_trigger main method=window.next() duration_ms=2.9 submitted=True error=-
+2026-04-06 10:44:21,497 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:21,778 | INFO | radio(required): A8=4 (min=None, max=None)
+2026-04-06 10:44:21,967 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:21,997 | INFO | [6] step=3 A3 -> Survey (expected_next=A4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:22,034 | INFO | [5] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:44:22,087 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:22,127 | INFO | radio(required): B3=61 (min=None, max=None)
+2026-04-06 10:44:22,196 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:22,262 | INFO | [4] next_trigger main method=window.next() duration_ms=6.7 submitted=True error=-
+2026-04-06 10:44:22,304 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:22,437 | INFO | [5] step=8 A8 -> Survey (expected_next=B1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:22,608 | INFO | [4] step=10 B3 -> Survey (expected_next=B4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:22,646 | INFO | [override] radio: A4=9
+2026-04-06 10:44:22,680 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:22,727 | INFO | [6] next_trigger main method=window.next() duration_ms=2.7 submitted=True error=-
+2026-04-06 10:44:22,768 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:22,960 | INFO | [override] radio(NEQSET): B1 excluded=['3'] -> picked=1
+2026-04-06 10:44:23,019 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:23,088 | INFO | [6] step=4 A4 -> Survey (expected_next=A5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:23,091 | INFO | [5] next_trigger main method=window.next() duration_ms=3.1 submitted=True error=-
+2026-04-06 10:44:23,101 | INFO | [override] radio(NEQSET): B4 excluded=['2'] -> picked=1
+2026-04-06 10:44:23,115 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:23,134 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:23,199 | INFO | [4] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:44:23,247 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:23,512 | INFO | [5] step=9 B1 -> Survey (expected_next=B2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:23,607 | INFO | [4] step=11 B4 -> Survey (expected_next=B5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:23,616 | INFO | radio(required): A5=3 (min=None, max=None)
+2026-04-06 10:44:23,670 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:23,723 | INFO | [6] next_trigger main method=window.next() duration_ms=2.9 submitted=True error=-
+2026-04-06 10:44:23,784 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:23,963 | INFO | [override] radio(NEQSET): B2 excluded=['2', '6', '7', '8'] -> picked=5
+2026-04-06 10:44:24,007 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:24,093 | INFO | [6] step=5 A5 -> Survey (expected_next=A6A action=Survey.asp url=https://www.surveys.kr/study/T24060701/A5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:24,096 | INFO | [5] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:44:24,105 | INFO | [override] radio: B5=1
+2026-04-06 10:44:24,137 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:24,194 | INFO | [4] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:24,221 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:24,242 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:24,813 | INFO | [5] step=10 B2 -> Survey (expected_next=B3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:24,838 | INFO | [4] step=12 B5 -> Survey (expected_next=B6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:24,872 | INFO | input(tel): A6A_1=336
+2026-04-06 10:44:24,883 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:24,942 | INFO | [6] next_trigger main method=window.next() duration_ms=2.1 submitted=True error=-
+2026-04-06 10:44:24,989 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:25,388 | INFO | [6] step=6 A6A -> Survey (expected_next=A7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A6A.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:25,433 | INFO | radio(required): B3=41 (min=None, max=None)
+2026-04-06 10:44:25,497 | INFO | [override] radio: B6=1
+2026-04-06 10:44:25,497 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:25,531 | INFO | [OTHER] cleared input name=TB6_2 id=TB6_2 reason=selected-option-nearby
+2026-04-06 10:44:25,543 | INFO | [OTHER] cleared input name=TB6_3 id=TB6_3 reason=selected-option-nearby
+2026-04-06 10:44:25,550 | INFO | [5] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:44:25,569 | INFO | [OTHER] cleared input name=TB6_4 id=TB6_4 reason=selected-option-nearby
+2026-04-06 10:44:25,579 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:25,598 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:25,646 | INFO | [4] next_trigger main method=window.next() duration_ms=4.4 submitted=True error=-
+2026-04-06 10:44:25,704 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:25,875 | INFO | radio(required): A7=2 (min=None, max=None)
+2026-04-06 10:44:25,908 | INFO | [5] step=11 B3 -> Survey (expected_next=B4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:25,967 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:26,036 | INFO | [6] next_trigger main method=window.next() duration_ms=2.6 submitted=True error=-
+2026-04-06 10:44:26,065 | INFO | [4] step=13 B6 -> Survey (expected_next=C1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:26,077 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:26,379 | INFO | [override] radio(NEQSET): B4 excluded=['2'] -> picked=3
+2026-04-06 10:44:26,454 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:26,488 | INFO | [6] step=7 A7 -> Survey (expected_next=A8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:26,500 | INFO | input(series): C1_1=2022 base=C1
+2026-04-06 10:44:26,510 | INFO | [5] next_trigger main method=window.next() duration_ms=3.1 submitted=True error=-
+2026-04-06 10:44:26,528 | INFO | input(series): C1_2=2022 base=C1
+2026-04-06 10:44:26,538 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:26,557 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:26,590 | WARNING | [4] dialog type=alert message=12 이하로 입력 해 주십시오.
+2026-04-06 10:44:26,651 | INFO | [4] next_trigger main method=window.next() duration_ms=37.9 submitted=True error=-
+2026-04-06 10:44:26,658 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:26,717 | WARNING | [4] validation alert detected: 12 이하로 입력 해 주십시오.
+2026-04-06 10:44:26,777 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_max:C1_2>4 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:26,936 | INFO | [next_logic] issue_repair: C1_2=3(issue:max)
+2026-04-06 10:44:26,991 | INFO | [5] step=12 B4 -> Survey (expected_next=B5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:27,215 | INFO | radio(required): A8=2 (min=None, max=None)
+2026-04-06 10:44:27,254 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_min:C1_1<2022 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:27,308 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:27,366 | INFO | [6] next_trigger main method=window.next() duration_ms=3.2 submitted=True error=-
+2026-04-06 10:44:27,379 | INFO | [next_logic] issue_repair: C1_1=2023(issue:min)
+2026-04-06 10:44:27,380 | INFO | [next_logic] alert_repair: C1_2=3(issue:max) | C1_1=1900(alert:max) | C1_1=2023(issue:min)
+2026-04-06 10:44:27,381 | INFO | [4] alert_retry=1 changed=['C1_2=3(issue:max)', 'C1_1=1900(alert:max)', 'C1_1=2023(issue:min)']
+2026-04-06 10:44:27,415 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:27,433 | INFO | [4] next_trigger repair method=window.next() duration_ms=2.8 submitted=True error=-
+2026-04-06 10:44:27,515 | INFO | [4] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:27,623 | INFO | [override] radio: B5=1
+2026-04-06 10:44:27,661 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:27,728 | INFO | [5] next_trigger main method=window.next() duration_ms=4.3 submitted=True error=-
+2026-04-06 10:44:27,762 | INFO | [6] step=8 A8 -> Survey (expected_next=B1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:27,768 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:27,957 | INFO | [4] step=14 C1 -> C2 (expected_next=C2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/C1.asp -> https://www.surveys.kr/study/T24060701/C2.asp)
+2026-04-06 10:44:28,080 | INFO | [5] step=13 B5 -> Survey (expected_next=B6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:28,347 | INFO | [override] radio(NEQSET): B1 excluded=['3'] -> picked=2
+2026-04-06 10:44:28,380 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:28,398 | INFO | radio(required): C2=1 (min=None, max=None)
+2026-04-06 10:44:28,436 | INFO | [6] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:44:28,457 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:28,511 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:28,512 | INFO | [4] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:44:28,577 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:28,731 | INFO | [override] radio: B6=1
+2026-04-06 10:44:28,791 | INFO | [OTHER] cleared input name=TB6_2 id=TB6_2 reason=selected-option-nearby
+2026-04-06 10:44:28,805 | INFO | [OTHER] cleared input name=TB6_3 id=TB6_3 reason=selected-option-nearby
+2026-04-06 10:44:28,820 | INFO | [OTHER] cleared input name=TB6_4 id=TB6_4 reason=selected-option-nearby
+2026-04-06 10:44:28,865 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:28,943 | INFO | [6] step=9 B1 -> Survey (expected_next=B2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:28,979 | INFO | [5] next_trigger main method=window.next() duration_ms=4.7 submitted=True error=-
+2026-04-06 10:44:29,025 | INFO | [4] step=15 C2 -> Survey (expected_next=C3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/C2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:29,027 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:29,396 | INFO | [5] step=14 B6 -> Survey (expected_next=C1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:29,553 | INFO | [override] radio(NEQSET): B2 excluded=['2', '6', '7', '8'] -> picked=5
+2026-04-06 10:44:29,572 | INFO | [override] input: C4_1=4
+2026-04-06 10:44:29,596 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:29,647 | INFO | [6] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:44:29,695 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:30,044 | INFO | [6] step=10 B2 -> Survey (expected_next=B3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:30,058 | INFO | [override] radio: D1=1
+2026-04-06 10:44:30,088 | INFO | rank(C4) attempt 1: OK slots=['4', '6', '1'] forced={1: '4'}
+2026-04-06 10:44:30,115 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:30,180 | INFO | [4] next_trigger main method=window.next() duration_ms=3.1 submitted=True error=-
+2026-04-06 10:44:30,185 | INFO | [5] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:44:30,246 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:30,247 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:30,582 | INFO | radio(required): B3=43 (min=None, max=None)
+2026-04-06 10:44:30,691 | INFO | [5] step=15 D1 -> Survey (expected_next=D2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:30,742 | INFO | [4] step=16 C4 -> Survey (expected_next=C5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/C4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:30,759 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:30,814 | INFO | [6] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:44:30,863 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:31,314 | INFO | [6] step=11 B3 -> Survey (expected_next=B4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:31,421 | INFO | [override] checkbox UNCHECK: D2_NONE (val='')
+2026-04-06 10:44:31,429 | INFO | checkbox(skip): D2_NONE endswith _NONE
+2026-04-06 10:44:31,458 | INFO | radio(series): C5_1=7 base=C5 freq={'7': 1}
+2026-04-06 10:44:31,459 | INFO | input(tel): D2=11
+2026-04-06 10:44:31,473 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:31,528 | INFO | [5] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:44:31,572 | INFO | radio(series): C5_4=5 base=C5 freq={'7': 1, '5': 1}
+2026-04-06 10:44:31,590 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:31,720 | INFO | radio(series): C5_6=2 base=C5 freq={'7': 1, '5': 1, '2': 1}
+2026-04-06 10:44:31,814 | INFO | checked_count_after_fill=3
+2026-04-06 10:44:31,916 | INFO | [4] next_trigger main method=window.next() duration_ms=2.6 submitted=True error=-
+2026-04-06 10:44:31,953 | INFO | [5] step=16 D2 -> Survey (expected_next=D3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:31,960 | INFO | [override] radio(NEQSET): B4 excluded=['2'] -> picked=3
+2026-04-06 10:44:31,979 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:32,004 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:32,066 | INFO | [6] next_trigger main method=window.next() duration_ms=6.3 submitted=True error=-
+2026-04-06 10:44:32,110 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:32,735 | INFO | [4] step=17 C5 -> Survey (expected_next=C6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/C5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:32,788 | INFO | [6] step=12 B4 -> Survey (expected_next=B5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:33,151 | INFO | [override] radio: B5=1
+2026-04-06 10:44:33,186 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:33,277 | INFO | [6] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:44:33,320 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:33,501 | WARNING | [override] checkbox fallback: E1_10 requested value='2' missing -> picked first
+2026-04-06 10:44:33,504 | INFO | [override] checkbox: E1_10 picks=['2']
+2026-04-06 10:44:33,545 | INFO | checkbox-group: E1 has count-rule, so handled overrides will be normalized by group logic: ['E1_10']
+2026-04-06 10:44:33,556 | INFO | rank(D3) attempt 1: OK slots=['1', '5', '6', '4', '2'] forced={}
+2026-04-06 10:44:33,669 | INFO | [5] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:33,678 | INFO | [6] step=13 B5 -> Survey (expected_next=B6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:33,706 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:33,920 | INFO | checkbox-group: E1 picks=['10'] checked=[]
+2026-04-06 10:44:33,929 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:34,001 | INFO | [4] next_trigger main method=window.next() duration_ms=2.7 submitted=True error=-
+2026-04-06 10:44:34,054 | INFO | [5] step=17 D3 -> Survey (expected_next=D4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:34,086 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:34,285 | INFO | [override] radio: B6=1
+2026-04-06 10:44:34,335 | INFO | [OTHER] cleared input name=TB6_2 id=TB6_2 reason=selected-option-nearby
+2026-04-06 10:44:34,358 | INFO | [OTHER] cleared input name=TB6_3 id=TB6_3 reason=selected-option-nearby
+2026-04-06 10:44:34,386 | INFO | [4] step=18 E1 -> Survey (expected_next=E2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:34,387 | INFO | [OTHER] cleared input name=TB6_4 id=TB6_4 reason=selected-option-nearby
+2026-04-06 10:44:34,398 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:34,489 | INFO | [6] next_trigger main method=window.next() duration_ms=4.5 submitted=True error=-
+2026-04-06 10:44:34,550 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:34,731 | INFO | radio(series): D4_1=5 base=D4 freq={'5': 1}
+2026-04-06 10:44:34,845 | INFO | [override] radio(NEQSET): G1 excluded=['1'] -> picked=2
+2026-04-06 10:44:34,880 | INFO | [6] step=14 B6 -> Survey (expected_next=C1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:34,897 | INFO | radio(series): D4_2=6 base=D4 freq={'5': 1, '6': 1}
+2026-04-06 10:44:34,904 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:34,956 | INFO | [4] next_trigger main method=window.next() duration_ms=3.0 submitted=True error=-
+2026-04-06 10:44:35,004 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:35,022 | INFO | radio(series): D4_3=4 base=D4 freq={'5': 1, '6': 1, '4': 1}
+2026-04-06 10:44:35,138 | INFO | radio(series): D4_4=1 base=D4 freq={'5': 1, '6': 1, '4': 1, '1': 1}
+2026-04-06 10:44:35,248 | INFO | radio(series): D4_5=2 base=D4 freq={'5': 1, '6': 1, '4': 1, '1': 1, '2': 1}
+2026-04-06 10:44:35,307 | INFO | [4] step=19 G1 -> Survey (expected_next=G2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:35,421 | INFO | radio(series): D4_6=3 base=D4 freq={'5': 1, '6': 1, '4': 1, '1': 1, '2': 1, '3': 1}
+2026-04-06 10:44:35,480 | INFO | checked_count_after_fill=6
+2026-04-06 10:44:35,513 | INFO | [override] radio: D1=1
+2026-04-06 10:44:35,538 | INFO | [5] next_trigger main method=window.next() duration_ms=5.0 submitted=True error=-
+2026-04-06 10:44:35,568 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:35,591 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:35,630 | INFO | [6] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:44:35,682 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:35,823 | INFO | [override] radio(NEQSET): G2 excluded=['2'] -> picked=1
+2026-04-06 10:44:36,021 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:36,077 | INFO | [5] step=18 D4 -> Survey (expected_next=D5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:36,097 | INFO | [4] next_trigger main method=window.next() duration_ms=3.2 submitted=True error=-
+2026-04-06 10:44:36,136 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:36,162 | INFO | [6] step=15 D1 -> Survey (expected_next=D2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:36,426 | INFO | [4] step=20 G2 -> Survey (expected_next=G3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:36,852 | INFO | checkbox(skip): G3_NONE endswith _NONE
+2026-04-06 10:44:36,868 | INFO | checkbox: G3_1_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_1CNT=None, MG3_1_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:36,954 | INFO | [override] checkbox UNCHECK: D2_NONE (val='')
+2026-04-06 10:44:36,961 | INFO | checkbox(skip): D2_NONE endswith _NONE
+2026-04-06 10:44:36,988 | INFO | input(tel): D2=52
+2026-04-06 10:44:36,997 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:37,060 | INFO | [6] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:44:37,140 | INFO | checkbox: G3_1_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_2CNT=None, MG3_1_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:37,199 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:37,421 | INFO | rank(D5) attempt 1: OK slots=['1', '4', '2', '5', '3'] forced={}
+2026-04-06 10:44:37,440 | INFO | checkbox: G3_1_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_3CNT=None, MG3_1_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:37,538 | INFO | [5] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:44:37,579 | INFO | [6] step=16 D2 -> Survey (expected_next=D3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:37,588 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:37,692 | INFO | checkbox: G3_2_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_1CNT=None, MG3_2_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:38,020 | INFO | checkbox: G3_2_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_2CNT=None, MG3_2_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:38,062 | INFO | [5] step=19 D5 -> Survey (expected_next=D6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:38,388 | INFO | checkbox: G3_2_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_3CNT=None, MG3_2_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:38,717 | INFO | checkbox: G3_3_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_1CNT=None, MG3_3_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:38,770 | INFO | radio(series): D6_1=4 base=D6 freq={'4': 1}
+2026-04-06 10:44:38,906 | INFO | radio(series): D6_2=7 base=D6 freq={'4': 1, '7': 1}
+2026-04-06 10:44:39,011 | INFO | rank(D3) attempt 1: OK slots=['6', '3', '1', '4', '2'] forced={}
+2026-04-06 10:44:39,031 | INFO | checkbox: G3_3_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_2CNT=None, MG3_3_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:39,076 | INFO | radio(series): D6_3=2 base=D6 freq={'4': 1, '7': 1, '2': 1}
+2026-04-06 10:44:39,104 | INFO | [6] next_trigger main method=window.next() duration_ms=5.6 submitted=True error=-
+2026-04-06 10:44:39,158 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:39,236 | INFO | radio(series): D6_4=5 base=D6 freq={'4': 1, '7': 1, '2': 1, '5': 1}
+2026-04-06 10:44:39,353 | INFO | checkbox: G3_3_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_3CNT=None, MG3_3_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:39,407 | INFO | radio(series): D6_5=1 base=D6 freq={'4': 1, '7': 1, '2': 1, '5': 1, '1': 1}
+2026-04-06 10:44:39,504 | INFO | checked_count_after_fill=5
+2026-04-06 10:44:39,598 | INFO | [6] step=17 D3 -> Survey (expected_next=D4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:39,619 | INFO | [5] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:44:39,675 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:39,689 | INFO | checkbox: G3_4_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_1CNT=None, MG3_4_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:39,999 | INFO | checkbox: G3_4_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_2CNT=None, MG3_4_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:40,032 | INFO | [5] step=20 D6 -> Survey (expected_next=D7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:40,279 | INFO | checkbox: G3_4_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_3CNT=None, MG3_4_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:40,329 | INFO | radio(series): D4_1=3 base=D4 freq={'3': 1}
+2026-04-06 10:44:40,466 | INFO | radio(series): D4_2=1 base=D4 freq={'3': 1, '1': 1}
+2026-04-06 10:44:40,548 | INFO | checkbox(skip): G3_NONE endswith _NONE (general loop)
+2026-04-06 10:44:40,562 | INFO | input(skip disabled): G3A
+2026-04-06 10:44:40,616 | INFO | textarea: G3A=전반적으로 이용이 편리했습니다
+2026-04-06 10:44:40,627 | INFO | checked_count_after_fill=12
+2026-04-06 10:44:40,680 | INFO | [4] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:44:40,701 | INFO | radio(series): D4_3=6 base=D4 freq={'3': 1, '1': 1, '6': 1}
+2026-04-06 10:44:40,708 | INFO | input(series): D7_1=38 base=D7
+2026-04-06 10:44:40,736 | INFO | input(series): D7_2=2500 base=D7
+2026-04-06 10:44:40,745 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:40,758 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:40,825 | INFO | [5] next_trigger main method=window.next() duration_ms=4.8 submitted=True error=-
+2026-04-06 10:44:40,860 | INFO | radio(series): D4_4=2 base=D4 freq={'3': 1, '1': 1, '6': 1, '2': 1}
+2026-04-06 10:44:40,869 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:41,016 | INFO | radio(series): D4_5=5 base=D4 freq={'3': 1, '1': 1, '6': 1, '2': 1, '5': 1}
+2026-04-06 10:44:41,121 | INFO | [4] step=21 G3 -> Survey (expected_next=G4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:41,238 | INFO | [5] step=21 D7 -> Survey (expected_next=D8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:41,251 | INFO | radio(series): D4_6=7 base=D4 freq={'3': 1, '1': 1, '6': 1, '2': 1, '5': 1, '7': 1}
+2026-04-06 10:44:41,312 | INFO | checked_count_after_fill=6
+2026-04-06 10:44:41,381 | INFO | [6] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:41,434 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:41,512 | INFO | radio(required): G4=3 (min=None, max=None)
+2026-04-06 10:44:41,575 | INFO | input(skip disabled): G4A
+2026-04-06 10:44:41,599 | INFO | textarea: G4A=선택지가 더 다양했으면 좋겠습니다
+2026-04-06 10:44:41,610 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:41,704 | INFO | [4] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:41,758 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:41,934 | INFO | [6] step=18 D4 -> Survey (expected_next=D5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:41,980 | INFO | [override] radio(NEQSET): D8 excluded=['3', '4'] -> picked=1
+2026-04-06 10:44:42,025 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:42,102 | INFO | [4] step=22 G4 -> Survey (expected_next=G5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:42,103 | INFO | [5] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:44:42,136 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:42,565 | INFO | [5] step=22 D8 -> Survey (expected_next=D9 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:42,691 | INFO | radio(required): G5=2 (min=None, max=None)
+2026-04-06 10:44:42,749 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:42,825 | INFO | [4] next_trigger main method=window.next() duration_ms=4.1 submitted=True error=-
+2026-04-06 10:44:42,908 | INFO | [4] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:42,985 | WARNING | [4] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:42,996 | WARNING | [4] [requestfailed] GET https://www.surveys.kr/study/T24060701/js/jquery.alphanumeric.pack.js
+2026-04-06 10:44:43,036 | INFO | [4] step=23 G5 -> Survey (expected_next=SURVEY_END action=Survey.asp url=https://www.surveys.kr/study/T24060701/G5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:43,189 | INFO | [override] checkbox: D9_1 picks=['1']
+2026-04-06 10:44:43,259 | INFO | [4] COMPLETED url=https://www.surveys.kr/study/T24060701/Survey_End.asp
+2026-04-06 10:44:43,326 | INFO | rank(D5) attempt 1: OK slots=['2', '1', '4', '3', '5'] forced={}
+2026-04-06 10:44:43,357 | INFO | [override] checkbox: D9_2 picks=['2']
+2026-04-06 10:44:43,499 | INFO | [6] next_trigger main method=window.next() duration_ms=7.5 submitted=True error=-
+2026-04-06 10:44:43,540 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:43,608 | INFO | [override] checkbox UNCHECK: D9_3 (val='')
+2026-04-06 10:44:43,748 | INFO | [override] checkbox UNCHECK: D9_4 (val='')
+2026-04-06 10:44:43,865 | INFO | [6] step=19 D5 -> Survey (expected_next=D6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:43,918 | INFO | [override] checkbox UNCHECK: D9_5 (val='')
+2026-04-06 10:44:43,950 | INFO | [coverage] 7 out_dir=run_logs_pw\clients\4H_bBlD0BEwJp69Kv04DzNUAnLYdKtF5\case_007 key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr= overrides={'D9_1': '1', 'D9_2': '', 'D9_3': '', 'D9_4': '', 'D9_5': '', 'D9_6': '', 'D9_7': '', 'D9_8': '', '__NUM_CONSTRAINTS__': {'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}, 'A3': '__NEQ__:1', 'A4': '9', 'B1': '__NEQ__:3', 'B2': '__NEQSET__:2,6,7,8', 'B4': '__NEQ__:2', 'B5': '1', 'B6': '1', '__RANK_INCLUDE_ANY__': {'C4': ['4']}, 'C4_1': '4', 'D1': '1', 'D2_NONE': '', 'D8': '__NEQSET__:3,4', 'G1': '__NEQ__:1', 'G2': '__NEQ__:2', 'NEXTPAGE': 'SCREEN', 'C6': '__NEQ__:2', 'holdStr': '', '__COND_NUM_RULES__': [{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}], '__CHECK_COUNT_RULES__': {'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}}
+2026-04-06 10:44:43,959 | INFO | [coverage] OK key=A3=__NEQ__:1|A4=9|B1=__NEQ__:3|B2=__NEQSET__:2,6,7,8|B4=__NEQ__:2|B5=1|B6=1|C4_1=4|C6=__NEQ__:2|D1=1|D2_NONE=|D8=__NEQSET__:3,4|D9_1=1|D9_2=2|D9_3=|D9_4=|D9_5=|D9_6=|D9_7=|D9_8=|E1_10=2|G1=__NEQ__:1|G2=__NEQ__:2|NEXTPAGE=SCREEN|__CHECK_COUNT_RULES__={'D9': {'range': (1, 8), 'min': 2, 'none_values': [], 'branch_next': 'SCREEN'}, 'E1': {'range': (1, 9), 'min': 4, 'none_values': ['10'], 'branch_next': 'G1'}}|__COND_NUM_RULES__=[{'when': {'C1_1': '2022'}, 'target': 'C1_2', 'min': 3}]|__NUM_CONSTRAINTS__={'A2': {'min': 20}, 'C5_4': {'min': 5}, 'D7_2': {'min': 2500}, 'C1_1': {'min': 2022}, 'cnt': {'min': 2}}|__RANK_INCLUDE_ANY__={'C4': ['4']}|holdStr=
+2026-04-06 10:44:43,965 | INFO | run 4/45 DONE ok=True
+2026-04-06 10:44:43,966 | INFO | STOP requested by user.
+2026-04-06 10:44:44,055 | INFO | [override] checkbox UNCHECK: D9_6 (val='')
+2026-04-06 10:44:44,194 | INFO | [override] checkbox UNCHECK: D9_7 (val='')
+2026-04-06 10:44:44,339 | INFO | [override] checkbox UNCHECK: D9_8 (val='')
+2026-04-06 10:44:44,455 | INFO | checkbox-group: D9 has count-rule, so handled overrides will be normalized by group logic: ['D9_1', 'D9_2', 'D9_3', 'D9_4', 'D9_5', 'D9_6', 'D9_7', 'D9_8']
+2026-04-06 10:44:44,591 | INFO | radio(series): D6_1=3 base=D6 freq={'3': 1}
+2026-04-06 10:44:44,700 | INFO | radio(series): D6_2=5 base=D6 freq={'3': 1, '5': 1}
+2026-04-06 10:44:44,814 | INFO | radio(series): D6_3=7 base=D6 freq={'3': 1, '5': 1, '7': 1}
+2026-04-06 10:44:44,939 | INFO | radio(series): D6_4=4 base=D6 freq={'3': 1, '5': 1, '7': 1, '4': 1}
+2026-04-06 10:44:45,030 | INFO | radio(series): D6_5=1 base=D6 freq={'3': 1, '5': 1, '7': 1, '4': 1, '1': 1}
+2026-04-06 10:44:45,087 | INFO | checked_count_after_fill=5
+2026-04-06 10:44:45,146 | INFO | [6] next_trigger main method=window.next() duration_ms=3.7 submitted=True error=-
+2026-04-06 10:44:45,202 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:45,843 | INFO | [6] step=20 D6 -> Survey (expected_next=D7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:46,365 | INFO | [7] START https://www.surveys.kr/study/T24060701/index.asp?ResType=TEST-
+2026-04-06 10:44:46,576 | WARNING | [7] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:46,612 | WARNING | [7] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/main/4.4.21/kakao.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:46,621 | WARNING | [7] [console.warning] A parser-blocking, cross site (i.e. different eTLD+1) script, https://t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+2026-04-06 10:44:46,730 | INFO | input(series): D7_1=29 base=D7
+2026-04-06 10:44:46,772 | INFO | input(series): D7_2=2500 base=D7
+2026-04-06 10:44:46,782 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:46,907 | WARNING | [7] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:46,960 | INFO | [6] next_trigger main method=window.next() duration_ms=5.2 submitted=True error=-
+2026-04-06 10:44:46,990 | INFO | checkbox-group: D9 picks=['1', '2', '3', '4', '5', '6', '7', '8'] checked=[]
+2026-04-06 10:44:47,099 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:47,244 | INFO | checked_count_after_fill=8
+2026-04-06 10:44:47,465 | INFO | [5] next_trigger main method=window.next() duration_ms=5.3 submitted=True error=-
+2026-04-06 10:44:47,608 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:48,139 | INFO | [6] step=21 D7 -> Survey (expected_next=D8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:48,268 | INFO | [5] step=23 D9 -> E1 (expected_next=E1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D9.asp -> https://www.surveys.kr/study/T24060701/E1.asp)
+2026-04-06 10:44:48,290 | INFO | input(series): A0_1=29 base=A0
+2026-04-06 10:44:48,308 | INFO | input(series): A0_2=36 base=A0
+2026-04-06 10:44:48,330 | INFO | input(series): A0_3=76 base=A0
+2026-04-06 10:44:48,365 | INFO | input(series): A0_4=82 base=A0
+2026-04-06 10:44:48,521 | INFO | input(tel): HP=010-4327-4841
+2026-04-06 10:44:48,568 | INFO | input(text): NAME=김민수
+2026-04-06 10:44:48,779 | INFO | input(text): midd=없음
+2026-04-06 10:44:48,840 | INFO | input(text): RECKEY=기타
+2026-04-06 10:44:49,011 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:49,091 | WARNING | [7] dialog type=alert message=컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:49,116 | INFO | [7] next_trigger main method=window.next() duration_ms=25.2 submitted=True error=-
+2026-04-06 10:44:49,325 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:49,487 | INFO | [override] radio(NEQSET): D8 excluded=['3', '4'] -> picked=1
+2026-04-06 10:44:49,489 | WARNING | [override] checkbox fallback: E1_10 requested value='3' missing -> picked first
+2026-04-06 10:44:49,500 | INFO | [override] checkbox: E1_10 picks=['3']
+2026-04-06 10:44:49,637 | WARNING | [7] validation alert detected: 컨택 일시 - 월 입력을 확인하여 주십시오.
+2026-04-06 10:44:49,680 | INFO | checkbox-group: E1 has count-rule, so handled overrides will be normalized by group logic: ['E1_10']
+2026-04-06 10:44:49,878 | WARNING | [next_logic] unresolved: numeric_max:A0_1>12 | numeric_max:A0_2>31 | numeric_max:A0_3>23 | numeric_max:A0_4>59 | numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:49,914 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:50,064 | INFO | [6] next_trigger main method=window.next() duration_ms=3.7 submitted=True error=-
+2026-04-06 10:44:50,118 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:50,282 | INFO | [next_logic] issue_repair: A0_1=6(issue:max) | A0_2=31(issue:max) | A0_3=5(issue:max) | A0_4=9(issue:max)
+2026-04-06 10:44:50,497 | INFO | checkbox-group: E1 picks=['10'] checked=[]
+2026-04-06 10:44:50,505 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:50,563 | INFO | [5] next_trigger main method=window.next() duration_ms=3.1 submitted=True error=-
+2026-04-06 10:44:50,564 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:44:50,679 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:50,786 | INFO | [6] step=22 D8 -> Survey (expected_next=D9 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:50,838 | INFO | [next_logic] alert_repair: A0_1=6(issue:max) | A0_2=31(issue:max) | A0_3=5(issue:max) | A0_4=9(issue:max) | A0_2=12(alert:month) | A0_3=3(alert:hour)
+2026-04-06 10:44:50,839 | INFO | [7] alert_retry=1 changed=['A0_1=6(issue:max)', 'A0_2=31(issue:max)', 'A0_3=5(issue:max)', 'A0_4=9(issue:max)', 'A0_2=12(alert:month)', 'A0_3=3(alert:hour)']
+2026-04-06 10:44:50,918 | INFO | [5] step=24 E1 -> Survey (expected_next=E2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:50,930 | INFO | [7] next_trigger repair method=window.next() duration_ms=36.7 submitted=True error=-
+2026-04-06 10:44:51,000 | INFO | [7] next_runtime_repair calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:51,515 | INFO | [7] step=0 A0 -> A1 (expected_next=A1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A0.asp -> https://www.surveys.kr/study/T24060701/A1.asp)
+2026-04-06 10:44:51,552 | INFO | [override] radio(NEQSET): G1 excluded=['1'] -> picked=2
+2026-04-06 10:44:51,574 | INFO | [override] checkbox: D9_1 picks=['1']
+2026-04-06 10:44:51,585 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:51,634 | INFO | [5] next_trigger main method=window.next() duration_ms=2.2 submitted=True error=-
+2026-04-06 10:44:51,680 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:51,728 | INFO | [override] checkbox: D9_2 picks=['2']
+2026-04-06 10:44:51,873 | INFO | [override] checkbox UNCHECK: D9_3 (val='')
+2026-04-06 10:44:52,016 | INFO | [5] step=25 G1 -> Survey (expected_next=G2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:52,085 | INFO | [override] checkbox UNCHECK: D9_4 (val='')
+2026-04-06 10:44:52,128 | INFO | radio(required): A1=1 (min=None, max=None)
+2026-04-06 10:44:52,194 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:52,242 | INFO | [override] checkbox UNCHECK: D9_5 (val='')
+2026-04-06 10:44:52,262 | INFO | [7] next_trigger main method=window.next() duration_ms=5.2 submitted=True error=-
+2026-04-06 10:44:52,353 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:52,378 | INFO | [override] radio(NEQSET): G2 excluded=['2'] -> picked=1
+2026-04-06 10:44:52,413 | INFO | [override] checkbox UNCHECK: D9_6 (val='')
+2026-04-06 10:44:52,420 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:52,472 | INFO | [5] next_trigger main method=window.next() duration_ms=2.3 submitted=True error=-
+2026-04-06 10:44:52,551 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:52,571 | INFO | [override] checkbox UNCHECK: D9_7 (val='')
+2026-04-06 10:44:52,850 | INFO | [7] step=1 A1 -> Survey (expected_next=A2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:52,939 | INFO | [5] step=26 G2 -> G3 (expected_next=G3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G2.asp -> https://www.surveys.kr/study/T24060701/G3.asp)
+2026-04-06 10:44:52,953 | INFO | [override] checkbox UNCHECK: D9_8 (val='')
+2026-04-06 10:44:53,032 | INFO | checkbox-group: D9 has count-rule, so handled overrides will be normalized by group logic: ['D9_1', 'D9_2', 'D9_3', 'D9_4', 'D9_5', 'D9_6', 'D9_7', 'D9_8']
+2026-04-06 10:44:53,406 | INFO | checkbox(skip): G3_NONE endswith _NONE
+2026-04-06 10:44:53,431 | INFO | checkbox: G3_1_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_1CNT=None, MG3_1_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:53,454 | INFO | input(tel, constrained): A2=34 (min=20, max=None)
+2026-04-06 10:44:53,469 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:53,535 | INFO | [7] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:44:53,628 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:53,720 | INFO | checkbox: G3_1_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_2CNT=None, MG3_1_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:54,012 | INFO | [7] step=2 A2 -> Survey (expected_next=A3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:54,022 | INFO | checkbox: G3_1_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_3CNT=None, MG3_1_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:54,265 | INFO | checkbox: G3_2_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_1CNT=None, MG3_2_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:54,539 | INFO | checkbox: G3_2_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_2CNT=None, MG3_2_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:54,694 | INFO | [override] radio(NEQSET): A3 excluded=['1'] -> picked=2
+2026-04-06 10:44:54,700 | INFO | checkbox-group: D9 picks=['1', '2', '3', '4', '5', '6', '7', '8'] checked=[]
+2026-04-06 10:44:54,711 | INFO | checked_count_after_fill=8
+2026-04-06 10:44:54,738 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:54,778 | INFO | [6] next_trigger main method=window.next() duration_ms=6.4 submitted=True error=-
+2026-04-06 10:44:54,800 | INFO | checkbox: G3_2_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_3CNT=None, MG3_2_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:54,830 | INFO | [7] next_trigger main method=window.next() duration_ms=6.0 submitted=True error=-
+2026-04-06 10:44:54,891 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:54,951 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:54,992 | INFO | [6] step=23 D9 -> Survey (expected_next=E1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D9.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:55,090 | INFO | checkbox: G3_3_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_1CNT=None, MG3_3_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:55,292 | INFO | [7] step=3 A3 -> Survey (expected_next=A4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:55,406 | INFO | checkbox: G3_3_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_2CNT=None, MG3_3_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:55,647 | INFO | checkbox: G3_3_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_3CNT=None, MG3_3_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:55,691 | WARNING | [override] checkbox fallback: E1_10 requested value='4' missing -> picked first
+2026-04-06 10:44:55,698 | INFO | [override] checkbox: E1_10 picks=['4']
+2026-04-06 10:44:55,736 | INFO | checkbox-group: E1 has count-rule, so handled overrides will be normalized by group logic: ['E1_10']
+2026-04-06 10:44:55,894 | INFO | [override] radio: A4=9
+2026-04-06 10:44:55,923 | INFO | checkbox: G3_4_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_1CNT=None, MG3_4_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:55,947 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:56,002 | INFO | [7] next_trigger main method=window.next() duration_ms=3.2 submitted=True error=-
+2026-04-06 10:44:56,052 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:56,111 | INFO | checkbox-group: E1 picks=['10'] checked=[]
+2026-04-06 10:44:56,125 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:56,152 | INFO | checkbox: G3_4_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_2CNT=None, MG3_4_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:44:56,175 | INFO | [6] next_trigger main method=window.next() duration_ms=4.9 submitted=True error=-
+2026-04-06 10:44:56,357 | INFO | [7] step=4 A4 -> Survey (expected_next=A5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:56,362 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:56,441 | INFO | checkbox: G3_4_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_3CNT=None, MG3_4_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:44:56,674 | INFO | checkbox(skip): G3_NONE endswith _NONE (general loop)
+2026-04-06 10:44:56,685 | INFO | input(skip disabled): G3A
+2026-04-06 10:44:56,753 | INFO | textarea: G3A=대기 시간이 길었습니다
+2026-04-06 10:44:56,765 | INFO | checked_count_after_fill=12
+2026-04-06 10:44:56,796 | INFO | [6] step=24 Survey -> Survey (expected_next=E2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:56,825 | INFO | [5] next_trigger main method=window.next() duration_ms=2.7 submitted=True error=-
+2026-04-06 10:44:56,849 | INFO | radio(required): A5=2 (min=None, max=None)
+2026-04-06 10:44:56,893 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:56,910 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:56,965 | INFO | [7] next_trigger main method=window.next() duration_ms=3.9 submitted=True error=-
+2026-04-06 10:44:57,010 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:57,187 | INFO | [5] step=27 G3 -> Survey (expected_next=G4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:57,209 | INFO | [override] radio(NEQSET): G1 excluded=['1'] -> picked=2
+2026-04-06 10:44:57,256 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:57,333 | INFO | [7] step=5 A5 -> Survey (expected_next=A6A action=Survey.asp url=https://www.surveys.kr/study/T24060701/A5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:57,334 | INFO | [6] next_trigger main method=window.next() duration_ms=3.3 submitted=True error=-
+2026-04-06 10:44:57,362 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:57,745 | INFO | [6] step=25 G1 -> Survey (expected_next=G2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:57,848 | INFO | radio(required): G4=1 (min=None, max=None)
+2026-04-06 10:44:57,949 | INFO | input(skip disabled): G4A
+2026-04-06 10:44:57,966 | INFO | input(tel): A6A_1=296
+2026-04-06 10:44:57,984 | INFO | checked_count_after_fill=0
+2026-04-06 10:44:57,987 | INFO | textarea: G4A=전반적으로 만족합니다
+2026-04-06 10:44:58,002 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:58,049 | INFO | [7] next_trigger main method=window.next() duration_ms=7.6 submitted=True error=-
+2026-04-06 10:44:58,062 | INFO | [5] next_trigger main method=window.next() duration_ms=3.8 submitted=True error=-
+2026-04-06 10:44:58,108 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:58,111 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:58,317 | INFO | [override] radio(NEQSET): G2 excluded=['2'] -> picked=1
+2026-04-06 10:44:58,371 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:58,456 | INFO | [6] next_trigger main method=window.next() duration_ms=4.4 submitted=True error=-
+2026-04-06 10:44:58,495 | INFO | [5] step=28 G4 -> Survey (expected_next=G5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:58,504 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:58,525 | INFO | [7] step=6 A6A -> Survey (expected_next=A7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A6A.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:59,001 | INFO | [6] step=26 G2 -> Survey (expected_next=G3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:59,063 | INFO | radio(required): A7=1 (min=None, max=None)
+2026-04-06 10:44:59,112 | INFO | radio(required): G5=1 (min=None, max=None)
+2026-04-06 10:44:59,129 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:59,168 | INFO | checked_count_after_fill=1
+2026-04-06 10:44:59,183 | INFO | [7] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:44:59,225 | INFO | [5] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:44:59,250 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:59,282 | INFO | [5] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:44:59,359 | WARNING | [5] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:44:59,366 | WARNING | [5] [requestfailed] GET https://www.surveys.kr/study/T24060701/js/jquery.alphanumeric.pack.js
+2026-04-06 10:44:59,452 | INFO | [5] step=29 G5 -> Survey_End (expected_next=SURVEY_END action=Survey.asp url=https://www.surveys.kr/study/T24060701/G5.asp -> https://www.surveys.kr/study/T24060701/Survey_End.asp)
+2026-04-06 10:44:59,503 | INFO | checkbox(skip): G3_NONE endswith _NONE
+2026-04-06 10:44:59,531 | INFO | checkbox: G3_1_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_1CNT=None, MG3_1_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:44:59,603 | INFO | [7] step=7 A7 -> Survey (expected_next=A8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/A7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:44:59,641 | INFO | [5] COMPLETED url=https://www.surveys.kr/study/T24060701/Survey_End.asp
+2026-04-06 10:45:00,144 | INFO | checkbox: G3_1_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_2CNT=None, MG3_1_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:00,239 | INFO | [override] radio(NEQSET): B1 excluded=['3'] -> picked=1
+2026-04-06 10:45:00,278 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:00,345 | INFO | [7] next_trigger main method=window.next() duration_ms=4.4 submitted=True error=-
+2026-04-06 10:45:00,453 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:00,998 | INFO | checkbox: G3_1_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_3CNT=None, MG3_1_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:01,053 | INFO | [7] step=8 B1 -> Survey (expected_next=B2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:01,269 | INFO | checkbox: G3_2_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_1CNT=None, MG3_2_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:45:01,510 | INFO | checkbox: G3_2_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_2CNT=None, MG3_2_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:01,586 | INFO | [override] radio(NEQSET): B2 excluded=['2', '6', '7', '8'] -> picked=4
+2026-04-06 10:45:01,617 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:01,677 | INFO | [7] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:45:01,741 | INFO | checkbox: G3_2_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_3CNT=None, MG3_2_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:01,755 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:01,978 | INFO | checkbox: G3_3_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_1CNT=None, MG3_3_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:45:02,077 | INFO | [7] step=9 B2 -> Survey (expected_next=B3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:02,251 | INFO | checkbox: G3_3_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_2CNT=None, MG3_3_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:02,527 | INFO | checkbox: G3_3_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_3CNT=None, MG3_3_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:02,614 | INFO | radio(required): B3=81 (min=None, max=None)
+2026-04-06 10:45:02,681 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:02,733 | INFO | [7] next_trigger main method=window.next() duration_ms=4.9 submitted=True error=-
+2026-04-06 10:45:02,780 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:02,793 | INFO | checkbox: G3_4_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_1CNT=None, MG3_4_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:45:03,077 | INFO | checkbox: G3_4_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_2CNT=None, MG3_4_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:03,110 | INFO | [7] step=10 B3 -> Survey (expected_next=B4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:03,324 | INFO | checkbox: G3_4_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_3CNT=None, MG3_4_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:03,557 | INFO | [override] radio(NEQSET): B4 excluded=['2'] -> picked=1
+2026-04-06 10:45:03,580 | INFO | checkbox(skip): G3_NONE endswith _NONE (general loop)
+2026-04-06 10:45:03,590 | INFO | input(skip disabled): G3A
+2026-04-06 10:45:03,607 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:03,624 | INFO | textarea: G3A=평소에 익숙해서
+2026-04-06 10:45:03,632 | INFO | checked_count_after_fill=12
+2026-04-06 10:45:03,653 | INFO | [7] next_trigger main method=window.next() duration_ms=3.7 submitted=True error=-
+2026-04-06 10:45:03,691 | INFO | [6] next_trigger main method=window.next() duration_ms=6.5 submitted=True error=-
+2026-04-06 10:45:03,705 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:03,772 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:04,063 | INFO | [7] step=11 B4 -> Survey (expected_next=B5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:04,149 | INFO | [6] step=27 G3 -> Survey (expected_next=G4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:04,645 | INFO | [override] radio: B5=1
+2026-04-06 10:45:04,685 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:04,747 | INFO | [7] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:45:04,800 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:04,805 | INFO | radio(required): G4=2 (min=None, max=None)
+2026-04-06 10:45:04,886 | INFO | input(skip disabled): G4A
+2026-04-06 10:45:04,917 | INFO | textarea: G4A=필요한 기능이 있어서
+2026-04-06 10:45:04,925 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:05,047 | INFO | [6] next_trigger main method=window.next() duration_ms=57.0 submitted=True error=-
+2026-04-06 10:45:05,066 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:05,190 | INFO | [7] step=12 B5 -> Survey (expected_next=B6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:05,279 | WARNING | [6] same-page after main submit -> one quick fallback
+2026-04-06 10:45:05,347 | WARNING | [6] dialog type=alert message=질문에 응답해 주십시오.
+2026-04-06 10:45:05,353 | INFO | [6] next_trigger fallback method=window.next() duration_ms=7.8 clicked=True error=-
+2026-04-06 10:45:05,365 | INFO | [6] next_runtime_fallback calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:05,442 | WARNING | [6] dialog type=alert message=질문에 응답해 주십시오.
+2026-04-06 10:45:05,448 | INFO | [6] next_trigger main method=window.next() duration_ms=6.3 submitted=True error=-
+2026-04-06 10:45:05,455 | INFO | [6] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:05,525 | WARNING | [6] validation alert detected: 질문에 응답해 주십시오.
+2026-04-06 10:45:05,558 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:45:05,827 | INFO | [override] radio: B6=1
+2026-04-06 10:45:05,862 | INFO | [OTHER] cleared input name=TB6_2 id=TB6_2 reason=selected-option-nearby
+2026-04-06 10:45:05,876 | INFO | [OTHER] cleared input name=TB6_3 id=TB6_3 reason=selected-option-nearby
+2026-04-06 10:45:05,888 | INFO | [OTHER] cleared input name=TB6_4 id=TB6_4 reason=selected-option-nearby
+2026-04-06 10:45:05,901 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:05,966 | INFO | [7] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:45:06,028 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:06,321 | INFO | [7] step=13 B6 -> Survey (expected_next=C1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/B6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:06,683 | INFO | [override] radio: D1=1
+2026-04-06 10:45:06,728 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:06,787 | INFO | [7] next_trigger main method=window.next() duration_ms=7.5 submitted=True error=-
+2026-04-06 10:45:06,852 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:07,158 | INFO | [7] step=14 D1 -> Survey (expected_next=D2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:07,554 | INFO | [override] checkbox UNCHECK: D2_NONE (val='')
+2026-04-06 10:45:07,561 | INFO | checkbox(skip): D2_NONE endswith _NONE
+2026-04-06 10:45:07,591 | INFO | input(tel): D2=91
+2026-04-06 10:45:07,600 | INFO | checked_count_after_fill=0
+2026-04-06 10:45:07,652 | INFO | [7] next_trigger main method=window.next() duration_ms=3.5 submitted=True error=-
+2026-04-06 10:45:07,706 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:08,018 | INFO | [7] step=15 D2 -> Survey (expected_next=D3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:09,145 | INFO | rank(D3) attempt 1: OK slots=['6', '5', '3', '1', '2'] forced={}
+2026-04-06 10:45:09,213 | INFO | [7] next_trigger main method=window.next() duration_ms=4.0 submitted=True error=-
+2026-04-06 10:45:09,269 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:09,607 | INFO | [7] step=16 D3 -> Survey (expected_next=D4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:10,107 | INFO | radio(series): D4_1=4 base=D4 freq={'4': 1}
+2026-04-06 10:45:10,154 | INFO | [next_logic] no adjustment
+2026-04-06 10:45:10,166 | WARNING | [next_logic] unresolved: numeric_invalid:A2 | numeric_invalid:C1_1 | numeric_invalid:C5_4 | numeric_invalid:D7_2 | numeric_invalid:cnt
+2026-04-06 10:45:10,242 | INFO | [next_logic] alert_repair: no changes
+2026-04-06 10:45:10,275 | INFO | [6] step=28 G4 -> G5 (expected_next=G5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G4.asp -> https://www.surveys.kr/study/T24060701/G5.asp)
+2026-04-06 10:45:10,281 | INFO | radio(series): D4_2=2 base=D4 freq={'4': 1, '2': 1}
+2026-04-06 10:45:10,401 | INFO | radio(series): D4_3=7 base=D4 freq={'4': 1, '2': 1, '7': 1}
+2026-04-06 10:45:10,537 | INFO | radio(series): D4_4=5 base=D4 freq={'4': 1, '2': 1, '7': 1, '5': 1}
+2026-04-06 10:45:10,648 | INFO | radio(series): D4_5=1 base=D4 freq={'4': 1, '2': 1, '7': 1, '5': 1, '1': 1}
+2026-04-06 10:45:10,756 | INFO | radio(series): D4_6=6 base=D4 freq={'4': 1, '2': 1, '7': 1, '5': 1, '1': 1, '6': 1}
+2026-04-06 10:45:10,810 | INFO | checked_count_after_fill=6
+2026-04-06 10:45:10,873 | INFO | [7] next_trigger main method=window.next() duration_ms=4.6 submitted=True error=-
+2026-04-06 10:45:10,926 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:11,241 | INFO | [7] step=17 D4 -> Survey (expected_next=D5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:12,315 | INFO | rank(D5) attempt 1: OK slots=['2', '4', '5', '1', '3'] forced={}
+2026-04-06 10:45:12,393 | INFO | [7] next_trigger main method=window.next() duration_ms=5.6 submitted=True error=-
+2026-04-06 10:45:12,451 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:12,829 | INFO | [7] step=18 D5 -> Survey (expected_next=D6 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:13,333 | INFO | radio(series): D6_1=3 base=D6 freq={'3': 1}
+2026-04-06 10:45:13,440 | INFO | radio(series): D6_2=1 base=D6 freq={'3': 1, '1': 1}
+2026-04-06 10:45:13,551 | INFO | radio(series): D6_3=4 base=D6 freq={'3': 1, '1': 1, '4': 1}
+2026-04-06 10:45:13,679 | INFO | radio(series): D6_4=2 base=D6 freq={'3': 1, '1': 1, '4': 1, '2': 1}
+2026-04-06 10:45:13,804 | INFO | radio(series): D6_5=6 base=D6 freq={'3': 1, '1': 1, '4': 1, '2': 1, '6': 1}
+2026-04-06 10:45:13,855 | INFO | checked_count_after_fill=5
+2026-04-06 10:45:13,913 | INFO | [7] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:45:13,964 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:14,273 | INFO | [7] step=19 D6 -> Survey (expected_next=D7 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D6.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:14,616 | INFO | input(series): D7_1=24 base=D7
+2026-04-06 10:45:14,641 | INFO | input(series): D7_2=2500 base=D7
+2026-04-06 10:45:14,650 | INFO | checked_count_after_fill=0
+2026-04-06 10:45:14,712 | INFO | [7] next_trigger main method=window.next() duration_ms=4.2 submitted=True error=-
+2026-04-06 10:45:14,758 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:15,065 | INFO | [7] step=20 D7 -> Survey (expected_next=D8 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D7.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:15,601 | INFO | [override] radio(NEQSET): D8 excluded=['3', '4'] -> picked=1
+2026-04-06 10:45:15,640 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:15,689 | INFO | [7] next_trigger main method=window.next() duration_ms=3.4 submitted=True error=-
+2026-04-06 10:45:15,740 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:16,054 | INFO | [7] step=21 D8 -> Survey (expected_next=D9 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D8.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:16,595 | INFO | [override] checkbox: D9_1 picks=['1']
+2026-04-06 10:45:16,736 | INFO | [override] checkbox UNCHECK: D9_2 (val='')
+2026-04-06 10:45:16,876 | INFO | [override] checkbox UNCHECK: D9_3 (val='')
+2026-04-06 10:45:17,015 | INFO | [override] checkbox UNCHECK: D9_4 (val='')
+2026-04-06 10:45:17,154 | INFO | [override] checkbox UNCHECK: D9_5 (val='')
+2026-04-06 10:45:17,295 | INFO | [override] checkbox UNCHECK: D9_6 (val='')
+2026-04-06 10:45:17,453 | INFO | [override] checkbox UNCHECK: D9_7 (val='')
+2026-04-06 10:45:17,592 | INFO | [override] checkbox UNCHECK: D9_8 (val='')
+2026-04-06 10:45:17,653 | INFO | checkbox-group: D9 has count-rule, so handled overrides will be normalized by group logic: ['D9_1', 'D9_2', 'D9_3', 'D9_4', 'D9_5', 'D9_6', 'D9_7', 'D9_8']
+2026-04-06 10:45:18,978 | INFO | checkbox-group: D9 picks=['1', '2', '3', '4', '5', '6', '7', '8'] checked=[]
+2026-04-06 10:45:18,997 | INFO | checked_count_after_fill=8
+2026-04-06 10:45:19,055 | INFO | [7] next_trigger main method=window.next() duration_ms=5.4 submitted=True error=-
+2026-04-06 10:45:19,112 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:19,478 | INFO | [7] step=22 D9 -> Survey (expected_next=E1 action=Survey.asp url=https://www.surveys.kr/study/T24060701/D9.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:21,583 | INFO | checkbox-group: E1 picks=['1', '2', '3', '4', '5', '6', '7', '8', '9'] checked=[]
+2026-04-06 10:45:21,593 | INFO | checked_count_after_fill=9
+2026-04-06 10:45:21,650 | INFO | [7] next_trigger main method=window.next() duration_ms=5.3 submitted=True error=-
+2026-04-06 10:45:21,764 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:22,161 | INFO | [7] step=23 E1 -> Survey (expected_next=E2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:22,868 | INFO | radio(series): E2_1=2 base=E2 freq={'2': 1}
+2026-04-06 10:45:22,998 | INFO | radio(series): E2_2=1 base=E2 freq={'2': 1, '1': 1}
+2026-04-06 10:45:23,135 | INFO | radio(series): E2_3=5 base=E2 freq={'2': 1, '1': 1, '5': 1}
+2026-04-06 10:45:23,245 | INFO | radio(series): E2_4=3 base=E2 freq={'2': 1, '1': 1, '5': 1, '3': 1}
+2026-04-06 10:45:23,359 | INFO | radio(series): E2_5=4 base=E2 freq={'2': 1, '1': 1, '5': 1, '3': 1, '4': 1}
+2026-04-06 10:45:23,419 | INFO | checked_count_after_fill=5
+2026-04-06 10:45:23,486 | INFO | [7] next_trigger main method=window.next() duration_ms=4.4 submitted=True error=-
+2026-04-06 10:45:23,546 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:23,881 | INFO | [7] step=24 E2 -> Survey (expected_next=E3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:24,237 | INFO | radio(required): E3=3 (min=None, max=None)
+2026-04-06 10:45:24,257 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:24,303 | INFO | [7] next_trigger main method=window.next() duration_ms=1.5 submitted=True error=-
+2026-04-06 10:45:24,353 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:24,618 | INFO | [7] step=25 E3 -> Survey (expected_next=E4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/E3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:25,147 | INFO | [override] radio(NEQSET): G1 excluded=['1'] -> picked=2
+2026-04-06 10:45:25,176 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:25,241 | INFO | [7] next_trigger main method=window.next() duration_ms=5.2 submitted=True error=-
+2026-04-06 10:45:25,296 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:25,673 | INFO | [7] step=26 G1 -> Survey (expected_next=G2 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G1.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:26,081 | INFO | [override] radio(NEQSET): G2 excluded=['2'] -> picked=1
+2026-04-06 10:45:26,111 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:26,170 | INFO | [7] next_trigger main method=window.next() duration_ms=5.0 submitted=True error=-
+2026-04-06 10:45:26,226 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:26,619 | INFO | [7] step=27 G2 -> Survey (expected_next=G3 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G2.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:26,912 | INFO | checkbox(skip): G3_NONE endswith _NONE
+2026-04-06 10:45:26,930 | INFO | checkbox: G3_1_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_1CNT=None, MG3_1_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:45:27,219 | INFO | checkbox: G3_1_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_2CNT=None, MG3_1_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:27,481 | INFO | checkbox: G3_1_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_1_3CNT=None, MG3_1_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:27,756 | INFO | checkbox: G3_2_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_1CNT=None, MG3_2_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:45:28,041 | INFO | checkbox: G3_2_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_2CNT=None, MG3_2_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:28,309 | INFO | checkbox: G3_2_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_2_3CNT=None, MG3_2_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:28,566 | INFO | checkbox: G3_3_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_1CNT=None, MG3_3_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:45:28,795 | INFO | checkbox: G3_3_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_2CNT=None, MG3_3_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:29,015 | INFO | checkbox: G3_3_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_3_3CNT=None, MG3_3_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:29,231 | INFO | checkbox: G3_4_1 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_1CNT=None, MG3_4_1CNT=None) pick_count=1 picks=['1']
+2026-04-06 10:45:29,477 | INFO | checkbox: G3_4_2 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_2CNT=None, MG3_4_2CNT=None) pick_count=1 picks=['2']
+2026-04-06 10:45:29,686 | INFO | checkbox: G3_4_3 opt=1 normal=1 exclusive=[] min=1->1 max=1->1 (MIG3_4_3CNT=None, MG3_4_3CNT=None) pick_count=1 picks=['3']
+2026-04-06 10:45:29,894 | INFO | checkbox(skip): G3_NONE endswith _NONE (general loop)
+2026-04-06 10:45:29,903 | INFO | input(skip disabled): G3A
+2026-04-06 10:45:29,927 | INFO | textarea: G3A=가격이 다소 부담되었습니다
+2026-04-06 10:45:30,505 | INFO | checked_count_after_fill=12
+2026-04-06 10:45:30,563 | INFO | [7] next_trigger main method=window.next() duration_ms=3.7 submitted=True error=-
+2026-04-06 10:45:30,636 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:30,950 | INFO | [7] step=28 G3 -> Survey (expected_next=G4 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G3.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:31,510 | INFO | radio(required): G4=2 (min=None, max=None)
+2026-04-06 10:45:31,570 | INFO | input(skip disabled): G4A
+2026-04-06 10:45:31,597 | INFO | textarea: G4A=사용 방법이 조금 어려웠습니다
+2026-04-06 10:45:31,614 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:31,679 | INFO | [7] next_trigger main method=window.next() duration_ms=4.6 submitted=True error=-
+2026-04-06 10:45:31,730 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:32,048 | INFO | [7] step=29 G4 -> Survey (expected_next=G5 action=Survey.asp url=https://www.surveys.kr/study/T24060701/G4.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:32,505 | INFO | radio(required): G5=1 (min=None, max=None)
+2026-04-06 10:45:32,561 | INFO | checked_count_after_fill=1
+2026-04-06 10:45:32,608 | INFO | [7] next_trigger main method=window.next() duration_ms=3.6 submitted=True error=-
+2026-04-06 10:45:32,676 | INFO | [7] next_runtime_main calls=0->0 last_duration_ms=0.0 max_duration_ms=0.0 mode=- error=-
+2026-04-06 10:45:32,765 | WARNING | [7] [console.error] Failed to load resource: the server responded with a status of 404 ()
+2026-04-06 10:45:32,770 | WARNING | [7] [requestfailed] GET https://www.surveys.kr/study/T24060701/js/jquery.alphanumeric.pack.js
+2026-04-06 10:45:32,836 | INFO | [7] step=30 G5 -> Survey (expected_next=SURVEY_END action=Survey.asp url=https://www.surveys.kr/study/T24060701/G5.asp -> https://www.surveys.kr/study/T24060701/Survey.asp)
+2026-04-06 10:45:33,204 | INFO | [7] COMPLETED url=https://www.surveys.kr/study/T24060701/Survey_End.asp

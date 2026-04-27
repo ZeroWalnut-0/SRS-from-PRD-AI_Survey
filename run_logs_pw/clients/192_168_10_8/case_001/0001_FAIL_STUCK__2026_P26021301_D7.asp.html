@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Failure Snapshot</title>
+  <style>
+    body { font-family: Arial, 'Malgun Gothic', sans-serif; margin: 24px; line-height: 1.5; color:#222; background:#fafafa; }
+    .box { background:#fff; border:1px solid #ddd; border-radius:10px; padding:16px; margin-bottom:16px; }
+    pre { white-space:pre-wrap; word-break:break-word; background:#f6f6f6; border:1px solid #e2e2e2; border-radius:8px; padding:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0;">Failure Snapshot</h2>
+    <div><b>URL</b> https://kstat.surveys.kr/2026/P26021301/D7.asp</div>
+    <div><b>Title</b> 선정설문지</div>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0;">Visible Text Excerpt</h3>
+    <pre>ID:0317152208718959347227075%D7향후경차EV를구매하기위해예산은어느정도로생각하고계십니까?일반가솔린/디젤이아닌전기차(EV)를기준으로응답하여주십시오.단,자동차세,등록세등의세금과자동차보험료를제외한가격으로기입해주세요최소만원(이천구백만원)최대만원(일천일백구만원)이전다음3000미만,4000초과탈락</pre>
+  </div>
+  <div class="box">
+    <details open>
+      <summary><b>Raw HTML (escaped)</b></summary>
+      <pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;https://www.w3.org/TR/html4/loose.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=10; IE=9; IE=8; IE=7; IE=EDGE&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;APMALL&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/bootstrap.min.css?v=202602131248&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS/users.css?v=202602251740&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/font-kopubworld@1.0&quot;&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot; integrity=&quot;sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.alphanum/1.0.24/jquery.alphanum.min.js&quot; integrity=&quot;sha512-gXwhwYG+MXc3CTdrUQpBDqW+VY4Gpo8dLZsHC5s4X9hitmSZcztF2YPbbeNcFxOiNx6/QeyTCoOw7b+xnm3DwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/survey.js?v=202603041345&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+
+&lt;title&gt;선정설문지&lt;/title&gt;
+&lt;script&gt;
+	$(document).ready(function(){
+	$(&#x27;input[name=D7_1]&#x27;).keyup(function(){
+		var attr = $(this).attr(&#x27;name&#x27;);
+		if (parseFloat($(this).val()||0)&gt;0){
+				var money = $(this).val()*10000;
+			NUM_HAN(money,3,&#x27;M&#x27;+attr);
+		}
+		else
+		{
+			$(&#x27;#M&#x27;+attr).text(&#x27;&#x27;);
+		}
+	});
+	});
+&lt;/script&gt;&lt;script&gt;
+	$(document).ready(function(){
+	$(&#x27;input[name=D7_2]&#x27;).keyup(function(){
+		var attr = $(this).attr(&#x27;name&#x27;);
+		if (parseFloat($(this).val()||0)&gt;0){
+				var money = $(this).val()*10000;
+			NUM_HAN(money,3,&#x27;M&#x27;+attr);
+		}
+		else
+		{
+			$(&#x27;#M&#x27;+attr).text(&#x27;&#x27;);
+		}
+	});
+	});
+&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;/script&gt;&lt;style&gt;
+  .qm-popover{--bs-popover-bg:#fff3cd;--bs-popover-border-color:#ffe69c;--bs-popover-body-color:#212529;--bs-popover-max-width:240px;}
+  .qm-popover .popover-body{padding:.35rem .5rem;font-size:.85rem;line-height:1.2;}
+  .qm-pop-body{display:flex;align-items:flex-start;gap:.4rem;}
+  .qm-warn-icon{display:inline-flex;align-items:center;justify-content:center;width:1.1rem;height:1.1rem;font-size:.8rem;font-weight:700;background:#ffe69c;color:#212529;border-radius:50%;flex:0 0 auto;border:1px solid rgba(0,0,0,.12);}
+  .qm-warn-text{word-break:keep-all;}
+&lt;/style&gt;&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+function next()
+{
+	if(!/^\d+(\.\d+)?$/.test($(&quot;#D7_1&quot;).val().trim()))
+	{
+  var el=document.getElementById(&quot;LD7_1&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+		alert(&quot;[&quot;+$(&quot;#LD7_1&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;);
+		$(&quot;#D7_1&quot;).focus();
+		return;
+	}
+	if (parseFloat($(&quot;#D7_1&quot;).val().trim()) &lt; 0)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD7_1&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;);
+		$(&quot;#D7_1&quot;).focus();
+		return;
+	}
+	if (parseFloat($(&quot;#D7_1&quot;).val().trim()) &gt; 9999)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD7_1&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;);
+		$(&quot;#D7_1&quot;).focus();
+		return;
+	}
+
+	if(!/^\d+(\.\d+)?$/.test($(&quot;#D7_2&quot;).val().trim()))
+	{
+  var el=document.getElementById(&quot;LD7_2&quot;),msg=&quot;응답해주세요.&quot;;
+  try{var prev=bootstrap.Popover.getInstance(el);if(prev)prev.dispose();}catch(e){}
+  var pop=new bootstrap.Popover(el,{
+    container:&#x27;body&#x27;,trigger:&#x27;manual&#x27;,placement:&#x27;bottom&#x27;,html:true,customClass:&#x27;qm-popover&#x27;,
+    content:&#x27;&lt;div class=&quot;qm-pop-body&quot;&gt;&lt;span class=&quot;qm-warn-icon&quot;&gt;⚠&lt;/span&gt;&lt;span class=&quot;qm-warn-text&quot;&gt;&#x27;+msg+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;,
+    popperConfig:function(cfg){
+      cfg=cfg||{};cfg.placement=&#x27;bottom&#x27;;cfg.modifiers=(cfg.modifiers||[]).concat([{name:&#x27;flip&#x27;,enabled:false}]);return cfg;
+    }
+  });
+  pop.show();el.scrollIntoView({block:&#x27;center&#x27;,behavior:&#x27;smooth&#x27;});$(el).focus();
+  $(document).off(&#x27;mousedown.qmPop&#x27;).on(&#x27;mousedown.qmPop&#x27;,function(e){if(!el.contains(e.target)){$(document).off(&#x27;mousedown.qmPop&#x27;);try{pop.hide();}catch(ex){}}});
+		alert(&quot;[&quot;+$(&quot;#LD7_2&quot;).text()+&quot;] 숫자만 입력해 주십시오.&quot;);
+		$(&quot;#D7_2&quot;).focus();
+		return;
+	}
+	if (parseFloat($(&quot;#D7_2&quot;).val().trim()) &lt; 0)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD7_2&quot;).text()+&quot;] 0 이상 입력해 주십시오.&quot;);
+		$(&quot;#D7_2&quot;).focus();
+		return;
+	}
+	if (parseFloat($(&quot;#D7_2&quot;).val().trim()) &gt; 9999)
+	{
+		alert(&quot;[&quot;+$(&quot;#LD7_2&quot;).text()+&quot;] 9999 이하 입력해 주십시오.&quot;);
+		$(&quot;#D7_2&quot;).focus();
+		return;
+	}
+
+
+
+if (parseInt($(&quot;#D7_1&quot;).val().trim()) &gt; parseInt($(&quot;#D7_2&quot;).val().trim()))
+{
+	alert(&quot;응답을 확인해 주십시오.&quot;);
+	return;
+}
+
+	var obj;
+
+	document.Survey.submit();
+
+	LoadingWithMask();
+}
+
+ 
+
+$(document).ready(function(){
+	
+
+           
+});
+
+
+//--&gt;
+&lt;/script&gt;&lt;/head&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;body class=&quot;member_con&quot;&gt;
+
+&lt;form name=&quot;Survey&quot; onsubmit=&quot;return false;&quot; method=&quot;post&quot; action=&quot;Survey.asp&quot; class=&quot;form-inline&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Var&quot; value=&quot;D7_1,D7_2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PageName&quot; value=&quot;D7&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;NextPage&quot; value=&quot;D8&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDKey&quot; value=&quot;03171522087189593472270&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ResType&quot; value=&quot;TEST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;VC_ID&quot; value=&quot;03171522087189593472270&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;PVALUE&quot; value=&quot;30&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ECODE&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ENUMBER&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;IDS&quot; value=&quot;&quot;&gt;
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+&lt;!--
+	$(document).ready(function(){
+	var isAlt = false;
+	var action = &quot;&quot;;
+	$(document).keyup(function(e){
+		if(e.which == 18) isAlt=false;
+	}).keydown(function(e){
+		if(e.which == 18) isAlt=true;
+		if(e.which == 74 &amp;&amp; isAlt == true) {
+			//run code for CTRL+S -- ie, save!
+			action = prompt(&#x27;Input Page Name\nOnly Name not valid .asp&#x27;);
+			if (action==&quot;&quot;){
+				return;
+			}else{
+				$(&quot;input[name=NextPage]&quot;).val(action);
+			}
+		}
+	});
+	});
+//--&gt;
+&lt;/script&gt;
+
+
+
+&lt;div class=&quot;offcanvas offcanvas-start&quot; tabindex=&quot;-1&quot; id=&quot;offcanvasExample&quot; aria-labelledby=&quot;offcanvasExampleLabel&quot;&gt;
+  &lt;div class=&quot;offcanvas-header&quot;&gt;
+    &lt;h5 class=&quot;offcanvas-title&quot; id=&quot;offcanvasExampleLabel&quot;&gt;목차보기&lt;/h5&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn-close text-reset&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;offcanvas-body&quot;&gt;   
+    &lt;div class=&quot;left-menu&quot;&gt;
+       &lt;ul class=&quot;menu-list&quot;&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A0&#x27;);&quot; class=&quot;menu-item&quot;&gt;1. A0&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A1&#x27;);&quot; class=&quot;menu-item&quot;&gt;2. A1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A2&#x27;);&quot; class=&quot;menu-item&quot;&gt;3. A2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A3&#x27;);&quot; class=&quot;menu-item&quot;&gt;4. A3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A4&#x27;);&quot; class=&quot;menu-item&quot;&gt;5. A4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A5&#x27;);&quot; class=&quot;menu-item&quot;&gt;6. A5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A6A&#x27;);&quot; class=&quot;menu-item&quot;&gt;7. A6A&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A7&#x27;);&quot; class=&quot;menu-item&quot;&gt;8. A7&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;A8&#x27;);&quot; class=&quot;menu-item&quot;&gt;9. A8&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B1&#x27;);&quot; class=&quot;menu-item&quot;&gt;10. B1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B2&#x27;);&quot; class=&quot;menu-item&quot;&gt;11. B2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B3&#x27;);&quot; class=&quot;menu-item&quot;&gt;12. B3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B4&#x27;);&quot; class=&quot;menu-item&quot;&gt;13. B4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B5&#x27;);&quot; class=&quot;menu-item&quot;&gt;14. B5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;B6&#x27;);&quot; class=&quot;menu-item&quot;&gt;15. B6&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C1&#x27;);&quot; class=&quot;menu-item&quot;&gt;16. C1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C2&#x27;);&quot; class=&quot;menu-item&quot;&gt;17. C2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C3&#x27;);&quot; class=&quot;menu-item&quot;&gt;18. C3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C4&#x27;);&quot; class=&quot;menu-item&quot;&gt;19. C4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C5&#x27;);&quot; class=&quot;menu-item&quot;&gt;20. C5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C6&#x27;);&quot; class=&quot;menu-item&quot;&gt;21. C6&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;C7&#x27;);&quot; class=&quot;menu-item&quot;&gt;22. C7&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D1&#x27;);&quot; class=&quot;menu-item&quot;&gt;23. D1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D2&#x27;);&quot; class=&quot;menu-item&quot;&gt;24. D2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D3&#x27;);&quot; class=&quot;menu-item&quot;&gt;25. D3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D4&#x27;);&quot; class=&quot;menu-item&quot;&gt;26. D4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D5&#x27;);&quot; class=&quot;menu-item&quot;&gt;27. D5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D6&#x27;);&quot; class=&quot;menu-item&quot;&gt;28. D6&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D7&#x27;);&quot; class=&quot;menu-item&quot;&gt;29. D7&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D8&#x27;);&quot; class=&quot;menu-item&quot;&gt;30. D8&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;D9&#x27;);&quot; class=&quot;menu-item&quot;&gt;31. D9&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E1&#x27;);&quot; class=&quot;menu-item&quot;&gt;32. E1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E2&#x27;);&quot; class=&quot;menu-item&quot;&gt;33. E2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E3&#x27;);&quot; class=&quot;menu-item&quot;&gt;34. E3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E4&#x27;);&quot; class=&quot;menu-item&quot;&gt;35. E4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;E5&#x27;);&quot; class=&quot;menu-item&quot;&gt;36. E5&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G1&#x27;);&quot; class=&quot;menu-item&quot;&gt;37. G1&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G2&#x27;);&quot; class=&quot;menu-item&quot;&gt;38. G2&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G3&#x27;);&quot; class=&quot;menu-item&quot;&gt;39. G3&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G4&#x27;);&quot; class=&quot;menu-item&quot;&gt;40. G4&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;li&gt;
+                &lt;a href=&quot;javascript:move_page(&#x27;G5&#x27;);&quot; class=&quot;menu-item&quot;&gt;41. G5&lt;/a&gt;
+            &lt;/li&gt;
+        
+        &lt;/ul&gt;
+    &lt;/div&gt; &lt;div class=&quot;mt-2 mb-2&quot;&gt;
+&lt;!--         &lt;button type=&quot;button&quot; class=&quot;btn btn-danger col-12&quot; onclick=&quot;javascript:end_survey();&quot;&gt;최종완료&lt;/button&gt; --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;	
+
+&lt;div class=&quot;container-fluid&quot; id=&quot;container_area&quot;&gt;
+
+	&lt;div class=&quot;row justify-content-center&quot;&gt;
+		&lt;div class=&quot;col custom-col&quot; style=&quot;margin-top:40px;&quot;&gt;
+	
+			&lt;div class=&quot;shadow p-3 bg-body rounded border-top border-secondary&quot;&gt;			
+				&lt;div class=&quot;row justify-content-end align-items-center mb-2&quot;&gt;
+    &lt;div class=&quot;col-auto pe-1&quot;&gt;
+        &lt;span style=&quot;font-size: 0.9rem; font-weight: 600; color: #555;&quot;&gt;ID : 03171522087189593472270&lt;/span&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;col-6 col-md-3&quot;&gt;
+        &lt;div class=&quot;progress&quot; style=&quot;height: 15px;&quot;&gt;
+        
+            &lt;div class=&quot;progress-bar bg-danger&quot; role=&quot;progressbar&quot; style=&quot;width: 75%; font-size: 10px !important; line-height: 15px;&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+                75%
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+				&lt;div class=&quot;fs-4 text-primary border-bottom p-2&quot;&gt;
+					&lt;table&gt;		
+						&lt;tbody&gt;&lt;tr&gt;
+							&lt;td nowrap=&quot;&quot; style=&quot;vertical-align:top;display:block;&quot;&gt;
+
+							
+								&lt;span class=&quot;badge bg-secondary p-2&quot; style=&quot;font-weight:normal;&quot;&gt;
+							D7&lt;/span&gt;						
+							&lt;/td&gt;
+							&lt;td&gt;&lt;div id=&quot;question_txt&quot;&gt;향후 경차 EV를 구매하기 위해 예산은 어느 정도로 생각하고 계십니까?&lt;br&gt;일반 가솔린/디젤이 아닌 전기차(EV)를 기준으로 응답하여 주십시오.&lt;br&gt;단, &lt;span class=&quot;UnBd&quot;&gt;자동차세, 등록세 등의 세금과 자동차 보험료를 제외&lt;/span&gt;한 가격으로 기입해주세요&lt;/div&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;&lt;/table&gt;
+				&lt;/div&gt;
+				
+				
+				&lt;div class=&quot;mt-1&quot;&gt;
+					&lt;table class=&quot;table table-bordered&quot; id=&quot;D7_table&quot;&gt;
+	&lt;colgroup&gt;
+		&lt;col width=&quot;10%&quot;&gt;
+		&lt;col width=&quot;40%&quot;&gt;
+		&lt;col width=&quot;10%&quot;&gt;
+		&lt;col width=&quot;40%&quot;&gt;
+	&lt;/colgroup&gt;
+	&lt;tbody&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LD7_1&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;최소&lt;/span&gt;&lt;/th&gt;
+		&lt;td class=&quot;align-middle text-center&quot;&gt;
+		&lt;div class=&quot;input-group&quot;&gt;
+			&lt;input name=&quot;D7_1&quot; id=&quot;D7_1&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;form-control input-lg text-end&quot; maxlength=&quot;4&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;
+			&lt;span class=&quot;input-group-text&quot;&gt;만원&lt;/span&gt;		&lt;/div&gt;
+		&lt;div class=&quot;text-end&quot;&gt;
+			&lt;span class=&quot;BlueBd&quot; id=&quot;MD7_1&quot;&gt; ( 이천 구백 만  원 )&lt;/span&gt;
+		&lt;/div&gt;
+
+		&lt;/td&gt;
+		&lt;th class=&quot;text-left align-middle bg-light&quot;&gt;&lt;span id=&quot;LD7_2&quot; tabindex=&quot;-1&quot; data-bs-toggle=&quot;popover&quot; data-bs-trigger=&quot;manual&quot;&gt;최대&lt;/span&gt;&lt;/th&gt;
+		&lt;td class=&quot;align-middle text-center&quot;&gt;
+		&lt;div class=&quot;input-group&quot;&gt;
+			&lt;input name=&quot;D7_2&quot; id=&quot;D7_2&quot; type=&quot;tel&quot; inputmode=&quot;numeric&quot; class=&quot;form-control input-lg text-end&quot; maxlength=&quot;4&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;
+			&lt;span class=&quot;input-group-text&quot;&gt;만원&lt;/span&gt;		&lt;/div&gt;
+		&lt;div class=&quot;text-end&quot;&gt;
+			&lt;span class=&quot;BlueBd&quot; id=&quot;MD7_2&quot;&gt; ( 일천 일백 구만  원 )&lt;/span&gt;
+		&lt;/div&gt;
+
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+					 
+				&lt;/div&gt;				
+				
+			&lt;/div&gt; &lt;!--shadow-sm end--&gt;
+
+				
+			
+			 
+			
+&lt;div id=&quot;imageModal&quot; style=&quot;display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;&quot; onclick=&quot;closeModal()&quot;&gt;
+  &lt;img id=&quot;modalImage&quot; src=&quot;&quot; style=&quot;max-width:90%; max-height:90%; border:4px solid white; box-shadow:0 0 10px #000;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;timerLabel&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;btn-group col-12 shadow&quot; id=&quot;btnC&quot;&gt;
+
+
+    &lt;button type=&quot;button&quot; id=&quot;prev&quot; class=&quot;btn btn-default btn-lg col-5 btn-bottom&quot;&gt;이전&lt;/button&gt;
+
+    &lt;button type=&quot;button&quot; id=&quot;next&quot; class=&quot;btn btn-secondary btn-lg col-7 btn-bottom&quot;&gt;다음&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!--마우스 오버시 보이는 보기값 출력--&gt;
+
+&lt;div id=&quot;progr&quot;&gt;&lt;/div&gt;
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+
+
+function data_save()
+
+{
+
+document.Survey.action = &quot;Survey1.asp&quot;;
+
+
+
+next();
+
+}
+&lt;/script&gt;
+			&lt;p&gt;3000미만, 4000초과 탈락&lt;/p&gt;
+			
+			
+		&lt;/div&gt; &lt;!--mobile-body or col-8 end--&gt;
+	&lt;/div&gt; &lt;!--row or nothing div end--&gt;
+			
+&lt;/div&gt; &lt;!--containter end--&gt;
+&lt;/form&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</pre>
+    </details>
+  </div>
+</body>
+</html>
